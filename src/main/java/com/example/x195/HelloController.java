@@ -14,4 +14,7 @@ public class HelloController {
     }
     @FXML Label geoLbl;
     @FXML Button signinBtn;
+    @FXML protected void printHi() {
+        System.out.println("Hi");
+    }
 }
