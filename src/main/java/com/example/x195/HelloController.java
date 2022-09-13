@@ -8,13 +8,7 @@ import javafx.scene.control.TextField;
 public class HelloController {
     public TextField usrTxtFld;
     public PasswordField passTxtFld;
-    @FXML
-    private Label welcomeText;
 
-    @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
-    }
     @FXML Label geoLbl;
     @FXML Button signinBtn;
     @FXML protected void printHi() {
