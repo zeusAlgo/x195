@@ -8,7 +8,7 @@
    <children>
       <PasswordField layoutX="465.0" layoutY="466.0" />
       <TextField layoutX="465.0" layoutY="415.0" />
-      <Button layoutX="519.0" layoutY="511.0" mnemonicParsing="false" text="Sign In" />
-      <Label layoutX="532.0" layoutY="718.0" text="Label" />
+      <Button fx:id="signinBtn" layoutX="519.0" layoutY="511.0" mnemonicParsing="false" text="Sign In" />
+      <Label fx:id="geoLbl"layoutX="532.0" layoutY="718.0" text="Label" />
    </children>
 </Pane>
