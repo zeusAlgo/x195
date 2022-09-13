@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1100.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <PasswordField layoutX="465.0" layoutY="466.0" />
+      <TextField layoutX="465.0" layoutY="415.0" />
+      <Button layoutX="519.0" layoutY="511.0" mnemonicParsing="false" text="Sign In" />
+      <Label layoutX="532.0" layoutY="718.0" text="Label" />
+   </children>
+</Pane>
