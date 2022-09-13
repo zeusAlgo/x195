@@ -11,11 +11,10 @@ public class HelloController {
 
     @FXML Label geoLbl;
     @FXML Button signinBtn;
-    @FXML protected void printHi() {
+    @FXML protected void signin() {
         String usrcreds = usrTxtFld.getText();
         String passcreds = passTxtFld.getText();
 
-        System.out.println("Hi");
         System.out.println(usrcreds);
         System.out.println(passcreds);
     }
