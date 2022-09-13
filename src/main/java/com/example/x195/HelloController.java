@@ -16,6 +16,8 @@ public class HelloController {
         String passcreds = passTxtFld.getText();
 
         System.out.println("Hi");
+        System.out.println(usrcreds);
+        System.out.println(passcreds);
     }
     
 }
