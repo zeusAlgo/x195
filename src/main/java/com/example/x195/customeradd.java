@@ -3,6 +3,10 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.ComboBox;
 
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.HashMap;
 
 public class customeradd {
@@ -18,10 +22,28 @@ public class customeradd {
 
     public void set_divisions() {
         int countryidx = countryComboBox.getSelectionModel().getSelectedIndex()+1;
+        get_divisions(countryidx);
+        divisionComboBox.setItems(divisionsar);
 
     }
 
-    public void get_divisions() {
+    public void get_divisions(int countryIndex) {
+        try {
+                Connection connection = HelloController.connection;
+                Statement statement = connection.createStatement();
+                String query = "SELECT * FROM first_level_divisions where Country_ID="  + countryIndex;
+                ResultSet results = statement.executeQuery(query);
+                while (results.next()) {
+                    String divname = results.getString("Division");
+                    int divid =  results.getInt("Division_ID");
+
+                    divisionhm1.put(divname, divid);
+                    divisionhm2.put(divid, divname);
+                    divisionsar.add(divname);
+                }
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+        }
 
 
     }

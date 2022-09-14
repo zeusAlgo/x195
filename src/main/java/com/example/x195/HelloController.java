@@ -17,6 +17,7 @@ public class HelloController {
     @FXML Label geoLbl;
     @FXML Button signinBtn;
     public String lang = "";
+    static Connection connection = null;
 
     @FXML protected void signin() {
         String usrcreds = usrTxtFld.getText();
@@ -34,6 +35,9 @@ public class HelloController {
             alert.show();
         }
     }
+
+
+
 
     public void gohome(){
         try {
