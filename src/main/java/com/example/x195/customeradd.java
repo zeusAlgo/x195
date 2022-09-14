@@ -24,7 +24,6 @@ public class customeradd {
         int countryidx = countryComboBox.getSelectionModel().getSelectedIndex()+1;
         get_divisions(countryidx);
         divisionComboBox.setItems(divisionsar);
-
     }
 
     public void get_divisions(int countryIndex) {
@@ -47,13 +46,7 @@ public class customeradd {
             } catch (SQLException e) {
                 throw new RuntimeException(e);
         }
-
-
     }
-
-//    public void dbconnect() {
-//
-//    }
 
     public void initialize() {
         countryhm1.put("U.S", 1);
@@ -66,5 +59,4 @@ public class customeradd {
         countryComboBox.setItems(countryar);
 
     }
-
 }
