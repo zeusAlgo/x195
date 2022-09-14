@@ -5,6 +5,7 @@ import javafx.scene.control.*;
 import java.sql.Connection;
 import java.sql.*;
 import java.sql.DriverManager;
+import java.time.ZoneId;
 
 public class HelloController {
     public TextField usrTxtFld;
@@ -26,5 +27,10 @@ public class HelloController {
                     "Please enter valid username and password");
             alert.show();
         }
+    }
+
+    public void initialize() {
+        ZoneId zone = ZoneId.systemDefault();
+        geoLbl.setText(String.valueOf(zone));
     }
 }
