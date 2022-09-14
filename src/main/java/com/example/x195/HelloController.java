@@ -1,12 +1,9 @@
 package com.example.x195;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+
 import java.sql.Connection;
 import java.sql.*;
-import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class HelloController {
@@ -23,6 +20,9 @@ public class HelloController {
             Connection connection = DriverManager.getConnection(db, usrcreds, passcreds);
         } catch (SQLException e) {
             System.out.println("Error" + e.getMessage());
+            Alert alert = new Alert(Alert.AlertType.INFORMATION,
+                    "Please enter valid username and password");
+            alert.show();
         }
     }
 }
