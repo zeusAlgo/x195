@@ -8,7 +8,6 @@ import java.sql.Connection;
 import java.sql.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import com.mysql.jdbc.Driver;
 
 public class HelloController {
     public TextField usrTxtFld;
@@ -19,12 +18,7 @@ public class HelloController {
     @FXML protected void signin() throws SQLException, ClassNotFoundException {
         String usrcreds = usrTxtFld.getText();
         String passcreds = passTxtFld.getText();
-
-//        Class.forName("com.mysql.jdbc.Driver");
-
-        String db = "jbdc:mysql://localhost/client_schedule";
-
-        Connection connection;
-        connection = DriverManager.getConnection(db, usrcreds, passcreds);
+        String db = "jdbc:mysql://localhost/client_schedule";
+        Connection connection = DriverManager.getConnection(db, usrcreds, passcreds);
     }
 }
