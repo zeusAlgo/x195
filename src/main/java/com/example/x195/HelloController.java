@@ -17,11 +17,23 @@ public class HelloController {
     @FXML Label geoLbl;
     @FXML Button signinBtn;
     public String lang = "";
-    static Connection connection = null;
+    static String usr = "admin";
+    static String pass = "admin";
+    static String dbsrc = "jdbc:mysql://localhost/client_schedule";
+
+    public static Connection dbconnection() {
+        try {
+            return DriverManager.getConnection(dbsrc, usr, pass);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
     @FXML protected void signin() {
         String usrcreds = usrTxtFld.getText();
+        usr = usrcreds;
         String passcreds = passTxtFld.getText();
+        pass = passcreds;
         String db = "jdbc:mysql://localhost/client_schedule";
         try {
             Connection connection = DriverManager.getConnection(db, usrcreds, passcreds);
@@ -50,6 +62,7 @@ public class HelloController {
         } catch(Exception e) {System.out.println(e.getMessage());}
     }
 
+    static Connection connection = dbconnection();
     public void initialize() {
         ZoneId zone = ZoneId.systemDefault();
         geoLbl.setText(String.valueOf(zone));
