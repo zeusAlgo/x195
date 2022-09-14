@@ -12,7 +12,7 @@ public class home {
 
     public void launchActivity(String activityname){
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(home.class.getResource(activityname+"home.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(home.class.getResource(activityname+".fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 1100, 1100);
             Stage stage = new Stage();
             stage.setTitle(activityname);
