@@ -65,17 +65,16 @@ public class customeradd {
     }
 
     public void addCustomer(ActionEvent actionEvent) {
-        String dividx1 = divisionComboBox.getSelectionModel().getSelectedItem().toString();
-        System.out.println(dividx1);
         try {
 
-            String dividx = divisionComboBox.getSelectionModel().getSelectedItem().toString();
+            String divisionname = divisionComboBox.getSelectionModel().getSelectedItem().toString();
+            int divisionidx = divisionhm1.get(divisionname);
 
             Statement statement = HelloController.connection.createStatement();
             String insertion = "Insert into customers values('" + nameTxtFld.getText() + "', '" +
                     addressTxtFld.getText() + "', '" + postalCodeTxtFld.getText() + "', '"
                     + phoneTxtFld.getText() + "', '" + "2022-09-14 20:00:00" + "', '" + "script" +
-                    "', '" + "2022-09-14 20:00:00" + "', '" + "script" + ")";
+                    "', '" + "2022-09-14 20:00:00" + "', '" + "script" + divisionname + ")";
         } catch (SQLException e) {
             System.out.println("SQL Error" + e.getMessage());
         }
