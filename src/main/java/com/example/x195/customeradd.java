@@ -87,10 +87,10 @@ public class customeradd {
             String insertion = "Insert into customers values(" + colv + ", '" + nameTxtFld.getText() + "', '" +
                     addressTxtFld.getText() + "', '" + postalCodeTxtFld.getText() + "', '"
                     + phoneTxtFld.getText() + "', '" + "2022-09-14 20:00:00" + "', '" + "script" +
-                    "', '" + "2022-09-14 20:00:00" + "', '" + "script" + "', "+ divisionname + ")";
+                    "', '" + "2022-09-14 20:00:00" + "', '" + "script" + "', "+ divisionidx + ")";
             statement.execute(insertion);
         } catch (SQLException e) {
-            System.out.println("SQL Error" + e.getMessage());
+            System.out.println("SQL Error " + e.getMessage());
         }
     }
 }
