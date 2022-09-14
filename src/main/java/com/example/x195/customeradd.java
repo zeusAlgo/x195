@@ -14,7 +14,17 @@ public class customeradd {
     HashMap<String, Integer> divisionhm1 = new HashMap<>();
     HashMap<Integer, String> divisionhm2 = new HashMap<>();
     ObservableList<String> countryar = FXCollections.observableArrayList();
+    ObservableList<String> divisionsar = FXCollections.observableArrayList();
 
+    public void set_divisions() {
+        int countryidx = countryComboBox.getSelectionModel().getSelectedIndex()+1;
+
+    }
+
+    public void get_divisions() {
+
+
+    }
 
     public void initialize() {
         countryhm1.put("U.S", 1);
@@ -26,7 +36,6 @@ public class customeradd {
         countryar.add("U.S"); countryar.add("UK"); countryar.add("Canada");
         countryComboBox.setItems(countryar);
 
-        
     }
 
 }
