@@ -16,11 +16,14 @@ public class HelloController {
 
     @FXML Label geoLbl;
     @FXML Button signinBtn;
-    @FXML protected void signin() {
+    @FXML protected void signin() throws SQLException {
         String usrcreds = usrTxtFld.getText();
         String passcreds = passTxtFld.getText();
 
         System.out.println(usrcreds);
         System.out.println(passcreds);
+
+        String db = "jbdc:mysql://localhost/client_schedule";
+        Connection connection = DriverManager.getConnection(db, usrcreds, passcreds);
     }
 }
