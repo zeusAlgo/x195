@@ -16,14 +16,13 @@ public class HelloController {
 
     @FXML Label geoLbl;
     @FXML Button signinBtn;
-    @FXML protected void signin() throws SQLException {
+    @FXML protected void signin() throws SQLException, ClassNotFoundException {
         String usrcreds = usrTxtFld.getText();
         String passcreds = passTxtFld.getText();
 
-        System.out.println(usrcreds);
-        System.out.println(passcreds);
+        Class.forName("com.mysql.jdbc.Driver");
 
-        String db = "jbdc:mysql://localhost/client_schedule";
+        String db = "jbdc:mysql://localhost:3306/client_schedule";
         Connection connection = DriverManager.getConnection(db, usrcreds, passcreds);
     }
 }
