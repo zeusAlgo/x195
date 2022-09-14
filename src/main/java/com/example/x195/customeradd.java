@@ -27,10 +27,10 @@ public class customeradd {
     }
 
     public void get_divisions(int countryIndex) {
-        divisionhm1.clear();
-        divisionhm2.clear();
-        divisionsar.clear();
         try {
+            divisionhm1.clear();
+            divisionhm2.clear();
+            divisionsar.clear();
             Connection connection = HelloController.connection;
             Statement statement = connection.createStatement();
             String query = "SELECT * FROM first_level_divisions where Country_ID="  + countryIndex;
