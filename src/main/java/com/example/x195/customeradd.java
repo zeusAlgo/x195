@@ -26,6 +26,7 @@ public class customeradd {
         countryar.add("U.S"); countryar.add("UK"); countryar.add("Canada");
         countryComboBox.setItems(countryar);
 
+        
     }
 
 }
