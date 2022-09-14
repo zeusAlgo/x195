@@ -3,12 +3,11 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1100.0" prefWidth="1100.0" fx:controller="com.example.x195.HelloController" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1100.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.x195.HelloController">
    <children>
-      <PasswordField fx:id="passTxtFld" layoutX="465.0" layoutY="466.0" />
-      <TextField fx:id="usrTxtFld" layoutX="465.0" layoutY="415.0" />
-      <Button fx:id="signinBtn" onAction="#signin" layoutX="519.0" layoutY="511.0" mnemonicParsing="false" text="Sign In" />
-      <Label fx:id="geoLbl" layoutX="532.0" layoutY="718.0" text="Label" />
+      <PasswordField fx:id="passTxtFld" layoutX="521.0" layoutY="454.0" />
+      <TextField fx:id="usrTxtFld" layoutX="344.0" layoutY="454.0" />
+      <Button fx:id="signinBtn" layoutX="699.0" layoutY="454.0" mnemonicParsing="false" onAction="#signin" text="Sign In" />
+      <Label fx:id="geoLbl" layoutX="521.0" layoutY="542.0" text="Label" />
    </children>
 </Pane>
