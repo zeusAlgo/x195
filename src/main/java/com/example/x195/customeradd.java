@@ -32,13 +32,26 @@ public class customeradd {
         divisionComboBox.setItems(divisionsar);
     }
 
+    public int incrementcolval() {
+        int colv = 0;
+        try {
+            Statement statement = HelloController.connection.createStatement();
+            String query = "Select * from customers";
+            ResultSet results = statement.executeQuery(query);
+            while (results.next()) {
+                colv = results.getInt("Customer_ID");
+            }
+
+        } catch (SQLException e) { System.out.println(e.getMessage());}
+        return colv+1;
+    }
+
     public void get_divisions(int countryIndex) {
         try {
             divisionhm1.clear();
             divisionhm2.clear();
             divisionsar.clear();
-            Connection connection = HelloController.connection;
-            Statement statement = connection.createStatement();
+            Statement statement = HelloController.connection.createStatement();
             String query = "SELECT * FROM first_level_divisions where Country_ID="  + countryIndex;
             ResultSet results = statement.executeQuery(query);
             while (results.next()) {
@@ -66,12 +79,12 @@ public class customeradd {
 
     public void addCustomer(ActionEvent actionEvent) {
         try {
-
+            int colv = incrementcolval();
             String divisionname = divisionComboBox.getSelectionModel().getSelectedItem().toString();
             int divisionidx = divisionhm1.get(divisionname);
 
             Statement statement = HelloController.connection.createStatement();
-            String insertion = "Insert into customers values('" + nameTxtFld.getText() + "', '" +
+            String insertion = "Insert into customers values(" + colv + ", '" + nameTxtFld.getText() + "', '" +
                     addressTxtFld.getText() + "', '" + postalCodeTxtFld.getText() + "', '"
                     + phoneTxtFld.getText() + "', '" + "2022-09-14 20:00:00" + "', '" + "script" +
                     "', '" + "2022-09-14 20:00:00" + "', '" + "script" + "', "+ divisionname + ")";
