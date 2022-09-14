@@ -43,11 +43,7 @@ public class HelloController {
             stage.setTitle("Home");
             stage.setScene(scene);
             stage.show();
-
-        } catch(Exception e) {
-            System.out.println(e.getMessage());
-        }
-
+        } catch(Exception e) {System.out.println(e.getMessage());}
     }
 
     public void initialize() {
