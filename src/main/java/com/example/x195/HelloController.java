@@ -4,6 +4,11 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import java.sql.Connection;
+import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import com.mysql.jdbc.Driver;
 
 public class HelloController {
     public TextField usrTxtFld;
@@ -18,5 +23,4 @@ public class HelloController {
         System.out.println(usrcreds);
         System.out.println(passcreds);
     }
-    
 }
