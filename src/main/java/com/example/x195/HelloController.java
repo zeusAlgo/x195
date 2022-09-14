@@ -48,9 +48,6 @@ public class HelloController {
         }
     }
 
-
-
-
     public void gohome(){
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(home.class.getResource("home.fxml"));

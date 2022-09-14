@@ -1,7 +1,9 @@
 package com.example.x195;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextField;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -12,6 +14,10 @@ import java.util.HashMap;
 public class customeradd {
     public ComboBox countryComboBox;
     public ComboBox divisionComboBox;
+    public TextField addressTxtFld;
+    public TextField phoneTxtFld;
+    public TextField nameTxtFld;
+    public TextField postalCodeTxtFld;
 
     HashMap<String, Integer> countryhm1 = new HashMap<>();
     HashMap<Integer, String> countryhm2 = new HashMap<>();
@@ -56,5 +62,22 @@ public class customeradd {
         countryar.add("U.S"); countryar.add("UK"); countryar.add("Canada");
         countryComboBox.setItems(countryar);
 
+    }
+
+    public void addCustomer(ActionEvent actionEvent) {
+        String dividx1 = divisionComboBox.getSelectionModel().getSelectedItem().toString();
+        System.out.println(dividx1);
+        try {
+
+            String dividx = divisionComboBox.getSelectionModel().getSelectedItem().toString();
+
+            Statement statement = HelloController.connection.createStatement();
+            String insertion = "Insert into customers values('" + nameTxtFld.getText() + "', '" +
+                    addressTxtFld.getText() + "', '" + postalCodeTxtFld.getText() + "', '"
+                    + phoneTxtFld.getText() + "', '" + "2022-09-14 20:00:00" + "', '" + "script" +
+                    "', '" + "2022-09-14 20:00:00" + "', '" + "script" + ")";
+        } catch (SQLException e) {
+            System.out.println("SQL Error" + e.getMessage());
+        }
     }
 }
