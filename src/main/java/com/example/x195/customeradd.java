@@ -27,25 +27,23 @@ public class customeradd {
     }
 
     public void get_divisions(int countryIndex) {
+        divisionhm1.clear();
+        divisionhm2.clear();
+        divisionsar.clear();
         try {
-                divisionhm1.clear();
-                divisionhm2.clear();
-                divisionsar.clear();
-                Connection connection = HelloController.connection;
-                Statement statement = connection.createStatement();
-                String query = "SELECT * FROM first_level_divisions where Country_ID="  + countryIndex;
-                ResultSet results = statement.executeQuery(query);
-                while (results.next()) {
-                    String divname = results.getString("Division");
-                    int divid =  results.getInt("Division_ID");
+            Connection connection = HelloController.connection;
+            Statement statement = connection.createStatement();
+            String query = "SELECT * FROM first_level_divisions where Country_ID="  + countryIndex;
+            ResultSet results = statement.executeQuery(query);
+            while (results.next()) {
+                String divname = results.getString("Division");
+                int divid =  results.getInt("Division_ID");
 
-                    divisionhm1.put(divname, divid);
-                    divisionhm2.put(divid, divname);
-                    divisionsar.add(divname);
-                }
-            } catch (SQLException e) {
-                throw new RuntimeException(e);
-        }
+                divisionhm1.put(divname, divid);
+                divisionhm2.put(divid, divname);
+                divisionsar.add(divname);
+            }
+        } catch (SQLException e) {throw new RuntimeException(e);}
     }
 
     public void initialize() {
