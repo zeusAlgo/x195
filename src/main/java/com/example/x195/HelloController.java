@@ -18,6 +18,8 @@ public class HelloController {
         String db = "jdbc:mysql://localhost/client_schedule";
         try {
             Connection connection = DriverManager.getConnection(db, usrcreds, passcreds);
+            System.out.println("Connected to db");
+
         } catch (SQLException e) {
             System.out.println("Error" + e.getMessage());
             Alert alert = new Alert(Alert.AlertType.INFORMATION,
