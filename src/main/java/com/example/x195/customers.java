@@ -18,7 +18,7 @@ public class customers {
     @FXML private TableColumn<customer, String> tblcolb;
     @FXML private TableView<customer> tblview;
     public static ObservableList<customer> ar;
-    public int tomodifyid = 0;
+    public static int tomodifyid = 0;
 
     public void launchActivity(String activityname){
 

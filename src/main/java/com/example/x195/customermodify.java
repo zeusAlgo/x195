@@ -24,8 +24,13 @@ public class customermodify {
         return customerhm;
     }
 
-    public void init() {
-        
+    public void initialize() {
+        int curcustomerid = customers.tomodifyid;
+        System.out.println(curcustomerid);
+        HashMap<String, String> custhm = getcustomerinfo(curcustomerid);
+        System.out.println(custhm.get("phone"));
+
 
     }
+
 }
