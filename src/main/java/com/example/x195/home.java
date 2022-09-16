@@ -18,10 +18,12 @@ public class home {
     HashMap<String, Integer> usdivhm = new HashMap<>();
     HashMap<String, Integer> ukdivhm = new HashMap<>();
     HashMap<String, Integer> canadadivhm = new HashMap<>();
+    HashMap<Integer, String> alldivshm = new HashMap<>();
     static ObservableList<String> countryar = FXCollections.observableArrayList();
     static ObservableList<String> usdivar = FXCollections.observableArrayList();
     static ObservableList<String> ukdivar = FXCollections.observableArrayList();
     static ObservableList<String> canadadivar = FXCollections.observableArrayList();
+
     public void launchActivity(String activityname){
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(home.class.getResource(activityname+".fxml"));
@@ -55,11 +57,25 @@ public class home {
         return hashbrownmap;
     }
 
+    public HashMap<Integer, String> getalldivs() {
+        HashMap<Integer, String> hashbrownmap = new HashMap<>();
+        try {
+            Statement stmnt = HelloController.connection.createStatement();
+            ResultSet rs = stmnt.executeQuery("Select * from first_level_divisions");
+            while (rs.next()) {
+                String divname = rs.getString("Division");
+                hashbrownmap.put(divname, rs.getInt("Division_ID"));
+            }
+        } catch (SQLException e) {throw new RuntimeException(e);}
+        return hashbrownmap;
+    }
+
     public void initialize() {
         countryhm.put("U.S", 1); countryhm.put("UK", 2); countryhm.put("Canada", 3);
         countryar.add("U.S."); countryar.add("UK"); countryar.add("Canada");
         usdivhm = getdivs(1);ukdivhm = getdivs(2);
         canadadivhm = getdivs(3);
+        alldivshm = getalldivs();
 
     }
 }

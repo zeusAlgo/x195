@@ -37,8 +37,10 @@ public class customermodify {
         postcodetxtfld.setText(custhm.get("postalcode"));phonetxtfld.setText(custhm.get("phone"));
 
         countrycombobox.setItems(home.countryar);
+
+        for (i=0;i<)
         switch (custhm.get("divid")) {
-            
+
         }
         divisioncombobox.setItems(home.divar);
     }
