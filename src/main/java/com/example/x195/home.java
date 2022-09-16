@@ -22,8 +22,6 @@ public class home {
     }
 
     public void launchA(ActionEvent actionEvent) { launchActivity("customers");}
-
     public void launchB(ActionEvent actionEvent) { launchActivity("appointments");}
-
     public void launchC(ActionEvent actionEvent) { launchActivity("reports");}
 }

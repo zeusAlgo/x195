@@ -14,8 +14,8 @@ import javafx.stage.Stage;
 public class customers {
     @FXML private TableColumn<customer, String> tblcola;
     @FXML private TableColumn<customer, String> tblcolb;
-    @FXML private TableView<String> tblview;
-    ObservableList<String> ar = FXCollections.observableArrayList();
+    @FXML private TableView<customer> tblview;
+    ObservableList ar = FXCollections.observableArrayList();
 
 
     public void launchActivity(String activityname){
@@ -38,7 +38,13 @@ public class customers {
     public void initialize() {
         tblcola.setCellValueFactory(new PropertyValueFactory<>("id"));
         tblcolb.setCellValueFactory(new PropertyValueFactory<>("name"));
-        ar.add(String.valueOf(new customer(1, "dklaj", "slkfj", "lksdj", "lsdkjf",23)));
+        customer custa = new customer(1, "dklaj", "slkfj", "lksdj", "lsdkjf",23);
+//        ar.add(String.valueOf(custa.getid()));
+        ar.add(custa);
+
+//        ar.add(
+//                String.valueOf(new customer(1, "dklaj", "slkfj", "lksdj", "lsdkjf",23)));
+//        ar.add("yes");
         tblview.setItems(ar);
     }
 }
