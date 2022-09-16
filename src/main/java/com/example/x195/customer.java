@@ -12,4 +12,7 @@ public class customer {
     public void setaddress(String address) {this.address=address;}
     public void postalcode(String postalcode) {this.postalcode=postalcode;}
     public void phone(String phone) {this.phone=phone;}
+    public void divid(int divid) {this.divid=divid;}
+
+    
 }
