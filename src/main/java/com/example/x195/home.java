@@ -15,7 +15,9 @@ import java.util.HashMap;
 public class home {
     public Button customersBtn, aptBtn, reportsBtn;
     HashMap<String, Integer> countryhm = new HashMap<>();
-    HashMap<String, Integer> divhm = new HashMap<>();
+    HashMap<String, Integer> usdivhm = new HashMap<>();
+    HashMap<String, Integer> ukdivhm = new HashMap<>();
+    HashMap<String, Integer> canadadivhm = new HashMap<>();
     static ObservableList<String> countryar = FXCollections.observableArrayList();
     static ObservableList<String> divar = FXCollections.observableArrayList();
     public void launchActivity(String activityname){
@@ -50,6 +52,8 @@ public class home {
     public void initialize() {
         countryhm.put("U.S", 1); countryhm.put("UK", 2); countryhm.put("Canada", 3);
         countryar.add("U.S."); countryar.add("UK"); countryar.add("Canada");
-        divhm = getdivs();
+        usdivhm = getdivs(1);ukdivhm = getdivs(2);
+        canadadivhm = getdivs(3);
+
     }
 }
