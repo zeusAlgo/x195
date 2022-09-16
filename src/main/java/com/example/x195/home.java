@@ -10,9 +10,7 @@ import javafx.stage.Stage;
 import java.util.HashMap;
 
 public class home {
-    public Button customersBtn;
-    public Button aptBtn;
-    public Button reportsBtn;
+    public Button customersBtn, aptBtn, reportsBtn;
     HashMap<String, Integer> countryhm = new HashMap<>();
     public void launchActivity(String activityname){
         try {
