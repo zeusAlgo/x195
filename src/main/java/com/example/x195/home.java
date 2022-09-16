@@ -33,11 +33,11 @@ public class home {
     public void launchB(ActionEvent actionEvent) { launchActivity("appointments");}
     public void launchC(ActionEvent actionEvent) { launchActivity("reports");}
 
-    public HashMap<String, Integer> getdivs() {
+    public HashMap<String, Integer> getdivs(int countryid) {
         HashMap<String, Integer> hashbrownmap = new HashMap<>();
         try {
             Statement stmnt = HelloController.connection.createStatement();
-            ResultSet rs = stmnt.executeQuery("Select * from first_level_divisions");
+            ResultSet rs = stmnt.executeQuery("Select * from first_level_divisions where=" + countryid);
             while (rs.next()) {
                 String divname = rs.getString("Division");
                 hashbrownmap.put(divname, rs.getInt("Division_ID"));
