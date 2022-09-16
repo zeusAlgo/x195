@@ -17,9 +17,15 @@ public class customermodify {
                 customerhm.put("name", res.getString("Customer_Name"));
                 customerhm.put("address", res.getString("Address"));
                 customerhm.put("postalcode", res.getString("Postal_Code"));
-                customerhm.put("")
+                customerhm.put("phone", res.getString("Phone"));
+                customerhm.put("divid", String.valueOf(res.getInt("Division_ID")));
             }
         } catch (SQLException e) { System.out.println("SQL Error: " + e.getMessage()); }
         return customerhm;
+    }
+
+    public void init() {
+        
+
     }
 }
