@@ -14,7 +14,8 @@ public class customermodify {
     public TextField nametxtfld;
     public TextField addresstxtfld;
     public TextField postcodetxtfld;
-    public TextField phone;
+    public TextField idtxtfld;
+    public TextField phonetxtfld;
 
     public HashMap<String, String> getcustomerinfo(int customerid) {
         HashMap<String, String> customerhm = new HashMap<>();
@@ -36,9 +37,12 @@ public class customermodify {
 
     public void initialize() {
         int curcustomerid = customers.tomodifyid;
-        System.out.println(curcustomerid);
         HashMap<String, String> custhm = getcustomerinfo(curcustomerid);
-        System.out.println(custhm.get("phone"));
+        idtxtfld.setText(custhm.get("id"));
+        nametxtfld.setText(custhm.get("name"));
+        addresstxtfld.setText(custhm.get("address"));
+        postcodetxtfld.setText(custhm.get("postalcode"));
+        phonetxtfld.setText(custhm.get("phone"));
 
 
     }
