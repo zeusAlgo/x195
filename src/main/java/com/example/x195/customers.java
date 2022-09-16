@@ -14,7 +14,6 @@ public class customers {
     ObservableList<String> ar = FXCollections.observableArrayList();
 
 
-
     public void launchActivity(String activityname){
 
         try {
@@ -31,4 +30,8 @@ public class customers {
     public void launch3(ActionEvent actionEvent) {}
 
 
+
+    public void initialize() {
+//        tblcola.setCellValueFactory(ar);
+    }
 }
