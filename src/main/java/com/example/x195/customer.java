@@ -14,5 +14,11 @@ public class customer {
     public void phone(String phone) {this.phone=phone;}
     public void divid(int divid) {this.divid=divid;}
 
-    
+    public int getid() {return id;}
+    public String getname() {return name;}
+    public String getaddress() {return address;}
+    public String getpostalcode() {return postalcode;}
+    public String getphone() {return phone;}
+    public 
+
 }
