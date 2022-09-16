@@ -50,5 +50,6 @@ public class home {
     public void initialize() {
         countryhm.put("U.S", 1); countryhm.put("UK", 2); countryhm.put("Canada", 3);
         countryar.add("U.S."); countryar.add("UK"); countryar.add("Canada");
+        divhm = getdivs();
     }
 }
