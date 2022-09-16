@@ -6,11 +6,12 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 public class customers {
-    public TableColumn tblcola;
-    public TableColumn tblcolb;
+    public TableColumn<customer, Integer> tblcola;
+    public TableColumn<customer, String> tblcolb;
     ObservableList<String> ar = FXCollections.observableArrayList();
 
 
@@ -32,6 +33,8 @@ public class customers {
 
 
     public void initialize() {
-//        tblcola.setCellValueFactory(ar);
+        tblcola.setCellValueFactory(new PropertyValueFactory<>("id"));
+        tblcola.setCellValueFactory(new PropertyValueFactory<>("name"));
+
     }
 }

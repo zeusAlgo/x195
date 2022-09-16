@@ -19,6 +19,6 @@ public class customer {
     public String getaddress() {return address;}
     public String getpostalcode() {return postalcode;}
     public String getphone() {return phone;}
-    public 
+    public int getdivid() {return divid;}
 
 }
