@@ -36,12 +36,9 @@ public class customermodify {
         nametxtfld.setText(custhm.get("name"));addresstxtfld.setText(custhm.get("address"));
         postcodetxtfld.setText(custhm.get("postalcode"));phonetxtfld.setText(custhm.get("phone"));
 
+        
+
         countrycombobox.setItems(home.countryar);
-
-        for (i=0;i<)
-        switch (custhm.get("divid")) {
-
-        }
         divisioncombobox.setItems(home.divar);
     }
 }
