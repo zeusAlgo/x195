@@ -1,10 +1,6 @@
 package com.example.x195;
-
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
-
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -13,7 +9,6 @@ import java.util.HashMap;
 public class customermodify {
     public ComboBox countrycombobox, divisioncombobox;
     public TextField nametxtfld, addresstxtfld, postcodetxtfld, idtxtfld, phonetxtfld;
-    HashMap<String, Integer> countryhm = new HashMap<>();
 
     public HashMap<String, String> getcustomerinfo(int customerid) {
         HashMap<String, String> customerhm = new HashMap<>();
@@ -33,6 +28,8 @@ public class customermodify {
         return customerhm;
     }
 
+    public
+
     public void initialize() {
         int curcustomerid = customers.tomodifyid;
         HashMap<String, String> custhm = getcustomerinfo(curcustomerid);
@@ -41,7 +38,7 @@ public class customermodify {
         postcodetxtfld.setText(custhm.get("postalcode"));phonetxtfld.setText(custhm.get("phone"));
 
 
-        countrycombobox.setItems(countryar);
+        countrycombobox.setItems(home.countryar);
 
     }
 }
