@@ -40,10 +40,7 @@ public class customermodify {
         nametxtfld.setText(custhm.get("name"));addresstxtfld.setText(custhm.get("address"));
         postcodetxtfld.setText(custhm.get("postalcode"));phonetxtfld.setText(custhm.get("phone"));
 
-        countryhm.put("U.S", 1); countryhm.put("UK", 2); countryhm.put("Canada", 3);
 
-        ObservableList<String> countryar = FXCollections.observableArrayList();
-        countryar.add("U.S."); countryar.add("UK"); countryar.add("Canada");
         countrycombobox.setItems(countryar);
 
     }
