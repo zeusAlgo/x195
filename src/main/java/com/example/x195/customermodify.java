@@ -9,18 +9,14 @@ import java.sql.Statement;
 import java.util.HashMap;
 
 public class customermodify {
-    public ComboBox countrycombobox;
-    public ComboBox divisioncombobox;
-    public TextField nametxtfld;
-    public TextField addresstxtfld;
-    public TextField postcodetxtfld;
-    public TextField idtxtfld;
-    public TextField phonetxtfld;
+    public ComboBox countrycombobox, divisioncombobox;
+    public TextField nametxtfld, addresstxtfld, postcodetxtfld, idtxtfld, phonetxtfld;
+    HashMap<String, Integer> countryhm = new HashMap<>();
 
     public HashMap<String, String> getcustomerinfo(int customerid) {
         HashMap<String, String> customerhm = new HashMap<>();
         try {
-            Statement statement = statement = HelloController.connection.createStatement();
+            Statement statement = HelloController.connection.createStatement();
             ResultSet res = statement.executeQuery(
                     "SELECT * FROM customers where Customer_ID="+ customerid);
             while (res.next()) {
@@ -39,12 +35,11 @@ public class customermodify {
         int curcustomerid = customers.tomodifyid;
         HashMap<String, String> custhm = getcustomerinfo(curcustomerid);
         idtxtfld.setText(custhm.get("id"));
-        nametxtfld.setText(custhm.get("name"));
-        addresstxtfld.setText(custhm.get("address"));
-        postcodetxtfld.setText(custhm.get("postalcode"));
-        phonetxtfld.setText(custhm.get("phone"));
+        nametxtfld.setText(custhm.get("name"));addresstxtfld.setText(custhm.get("address"));
+        postcodetxtfld.setText(custhm.get("postalcode"));phonetxtfld.setText(custhm.get("phone"));
+
+        countryhm.put("U.S", 1); countryhm.put()
 
 
     }
-
 }
