@@ -5,9 +5,12 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.TableColumn;
 import javafx.stage.Stage;
 
 public class customers {
+    public TableColumn tblcola;
+    public TableColumn tblcolb;
     ObservableList<String> ar = FXCollections.observableArrayList();
 
 
