@@ -14,5 +14,7 @@
           <TableColumn fx:id="tblcolb" prefWidth="75.0" text="C2" />
         </columns>
       </TableView>
+      <TextField fx:id="modifyTxtFld" layoutX="684.0" layoutY="494.0" />
+      <TextField fx:id="deleteTxtFld" layoutX="684.0" layoutY="586.0" />
    </children>
 </AnchorPane>
