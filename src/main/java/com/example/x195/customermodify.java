@@ -1,11 +1,21 @@
 package com.example.x195;
 
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextField;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.HashMap;
 
 public class customermodify {
+    public ComboBox countrycombobox;
+    public ComboBox divisioncombobox;
+    public TextField nametxtfld;
+    public TextField addresstxtfld;
+    public TextField postcodetxtfld;
+    public TextField phone;
+
     public HashMap<String, String> getcustomerinfo(int customerid) {
         HashMap<String, String> customerhm = new HashMap<>();
         try {
