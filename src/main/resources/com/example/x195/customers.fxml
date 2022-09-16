@@ -10,7 +10,7 @@
       <Button layoutX="684.0" layoutY="620.0" mnemonicParsing="false" onAction="#launch3" text="Delete" />
       <TableView layoutX="241.0" layoutY="122.0" prefHeight="809.0" prefWidth="427.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn fx:id="TblCola" prefWidth="75.0" text="C1" />
           <TableColumn prefWidth="75.0" text="C2" />
         </columns>
       </TableView>
