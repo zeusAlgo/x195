@@ -39,7 +39,9 @@ public class home {
             Statement stmnt = HelloController.connection.createStatement();
             ResultSet rs = stmnt.executeQuery("Select * from first_level_divisions");
             while (rs.next()) {
-
+                String divname = rs.getString("Division");
+                hashbrownmap.put(divname, rs.getInt("Division_ID"));
+                divar.add(divname);
             }
         } catch (SQLException e) {throw new RuntimeException(e);}
         return hashbrownmap;
