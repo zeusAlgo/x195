@@ -19,7 +19,9 @@ public class home {
     HashMap<String, Integer> ukdivhm = new HashMap<>();
     HashMap<String, Integer> canadadivhm = new HashMap<>();
     static ObservableList<String> countryar = FXCollections.observableArrayList();
-    static ObservableList<String> divar = FXCollections.observableArrayList();
+    static ObservableList<String> usdivar = FXCollections.observableArrayList();
+    static ObservableList<String> ukdivar = FXCollections.observableArrayList();
+    static ObservableList<String> canadadivar = FXCollections.observableArrayList();
     public void launchActivity(String activityname){
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(home.class.getResource(activityname+".fxml"));
