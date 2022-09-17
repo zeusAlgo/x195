@@ -47,11 +47,14 @@ public class home {
             while (rs.next()) {
                 String divname = rs.getString("Division");
                 hashbrownmap.put(divname, rs.getInt("Division_ID"));
-                switch (countryid) {
-                    case 1: usdivar.add(divname);
-                    case 2: ukdivar.add(divname);
-                    case 3: canadadivar.add(divname);
-                }
+                if (countryid == 1) usdivar.add(divname);
+                else if (countryid == 2) ukdivar.add(divname);
+                else if (countryid == 3) canadadivar.add(divname);
+//                switch (countryid) {
+//                    case 1: usdivar.add(divname);
+//                    case 2: ukdivar.add(divname);
+//                    case 3: canadadivar.add(divname);
+//                }
             }
         } catch (SQLException e) {e.getMessage();}
         return hashbrownmap;
