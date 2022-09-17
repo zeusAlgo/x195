@@ -39,11 +39,9 @@ public class customermodify {
 
         int divid = Integer.parseInt(custhm.get("divid"));
         String divname = home.alldivshm.get(divid);
-//        System.out.println(home.countryar);
         System.out.println(divid);
         System.out.println(divname);
-        ObservableList usdivar2 = home.getdivs2(1);
-        System.out.println(usdivar2);
+        System.out.println(home.usdivar);
         System.out.println(home.alldivshm);
         System.out.println(home.usdivhm);
 

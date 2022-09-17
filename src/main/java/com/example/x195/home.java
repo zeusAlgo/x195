@@ -21,8 +21,8 @@ public class home {
     static HashMap<Integer, String> alldivshm = new HashMap<>();
 
     static ObservableList<String> countryar = FXCollections.observableArrayList();
-//    static ObservableList<String> usdivar = FXCollections.observableArrayList();
-    static ObservableList<String> usdivar = getdivs2(1);
+    static ObservableList<String> usdivar = FXCollections.observableArrayList();
+//    static ObservableList<String> usdivar = getdivs2(1);
     static ObservableList<String> ukdivar = FXCollections.observableArrayList();
     static ObservableList<String> canadadivar = FXCollections.observableArrayList();
 
@@ -45,8 +45,7 @@ public class home {
         HashMap<String, Integer> hashbrownmap = new HashMap<>();
         try {
             Statement stmnt = HelloController.connection.createStatement();
-            //todo: fix where Country_ID =
-            ResultSet rs = stmnt.executeQuery("Select * from first_level_divisions where= Country_ID=" + countryid);
+            ResultSet rs = stmnt.executeQuery("Select * from first_level_divisions where Country_ID=" + countryid);
             while (rs.next()) {
                 String divname = rs.getString("Division");
                 hashbrownmap.put(divname, rs.getInt("Division_ID"));
