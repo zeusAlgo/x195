@@ -43,7 +43,7 @@ public class customermodify {
 //        else if (home.ukdivhm.keySet().contains(divname)) divisioncombobox.setItems(home.ukdivar);
 //        else if (home.canadadivhm.keySet().contains(divname)) divisioncombobox.setItems(home.canadadivar);
 
-        countrycombobox.setItems(home.countryar);
+//        countrycombobox.setItems(home.countryar);
 //        divisioncombobox.setItems(home.divar);
     }
 }

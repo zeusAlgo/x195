@@ -20,10 +20,10 @@ public class home {
     HashMap<String, Integer> ukdivhm = new HashMap<>();
     HashMap<String, Integer> canadadivhm = new HashMap<>();
 //    static HashMap<Integer, String> alldivshm = new HashMap<>();
-    static ObservableList<String> countryar = FXCollections.observableArrayList();
-    static ObservableList<String> usdivar = FXCollections.observableArrayList();
-    static ObservableList<String> ukdivar = FXCollections.observableArrayList();
-    static ObservableList<String> canadadivar = FXCollections.observableArrayList();
+    ObservableList<String> countryar = FXCollections.observableArrayList();
+    ObservableList<String> usdivar = FXCollections.observableArrayList();
+    ObservableList<String> ukdivar = FXCollections.observableArrayList();
+    ObservableList<String> canadadivar = FXCollections.observableArrayList();
 
     public void launchActivity(String activityname){
         try {
