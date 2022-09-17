@@ -30,7 +30,6 @@ public class customermodify {
 
     public void setdivs() {
         String countryname = (String) countrycombobox.getSelectionModel().getSelectedItem();
-        System.out.println(countryname);
         switch (countryname) {
             case "U.S.": divisioncombobox.setItems(home.usdivar); break;
             case "UK": divisioncombobox.setItems(home.ukdivar); break;
