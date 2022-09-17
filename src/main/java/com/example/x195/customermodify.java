@@ -1,4 +1,5 @@
 package com.example.x195;
+import javafx.collections.ObservableList;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import java.sql.ResultSet;
@@ -41,7 +42,8 @@ public class customermodify {
 //        System.out.println(home.countryar);
         System.out.println(divid);
         System.out.println(divname);
-        System.out.println(home.usdivar);
+        ObservableList usdivar2 = home.getdivs2(1);
+        System.out.println(usdivar2);
         System.out.println(home.alldivshm);
         System.out.println(home.usdivhm);
 

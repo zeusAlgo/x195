@@ -45,6 +45,7 @@ public class home {
         HashMap<String, Integer> hashbrownmap = new HashMap<>();
         try {
             Statement stmnt = HelloController.connection.createStatement();
+            //todo: fix where Country_ID = 
             ResultSet rs = stmnt.executeQuery("Select * from first_level_divisions where=" + countryid);
             while (rs.next()) {
                 String divname = rs.getString("Division");
