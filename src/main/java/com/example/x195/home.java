@@ -60,18 +60,6 @@ public class home {
         return hashbrownmap;
     }
 
-    public static ObservableList<String> getdivs2(int countryid) {
-        ObservableList<String> arrayofhope = FXCollections.observableArrayList();
-        try {
-            Statement stmnt2 = HelloController.connection.createStatement();
-            ResultSet rs2 = stmnt2.executeQuery("Select * from first_level_divisions where Country_ID=" + countryid);
-            while (rs2.next()) {
-                arrayofhope.add(rs2.getString("Division"));
-            }
-        } catch (SQLException e) {e.getMessage();}
-        return arrayofhope;
-    }
-
     public HashMap<Integer, String> getalldivs() {
         HashMap<Integer, String> hashmap = new HashMap<>();
         try {
@@ -92,7 +80,5 @@ public class home {
         usdivhm = getdivs(1);ukdivhm = getdivs(2);
         canadadivhm = getdivs(3);alldivshm = getalldivs();
 
-//        usdivar = getdivs2(1); ukdivar = getdivs2(2);
-//        canadadivar = getdivs2(3);
     }
 }
