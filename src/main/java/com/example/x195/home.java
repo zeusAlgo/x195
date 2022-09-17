@@ -11,14 +11,15 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 public class home {
     public Button customersBtn, aptBtn, reportsBtn;
     HashMap<String, Integer> countryhm = new HashMap<>();
-    HashMap<String, Integer> usdivhm = new HashMap<>();
-    HashMap<String, Integer> ukdivhm = new HashMap<>();
-    HashMap<String, Integer> canadadivhm = new HashMap<>();
-    HashMap<Integer, String> alldivshm = new HashMap<>();
+    static HashMap<String, Integer> usdivhm = new HashMap<>();
+    static HashMap<String, Integer> ukdivhm = new HashMap<>();
+    static HashMap<String, Integer> canadadivhm = new HashMap<>();
+    static HashMap<Integer, String> alldivshm = new HashMap<>();
     static ObservableList<String> countryar = FXCollections.observableArrayList();
     static ObservableList<String> usdivar = FXCollections.observableArrayList();
     static ObservableList<String> ukdivar = FXCollections.observableArrayList();

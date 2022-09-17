@@ -6,6 +6,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.HashMap;
 
+import static com.sun.org.apache.xpath.internal.compiler.Token.contains;
+
 public class customermodify {
     public ComboBox countrycombobox, divisioncombobox;
     public TextField nametxtfld, addresstxtfld, postcodetxtfld, idtxtfld, phonetxtfld;
@@ -36,7 +38,16 @@ public class customermodify {
         nametxtfld.setText(custhm.get("name"));addresstxtfld.setText(custhm.get("address"));
         postcodetxtfld.setText(custhm.get("postalcode"));phonetxtfld.setText(custhm.get("phone"));
 
-        
+        int divid = Integer.parseInt(custhm.get("divid"));
+        String divname = home.alldivshm.get(divid);
+//        home.alldivshm
+        if (home.usdivhm.keySet().contains(divname)) {
+
+        } else if (home.ukdivhm.keySet().contains(divname)) {
+
+        } else if (home.canadadivhm.keySet().contains(divname)) {
+
+        }
 
         countrycombobox.setItems(home.countryar);
         divisioncombobox.setItems(home.divar);
