@@ -59,8 +59,7 @@ public class home {
             Statement stmnt = HelloController.connection.createStatement();
             ResultSet rs = stmnt.executeQuery("Select * from first_level_divisions where=" + countryid);
             while (rs.next()) {
-                String divname = rs.getString("Division");
-                arrayofhope.add(divname);
+                arrayofhope.add(rs.getString("Division"));
             }
         } catch (SQLException e) {e.getMessage();}
         return arrayofhope;
@@ -82,7 +81,7 @@ public class home {
     public void initialize() {
         countryhm.put("U.S", 1); countryhm.put("UK", 2); countryhm.put("Canada", 3);
         countryar.add("U.S."); countryar.add("UK"); countryar.add("Canada");
-        
+
         usdivhm = getdivs(1);ukdivhm = getdivs(2);
         canadadivhm = getdivs(3);alldivshm = getalldivs();
 
