@@ -11,19 +11,18 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.HashMap;
-import java.util.LinkedHashMap;
 
 public class home {
     public Button customersBtn, aptBtn, reportsBtn;
     HashMap<String, Integer> countryhm = new HashMap<>();
-    HashMap<String, Integer> usdivhm = new HashMap<>();
-    HashMap<String, Integer> ukdivhm = new HashMap<>();
-    HashMap<String, Integer> canadadivhm = new HashMap<>();
-//    static HashMap<Integer, String> alldivshm = new HashMap<>();
-    ObservableList<String> countryar = FXCollections.observableArrayList();
-    ObservableList<String> usdivar = FXCollections.observableArrayList();
-    ObservableList<String> ukdivar = FXCollections.observableArrayList();
-    ObservableList<String> canadadivar = FXCollections.observableArrayList();
+    static HashMap<String, Integer> usdivhm = new HashMap<>();
+    static HashMap<String, Integer> ukdivhm = new HashMap<>();
+    static HashMap<String, Integer> canadadivhm = new HashMap<>();
+    static HashMap<Integer, String> alldivshm = new HashMap<>();
+    static ObservableList<String> countryar = FXCollections.observableArrayList();
+    static ObservableList<String> usdivar = FXCollections.observableArrayList();
+    static ObservableList<String> ukdivar = FXCollections.observableArrayList();
+    static ObservableList<String> canadadivar = FXCollections.observableArrayList();
 
     public void launchActivity(String activityname){
         try {
@@ -76,7 +75,7 @@ public class home {
         countryar.add("U.S."); countryar.add("UK"); countryar.add("Canada");
         usdivhm = getdivs(1);ukdivhm = getdivs(2);
         canadadivhm = getdivs(3);
-//        alldivshm = getalldivs();
+        alldivshm = getalldivs();
 
     }
 }
