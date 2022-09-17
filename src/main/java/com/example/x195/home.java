@@ -16,10 +16,10 @@ import java.util.LinkedHashMap;
 public class home {
     public Button customersBtn, aptBtn, reportsBtn;
     HashMap<String, Integer> countryhm = new HashMap<>();
-    static HashMap<String, Integer> usdivhm = new HashMap<>();
-    static HashMap<String, Integer> ukdivhm = new HashMap<>();
-    static HashMap<String, Integer> canadadivhm = new HashMap<>();
-    static HashMap<Integer, String> alldivshm = new HashMap<>();
+    HashMap<String, Integer> usdivhm = new HashMap<>();
+    HashMap<String, Integer> ukdivhm = new HashMap<>();
+    HashMap<String, Integer> canadadivhm = new HashMap<>();
+//    static HashMap<Integer, String> alldivshm = new HashMap<>();
     static ObservableList<String> countryar = FXCollections.observableArrayList();
     static ObservableList<String> usdivar = FXCollections.observableArrayList();
     static ObservableList<String> ukdivar = FXCollections.observableArrayList();
@@ -65,7 +65,7 @@ public class home {
             ResultSet rs = stmnt.executeQuery("Select * from first_level_divisions");
             while (rs.next()) {
                 String divname = rs.getString("Division");
-                hashbrownmap.put(divname, rs.getInt("Division_ID"));
+                hashbrownmap.put(rs.getInt("Division_ID"), divname);
             }
         } catch (SQLException e) {throw new RuntimeException(e);}
         return hashbrownmap;
@@ -76,7 +76,7 @@ public class home {
         countryar.add("U.S."); countryar.add("UK"); countryar.add("Canada");
         usdivhm = getdivs(1);ukdivhm = getdivs(2);
         canadadivhm = getdivs(3);
-        alldivshm = getalldivs();
+//        alldivshm = getalldivs();
 
     }
 }

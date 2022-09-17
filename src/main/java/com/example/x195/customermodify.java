@@ -6,8 +6,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.HashMap;
 
-import static com.sun.org.apache.xpath.internal.compiler.Token.contains;
-
 public class customermodify {
     public ComboBox countrycombobox, divisioncombobox;
     public TextField nametxtfld, addresstxtfld, postcodetxtfld, idtxtfld, phonetxtfld;
@@ -39,11 +37,11 @@ public class customermodify {
         postcodetxtfld.setText(custhm.get("postalcode"));phonetxtfld.setText(custhm.get("phone"));
 
         int divid = Integer.parseInt(custhm.get("divid"));
-        String divname = home.alldivshm.get(divid);
+//        String divname = home.alldivshm.get(divid);
 //        home.alldivshm
-        if (home.usdivhm.keySet().contains(divname)) divisioncombobox.setItems(home.usdivar);
-        else if (home.ukdivhm.keySet().contains(divname)) divisioncombobox.setItems(home.ukdivar);
-        else if (home.canadadivhm.keySet().contains(divname)) divisioncombobox.setItems(home.canadadivar);
+//        if (home.usdivhm.keySet().contains(divname)) divisioncombobox.setItems(home.usdivar);
+//        else if (home.ukdivhm.keySet().contains(divname)) divisioncombobox.setItems(home.ukdivar);
+//        else if (home.canadadivhm.keySet().contains(divname)) divisioncombobox.setItems(home.canadadivar);
 
         countrycombobox.setItems(home.countryar);
 //        divisioncombobox.setItems(home.divar);
