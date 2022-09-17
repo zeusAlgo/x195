@@ -38,9 +38,13 @@ public class customermodify {
 
         int divid = Integer.parseInt(custhm.get("divid"));
         String divname = home.alldivshm.get(divid);
+//        System.out.println(home.countryar);
         System.out.println(divid);
         System.out.println(divname);
         System.out.println(home.usdivar);
+        System.out.println(home.alldivshm);
+        System.out.println(home.usdivhm);
+
         //todo: investigate why the ars and hs are empty
         if (home.usdivar.contains(divname)) divisioncombobox.setItems(home.usdivar);
         else if (home.ukdivar.contains(divname)) divisioncombobox.setItems(home.ukdivar);

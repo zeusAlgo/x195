@@ -14,11 +14,12 @@ import java.util.HashMap;
 
 public class home {
     public Button customersBtn, aptBtn, reportsBtn;
-    HashMap<String, Integer> countryhm = new HashMap<>();
+    static HashMap<String, Integer> countryhm = new HashMap<>();
     static HashMap<String, Integer> usdivhm = new HashMap<>();
     static HashMap<String, Integer> ukdivhm = new HashMap<>();
     static HashMap<String, Integer> canadadivhm = new HashMap<>();
     static HashMap<Integer, String> alldivshm = new HashMap<>();
+
     static ObservableList<String> countryar = FXCollections.observableArrayList();
     static ObservableList<String> usdivar = FXCollections.observableArrayList();
     static ObservableList<String> ukdivar = FXCollections.observableArrayList();
@@ -47,14 +48,6 @@ public class home {
             while (rs.next()) {
                 String divname = rs.getString("Division");
                 hashbrownmap.put(divname, rs.getInt("Division_ID"));
-                if (countryid == 1) usdivar.add(divname);
-                else if (countryid == 2) ukdivar.add(divname);
-                else if (countryid == 3) canadadivar.add(divname);
-//                switch (countryid) {
-//                    case 1: usdivar.add(divname);
-//                    case 2: ukdivar.add(divname);
-//                    case 3: canadadivar.add(divname);
-//                }
             }
         } catch (SQLException e) {e.getMessage();}
         return hashbrownmap;
@@ -74,10 +67,20 @@ public class home {
     }
 
     public void initialize() {
+//        HashMap<String, Integer> countryhm = new HashMap<>();
         countryhm.put("U.S", 1); countryhm.put("UK", 2); countryhm.put("Canada", 3);
+//        ObservableList<String> countryar = FXCollections.observableArrayList();
         countryar.add("U.S."); countryar.add("UK"); countryar.add("Canada");
+//        HashMap<String, Integer> usdivhm = new HashMap<>();
+//        HashMap<String, Integer> ukdivhm = new HashMap<>();
+//        HashMap<String, Integer> canadadivhm = new HashMap<>();
+//        HashMap<Integer, String> alldivshm = new HashMap<>();
+//        ObservableList<String> usdivar = FXCollections.observableArrayList();
+//        ObservableList<String> ukdivar = FXCollections.observableArrayList();
+//        ObservableList<String> canadadivar = FXCollections.observableArrayList();
         usdivhm = getdivs(1);ukdivhm = getdivs(2);
         canadadivhm = getdivs(3);
+
         alldivshm = getalldivs();
 //        usdivar
     }
