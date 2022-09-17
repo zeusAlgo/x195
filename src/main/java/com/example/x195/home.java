@@ -54,21 +54,23 @@ public class home {
                     case 3: canadadivar.add(divname);
                 }
             }
-        } catch (SQLException e) {throw new RuntimeException(e);}
+        } catch (SQLException e) {
+            e.getMessage();
+        }
         return hashbrownmap;
     }
 
     public HashMap<Integer, String> getalldivs() {
-        HashMap<Integer, String> hashbrownmap = new HashMap<>();
+        HashMap<Integer, String> hashmap = new HashMap<>();
         try {
-            Statement stmnt = HelloController.connection.createStatement();
-            ResultSet rs = stmnt.executeQuery("Select * from first_level_divisions");
-            while (rs.next()) {
-                String divname = rs.getString("Division");
-                hashbrownmap.put(rs.getInt("Division_ID"), divname);
+            Statement stmnt1 = HelloController.connection.createStatement();
+            ResultSet rs1 = stmnt1.executeQuery("Select * from first_level_divisions");
+            while (rs1.next()) {
+                String divname1 = rs1.getString("Division");
+                hashmap.put(rs1.getInt("Division_ID"), divname1);
             }
         } catch (SQLException e) {throw new RuntimeException(e);}
-        return hashbrownmap;
+        return hashmap;
     }
 
     public void initialize() {
