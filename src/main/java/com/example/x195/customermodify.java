@@ -48,11 +48,11 @@ public class customermodify {
 
         int divid = Integer.parseInt(custhm.get("divid"));
         String divname = home.alldivshm.get(divid);
-        String nation;
+        String nation = "";
 
-        if (home.usdivar.contains(divname)) divisioncombobox.setItems(home.usdivar); nation = "U.S.";
-        else if (home.ukdivar.contains(divname)) divisioncombobox.setItems(home.ukdivar); nation = "UK";
-        else if (home.canadadivar.contains(divname)) divisioncombobox.setItems(home.canadadivar); nation = "Canada";
+        if (home.usdivar.contains(divname)) {divisioncombobox.setItems(home.usdivar); nation = "U.S.";}
+        else if (home.ukdivar.contains(divname)) {divisioncombobox.setItems(home.ukdivar); nation = "UK";}
+        else if (home.canadadivar.contains(divname)) {divisioncombobox.setItems(home.canadadivar); nation = "Canada";}
 
         countrycombobox.getSelectionModel().select(nation);
         divisioncombobox.getSelectionModel().select(divname);
