@@ -37,6 +37,7 @@ public class customermodify {
         }
     }
 
+    //todo: save cust update
     public void initialize() {
         countrycombobox.setItems(home.countryar);
         int curcustomerid = customers.tomodifyid;
