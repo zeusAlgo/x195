@@ -52,7 +52,18 @@ public class home {
         } catch (SQLException e) {e.getMessage();}
         return hashbrownmap;
     }
-
+    public ObservableList<String> getdivs2(int countryid) {
+        ObservableList<String> arrayofhope = new HashMap<>();
+        try {
+            Statement stmnt = HelloController.connection.createStatement();
+            ResultSet rs = stmnt.executeQuery("Select * from first_level_divisions where=" + countryid);
+            while (rs.next()) {
+                String divname = rs.getString("Division");
+                arrayofhope.add(divname);
+            }
+        } catch (SQLException e) {e.getMessage();}
+        return arrayofhope;
+    }
     public HashMap<Integer, String> getalldivs() {
         HashMap<Integer, String> hashmap = new HashMap<>();
         try {
