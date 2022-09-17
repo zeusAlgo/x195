@@ -54,9 +54,7 @@ public class home {
                     case 3: canadadivar.add(divname);
                 }
             }
-        } catch (SQLException e) {
-            e.getMessage();
-        }
+        } catch (SQLException e) {e.getMessage();}
         return hashbrownmap;
     }
 
@@ -69,7 +67,7 @@ public class home {
                 String divname1 = rs1.getString("Division");
                 hashmap.put(rs1.getInt("Division_ID"), divname1);
             }
-        } catch (SQLException e) {throw new RuntimeException(e);}
+        } catch (SQLException error) {error.getMessage();}
         return hashmap;
     }
 
