@@ -52,7 +52,7 @@ public class home {
         } catch (SQLException e) {e.getMessage();}
         return hashbrownmap;
     }
-    
+
     public ObservableList<String> getdivs2(int countryid) {
         ObservableList<String> arrayofhope = FXCollections.observableArrayList();
         try {
@@ -80,9 +80,7 @@ public class home {
     }
 
     public void initialize() {
-//        HashMap<String, Integer> countryhm = new HashMap<>();
         countryhm.put("U.S", 1); countryhm.put("UK", 2); countryhm.put("Canada", 3);
-//        ObservableList<String> countryar = FXCollections.observableArrayList();
         countryar.add("U.S."); countryar.add("UK"); countryar.add("Canada");
 //        HashMap<String, Integer> usdivhm = new HashMap<>();
 //        HashMap<String, Integer> ukdivhm = new HashMap<>();
@@ -93,6 +91,7 @@ public class home {
 //        ObservableList<String> canadadivar = FXCollections.observableArrayList();
         usdivhm = getdivs(1);ukdivhm = getdivs(2);
         canadadivhm = getdivs(3);alldivshm = getalldivs();
+
         usdivar = getdivs2(1); ukdivar = getdivs2(3);
         canadadivar = getdivs2(3);
     }
