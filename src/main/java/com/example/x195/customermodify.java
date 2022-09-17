@@ -1,6 +1,4 @@
 package com.example.x195;
-import javafx.collections.ObservableList;
-import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import java.sql.ResultSet;
@@ -30,9 +28,15 @@ public class customermodify {
         return customerhm;
     }
 
-    @FXML
-    setdivs() {
+    public void setdivs() {
 
+
+        int divid = Integer.parseInt(custhm.get("divid"));
+        String divname = home.alldivshm.get(divid);
+
+        if (home.usdivar.contains(divname)) divisioncombobox.setItems(home.usdivar);
+        else if (home.ukdivar.contains(divname)) divisioncombobox.setItems(home.ukdivar);
+        else if (home.canadadivar.contains(divname)) divisioncombobox.setItems(home.canadadivar);
     }
 
     public void initialize() {
@@ -44,13 +48,7 @@ public class customermodify {
 
         int divid = Integer.parseInt(custhm.get("divid"));
         String divname = home.alldivshm.get(divid);
-//        System.out.println(divid);
-//        System.out.println(divname);
-//        System.out.println(home.usdivar);
-//        System.out.println(home.alldivshm);
-//        System.out.println(home.usdivhm);
 
-        //todo: investigate why the ars and hs are empty
         if (home.usdivar.contains(divname)) divisioncombobox.setItems(home.usdivar);
         else if (home.ukdivar.contains(divname)) divisioncombobox.setItems(home.ukdivar);
         else if (home.canadadivar.contains(divname)) divisioncombobox.setItems(home.canadadivar);
