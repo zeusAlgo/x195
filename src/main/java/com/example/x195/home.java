@@ -14,10 +14,8 @@ import java.util.HashMap;
 
 public class home {
     public Button customersBtn, aptBtn, reportsBtn;
-    static HashMap<String, Integer> countryhm = new HashMap<>();
-    static HashMap<String, Integer> usdivhm = new HashMap<>();
-    static HashMap<String, Integer> ukdivhm = new HashMap<>();
-    static HashMap<String, Integer> canadadivhm = new HashMap<>();
+    static HashMap<String, Integer> countryhm = new HashMap<>(), usdivhm = new HashMap<>();
+    static HashMap<String, Integer> ukdivhm = new HashMap<>(), canadadivhm = new HashMap<>();
     static HashMap<Integer, String> alldivshm = new HashMap<>();
 
     static ObservableList<String> countryar = FXCollections.observableArrayList();
@@ -77,9 +75,5 @@ public class home {
 
         usdivhm = getdivs(1);ukdivhm = getdivs(2);
         canadadivhm = getdivs(3);alldivshm = getalldivs();
-
-        System.out.println(usdivar);
-        System.out.println(ukdivar);
-        System.out.println(canadadivar);
     }
 }
