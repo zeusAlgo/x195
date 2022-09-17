@@ -38,7 +38,8 @@ public class customermodify {
 
         int divid = Integer.parseInt(custhm.get("divid"));
         String divname = home.alldivshm.get(divid);
-//        home.alldivshm
+        System.out.println(divid);
+        System.out.println(divname);
         if (home.usdivhm.keySet().contains(divname)) divisioncombobox.setItems(home.usdivar);
         else if (home.ukdivhm.keySet().contains(divname)) divisioncombobox.setItems(home.ukdivar);
         else if (home.canadadivhm.keySet().contains(divname)) divisioncombobox.setItems(home.canadadivar);
