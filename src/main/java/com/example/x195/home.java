@@ -82,13 +82,7 @@ public class home {
     public void initialize() {
         countryhm.put("U.S", 1); countryhm.put("UK", 2); countryhm.put("Canada", 3);
         countryar.add("U.S."); countryar.add("UK"); countryar.add("Canada");
-//        HashMap<String, Integer> usdivhm = new HashMap<>();
-//        HashMap<String, Integer> ukdivhm = new HashMap<>();
-//        HashMap<String, Integer> canadadivhm = new HashMap<>();
-//        HashMap<Integer, String> alldivshm = new HashMap<>();
-//        ObservableList<String> usdivar = FXCollections.observableArrayList();
-//        ObservableList<String> ukdivar = FXCollections.observableArrayList();
-//        ObservableList<String> canadadivar = FXCollections.observableArrayList();
+        
         usdivhm = getdivs(1);ukdivhm = getdivs(2);
         canadadivhm = getdivs(3);alldivshm = getalldivs();
 
