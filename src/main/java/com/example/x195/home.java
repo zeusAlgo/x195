@@ -56,10 +56,10 @@ public class home {
     public ObservableList<String> getdivs2(int countryid) {
         ObservableList<String> arrayofhope = FXCollections.observableArrayList();
         try {
-            Statement stmnt = HelloController.connection.createStatement();
-            ResultSet rs = stmnt.executeQuery("Select * from first_level_divisions where=" + countryid);
-            while (rs.next()) {
-                arrayofhope.add(rs.getString("Division"));
+            Statement stmnt2 = HelloController.connection.createStatement();
+            ResultSet rs2 = stmnt2.executeQuery("Select * from first_level_divisions where=" + countryid);
+            while (rs2.next()) {
+                arrayofhope.add(rs2.getString("Division"));
             }
         } catch (SQLException e) {e.getMessage();}
         return arrayofhope;
