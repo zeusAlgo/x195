@@ -22,7 +22,6 @@ public class home {
 
     static ObservableList<String> countryar = FXCollections.observableArrayList();
     static ObservableList<String> usdivar = FXCollections.observableArrayList();
-//    static ObservableList<String> usdivar = getdivs2(1);
     static ObservableList<String> ukdivar = FXCollections.observableArrayList();
     static ObservableList<String> canadadivar = FXCollections.observableArrayList();
 

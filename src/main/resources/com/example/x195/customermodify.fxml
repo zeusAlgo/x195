@@ -4,7 +4,7 @@
 
 <AnchorPane prefHeight="1099.0" prefWidth="1099.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.x195.customermodify">
    <children>
-      <ComboBox fx:id="countrycombobox" layoutX="475.0" layoutY="208.0" prefWidth="150.0" />
+      <ComboBox fx:id="countrycombobox" onAction="#setdivs" layoutX="475.0" layoutY="208.0" prefWidth="150.0" />
       <ComboBox fx:id="divisioncombobox" layoutX="475.0" layoutY="279.0" prefWidth="150.0" />
       <TextField fx:id="nametxtfld" layoutX="465.0" layoutY="53.0" />
       <TextField fx:id="addresstxtfld" layoutX="465.0" layoutY="131.0" />

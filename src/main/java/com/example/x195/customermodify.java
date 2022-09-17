@@ -1,5 +1,6 @@
 package com.example.x195;
 import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import java.sql.ResultSet;
@@ -29,6 +30,10 @@ public class customermodify {
         return customerhm;
     }
 
+    @FXML
+    setdivs() {
+
+    }
 
     public void initialize() {
         int curcustomerid = customers.tomodifyid;
@@ -39,11 +44,11 @@ public class customermodify {
 
         int divid = Integer.parseInt(custhm.get("divid"));
         String divname = home.alldivshm.get(divid);
-        System.out.println(divid);
-        System.out.println(divname);
-        System.out.println(home.usdivar);
-        System.out.println(home.alldivshm);
-        System.out.println(home.usdivhm);
+//        System.out.println(divid);
+//        System.out.println(divname);
+//        System.out.println(home.usdivar);
+//        System.out.println(home.alldivshm);
+//        System.out.println(home.usdivhm);
 
         //todo: investigate why the ars and hs are empty
         if (home.usdivar.contains(divname)) divisioncombobox.setItems(home.usdivar);
@@ -51,6 +56,5 @@ public class customermodify {
         else if (home.canadadivar.contains(divname)) divisioncombobox.setItems(home.canadadivar);
 
         countrycombobox.setItems(home.countryar);
-//        divisioncombobox.setItems(home.divar);
     }
 }
