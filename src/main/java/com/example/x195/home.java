@@ -52,6 +52,7 @@ public class home {
         } catch (SQLException e) {e.getMessage();}
         return hashbrownmap;
     }
+    
     public ObservableList<String> getdivs2(int countryid) {
         ObservableList<String> arrayofhope = FXCollections.observableArrayList();
         try {
@@ -64,6 +65,7 @@ public class home {
         } catch (SQLException e) {e.getMessage();}
         return arrayofhope;
     }
+
     public HashMap<Integer, String> getalldivs() {
         HashMap<Integer, String> hashmap = new HashMap<>();
         try {
