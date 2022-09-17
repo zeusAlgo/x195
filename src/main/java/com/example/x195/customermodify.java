@@ -47,8 +47,7 @@ public class customermodify {
         postcodetxtfld.setText(custhm.get("postalcode"));phonetxtfld.setText(custhm.get("phone"));
 
         int divid = Integer.parseInt(custhm.get("divid"));
-        String divname = home.alldivshm.get(divid);
-        String nation = "";
+        String divname = home.alldivshm.get(divid), nation = "";
 
         if (home.usdivar.contains(divname)) {divisioncombobox.setItems(home.usdivar); nation = "U.S.";}
         else if (home.ukdivar.contains(divname)) {divisioncombobox.setItems(home.ukdivar); nation = "UK";}
