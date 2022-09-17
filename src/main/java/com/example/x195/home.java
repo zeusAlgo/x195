@@ -45,7 +45,7 @@ public class home {
         HashMap<String, Integer> hashbrownmap = new HashMap<>();
         try {
             Statement stmnt = HelloController.connection.createStatement();
-            //todo: fix where Country_ID = 
+            //todo: fix where Country_ID =
             ResultSet rs = stmnt.executeQuery("Select * from first_level_divisions where=" + countryid);
             while (rs.next()) {
                 String divname = rs.getString("Division");
@@ -59,7 +59,7 @@ public class home {
         ObservableList<String> arrayofhope = FXCollections.observableArrayList();
         try {
             Statement stmnt2 = HelloController.connection.createStatement();
-            ResultSet rs2 = stmnt2.executeQuery("Select * from first_level_divisions where=" + countryid);
+            ResultSet rs2 = stmnt2.executeQuery("Select * from first_level_divisions where Country_ID=" + countryid);
             while (rs2.next()) {
                 arrayofhope.add(rs2.getString("Division"));
             }
