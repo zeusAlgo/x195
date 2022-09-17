@@ -29,14 +29,18 @@ public class customermodify {
     }
 
     public void setdivs() {
+        String countryname = (String) countrycombobox.getSelectionModel().getSelectedItem();
+        System.out.println(countryname);
+//        String divname = home.alldivshm.get(divid);
+        switch (countryname) {
+            case "U.S.": divisioncombobox.setItems(home.usdivar);
+            case "UK": divisioncombobox.setItems(home.ukdivar);
+            case "Canada": divisioncombobox.setItems(home.canadadivar);
+        }
 
-
-        int divid = Integer.parseInt(custhm.get("divid"));
-        String divname = home.alldivshm.get(divid);
-
-        if (home.usdivar.contains(divname)) divisioncombobox.setItems(home.usdivar);
-        else if (home.ukdivar.contains(divname)) divisioncombobox.setItems(home.ukdivar);
-        else if (home.canadadivar.contains(divname)) divisioncombobox.setItems(home.canadadivar);
+//        if (vname)) divisioncombobox.setItems(home.usdivar);
+//        else if (home.ukdivar.contains(divname)) divisioncombobox.setItems(home.ukdivar);
+//        else if (home.canadadivar.contains(divname)) divisioncombobox.setItems(home.canadadivar);
     }
 
     public void initialize() {
