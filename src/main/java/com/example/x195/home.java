@@ -76,6 +76,6 @@ public class home {
         usdivhm = getdivs(1);ukdivhm = getdivs(2);
         canadadivhm = getdivs(3);
         alldivshm = getalldivs();
-
+//        usdivar
     }
 }

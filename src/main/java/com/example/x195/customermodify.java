@@ -41,6 +41,7 @@ public class customermodify {
         System.out.println(divid);
         System.out.println(divname);
         System.out.println(home.usdivar);
+        //todo: investigate why the ars and hs are empty
         if (home.usdivar.contains(divname)) divisioncombobox.setItems(home.usdivar);
         else if (home.ukdivar.contains(divname)) divisioncombobox.setItems(home.ukdivar);
         else if (home.canadadivar.contains(divname)) divisioncombobox.setItems(home.canadadivar);
