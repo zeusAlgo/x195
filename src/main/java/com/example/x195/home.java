@@ -21,7 +21,8 @@ public class home {
     static HashMap<Integer, String> alldivshm = new HashMap<>();
 
     static ObservableList<String> countryar = FXCollections.observableArrayList();
-    static ObservableList<String> usdivar = FXCollections.observableArrayList();
+//    static ObservableList<String> usdivar = FXCollections.observableArrayList();
+    static ObservableList<String> usdivar = getdivs2(1);
     static ObservableList<String> ukdivar = FXCollections.observableArrayList();
     static ObservableList<String> canadadivar = FXCollections.observableArrayList();
 
@@ -53,7 +54,7 @@ public class home {
         return hashbrownmap;
     }
 
-    public ObservableList<String> getdivs2(int countryid) {
+    public static ObservableList<String> getdivs2(int countryid) {
         ObservableList<String> arrayofhope = FXCollections.observableArrayList();
         try {
             Statement stmnt2 = HelloController.connection.createStatement();
@@ -85,7 +86,7 @@ public class home {
         usdivhm = getdivs(1);ukdivhm = getdivs(2);
         canadadivhm = getdivs(3);alldivshm = getalldivs();
 
-        usdivar = getdivs2(1); ukdivar = getdivs2(3);
+        usdivar = getdivs2(1); ukdivar = getdivs2(2);
         canadadivar = getdivs2(3);
     }
 }
