@@ -40,9 +40,10 @@ public class customermodify {
         String divname = home.alldivshm.get(divid);
         System.out.println(divid);
         System.out.println(divname);
-        if (home.usdivhm.keySet().contains(divname)) divisioncombobox.setItems(home.usdivar);
-        else if (home.ukdivhm.keySet().contains(divname)) divisioncombobox.setItems(home.ukdivar);
-        else if (home.canadadivhm.keySet().contains(divname)) divisioncombobox.setItems(home.canadadivar);
+        System.out.println(home.usdivar);
+        if (home.usdivar.contains(divname)) divisioncombobox.setItems(home.usdivar);
+        else if (home.ukdivar.contains(divname)) divisioncombobox.setItems(home.ukdivar);
+        else if (home.canadadivar.contains(divname)) divisioncombobox.setItems(home.canadadivar);
 
         countrycombobox.setItems(home.countryar);
 //        divisioncombobox.setItems(home.divar);
