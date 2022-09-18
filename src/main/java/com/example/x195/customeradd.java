@@ -37,19 +37,15 @@ public class customeradd {
 
     public void get_divisions(int countryIndex) {
         try {
-            divisionhm1.clear();
-            divisionhm2.clear();
-            divisionsar.clear();
+            divisionhm1.clear();divisionhm2.clear();divisionsar.clear();
             Statement statement = HelloController.connection.createStatement();
-            String query = "SELECT * FROM first_level_divisions where Country_ID="  + countryIndex;
-            ResultSet results = statement.executeQuery(query);
+            ResultSet results = statement.executeQuery(
+                    "SELECT * FROM first_level_divisions where Country_ID=" + countryIndex);
             while (results.next()) {
                 String divname = results.getString("Division");
                 int divid =  results.getInt("Division_ID");
 
-                divisionhm1.put(divname, divid);
-                divisionhm2.put(divid, divname);
-                divisionsar.add(divname);
+                divisionhm1.put(divname, divid);divisionhm2.put(divid, divname);divisionsar.add(divname);
             }
         } catch (SQLException e) {throw new RuntimeException(e);}
     }
