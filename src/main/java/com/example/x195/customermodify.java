@@ -13,8 +13,7 @@ public class customermodify {
     public HashMap<String, String> getcustomerinfo(int customerid) {
         HashMap<String, String> customerhm = new HashMap<>();
         try {
-            Statement statement = HelloController.connection.createStatement();
-            ResultSet res = statement.executeQuery(
+            ResultSet res = HelloController.connection.createStatement().executeQuery(
                     "SELECT * FROM customers where Customer_ID="+ customerid);
             while (res.next()) {
                 customerhm.put("id", String.valueOf(res.getInt("Customer_ID")));
@@ -36,8 +35,6 @@ public class customermodify {
             case "Canada": divisioncombobox.setItems(home.canadadivar); break;
         }
     }
-
-    //todo: save cust update
 
     public void updatecustomer() {
         try {
