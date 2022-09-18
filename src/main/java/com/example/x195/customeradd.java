@@ -51,15 +51,10 @@ public class customeradd {
     }
 
     public void initialize() {
-        countryhm1.put("U.S", 1);
-        countryhm1.put("UK", 2);
-        countryhm1.put("Canada", 3);
-        countryhm2.put(1, "U.S");
-        countryhm2.put(2, "UK");
-        countryhm2.put(3, "Canada");
+        countryhm1.put("U.S", 1);countryhm1.put("UK", 2);countryhm1.put("Canada", 3);
+        countryhm2.put(1, "U.S");countryhm2.put(2, "UK");countryhm2.put(3, "Canada");
         countryar.add("U.S"); countryar.add("UK"); countryar.add("Canada");
         countryComboBox.setItems(countryar);
-
     }
 
     public void addCustomer(ActionEvent actionEvent) {
