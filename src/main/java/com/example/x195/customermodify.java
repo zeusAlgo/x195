@@ -40,8 +40,10 @@ public class customermodify {
     //todo: save cust update
 
     public void updatecustomer() {
-        Statement stmnt = HelloController.connection.createStatement();
+        try {
+            Statement stmnt = HelloController.connection.createStatement();
         String update = "UPDATE customers set Customer_Name='" + nametxtfld.getText() + "', Address='" + addresstxtfld.getText() + "', Postal_Code='" +   "WHERE Customer_ID=" + customers.tomodifyid;
+        } catch (SQLException e) {throw new RuntimeException(e);}
     }
 
     public void initialize() {
