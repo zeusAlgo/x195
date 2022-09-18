@@ -5,6 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -13,6 +14,7 @@ import javafx.stage.Stage;
 
 public class customers {
     public TextField modifyTxtFld, deleteTxtFld;
+//    public Button delBtn;
     @FXML private TableColumn<customer, String> tblcola, tblcolb;
     @FXML private TableView<customer> tblview;
     public static ObservableList<customer> ar;
@@ -34,6 +36,7 @@ public class customers {
         tomodifyid = Integer.parseInt(modifyTxtFld.getText());
         launchActivity("customermodify");}
 
+    //todo: can clean this up on btn.pressed -> fn
     public void delete() {home.del("customers", "Customer_ID", Integer.parseInt(deleteTxtFld.getText()));}
 
     public void initialize() {
