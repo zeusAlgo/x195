@@ -70,10 +70,8 @@ public class home {
     }
 
    public void del(String tbl, String col, int id) {
-        try {
-            HelloController.connection.createStatement().execute(
-                    "Delete from " + tbl + "Where " +  col + "=" + id
-            );
+        try {HelloController.connection.createStatement().execute(
+                    "Delete from " + tbl + "Where " +  col + "=" + id);
         } catch (SQLException error) {error.getMessage();}
    }
 
