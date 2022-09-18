@@ -40,8 +40,8 @@ public class customermodify {
     //todo: save cust update
 
     public void updatecustomer() {
-        
-
+        Statement stmnt = HelloController.connection.createStatement();
+        String update = "UPDATE customers set"
     }
 
     public void initialize() {

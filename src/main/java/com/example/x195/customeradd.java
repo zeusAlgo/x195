@@ -12,19 +12,12 @@ import java.sql.Statement;
 import java.util.HashMap;
 
 public class customeradd {
-    public ComboBox countryComboBox;
-    public ComboBox divisionComboBox;
-    public TextField addressTxtFld;
-    public TextField phoneTxtFld;
-    public TextField nameTxtFld;
-    public TextField postalCodeTxtFld;
+    public ComboBox countryComboBox, divisionComboBox;
+    public TextField addressTxtFld, phoneTxtFld, nameTxtFld, postalCodeTxtFld;
 
-    HashMap<String, Integer> countryhm1 = new HashMap<>();
-    HashMap<Integer, String> countryhm2 = new HashMap<>();
-    HashMap<String, Integer> divisionhm1 = new HashMap<>();
-    HashMap<Integer, String> divisionhm2 = new HashMap<>();
-    ObservableList<String> countryar = FXCollections.observableArrayList();
-    ObservableList<String> divisionsar = FXCollections.observableArrayList();
+    HashMap<String, Integer> countryhm1 = new HashMap<>(), divisionhm1 = new HashMap<>();
+    HashMap<Integer, String> countryhm2 = new HashMap<>(), divisionhm2 = new HashMap<>();
+    ObservableList<String> countryar = FXCollections.observableArrayList(), divisionsar = FXCollections.observableArrayList();
 
     public void set_divisions() {
         int countryidx = countryComboBox.getSelectionModel().getSelectedIndex()+1;
