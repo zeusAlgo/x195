@@ -19,4 +19,9 @@ public class appointments {
 
     public void deleteapt(ActionEvent actionEvent) { home.del("appointments", "Appointment_ID", Integer.parseInt(deltxtfld.getText()));
     }
+
+    public void initialize() {
+        
+
+    }
 }
