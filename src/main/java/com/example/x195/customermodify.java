@@ -49,7 +49,7 @@ public class customermodify {
             }
             String update = "UPDATE customers set Customer_Name='" + nametxtfld.getText() + "', Address='" + addresstxtfld.getText() + "', Postal_Code='" + postcodetxtfld.getText()+ "', Phone='" + phonetxtfld.getText() + "', Division_ID=" + divid  + " WHERE Customer_ID=" + customers.tomodifyid;
             HelloController.connection.createStatement().executeUpdate(update);
-        } catch (SQLException e) {throw new RuntimeException(e);}
+        } catch (SQLException e) {System.out.println(e.getMessage());}
     }
 
     public void initialize() {
