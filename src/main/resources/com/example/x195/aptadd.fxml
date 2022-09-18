@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.x195.aptadd"
-            prefHeight="1000.0" prefWidth="1000.0">
 
+<AnchorPane prefHeight="1000.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.x195.aptadd">
+   <children>
+      <TextField fx:id="titletxtfld" layoutX="415.0" layoutY="85.0" promptText="Title" />
+      <TextField fx:id="desctxtfld" layoutX="415.0" layoutY="160.0" promptText="Description" />
+      <TextField fx:id="loctxtfld" layoutX="415.0" layoutY="226.0" promptText="Location" />
+      <TextField fx:id="typetxtfld" layoutX="415.0" layoutY="289.0" promptText="Type" />
+      <ComboBox fx:id="usercombobox" layoutX="425.0" layoutY="39.0" prefWidth="150.0" />
+      <ComboBox fx:id="apttimecombobox" layoutX="426.0" layoutY="349.0" prefWidth="150.0" />
+      <ComboBox fx:id="customercombobox" layoutX="425.0" layoutY="423.0" prefWidth="150.0" />
+      <ComboBox fx:id="contactcombobox" layoutX="426.0" layoutY="500.0" prefWidth="150.0" />
+      <Button layoutX="469.0" layoutY="576.0" mnemonicParsing="false" text="Save" />
+   </children>
 </AnchorPane>
