@@ -9,7 +9,7 @@ public class aptadd {
     public void initialize() {
         usercombobox.setItems(appointments.usersar);
         contactcombobox.setItems(appointments.contactsar);
-        
+
     }
 
 }

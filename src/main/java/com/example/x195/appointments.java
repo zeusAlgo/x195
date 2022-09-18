@@ -21,6 +21,9 @@ public class appointments {
         toalterid = Integer.parseInt(modifytxtfld.getText());
         home.launchActivity("aptmmodify");}
 
+    public void getallcustomers() {
+        
+    }
 
     public void deleteapt(ActionEvent actionEvent) { home.del("appointments", "Appointment_ID", Integer.parseInt(deltxtfld.getText()));
     }
