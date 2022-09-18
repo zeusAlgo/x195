@@ -37,6 +37,7 @@ public class customermodify {
         }
     }
 
+    //todo: test if update works
     public void updatecustomer() {
         try {
             int divid = 0;
