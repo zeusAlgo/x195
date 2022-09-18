@@ -31,9 +31,9 @@ public class customermodify {
     public void setdivs() {
         String countryname = (String) countrycombobox.getSelectionModel().getSelectedItem();
         switch (countryname) {
-            case "U.S.": divisioncombobox.setItems(home.usdivar); nation = "U.S."; break;
-            case "UK": divisioncombobox.setItems(home.ukdivar); nation = "UK"; break;
-            case "Canada": divisioncombobox.setItems(home.canadadivar); nation = "Canada"; break;
+            case "U.S." -> {divisioncombobox.setItems(home.usdivar);nation = "U.S.";}
+            case "UK" -> {divisioncombobox.setItems(home.ukdivar);nation = "UK";}
+            case "Canada" -> {divisioncombobox.setItems(home.canadadivar);nation = "Canada";}
         }
     }
 
@@ -42,10 +42,10 @@ public class customermodify {
         try {
             int divid = 0;
             String divisionname = divisioncombobox.getSelectionModel().getSelectedItem().toString();
-            switch(nation) {
-                case "U.S.": divid = home.usdivhm.get(divisionname); break;
-                case "UK": divid = home.ukdivhm.get(divisionname); break;
-                case "Canada": divid = home.canadadivhm.get(divisionname); break;
+            switch (nation) {
+                case "U.S." -> divid = home.usdivhm.get(divisionname);
+                case "UK" -> divid = home.ukdivhm.get(divisionname);
+                case "Canada" -> divid = home.canadadivhm.get(divisionname);
             }
 //            Statement stmnt = HelloController.connection.createStatement();
             String update = "UPDATE customers set Customer_Name='" + nametxtfld.getText() + "', Address='" + addresstxtfld.getText() + "', Postal_Code='" + postcodetxtfld.getText()+ "', Phone='" + phonetxtfld.getText() + "', Division_ID=" + divid  + "WHERE Customer_ID=" + customers.tomodifyid;
