@@ -14,7 +14,7 @@ import javafx.stage.Stage;
 
 public class customers {
     public TextField modifyTxtFld, deleteTxtFld;
-//    public Button delBtn;
+    public Button delBtn;
     @FXML private TableColumn<customer, String> tblcola, tblcolb;
     @FXML private TableView<customer> tblview;
     public static ObservableList<customer> ar;
@@ -37,9 +37,10 @@ public class customers {
         launchActivity("customermodify");}
 
     //todo: can clean this up on btn.pressed -> fn
-    public void delete() {home.del("customers", "Customer_ID", Integer.parseInt(deleteTxtFld.getText()));}
+    @FXML public void delete() {home.del("customers", "Customer_ID", Integer.parseInt(deleteTxtFld.getText()));}
 
     public void initialize() {
+
         tblcola.setCellValueFactory(new PropertyValueFactory<>("id"));
         tblcolb.setCellValueFactory(new PropertyValueFactory<>("name"));
         ar = FXCollections.observableArrayList();

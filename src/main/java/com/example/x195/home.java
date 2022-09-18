@@ -72,7 +72,7 @@ public class home {
    static public void del(String tbl, String col, int id) {
         try {HelloController.connection.createStatement().execute(
                     "Delete from " + tbl + "Where " +  col + "=" + id);
-        } catch (SQLException error) {error.getMessage();}
+        } catch (SQLException error) {System.out.println("SQL Error: " + error.getMessage());}
    }
 
     public void initialize() {
