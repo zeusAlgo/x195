@@ -8,7 +8,7 @@
    <children>
       <Button layoutX="772.0" onAction="#launchA" layoutY="363.0" mnemonicParsing="false" text="Add" />
       <Button layoutX="763.0" onAction="#launchB" layoutY="488.0" mnemonicParsing="false" text="Modify" />
-      <Button layoutX="764.0" layoutY="618.0" mnemonicParsing="false" text="Delete" />
+      <Button onAction="#deleteapt" layoutX="764.0" layoutY="618.0" mnemonicParsing="false" text="Delete" />
       <TextField fx:id="modifytxtfld" layoutX="764.0" layoutY="455.0" />
       <TextField fx:id="deltxtfld" layoutX="763.0" layoutY="583.0" />
    </children>
