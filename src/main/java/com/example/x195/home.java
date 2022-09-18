@@ -70,8 +70,11 @@ public class home {
     }
 
    public void del(String tbl, String col, int id) {
-        
-
+        try {
+            HelloController.connection.createStatement().execute(
+                    ""
+            );
+        } catch (SQLException error) {error.getMessage();}
    }
 
     public void initialize() {
