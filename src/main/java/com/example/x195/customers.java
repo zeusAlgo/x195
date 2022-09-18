@@ -12,10 +12,8 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 public class customers {
-    public TextField modifyTxtFld;
-    public TextField deleteTxtFld;
-    @FXML private TableColumn<customer, String> tblcola;
-    @FXML private TableColumn<customer, String> tblcolb;
+    public TextField modifyTxtFld, deleteTxtFld;
+    @FXML private TableColumn<customer, String> tblcola, tblcolb;
     @FXML private TableView<customer> tblview;
     public static ObservableList<customer> ar;
     public static int tomodifyid = 0;
@@ -35,8 +33,10 @@ public class customers {
     public void laundh2(ActionEvent actionEvent) {
         tomodifyid = Integer.parseInt(modifyTxtFld.getText());
         launchActivity("customermodify");}
-    public void launch3(ActionEvent actionEvent) {}
 
+    public void delete() {
+        home.del("customers", "Customer_ID", )
+    }
 
 
     public void initialize() {

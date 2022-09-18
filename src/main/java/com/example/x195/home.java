@@ -69,7 +69,7 @@ public class home {
         return hashmap;
     }
 
-   public void del(String tbl, String col, int id) {
+   static public void del(String tbl, String col, int id) {
         try {HelloController.connection.createStatement().execute(
                     "Delete from " + tbl + "Where " +  col + "=" + id);
         } catch (SQLException error) {error.getMessage();}
