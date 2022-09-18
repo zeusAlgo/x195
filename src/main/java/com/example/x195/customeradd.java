@@ -29,12 +29,8 @@ public class customeradd {
         int colv = 0;
         try {
             Statement statement = HelloController.connection.createStatement();
-            String query = "Select * from customers";
-            ResultSet results = statement.executeQuery(query);
-            while (results.next()) {
-                colv = results.getInt("Customer_ID");
-            }
-
+            ResultSet results = statement.executeQuery("Select * from customers");
+            while (results.next()) colv = results.getInt("Customer_ID");
         } catch (SQLException e) { System.out.println(e.getMessage());}
         return colv+1;
     }
