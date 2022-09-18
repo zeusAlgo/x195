@@ -6,4 +6,10 @@ public class aptadd {
     public ComboBox usercombobox, apttimecombobox, customercombobox, contactcombobox;
     public TextField titletxtfld, desctxtfld, loctxtfld, typetxtfld;
 
+    public void initialize() {
+        usercombobox.setItems(appointments.usersar);
+        contactcombobox.setItems(appointments.contactsar);
+        
+    }
+
 }

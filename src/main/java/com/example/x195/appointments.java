@@ -12,7 +12,7 @@ public class appointments {
     static HashMap<String, Integer> usershm = new HashMap<>();
     static ObservableList<String> contactsar = FXCollections.observableArrayList();
     static ObservableList<String> usersar = FXCollections.observableArrayList();
-    
+
 
     public static int toalterid = 0;
 
