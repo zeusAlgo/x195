@@ -9,6 +9,7 @@ import java.util.HashMap;
 public class customermodify {
     public ComboBox countrycombobox, divisioncombobox;
     public TextField nametxtfld, addresstxtfld, postcodetxtfld, idtxtfld, phonetxtfld;
+    String divname, nation;
 
     public HashMap<String, String> getcustomerinfo(int customerid) {
         HashMap<String, String> customerhm = new HashMap<>();
@@ -30,15 +31,15 @@ public class customermodify {
     public void setdivs() {
         String countryname = (String) countrycombobox.getSelectionModel().getSelectedItem();
         switch (countryname) {
-            case "U.S.": divisioncombobox.setItems(home.usdivar); break;
-            case "UK": divisioncombobox.setItems(home.ukdivar); break;
-            case "Canada": divisioncombobox.setItems(home.canadadivar); break;
+            case "U.S.": divisioncombobox.setItems(home.usdivar); nation = "U.S."; break;
+            case "UK": divisioncombobox.setItems(home.ukdivar); nation = "UK"; break;
+            case "Canada": divisioncombobox.setItems(home.canadadivar); nation = "Canada"; break;
         }
     }
 
     public void updatecustomer() {
         try {
-            String country
+            String nation =
             switch()
             Statement stmnt = HelloController.connection.createStatement();
             String update = "UPDATE customers set Customer_Name='" + nametxtfld.getText() + "', Address='" + addresstxtfld.getText() + "', Postal_Code='" + postcodetxtfld.getText()+ "', Phone='" + phonetxtfld.getText() + "', Division_ID=" +   + "WHERE Customer_ID=" + customers.tomodifyid;
@@ -54,7 +55,7 @@ public class customermodify {
         postcodetxtfld.setText(custhm.get("postalcode"));phonetxtfld.setText(custhm.get("phone"));
 
         int divid = Integer.parseInt(custhm.get("divid"));
-        String divname = home.alldivshm.get(divid), nation = "";
+        divname = home.alldivshm.get(divid); nation = "";
 
         if (home.usdivar.contains(divname)) {divisioncombobox.setItems(home.usdivar); nation = "U.S.";}
         else if (home.ukdivar.contains(divname)) {divisioncombobox.setItems(home.ukdivar); nation = "UK";}
