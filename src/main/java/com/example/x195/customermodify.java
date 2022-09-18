@@ -41,7 +41,7 @@ public class customermodify {
 
     public void updatecustomer() {
         Statement stmnt = HelloController.connection.createStatement();
-        String update = "UPDATE customers set"
+        String update = "UPDATE customers set Customer_Name='" + nametxtfld.getText() + "', Address='" + addresstxtfld.getText() + "', Postal_Code='" +   "WHERE Customer_ID=" + customers.tomodifyid;
     }
 
     public void initialize() {
