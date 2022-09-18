@@ -47,9 +47,10 @@ public class customermodify {
                 case "UK": divid = home.ukdivhm.get(divisionname); break;
                 case "Canada": divid = home.canadadivhm.get(divisionname); break;
             }
-            Statement stmnt = HelloController.connection.createStatement();
+//            Statement stmnt = HelloController.connection.createStatement();
             String update = "UPDATE customers set Customer_Name='" + nametxtfld.getText() + "', Address='" + addresstxtfld.getText() + "', Postal_Code='" + postcodetxtfld.getText()+ "', Phone='" + phonetxtfld.getText() + "', Division_ID=" + divid  + "WHERE Customer_ID=" + customers.tomodifyid;
-            stmnt.executeUpdate(update);
+            HelloController.connection.createStatement().executeUpdate(update);
+//            stmnt.executeUpdate(update);
         } catch (SQLException e) {throw new RuntimeException(e);}
     }
 
