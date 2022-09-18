@@ -23,7 +23,7 @@ public class home {
     static ObservableList<String> ukdivar = FXCollections.observableArrayList();
     static ObservableList<String> canadadivar = FXCollections.observableArrayList();
 
-    public void launchActivity(String activityname){
+    static public void launchActivity(String activityname){
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(home.class.getResource(activityname+".fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 1100, 1100);
@@ -71,7 +71,7 @@ public class home {
 
    static public void del(String tbl, String col, int id) {
         try {HelloController.connection.createStatement().execute(
-                    "Delete from " + tbl + "Where " +  col + "=" + id);
+                    "Delete from " + tbl + " Where " +  col + "=" + id);
         } catch (SQLException error) {System.out.println("SQL Error: " + error.getMessage());}
    }
 
