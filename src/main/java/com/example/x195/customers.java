@@ -34,10 +34,7 @@ public class customers {
         tomodifyid = Integer.parseInt(modifyTxtFld.getText());
         launchActivity("customermodify");}
 
-    public void delete() {
-        home.del("customers", "Customer_ID", )
-    }
-
+    public void delete() {home.del("customers", "Customer_ID", Integer.parseInt(deleteTxtFld.getText()));}
 
     public void initialize() {
         tblcola.setCellValueFactory(new PropertyValueFactory<>("id"));
