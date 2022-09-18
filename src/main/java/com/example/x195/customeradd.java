@@ -25,11 +25,11 @@ public class customeradd {
         divisionComboBox.setItems(divisionsar);
     }
 
-    public int incrementcolval() {
+    static public int incrementcolval(String tbl) {
         int colv = 0;
         try {
             Statement statement = HelloController.connection.createStatement();
-            ResultSet results = statement.executeQuery("Select * from customers");
+            ResultSet results = statement.executeQuery("Select * from " + tbl);
             while (results.next()) colv = results.getInt("Customer_ID");
         } catch (SQLException e) { System.out.println(e.getMessage());}
         return colv+1;
@@ -59,7 +59,7 @@ public class customeradd {
 
     public void addCustomer(ActionEvent actionEvent) {
         try {
-            int colv = incrementcolval();
+            int colv = incrementcolval("customers");
             String divisionname = divisionComboBox.getSelectionModel().getSelectedItem().toString();
             int divisionidx = divisionhm1.get(divisionname);
 
