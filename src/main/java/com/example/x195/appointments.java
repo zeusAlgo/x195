@@ -1,4 +1,6 @@
 package com.example.x195;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.scene.control.TextField;
 
@@ -8,6 +10,9 @@ public class appointments {
     public TextField modifytxtfld, deltxtfld;
     static HashMap<String, Integer> contactshm = new HashMap<>();
     static HashMap<String, Integer> usershm = new HashMap<>();
+    static ObservableList<String> contactsar = FXCollections.observableArrayList();
+    static ObservableList<String> usersar = FXCollections.observableArrayList();
+    
 
     public static int toalterid = 0;
 
