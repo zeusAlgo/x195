@@ -8,5 +8,5 @@ public class appointments {
     public void launchA(ActionEvent actionEvent) {home.launchActivity("aptadd");}
     public void launchB(ActionEvent actionEvent) {home.launchActivity("aptmmodify");}
 
-    
+
 }
