@@ -38,8 +38,10 @@ public class customermodify {
 
     public void updatecustomer() {
         try {
+            String country
+            switch()
             Statement stmnt = HelloController.connection.createStatement();
-            String update = "UPDATE customers set Customer_Name='" + nametxtfld.getText() + "', Address='" + addresstxtfld.getText() + "', Postal_Code='" + postcodetxtfld.getText()+ "', Phone='" + phonetxtfld.getText() + "', "  + "WHERE Customer_ID=" + customers.tomodifyid;
+            String update = "UPDATE customers set Customer_Name='" + nametxtfld.getText() + "', Address='" + addresstxtfld.getText() + "', Postal_Code='" + postcodetxtfld.getText()+ "', Phone='" + phonetxtfld.getText() + "', Division_ID=" +   + "WHERE Customer_ID=" + customers.tomodifyid;
         } catch (SQLException e) {throw new RuntimeException(e);}
     }
 
