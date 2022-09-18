@@ -37,7 +37,6 @@ public class customermodify {
         }
     }
 
-    //todo: test if update works
     //todo: add delete fn
     // build appts
 

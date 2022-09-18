@@ -69,6 +69,11 @@ public class home {
         return hashmap;
     }
 
+   public void del(String tbl, String col, int id) {
+        
+
+   }
+
     public void initialize() {
         countryhm.put("U.S", 1); countryhm.put("UK", 2); countryhm.put("Canada", 3);
         countryar.add("U.S."); countryar.add("UK"); countryar.add("Canada");
