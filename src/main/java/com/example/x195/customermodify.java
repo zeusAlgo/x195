@@ -63,6 +63,7 @@ public class customermodify {
         int divid = Integer.parseInt(custhm.get("divid"));
         divname = home.alldivshm.get(divid); nation = "";
 
+        //replace with swtich statement
         if (home.usdivar.contains(divname)) {divisioncombobox.setItems(home.usdivar); nation = "U.S.";}
         else if (home.ukdivar.contains(divname)) {divisioncombobox.setItems(home.ukdivar); nation = "UK";}
         else if (home.canadadivar.contains(divname)) {divisioncombobox.setItems(home.canadadivar); nation = "Canada";}
