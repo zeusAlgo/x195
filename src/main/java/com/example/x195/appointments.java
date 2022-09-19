@@ -47,23 +47,14 @@ public class appointments {
 
     public void conv2loctime() {
         //todo: get the string as input - the input string and then ldt
-//        LocalDate ldt = LocalDate.now();
-        String fmt = "dd-m-yyyy hh:mm:ss a";
-        LocalDateTime ldt = LocalDateTime.now();
-        System.out.println(ldt);
+        LocalDateTime curdt = LocalDateTime.now();
         ZoneId curzone = ZoneId.systemDefault();
-        System.out.println(curzone);
         ZoneId estzone = ZoneId.of("America/New_York");
-        System.out.println(estzone);
 
         ZonedDateTime cst2est = ldt.atZone(curzone);
         ZonedDateTime time3 = cst2est.withZoneSameInstant(estzone);
-//        ZonedDateTime cst2est = ldt.withZoneSameInstant(estzone);
         System.out.println(time3);
 
-        ZonedDateTime time2 = cst2est.withZoneSameInstant(curzone);
-        System.out.println(time2);
-//        ZonedDateTime time3 = cst2est.withZoneSameInstant();
     }
 
     public void initialize() {
