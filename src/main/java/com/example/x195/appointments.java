@@ -50,6 +50,8 @@ public class appointments {
         ZonedDateTime estzonedt = curzonedt.withZoneSameInstant(ZoneId.of("America/New_York"));
         System.out.println(estzonedt);
 
+
+
     }
 
     public void initialize() {
