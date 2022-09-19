@@ -19,8 +19,10 @@ public class aptadd {
     public void addapt(ActionEvent actionEvent) {
         try {
            int colv = home.incrementcolval("appointments");
-           Statement stmnt = HelloController.connection.createStatement();
-           String insert = "Insert into appointments values(" + colv + 
+           HelloController.connection.createStatement().execute(
+                   "Insert into appointments values(" + 
+           );
+           String insert = "Insert into appointments values(" + colv +
         } catch (SQLException e) {System.out.println("SQL Error: " + e.getMessage());}
     }
 }
