@@ -27,8 +27,7 @@ public class appointments {
     public HashMap<String, Integer> getallcustomers() {
         HashMap<String, Integer> customershm = new HashMap<>();
         try {
-            ResultSet res = HelloController.connection.createStatement().executeQuery(
-                    "Select * from customers");
+            ResultSet res = HelloController.connection.createStatement().executeQuery("Select * from customers");
             while (res.next()) {
                 String custname = res.getString("Customer_Name");
                 customershm.put(custname, res.getInt("Customer_ID"));
