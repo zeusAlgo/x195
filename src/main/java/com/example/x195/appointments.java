@@ -48,9 +48,10 @@ public class appointments {
     public void convloctime2biztime() {
         ZonedDateTime curzonedt = LocalDateTime.now().atZone(ZoneId.systemDefault());
         ZonedDateTime estzonedt = curzonedt.withZoneSameInstant(ZoneId.of("America/New_York"));
-//        System.out.println(estzonedt);
-
-
+        System.out.println(estzonedt);
+        ZonedDateTime utczonedt = curzonedt.withZoneSameInstant(ZoneId.of("UTC"));
+        System.out.println(utczonedt);
+        
     }
 
     public void initialize() {
