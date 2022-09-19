@@ -18,11 +18,16 @@ public class aptadd {
         System.out.println(LocalTime.now());
     }
 
+
+
     //todo: apt time
     // from db utc to est and to usr time
     // chk for outside biz hrs with est and usr
     // chk apt not in db
 
+
+    //todo: convert to est to chk outside biz hours
+    // display all times in local time for user
     public void addapt(ActionEvent actionEvent) {
         try {
            int colv = home.incrementcolval("appointments");

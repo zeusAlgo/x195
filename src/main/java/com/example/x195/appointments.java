@@ -6,6 +6,7 @@ import javafx.scene.control.TextField;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.ZoneId;
 import java.util.HashMap;
 
 public class appointments {
@@ -41,8 +42,9 @@ public class appointments {
     public void deleteapt(ActionEvent actionEvent) { home.del("appointments", "Appointment_ID", Integer.parseInt(deltxtfld.getText()));
     }
 
-    public void addapt() {
-
+    public void conv2loctime() {
+        ZoneId curzone = ZoneId.systemDefault();
+        System.out.println(curzone);
     }
 
     public void initialize() {
@@ -50,5 +52,6 @@ public class appointments {
        contactsar.add("Anika Costa"); contactsar.add("Daniel Garcia"); contactsar.add("Li Lee");
        usershm.put("test", 1);usershm.put("admin", 2); usersar.add("test"); usersar.add("admin");
        customershm = getallcustomers();
+       conv2loctime();
     }
 }
