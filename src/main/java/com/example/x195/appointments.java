@@ -9,6 +9,7 @@ import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.util.HashMap;
 
 public class appointments {
@@ -47,12 +48,16 @@ public class appointments {
     public void conv2loctime() {
         //todo: get the string as input - the input string and then ldt
 //        LocalDate ldt = LocalDate.now();
+        String fmt = "dd-m-yyyy hh:mm:ss a";
         LocalDateTime ldt = LocalDateTime.now();
         System.out.println(ldt);
         ZoneId curzone = ZoneId.systemDefault();
         System.out.println(curzone);
         ZoneId estzone = ZoneId.of("America/New_York");
         System.out.println(estzone);
+
+        ZonedDateTime cst2est = ldt.atZone(estzone);
+        System.out.println(cst2est);
     }
 
     public void initialize() {
