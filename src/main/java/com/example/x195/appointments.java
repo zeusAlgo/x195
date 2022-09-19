@@ -20,6 +20,7 @@ public class appointments {
     static ObservableList<String> contactsar = FXCollections.observableArrayList();
     static ObservableList<String> usersar = FXCollections.observableArrayList();
     static ObservableList<String> customersar = FXCollections.observableArrayList();
+    static ObservableList<String> timesar = FXCollections.observableArrayList();
 
     public static int toalterid = 0;
 
@@ -52,6 +53,7 @@ public class appointments {
 
         ZonedDateTime estzdt = curzdt.withZoneSameInstant(ZoneId.of("America/New_York"));
         System.out.println(estzdt);
+
         ZonedDateTime utczonedt = curzdt.withZoneSameInstant(ZoneId.of("UTC"));
         System.out.println(utczonedt);
 
@@ -61,6 +63,8 @@ public class appointments {
        contactshm.put("Anika Costa", 1);contactshm.put("Daniel Garcia", 2);contactshm.put("Li Lee", 3);
        contactsar.add("Anika Costa"); contactsar.add("Daniel Garcia"); contactsar.add("Li Lee");
        usershm.put("test", 1);usershm.put("admin", 2); usersar.add("test"); usersar.add("admin");
+       timesar.add("4 am"); timesar.addAll("5 am", "6 am", "7 am", "8 am", "9 am", "10 am", "11 am", "12 am", "1 pm", "2 pm", "3 pm", "4 pm", "5 pm", "6 pm", "7 pm", "8 pm", "9 pm", "10 pm", "11 pm");
+       System.out.println(timesar);
 
        customershm = getallcustomers();
        convloctime2biztime();
