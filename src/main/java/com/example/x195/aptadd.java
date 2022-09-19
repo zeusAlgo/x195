@@ -30,9 +30,8 @@ public class aptadd {
                            "', '" + "2022-08-30 17:02:46" + "', '" + "script" + "', '" +
                            "2022-08-30 17:02:46" + "', '" + "script" + "', " + custid + ", " +
                            userid + ", " + contactid + ");"
-                   
+
            );
-           String insert = "Insert into appointments values(" + colv +
         } catch (SQLException e) {System.out.println("SQL Error: " + e.getMessage());}
     }
 }
