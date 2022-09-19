@@ -15,7 +15,7 @@ import java.util.HashMap;
 public class appointments {
     public TextField modifytxtfld, deltxtfld;
     static HashMap<String, Integer> contactshm = new HashMap<>(), usershm = new HashMap<>(), customershm = new HashMap<>();
-    static ObservableList<String> contactsar = FXCollections.observableArrayList(), usersar = FXCollections.observableArrayList(), customersar = FXCollections.observableArrayList(), timesar = FXCollections.observableArrayList(), months = FXCollections.observableArrayList();static ObservableList<Integer> days = FXCollections.observableArrayList();
+    static ObservableList<String> contactsar = FXCollections.observableArrayList(), usersar = FXCollections.observableArrayList(), customersar = FXCollections.observableArrayList(), timesar = FXCollections.observableArrayList(), monthsar = FXCollections.observableArrayList();static ObservableList<Integer> daysar = FXCollections.observableArrayList();
 
     public static int toalterid = 0;
 
@@ -71,6 +71,7 @@ public class appointments {
        contactsar.addAll("Anika Costa", "Daniel Garcia", "Li Lee" );
        usershm.put("test", 1);usershm.put("admin", 2); usersar.addAll("test", "admin");
        timesar.addAll("4 am", "5 am", "6 am", "7 am", "8 am", "9 am", "10 am", "11 am", "12 am", "1 pm", "2 pm", "3 pm", "4 pm", "5 pm", "6 pm", "7 pm", "8 pm", "9 pm", "10 pm", "11 pm");
+       mont
 
        String rndtime = "5 am";
        isbizopen(rndtime);
