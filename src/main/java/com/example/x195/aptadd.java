@@ -13,6 +13,8 @@ public class aptadd {
         contactcombobox.setItems(appointments.contactsar);
         customercombobox.setItems(appointments.customersar);
     }
+    
+    //todo: apt time
 
     public void addapt(ActionEvent actionEvent) {
         try {
@@ -29,9 +31,7 @@ public class aptadd {
                            typetxtfld.getText() + "', '" + apttime + "', '" + apttime + 
                            "', '" + "2022-08-30 17:02:46" + "', '" + "script" + "', '" +
                            "2022-08-30 17:02:46" + "', '" + "script" + "', " + custid + ", " +
-                           userid + ", " + contactid + ");"
-
-           );
+                           userid + ", " + contactid + ");");
         } catch (SQLException e) {System.out.println("SQL Error: " + e.getMessage());}
     }
 }
