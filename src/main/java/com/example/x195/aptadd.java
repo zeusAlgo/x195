@@ -4,6 +4,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 
 import java.sql.SQLException;
+import java.sql.Statement;
 
 public class aptadd {
     public ComboBox usercombobox, apttimecombobox, customercombobox, contactcombobox;
@@ -17,7 +18,9 @@ public class aptadd {
 
     public void addapt(ActionEvent actionEvent) {
         try {
-           int colv = customersadd.incrementcolval("appointments");
+           int colv = home.incrementcolval("appointments");
+           Statement stmnt = HelloController.connection.createStatement();
+           String insert = "Insert into appointments values(" + colv + 
         } catch (SQLException e) {System.out.println("SQL Error: " + e.getMessage());}
     }
 }
