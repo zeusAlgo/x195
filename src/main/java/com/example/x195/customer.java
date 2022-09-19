@@ -28,4 +28,9 @@ public class customer {
     public String getphone() {return phone;}
     public int getdivid() {return divid;}
 
+    //mapping between the db
+    // get instance of customer with jdbc
+    // missing types
+    // i can't find the id. perhaps
+    // java need a model. model maps to a pojo
 }

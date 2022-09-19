@@ -6,6 +6,8 @@ import javafx.scene.control.TextField;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.HashMap;
 
@@ -44,6 +46,9 @@ public class appointments {
 
     public void conv2loctime() {
         //todo: get the string as input - the input string and then ldt
+//        LocalDate ldt = LocalDate.now();
+        LocalDateTime ldt = LocalDateTime.now();
+        System.out.println(ldt);
         ZoneId curzone = ZoneId.systemDefault();
         System.out.println(curzone);
         ZoneId estzone = ZoneId.of("America/New_York");
