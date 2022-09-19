@@ -13,6 +13,6 @@
       <ComboBox fx:id="apttimecombobox" layoutX="426.0" layoutY="349.0" prefWidth="150.0" />
       <ComboBox fx:id="customercombobox" layoutX="425.0" layoutY="423.0" prefWidth="150.0" />
       <ComboBox fx:id="contactcombobox" layoutX="426.0" layoutY="500.0" prefWidth="150.0" />
-      <Button layoutX="469.0" layoutY="576.0" mnemonicParsing="false" text="Save" />
+      <Button onAction="#addapt" layoutX="469.0" layoutY="576.0" mnemonicParsing="false" text="Save" />
    </children>
 </AnchorPane>

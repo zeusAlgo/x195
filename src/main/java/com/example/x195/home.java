@@ -75,6 +75,16 @@ public class home {
         } catch (SQLException error) {System.out.println("SQL Error: " + error.getMessage());}
    }
 
+    static public int incrementcolval(String tbl) {
+        int colv = 0;
+        try {
+            Statement statement = HelloController.connection.createStatement();
+            ResultSet results = statement.executeQuery("Select * from " + tbl);
+            while (results.next()) colv = results.getInt("Customer_ID");
+        } catch (SQLException e) { System.out.println(e.getMessage());}
+        return colv+1;
+    }
+
     public void initialize() {
         countryhm.put("U.S", 1); countryhm.put("UK", 2); countryhm.put("Canada", 3);
         countryar.add("U.S."); countryar.add("UK"); countryar.add("Canada");
