@@ -48,8 +48,7 @@ public class appointments {
     public void convloctime2biztime() {
         ZonedDateTime curzonedt = LocalDateTime.now().atZone(ZoneId.systemDefault());
         ZonedDateTime estzonedt = curzonedt.withZoneSameInstant(ZoneId.of("America/New_York"));
-        System.out.println(estzonedt);
-
+//        System.out.println(estzonedt);
 
 
     }
@@ -58,6 +57,7 @@ public class appointments {
        contactshm.put("Anika Costa", 1);contactshm.put("Daniel Garcia", 2);contactshm.put("Li Lee", 3);
        contactsar.add("Anika Costa"); contactsar.add("Daniel Garcia"); contactsar.add("Li Lee");
        usershm.put("test", 1);usershm.put("admin", 2); usersar.add("test"); usersar.add("admin");
+
        customershm = getallcustomers();
        convloctime2biztime();
     }
