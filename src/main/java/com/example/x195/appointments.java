@@ -14,13 +14,8 @@ import java.util.HashMap;
 
 public class appointments {
     public TextField modifytxtfld, deltxtfld;
-    static HashMap<String, Integer> contactshm = new HashMap<>();
-    static HashMap<String, Integer> usershm = new HashMap<>();
-    static HashMap<String, Integer> customershm = new HashMap<>();
-    static ObservableList<String> contactsar = FXCollections.observableArrayList();
-    static ObservableList<String> usersar = FXCollections.observableArrayList();
-    static ObservableList<String> customersar = FXCollections.observableArrayList();
-    static ObservableList<String> timesar = FXCollections.observableArrayList();
+    static HashMap<String, Integer> contactshm = new HashMap<>(), usershm = new HashMap<>(), customershm = new HashMap<>();
+    static ObservableList<String> contactsar = FXCollections.observableArrayList(), usersar = FXCollections.observableArrayList(), customersar = FXCollections.observableArrayList(), timesar = FXCollections.observableArrayList(), months = FXCollections.observableArrayList();static ObservableList<Integer> days = FXCollections.observableArrayList();
 
     public static int toalterid = 0;
 
@@ -61,11 +56,15 @@ public class appointments {
     public boolean isbizopen(String time) {
         boolean bool = false;
         time = time.substring(0, 1);
-        System.out.println(time);
+        int hr = Integer.parseInt(time);
+        System.out.println(hr);
+
 
 
         return bool;
     }
+
+    //todo: add month and days to layout apt add
 
     public void initialize() {
        contactshm.put("Anika Costa", 1);contactshm.put("Daniel Garcia", 2);contactshm.put("Li Lee", 3);
@@ -76,7 +75,7 @@ public class appointments {
        String rndtime = "5 am";
        isbizopen(rndtime);
        customershm = getallcustomers();
-       convloctime2biztime();
+//       convloctime2biztime();
 
     }
 }
