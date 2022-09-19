@@ -15,7 +15,8 @@ import java.util.HashMap;
 public class appointments {
     public TextField modifytxtfld, deltxtfld;
     static HashMap<String, Integer> contactshm = new HashMap<>(), usershm = new HashMap<>(), customershm = new HashMap<>();
-    static ObservableList<String> contactsar = FXCollections.observableArrayList(), usersar = FXCollections.observableArrayList(), customersar = FXCollections.observableArrayList(), timesar = FXCollections.observableArrayList(), monthsar = FXCollections.observableArrayList();static ObservableList<Integer> daysar = FXCollections.observableArrayList();
+    static ObservableList<String> contactsar = FXCollections.observableArrayList(), usersar = FXCollections.observableArrayList("test", "admin"), customersar = FXCollections.observableArrayList(), timesar = FXCollections.observableArrayList("4 am", "5 am", "6 am", "7 am", "8 am", "9 am", "10 am", "11 am", "12 am", "1 pm", "2 pm", "3 pm", "4 pm", "5 pm", "6 pm", "7 pm", "8 pm", "9 pm", "10 pm", "11 pm"), monthsar = FXCollections.observableArrayList("JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER",
+               "OCTOBER", "NOVEMBER", "DECEMEBER");static ObservableList<Integer> daysar = FXCollections.observableArrayList(1, 2, 3, 4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31);
 
     public static int toalterid = 0;
 
@@ -68,10 +69,8 @@ public class appointments {
 
     public void initialize() {
        contactshm.put("Anika Costa", 1);contactshm.put("Daniel Garcia", 2);contactshm.put("Li Lee", 3);
-       contactsar.addAll("Anika Costa", "Daniel Garcia", "Li Lee" );
-       usershm.put("test", 1);usershm.put("admin", 2); usersar.addAll("test", "admin");
-       timesar.addAll("4 am", "5 am", "6 am", "7 am", "8 am", "9 am", "10 am", "11 am", "12 am", "1 pm", "2 pm", "3 pm", "4 pm", "5 pm", "6 pm", "7 pm", "8 pm", "9 pm", "10 pm", "11 pm");
-       mont
+       usershm.put("test", 1);usershm.put("admin", 2);
+       
 
        String rndtime = "5 am";
        isbizopen(rndtime);
