@@ -56,10 +56,12 @@ public class appointments {
         ZoneId estzone = ZoneId.of("America/New_York");
         System.out.println(estzone);
 
-        ZonedDateTime cst2est = ldt.atZone(estzone);
-        System.out.println(cst2est);
+        ZonedDateTime cst2est = ldt.atZone(curzone);
+        ZonedDateTime time3 = cst2est.withZoneSameInstant(estzone);
+//        ZonedDateTime cst2est = ldt.withZoneSameInstant(estzone);
+        System.out.println(time3);
 
-        ZonedDateTime time2 = cst2est.withZoneSameInstant(estzone);
+        ZonedDateTime time2 = cst2est.withZoneSameInstant(curzone);
         System.out.println(time2);
 //        ZonedDateTime time3 = cst2est.withZoneSameInstant();
     }
