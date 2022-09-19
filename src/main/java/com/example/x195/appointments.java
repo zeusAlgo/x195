@@ -64,7 +64,7 @@ public class appointments {
     }
 
     //todo: add month and days to layout apt add
-
+    // get combo box vals
     public void initialize() {
        contactshm.put("Anika Costa", 1);contactshm.put("Daniel Garcia", 2);contactshm.put("Li Lee", 3);
        usershm.put("test", 1);usershm.put("admin", 2);
