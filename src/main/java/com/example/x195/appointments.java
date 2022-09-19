@@ -58,6 +58,10 @@ public class appointments {
 
         ZonedDateTime cst2est = ldt.atZone(estzone);
         System.out.println(cst2est);
+
+        ZonedDateTime time2 = cst2est.withZoneSameInstant(estzone);
+        System.out.println(time2);
+//        ZonedDateTime time3 = cst2est.withZoneSameInstant();
     }
 
     public void initialize() {
