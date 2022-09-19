@@ -7,14 +7,13 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 
 public class aptadd {
-    public ComboBox usercombobox, apttimecombobox, customercombobox, contactcombobox;
+    public ComboBox usercombobox, apttimecombobox, customercombobox, contactcombobox, monthcombobox, daycombobox;
     public TextField titletxtfld, desctxtfld, loctxtfld, typetxtfld;
 
     public void initialize() {
-        usercombobox.setItems(appointments.usersar);
-        contactcombobox.setItems(appointments.contactsar);
-        customercombobox.setItems(appointments.customersar);
-        apttimecombobox.setItems(appointments.timesar);
+        usercombobox.setItems(appointments.usersar);contactcombobox.setItems(appointments.contactsar);
+        customercombobox.setItems(appointments.customersar);apttimecombobox.setItems(appointments.timesar);
+        monthcombobox.setItems(appointments.monthsar);daycombobox.setItems(appointments.daysar);
 
         System.out.println(LocalTime.now());
     }
