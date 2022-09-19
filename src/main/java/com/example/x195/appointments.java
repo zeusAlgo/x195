@@ -4,6 +4,8 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.scene.control.TextField;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.HashMap;
 
 public class appointments {
@@ -13,7 +15,6 @@ public class appointments {
     static ObservableList<String> contactsar = FXCollections.observableArrayList();
     static ObservableList<String> usersar = FXCollections.observableArrayList();
 
-
     public static int toalterid = 0;
 
     public void launchA(ActionEvent actionEvent) {home.launchActivity("aptadd");}
@@ -21,8 +22,16 @@ public class appointments {
         toalterid = Integer.parseInt(modifytxtfld.getText());
         home.launchActivity("aptmmodify");}
 
-    public void getallcustomers() {
-        
+    public HashMap<String, Integer> getallcustomers() {
+        HashMap<String, Integer> customershm = new HashMap<>();
+        try {
+
+            ResultSet res = HelloController.connection.createStatement().executeQuery(
+                    "Select * from customers");
+            while (res.next()) {
+                customershm.put();
+            }
+        } catch (SQLException e) {System.out.println(e.getMessage());}
     }
 
     public void deleteapt(ActionEvent actionEvent) { home.del("appointments", "Appointment_ID", Integer.parseInt(deltxtfld.getText()));
