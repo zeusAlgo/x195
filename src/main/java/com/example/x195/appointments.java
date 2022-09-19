@@ -29,7 +29,10 @@ public class appointments {
             ResultSet res = HelloController.connection.createStatement().executeQuery(
                     "Select * from customers");
             while (res.next()) {
-                customershm.put(res.getString("Customer_Name"), res.getInt("Customer_ID"));}
+                String custname = res.getString("Customer_Name");
+                customershm.put(custname, res.getInt("Customer_ID"));
+                customersar.add(custname);
+            }
         } catch (SQLException e) {System.out.println(e.getMessage());}
         return customershm;
     }
