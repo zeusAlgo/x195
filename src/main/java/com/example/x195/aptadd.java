@@ -13,8 +13,11 @@ public class aptadd {
         contactcombobox.setItems(appointments.contactsar);
         customercombobox.setItems(appointments.customersar);
     }
-    
+
     //todo: apt time
+    // from db utc to est and to usr time
+    // chk for outside biz hrs with est and usr
+    // chk apt not in db
 
     public void addapt(ActionEvent actionEvent) {
         try {
