@@ -12,6 +12,7 @@ public class appointments {
     public TextField modifytxtfld, deltxtfld;
     static HashMap<String, Integer> contactshm = new HashMap<>();
     static HashMap<String, Integer> usershm = new HashMap<>();
+    static HashMap<String, Integer> customershm = new HashMap<>();
     static ObservableList<String> contactsar = FXCollections.observableArrayList();
     static ObservableList<String> usersar = FXCollections.observableArrayList();
     static ObservableList<String> customersar = FXCollections.observableArrayList();
@@ -44,6 +45,6 @@ public class appointments {
        contactshm.put("Anika Costa", 1);contactshm.put("Daniel Garcia", 2);contactshm.put("Li Lee", 3);
        contactsar.add("Anika Costa"); contactsar.add("Daniel Garcia"); contactsar.add("Li Lee");
        usershm.put("test", 1);usershm.put("admin", 2); usersar.add("test"); usersar.add("admin");
-
+       customershm = getallcustomers();
     }
 }
