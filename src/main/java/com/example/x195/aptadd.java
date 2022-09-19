@@ -14,6 +14,7 @@ public class aptadd {
         usercombobox.setItems(appointments.usersar);
         contactcombobox.setItems(appointments.contactsar);
         customercombobox.setItems(appointments.customersar);
+        apttimecombobox.setItems(appointments.timesar);
 
         System.out.println(LocalTime.now());
     }
