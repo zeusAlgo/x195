@@ -42,6 +42,7 @@ public class appointments {
 
     public void initialize() {
        contactshm.put("Anika Costa", 1);contactshm.put("Daniel Garcia", 2);contactshm.put("Li Lee", 3);
+       contactsar.add("Anika Costa"); contactsar.add("Daniel Garcia"); contactsar.add("Li Lee");
        usershm.put("test", 1);usershm.put("admin", 2);
 
     }
