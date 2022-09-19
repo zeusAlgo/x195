@@ -43,6 +43,7 @@ public class appointments {
     }
 
     public void conv2loctime() {
+        //todo: get the string as input - the input string and then ldt
         ZoneId curzone = ZoneId.systemDefault();
         System.out.println(curzone);
         ZoneId estzone = ZoneId.of("America/New_York");
