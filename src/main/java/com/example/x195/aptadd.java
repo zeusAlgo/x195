@@ -3,6 +3,8 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import java.sql.SQLException;
+import java.time.LocalDate;
+import java.time.LocalTime;
 
 public class aptadd {
     public ComboBox usercombobox, apttimecombobox, customercombobox, contactcombobox;
@@ -12,6 +14,8 @@ public class aptadd {
         usercombobox.setItems(appointments.usersar);
         contactcombobox.setItems(appointments.contactsar);
         customercombobox.setItems(appointments.customersar);
+
+        System.out.println(LocalTime.now());
     }
 
     //todo: apt time
