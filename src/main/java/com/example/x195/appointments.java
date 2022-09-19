@@ -45,15 +45,10 @@ public class appointments {
     public void deleteapt(ActionEvent actionEvent) { home.del("appointments", "Appointment_ID", Integer.parseInt(deltxtfld.getText()));
     }
 
-    public void conv2loctime() {
-        //todo: get the string as input - the input string and then ldt
-        LocalDateTime curdt = LocalDateTime.now();
-        ZoneId curzone = ZoneId.systemDefault();
-        ZoneId estzone = ZoneId.of("America/New_York");
-
-        ZonedDateTime cst2est = curdt.atZone(curzone);
-        ZonedDateTime time3 = cst2est.withZoneSameInstant(estzone);
-        System.out.println(time3);
+    public void convloctime2biztime() {
+        ZonedDateTime curzonedt = LocalDateTime.now().atZone(ZoneId.systemDefault());
+        ZonedDateTime estzonedt = curzonedt.withZoneSameInstant(ZoneId.of("America/New_York"));
+        System.out.println(estzonedt);
 
     }
 
@@ -62,6 +57,6 @@ public class appointments {
        contactsar.add("Anika Costa"); contactsar.add("Daniel Garcia"); contactsar.add("Li Lee");
        usershm.put("test", 1);usershm.put("admin", 2); usersar.add("test"); usersar.add("admin");
        customershm = getallcustomers();
-       conv2loctime();
+       convloctime2biztime();
     }
 }
