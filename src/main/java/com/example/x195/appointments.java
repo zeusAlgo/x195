@@ -14,6 +14,7 @@ public class appointments {
     static HashMap<String, Integer> usershm = new HashMap<>();
     static ObservableList<String> contactsar = FXCollections.observableArrayList();
     static ObservableList<String> usersar = FXCollections.observableArrayList();
+    static ObservableList<String> customersar = FXCollections.observableArrayList();
 
     public static int toalterid = 0;
 
@@ -25,13 +26,12 @@ public class appointments {
     public HashMap<String, Integer> getallcustomers() {
         HashMap<String, Integer> customershm = new HashMap<>();
         try {
-
             ResultSet res = HelloController.connection.createStatement().executeQuery(
                     "Select * from customers");
             while (res.next()) {
-                customershm.put();
-            }
+                customershm.put(res.getString("Customer_Name"), res.getInt("Customer_ID"));}
         } catch (SQLException e) {System.out.println(e.getMessage());}
+        return customershm;
     }
 
     public void deleteapt(ActionEvent actionEvent) { home.del("appointments", "Appointment_ID", Integer.parseInt(deltxtfld.getText()));
