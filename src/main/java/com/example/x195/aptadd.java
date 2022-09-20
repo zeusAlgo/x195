@@ -28,23 +28,11 @@ public class aptadd {
         int hr = Integer.parseInt(hrS.substring(0, 1));
 
         LocalDateTime apt = LocalDateTime.of(2022, month, day, hr, 0);
-//        ZonedDateTime aptestzdt = LocalDateTime.of(2022, month, day, hr, 0).atZone("America/New_York");
         ZonedDateTime aptcurzdt = LocalDateTime.of(2022, month, day, hr, 0).atZone(ZoneId.systemDefault());
-
         ZonedDateTime aptestzdt = aptcurzdt.withZoneSameInstant(ZoneId.of("America/New_York"));
 
         int hour = aptestzdt.getHour();
-
-        //todo: check if hour in allowed time slots
-
-        System.out.println(apt);
-        System.out.println(aptcurzdt);
-        System.out.println(aptestzdt);
-
-        System.out.println(hour);
-
         String dayofweek = aptestzdt.getDayOfWeek().toString();
-        System.out.println(dayofweek);
 
         if (hour < 8 | hour > 22) return false;
         if (dayofweek.equals("SATURDAY") | dayofweek.equals("SUNDAY")) return false;
@@ -59,9 +47,7 @@ public class aptadd {
                 String time2 = time.substring(11, 13);
                 String hr3 = String.valueOf(hour);
                 if (time1.equals(hour) | time2.equals(hr3)) return false;
-
-
-
+                //perhaps check for contact ids
             }
         } catch (SQLException e) {System.out.println("SQL Error: " + e.getMessage());}
         return bool;
