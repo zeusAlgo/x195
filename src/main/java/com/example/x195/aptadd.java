@@ -17,7 +17,7 @@ public class aptadd {
     }
 
     public boolean isbizopen() {
-        boolean bool = false;
+        boolean bool = true;
 
         int month = monthcombobox.getSelectionModel().getSelectedIndex()+1;
         int day = (int) daycombobox.getSelectionModel().getSelectedItem();
@@ -42,10 +42,9 @@ public class aptadd {
 
         String dayofweek = aptestzdt.getDayOfWeek().toString();
         System.out.println(dayofweek);
-        
-        if (hour < 8 | hour > 10) return false;
 
-
+        if (hour < 8 | hour > 22) return false;
+        if (dayofweek.equals("SATURDAY") | dayofweek.equals("SUNDAY")) return false;
 
         return bool;
     }
