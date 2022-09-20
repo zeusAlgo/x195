@@ -49,7 +49,7 @@ public class aptadd {
         if (dayofweek.equals("SATURDAY") | dayofweek.equals("SUNDAY")) return false;
 
         ResultSet rs = HelloController.connection.createStatement().executeQuery(
-                "Select from ")
+                "Select * from ")
         return bool;
     }
 
