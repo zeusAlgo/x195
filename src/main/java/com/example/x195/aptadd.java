@@ -30,15 +30,21 @@ public class aptadd {
 
         ZonedDateTime aptestzdt = aptcurzdt.withZoneSameInstant(ZoneId.of("America/New_York"));
 
-        int hr2 = aptestzdt.getHour();
+        int hour = aptestzdt.getHour();
 
         //todo: check if hour in allowed time slots
-        
+
         System.out.println(apt);
         System.out.println(aptcurzdt);
         System.out.println(aptestzdt);
 
-        System.out.println(hr2);
+        System.out.println(hour);
+
+        String dayofweek = aptestzdt.getDayOfWeek().toString();
+        System.out.println(dayofweek);
+        
+        if (hour < 8 | hour > 10) return false;
+
 
 
         return bool;
