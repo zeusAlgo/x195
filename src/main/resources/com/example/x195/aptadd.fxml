@@ -10,11 +10,11 @@
       <TextField fx:id="loctxtfld" layoutX="415.0" layoutY="226.0" promptText="Location" />
       <TextField fx:id="typetxtfld" layoutX="415.0" layoutY="289.0" promptText="Type" />
       <ComboBox fx:id="usercombobox" layoutX="425.0" layoutY="39.0" prefWidth="150.0" />
-      <ComboBox fx:id="apttimecombobox" layoutX="425.0" layoutY="488.0" prefWidth="150.0" />
+      <ComboBox fx:id="apttimecombobox" onAction="#isbizopen"  layoutX="425.0" layoutY="488.0" prefWidth="150.0" />
       <ComboBox fx:id="customercombobox" layoutX="425.0" layoutY="547.0" prefWidth="150.0" />
       <ComboBox fx:id="contactcombobox" layoutX="426.0" layoutY="632.0" prefWidth="150.0" />
       <Button layoutX="476.0" layoutY="731.0" mnemonicParsing="false" onAction="#addapt" text="Save" />
       <ComboBox fx:id="monthcombobox" layoutX="425.0" layoutY="354.0" prefWidth="150.0" />
-      <ComboBox fx:id="daycombobox" onAction="#isbizopen" layoutX="425.0" layoutY="420.0" prefWidth="150.0" />
+      <ComboBox fx:id="daycombobox" layoutX="425.0" layoutY="420.0" prefWidth="150.0" />
    </children>
 </AnchorPane>
