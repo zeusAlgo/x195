@@ -48,8 +48,12 @@ public class aptadd {
         if (hour < 8 | hour > 22) return false;
         if (dayofweek.equals("SATURDAY") | dayofweek.equals("SUNDAY")) return false;
 
-        ResultSet rs = HelloController.connection.createStatement().executeQuery(
-                "Select * from ")
+        int contactid = appointments.contactshm.get(contactcombobox.getSelectionModel().getSelectedItem());
+
+        ResultSet rs = HelloController.connection.createStatement().executeQuery("Select * from appointments");
+        while (rs.next()) {
+            
+        }
         return bool;
     }
 
