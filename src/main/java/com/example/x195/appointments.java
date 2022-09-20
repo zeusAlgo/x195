@@ -60,7 +60,7 @@ public class appointments {
        contactshm.put("Anika Costa", 1);contactshm.put("Daniel Garcia", 2);contactshm.put("Li Lee", 3);
        usershm.put("test", 1);usershm.put("admin", 2);
 
-       isbizopen("5 am");
+//       isbizopen("5 am");
        customershm = getallcustomers();
 //       convloctime2biztime();
     }

@@ -3,8 +3,7 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import java.sql.SQLException;
-import java.time.LocalDate;
-import java.time.LocalTime;
+import java.time.*;
 
 public class aptadd {
     public ComboBox usercombobox, apttimecombobox, customercombobox, contactcombobox, monthcombobox, daycombobox;
@@ -18,14 +17,18 @@ public class aptadd {
         System.out.println(LocalTime.now());
     }
 
-    public boolean isbizopen(String time) {
+    public boolean isbizopen() {
         boolean bool = false;
-        time = time.substring(0, 1);
-        int hr = Integer.parseInt(time);
-        System.out.println(hr);
 
         int month = (int) monthcombobox.getSelectionModel().getSelectedItem();
         int day = (int) daycombobox.getSelectionModel().getSelectedItem();
+        String hrS = (String) apttimecombobox.getSelectionModel().getSelectedItem();
+        int hr = Integer.parseInt(hrS.substring(0, 1));
+
+        LocalDateTime candapt = LocalDateTime.of(2022, month, day, hr, 0);
+        ZonedDateTime candaptzdt = LocalDateTime.of(2022, month, day, hr, 0).atZone(ZoneId.systemDefault());
+        System.out.println(candapt);
+        System.out.println(candaptzdt);
 
 
         return bool;
