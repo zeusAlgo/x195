@@ -24,10 +24,10 @@ public class aptadd {
         String hrS = (String) apttimecombobox.getSelectionModel().getSelectedItem();
         int hr = Integer.parseInt(hrS.substring(0, 1));
 
-        LocalDateTime candapt = LocalDateTime.of(2022, month, day, hr, 0);
-        ZonedDateTime candaptzdt = LocalDateTime.of(2022, month, day, hr, 0).atZone(ZoneId.systemDefault());
-        System.out.println(candapt);
-        System.out.println(candaptzdt);
+        LocalDateTime apt = LocalDateTime.of(2022, month, day, hr, 0);
+        ZonedDateTime aptcurzdt = LocalDateTime.of(2022, month, day, hr, 0).atZone(ZoneId.systemDefault());
+        System.out.println(apt);
+        System.out.println(aptcurzdt);
 
 
         return bool;
