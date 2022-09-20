@@ -52,16 +52,7 @@ public class appointments {
         System.out.println(utczonedt);
     }
 
-    public boolean isbizopen(String time) {
-        boolean bool = false;
-        time = time.substring(0, 1);
-        int hr = Integer.parseInt(time);
-        System.out.println(hr);
 
-
-
-        return bool;
-    }
 
     //todo: add month and days to layout apt add
     // get combo box vals

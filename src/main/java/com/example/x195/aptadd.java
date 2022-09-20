@@ -18,7 +18,18 @@ public class aptadd {
         System.out.println(LocalTime.now());
     }
 
+    public boolean isbizopen(String time) {
+        boolean bool = false;
+        time = time.substring(0, 1);
+        int hr = Integer.parseInt(time);
+        System.out.println(hr);
 
+        int month = (int) monthcombobox.getSelectionModel().getSelectedItem();
+        int day = (int) daycombobox.getSelectionModel().getSelectedItem();
+
+
+        return bool;
+    }
 
     //todo: apt time
     // from db utc to est and to usr time
