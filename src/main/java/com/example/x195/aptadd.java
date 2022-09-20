@@ -2,6 +2,8 @@ package com.example.x195;
 import javafx.event.ActionEvent;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
+
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.*;
 
@@ -46,8 +48,11 @@ public class aptadd {
         if (hour < 8 | hour > 22) return false;
         if (dayofweek.equals("SATURDAY") | dayofweek.equals("SUNDAY")) return false;
 
+        ResultSet rs = HelloController.connection.createStatement().executeQuery(
+                "Select from ")
         return bool;
     }
+
 
     //todo: apt time
     // from db utc to est and to usr time
