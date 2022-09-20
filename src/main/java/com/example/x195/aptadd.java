@@ -14,7 +14,6 @@ public class aptadd {
         customercombobox.setItems(appointments.customersar);apttimecombobox.setItems(appointments.timesar);
         monthcombobox.setItems(appointments.monthsar);daycombobox.setItems(appointments.daysar);
 
-        System.out.println(LocalTime.now());
     }
 
     public boolean isbizopen() {
