@@ -1,4 +1,5 @@
 package com.example.x195;
+import com.mysql.cj.jdbc.exceptions.SQLError;
 import javafx.event.ActionEvent;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
@@ -50,10 +51,19 @@ public class aptadd {
 
         int contactid = appointments.contactshm.get(contactcombobox.getSelectionModel().getSelectedItem());
 
-        ResultSet rs = HelloController.connection.createStatement().executeQuery("Select * from appointments");
-        while (rs.next()) {
-            
-        }
+        try {
+            ResultSet rs = HelloController.connection.createStatement().executeQuery("Select * from appointments");
+            while (rs.next()) {
+                String time = rs.getString("Start");
+                String time1 = time.substring(11, 12);
+                String time2 = time.substring(11, 13);
+                String hr3 = String.valueOf(hour);
+                if (time1.equals(hour) | time2.equals(hr3)) return false;
+
+
+
+            }
+        } catch (SQLError e) {System.out.println("SQL Error: " + e.getMessage());}
         return bool;
     }
 
