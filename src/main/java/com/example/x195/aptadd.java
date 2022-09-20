@@ -63,7 +63,7 @@ public class aptadd {
 
 
             }
-        } catch (SQLError e) {System.out.println("SQL Error: " + e.getMessage());}
+        } catch (SQLException e) {System.out.println("SQL Error: " + e.getMessage());}
         return bool;
     }
 
