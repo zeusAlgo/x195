@@ -83,7 +83,7 @@ public class aptmodify {
                     contactid = appointments.contactshm.get(contactcombobox.getSelectionModel().getSelectedItem());
             HelloController.connection.createStatement().executeUpdate("Update appointments set Title='" + titletxtfld.getText()
                     + "', Description='" + descriptiontxtfld.getText() + "', Location='" + locationtxtfld.getText() +
-                    "', Type='" + 
+                    "', Type='" + typetxtfld.getText() + "', Start='" + aptstart1 + "', End='" + aptend1 + "', "
                     "where Appointment_ID=" + appointments.toalterid);
             HelloController.connection.createStatement().execute(
                    "Insert into appointments values(" + colv + ", '" + titletxtfld.getText() +
