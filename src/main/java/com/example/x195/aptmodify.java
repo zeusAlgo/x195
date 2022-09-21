@@ -37,7 +37,9 @@ public class aptmodify {
         HashMap<String, String> apthm = getaptinfo(appointments.toalterid);
         titletxtfld.setText(apthm.get("title"));descriptiontxtfld.setText(apthm.get("description"));
         locationtxtfld.setText(apthm.get("location"));typetxtfld.setText(apthm.get("type"));
-
+        userComboBox.setItems(appointments.usersar); contactcombobox.setItems(appointments.contactsar);
+        monthcombox.setItems(appointments.monthsar); daycombobox.setItems(appointments.daysar);
+        timescombobox.setItems();
 
 
     }
