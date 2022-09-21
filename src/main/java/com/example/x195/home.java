@@ -14,14 +14,8 @@ import java.util.HashMap;
 
 public class home {
     public Button customersBtn, aptBtn, reportsBtn;
-    static HashMap<String, Integer> countryhm = new HashMap<>(), usdivhm = new HashMap<>();
-    static HashMap<String, Integer> ukdivhm = new HashMap<>(), canadadivhm = new HashMap<>();
-    static HashMap<Integer, String> alldivshm = new HashMap<>();
-
-    static ObservableList<String> countryar = FXCollections.observableArrayList();
-    static ObservableList<String> usdivar = FXCollections.observableArrayList();
-    static ObservableList<String> ukdivar = FXCollections.observableArrayList();
-    static ObservableList<String> canadadivar = FXCollections.observableArrayList();
+    static HashMap<String, Integer> countryhm = new HashMap<>(), usdivhm = new HashMap<>(), ukdivhm = new HashMap<>(), canadadivhm = new HashMap<>();static HashMap<Integer, String> alldivshm = new HashMap<>();
+    static ObservableList<String> countryar = FXCollections.observableArrayList(), usdivar = FXCollections.observableArrayList(), ukdivar = FXCollections.observableArrayList(), canadadivar = FXCollections.observableArrayList();
 
     static public void launchActivity(String activityname){
         try {
