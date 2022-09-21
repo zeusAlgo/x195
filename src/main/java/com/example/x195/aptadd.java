@@ -73,7 +73,6 @@ public class aptadd {
             int colv = home.incrementcolval("appointments", "Appointment_ID");
             String hrS = (String) apttimecombobox.getSelectionModel().getSelectedItem();
             
-            
             int month = monthcombobox.getSelectionModel().getSelectedIndex()+1;
             int day = (int) daycombobox.getSelectionModel().getSelectedItem();
             int hr = Integer.parseInt(hrS.substring(0, 1));
