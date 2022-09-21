@@ -50,7 +50,7 @@ public class customeradd {
 
     public void addCustomer(ActionEvent actionEvent) {
         try {
-            int colv = home.incrementcolval("customers");
+            int colv = home.incrementcolval("customers", "Customer_ID");
             String divisionname = divisionComboBox.getSelectionModel().getSelectedItem().toString();
             int divisionidx = divisionhm1.get(divisionname);
 

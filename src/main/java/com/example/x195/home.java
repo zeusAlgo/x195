@@ -75,12 +75,12 @@ public class home {
         } catch (SQLException error) {System.out.println("SQL Error: " + error.getMessage());}
    }
 
-    static public int incrementcolval(String tbl) {
+    static public int incrementcolval(String tbl, String col) {
         int colv = 0;
         try {
             Statement statement = HelloController.connection.createStatement();
             ResultSet results = statement.executeQuery("Select * from " + tbl);
-            while (results.next()) colv = results.getInt("Customer_ID");
+            while (results.next()) colv = results.getInt(col);
         } catch (SQLException e) { System.out.println(e.getMessage());}
         return colv+1;
     }
