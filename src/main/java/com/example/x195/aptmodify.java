@@ -78,20 +78,22 @@ public class aptmodify {
             ZonedDateTime aptutc = aptcurzdt.withZoneSameInstant(ZoneId.of("UTC")), aptutcend = aptutc.plusHours(1);
             LocalDateTime aptstart1 = aptutc.toLocalDateTime(), aptend1 = aptutcend.toLocalDateTime();
 
+
             int custid = appointments.customershm.get(customercombobox.getSelectionModel().getSelectedItem()),
                     userid = appointments.usershm.get(userComboBox.getSelectionModel().getSelectedItem()),
                     contactid = appointments.contactshm.get(contactcombobox.getSelectionModel().getSelectedItem());
             HelloController.connection.createStatement().executeUpdate("Update appointments set Title='" + titletxtfld.getText()
                     + "', Description='" + descriptiontxtfld.getText() + "', Location='" + locationtxtfld.getText() +
-                    "', Type='" + typetxtfld.getText() + "', Start='" + aptstart1 + "', End='" + aptend1 + "', "
-                    "where Appointment_ID=" + appointments.toalterid);
-            HelloController.connection.createStatement().execute(
-                   "Insert into appointments values(" + colv + ", '" + titletxtfld.getText() +
-                           "', '" + descriptiontxtfld.getText() + "', '" + locationtxtfld.getText() + "', '" +
-                           typetxtfld.getText() + "', '" + aptstart1 + "', '" + aptend1 +
-                           "', '" + "2022-08-30 17:02:46" + "', '" + "script" + "', '" +
-                           "2022-08-30 17:02:46" + "', '" + "script" + "', " + custid + ", " +
-                           userid + ", " + contactid + ");");
+                    "', Type='" + typetxtfld.getText() + "', Start='" + aptstart1 + "', End='" + aptend1 + "', Customer_ID="
+                    + custid + ", User_ID=" + userid + ", Contact_ID=" + contactid +
+                    " where Appointment_ID=" + appointments.toalterid + ";");
+//            HelloController.connection.createStatement().execute(
+//                   "Insert into appointments values(" + colv + ", '" + titletxtfld.getText() +
+//                           "', '" + descriptiontxtfld.getText() + "', '" + locationtxtfld.getText() + "', '" +
+//                           typetxtfld.getText() + "', '" + aptstart1 + "', '" + aptend1 +
+//                           "', '" + "2022-08-30 17:02:46" + "', '" + "script" + "', '" +
+//                           "2022-08-30 17:02:46" + "', '" + "script" + "', " + custid + ", " +
+//                           userid + ", " + contactid + ");");
         } catch (SQLException e) {System.out.println("SQL Error: " + e.getMessage());}
     }
     public void initialize() {
