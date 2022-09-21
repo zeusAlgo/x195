@@ -14,7 +14,6 @@ import java.util.HashMap;
 public class aptmodify {
     public TextField titletxtfld, descriptiontxtfld, locationtxtfld, typetxtfld;
     public ComboBox userComboBox, contactcombobox, monthcombobox, daycombobox, timescombobox, customercombobox;
-    HashMap<String, String> apthm = getaptinfo(appointments.toalterid);
 
     public HashMap<String, String> getaptinfo(int aptid) {
         HashMap<String, String> apthm = new HashMap<>();
@@ -78,13 +77,12 @@ public class aptmodify {
             ZonedDateTime aptcurzdt = LocalDateTime.of(2022, month, day, hr, 0).atZone(ZoneId.systemDefault());
             ZonedDateTime aptutc = aptcurzdt.withZoneSameInstant(ZoneId.of("UTC")), aptutcend = aptutc.plusHours(1);
             LocalDateTime aptstart1 = aptutc.toLocalDateTime(), aptend1 = aptutcend.toLocalDateTime();
-            int aptid = Integer.parseInt(apthm.get("id"));
 
             int custid = appointments.customershm.get(customercombobox.getSelectionModel().getSelectedItem()),
                     userid = appointments.usershm.get(userComboBox.getSelectionModel().getSelectedItem()),
                     contactid = appointments.contactshm.get(contactcombobox.getSelectionModel().getSelectedItem());
             HelloController.connection.createStatement().executeUpdate("Update appointments set " +
-                    "where Appointment_ID=" + aptid);
+                    "where Appointment_ID=" + appointments.toalterid);
             HelloController.connection.createStatement().execute(
                    "Insert into appointments values(" + colv + ", '" + titletxtfld.getText() +
                            "', '" + descriptiontxtfld.getText() + "', '" + locationtxtfld.getText() + "', '" +
@@ -95,7 +93,7 @@ public class aptmodify {
         } catch (SQLException e) {System.out.println("SQL Error: " + e.getMessage());}
     }
     public void initialize() {
-//        HashMap<String, String> apthm = getaptinfo(appointments.toalterid);
+        HashMap<String, String> apthm = getaptinfo(appointments.toalterid);
         titletxtfld.setText(apthm.get("title"));descriptiontxtfld.setText(apthm.get("description"));
         locationtxtfld.setText(apthm.get("location"));typetxtfld.setText(apthm.get("type"));
         userComboBox.setItems(appointments.usersar); contactcombobox.setItems(appointments.contactsar);
