@@ -17,7 +17,6 @@ public class aptadd {
         usercombobox.setItems(appointments.usersar);contactcombobox.setItems(appointments.contactsar);
         customercombobox.setItems(appointments.customersar);apttimecombobox.setItems(appointments.timesar);
         monthcombobox.setItems(appointments.monthsar);daycombobox.setItems(appointments.daysar);
-
     }
 
     public boolean isbizopen() {
@@ -47,8 +46,7 @@ public class aptadd {
             ResultSet rs = HelloController.connection.createStatement().executeQuery("Select * from appointments");
             while (rs.next()) {
                 String time = rs.getString("Start");
-                String time1 = time.substring(11, 12);
-                String time2 = time.substring(11, 13);
+                String time1 = time.substring(11, 12), time2 = time.substring(11, 13);
                 String hr3 = String.valueOf(utchr);
                 if (time1.equals(hr3) | time2.equals(hr3)) {
                     alert2.show();
