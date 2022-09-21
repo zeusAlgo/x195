@@ -35,4 +35,8 @@ public class aptmodify {
 
     public void updateapt(ActionEvent actionEvent) {
     }
+
+    public void initialize() {
+        
+    }
 }
