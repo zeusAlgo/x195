@@ -37,6 +37,6 @@ public class aptmodify {
     }
 
     public void initialize() {
-        
+        HashMap<String, String> apthm = getaptinfo(appointments.toalterid);
     }
 }
