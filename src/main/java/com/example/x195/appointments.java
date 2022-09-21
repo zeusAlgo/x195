@@ -22,7 +22,7 @@ public class appointments {
     public void launchA(ActionEvent actionEvent) {home.launchActivity("aptadd");}
     public void launchB(ActionEvent actionEvent) {
         toalterid = Integer.parseInt(modifytxtfld.getText());
-        home.launchActivity("aptmmodify");}
+        home.launchActivity("aptmodify");}
 
     public HashMap<String, Integer> getallcustomers() {
         HashMap<String, Integer> customershm = new HashMap<>();
