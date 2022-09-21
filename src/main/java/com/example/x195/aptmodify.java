@@ -30,6 +30,7 @@ public class aptmodify {
                 apthm.put("contactid", String.valueOf(rs.getString("Contact_ID")));
             }
         } catch(SQLException e) {System.out.println(e.getMessage());}
+        return apthm;
     }
 
     public void updateapt(ActionEvent actionEvent) {
