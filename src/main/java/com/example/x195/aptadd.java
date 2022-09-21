@@ -28,8 +28,8 @@ public class aptadd {
         int hr = appointments.timeshm.get(hrS);
 
         ZonedDateTime aptcurzdt = LocalDateTime.of(2022, month, day, hr, 0).atZone(ZoneId.systemDefault());
-        ZonedDateTime aptestzdt = aptcurzdt.withZoneSameInstant(ZoneId.of("America/New_York"));
-        ZonedDateTime aptutc = aptcurzdt.withZoneSameInstant(ZoneId.of("UTC"));
+        ZonedDateTime aptestzdt = aptcurzdt.withZoneSameInstant(ZoneId.of("America/New_York")),
+                aptutc = aptcurzdt.withZoneSameInstant(ZoneId.of("UTC"));
         int utchr = aptutc.getHour();
 
         int hour = aptestzdt.getHour();
