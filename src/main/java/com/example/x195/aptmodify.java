@@ -78,9 +78,9 @@ public class aptmodify {
             ZonedDateTime aptutc = aptcurzdt.withZoneSameInstant(ZoneId.of("UTC")), aptutcend = aptutc.plusHours(1);
             LocalDateTime aptstart1 = aptutc.toLocalDateTime(), aptend1 = aptutcend.toLocalDateTime();
 
-            int custid = appointments.customershm.get(customercombobox.getSelectionModel().getSelectedItem());
-            int userid = appointments.usershm.get(userComboBox.getSelectionModel().getSelectedItem());
-            int contactid = appointments.contactshm.get(contactcombobox.getSelectionModel().getSelectedItem());
+            int custid = appointments.customershm.get(customercombobox.getSelectionModel().getSelectedItem()),
+                    userid = appointments.usershm.get(userComboBox.getSelectionModel().getSelectedItem()),
+                    contactid = appointments.contactshm.get(contactcombobox.getSelectionModel().getSelectedItem());
             HelloController.connection.createStatement().executeUpdate("Update appointments set " +
                     "where Appointment")
             HelloController.connection.createStatement().execute(
