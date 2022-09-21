@@ -37,10 +37,8 @@ public class aptmodify {
 
     public void initialize() {
         HashMap<String, String> apthm = getaptinfo(appointments.toalterid);
-        titletxtfld.setText(apthm.get("title"));
-        descriptiontxtfld.setText(apthm.get("description"));
-//        locationtxtfld.setText(apthm.get("location"));
-        typetxtfld.setText(apthm.get("type"));
+        titletxtfld.setText(apthm.get("title"));descriptiontxtfld.setText(apthm.get("description"));
+        locationtxtfld.setText(apthm.get("location"));typetxtfld.setText(apthm.get("type"));
 
     }
 }
