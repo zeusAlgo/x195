@@ -27,7 +27,6 @@ public class aptadd {
         String hrS = (String) apttimecombobox.getSelectionModel().getSelectedItem();
         int hr = Integer.parseInt(hrS.substring(0, 1));
 
-        LocalDateTime apt = LocalDateTime.of(2022, month, day, hr, 0);
         ZonedDateTime aptcurzdt = LocalDateTime.of(2022, month, day, hr, 0).atZone(ZoneId.systemDefault());
         ZonedDateTime aptestzdt = aptcurzdt.withZoneSameInstant(ZoneId.of("America/New_York"));
 
