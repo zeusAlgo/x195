@@ -48,10 +48,7 @@ public class aptadd {
                 String time = rs.getString("Start");
                 String time1 = time.substring(11, 12), time2 = time.substring(11, 13);
                 String hr3 = String.valueOf(utchr);
-                if (time1.equals(hr3) | time2.equals(hr3)) {
-                    alert2.show();
-                    return false;
-                }
+                if (time1.equals(hr3) | time2.equals(hr3)) {alert2.show();return false;}
 //                perhaps check for contact ids
             }
         } catch (SQLException e) {System.out.println("SQL Error: " + e.getMessage());}
