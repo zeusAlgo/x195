@@ -41,7 +41,7 @@ public class aptadd {
         if (dayofweek.equals("SATURDAY") | dayofweek.equals("SUNDAY")) {alert4.show();return false;}
 //        int contactid = appointments.contactshm.get(contactcombobox.getSelectionModel().getSelectedItem());
 
-        Alert alert2 = new Alert(Alert.AlertType.INFORMATION, "Business not open");
+        Alert alert2 = new Alert(Alert.AlertType.INFORMATION, "Appointment unavailable");
         try {
             ResultSet rs = HelloController.connection.createStatement().executeQuery("Select * from appointments");
             while (rs.next()) {
