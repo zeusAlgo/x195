@@ -50,8 +50,7 @@ public class aptadd {
         return bool;
     }
 
-    //todo:
-    // from db utc to est and to usr time
+    // todo: from db utc to est and to usr time
 
     public void addapt(ActionEvent actionEvent) {
         try {
