@@ -26,7 +26,8 @@ public class aptadd {
         int month = monthcombobox.getSelectionModel().getSelectedIndex()+1;
         int day = (int) daycombobox.getSelectionModel().getSelectedItem();
         String hrS = (String) apttimecombobox.getSelectionModel().getSelectedItem();
-        int hr = Integer.parseInt(hrS.substring(0, 1));
+//        int hr = Integer.parseInt(hrS.substring(0, 1));
+        int hr = appointments.timeshm.get(hrS);
 
         ZonedDateTime aptcurzdt = LocalDateTime.of(2022, month, day, hr, 0).atZone(ZoneId.systemDefault());
         ZonedDateTime aptestzdt = aptcurzdt.withZoneSameInstant(ZoneId.of("America/New_York"));
