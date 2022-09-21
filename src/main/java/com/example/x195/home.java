@@ -85,14 +85,12 @@ public class home {
 
         ZonedDateTime curzdt = LocalDateTime.now().atZone(ZoneId.systemDefault());
         ZonedDateTime utczdt = curzdt.withZoneSameInstant(ZoneId.of("UTC"));
-
         //brute force check if apt in 15 min by checking every minute
-
+        System.out.println(utczdt);
     }
 
     public void initialize() {
         countryhm.put("U.S", 1); countryhm.put("UK", 2); countryhm.put("Canada", 3);usdivhm = getdivs(1);ukdivhm = getdivs(2);canadadivhm = getdivs(3);alldivshm = getalldivs();
-
-
+        impendingapt();
     }
 }
