@@ -30,6 +30,11 @@ public class aptadd {
         ZonedDateTime aptcurzdt = LocalDateTime.of(2022, month, day, hr, 0).atZone(ZoneId.systemDefault());
         ZonedDateTime aptestzdt = aptcurzdt.withZoneSameInstant(ZoneId.of("America/New_York"));
 
+        ZonedDateTime aptcurzdt2 = LocalDateTime.of(2022, month, day, hr, 0).atZone(ZoneId.of("UTC"));
+        ZonedDateTime aptutc = aptcurzdt.withZoneSameInstant(ZoneId.of("UTC"));
+        ZonedDateTime aptutc2 = aptcurzdt2.withZoneSameInstant(ZoneId.of("UTC"));
+        int utchr = aptutc.getHour();
+
         int hour = aptestzdt.getHour();
         String dayofweek = aptestzdt.getDayOfWeek().toString();
 
@@ -44,9 +49,9 @@ public class aptadd {
                 String time = rs.getString("Start");
                 String time1 = time.substring(11, 12);
                 String time2 = time.substring(11, 13);
-                String hr3 = String.valueOf(hour);
-                if (time1.equals(hour) | time2.equals(hr3)) return false;
-                //perhaps check for contact ids
+                String hr3 = String.valueOf(utchr);
+                if (time1.equals(hr3) | time2.equals(hr3)) return false;
+//                perhaps check for contact ids
             }
         } catch (SQLException e) {System.out.println("SQL Error: " + e.getMessage());}
         return bool;
