@@ -81,7 +81,9 @@ public class aptmodify {
             int custid = appointments.customershm.get(customercombobox.getSelectionModel().getSelectedItem()),
                     userid = appointments.usershm.get(userComboBox.getSelectionModel().getSelectedItem()),
                     contactid = appointments.contactshm.get(contactcombobox.getSelectionModel().getSelectedItem());
-            HelloController.connection.createStatement().executeUpdate("Update appointments set " +
+            HelloController.connection.createStatement().executeUpdate("Update appointments set Title='" + titletxtfld.getText()
+                    + "', Description='" + descriptiontxtfld.getText() + "', Location='" + locationtxtfld.getText() +
+                    "', Type='" + 
                     "where Appointment_ID=" + appointments.toalterid);
             HelloController.connection.createStatement().execute(
                    "Insert into appointments values(" + colv + ", '" + titletxtfld.getText() +
