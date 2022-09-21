@@ -105,6 +105,7 @@ public class aptadd {
             int contactid = appointments.contactshm.get(contactcombobox.getSelectionModel().getSelectedItem());
 
 
+            //todo: col id is incrementing from wrong col before it was customers, needs to be apts
             //todo: fix slicing on time thing. it's wrong. create hm k time => 1 - 24 hr clock thing
             HelloController.connection.createStatement().execute(
                    "Insert into appointments values(" + colv + ", '" + titletxtfld.getText() +
