@@ -21,7 +21,6 @@ public class aptadd {
 
     public boolean isbizopen() {
         boolean bool = true;
-
         int month = monthcombobox.getSelectionModel().getSelectedIndex()+1;
         int day = (int) daycombobox.getSelectionModel().getSelectedItem();
         String hrS = (String) apttimecombobox.getSelectionModel().getSelectedItem();
@@ -34,20 +33,18 @@ public class aptadd {
         String dayofweek = aptestzdt.getDayOfWeek().toString();
 
         Alert alert = new Alert(Alert.AlertType.INFORMATION, "Business not open"),
-                alert4 = new Alert(Alert.AlertType.INFORMATION, "Closed that day");
+                alert4 = new Alert(Alert.AlertType.INFORMATION, "Closed that day"),
+                alert2 = new Alert(Alert.AlertType.INFORMATION, "Appointment unavailable");
         if (hour < 8 | hour > 22) {alert.show();return false;}
         if (dayofweek.equals("SATURDAY") | dayofweek.equals("SUNDAY")) {alert4.show();return false;}
 //        int contactid = appointments.contactshm.get(contactcombobox.getSelectionModel().getSelectedItem());
-
-        Alert alert2 = new Alert(Alert.AlertType.INFORMATION, "Appointment unavailable");
         try {
             ResultSet rs = HelloController.connection.createStatement().executeQuery("Select * from appointments");
             while (rs.next()) {
                 String time = rs.getString("Start");
                 String time1 = time.substring(11, 12), time2 = time.substring(11, 13);
                 String hr3 = String.valueOf(utchr);
-                if (time1.equals(hr3) | time2.equals(hr3)) {alert2.show();return false;}
-//                perhaps check for contact ids
+                if (time1.equals(hr3) | time2.equals(hr3)) {alert2.show();return false;}//perhaps check for contact ids
             }
         } catch (SQLException e) {System.out.println("SQL Error: " + e.getMessage());}
         return bool;
