@@ -10,6 +10,9 @@ import javafx.stage.Stage;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.util.HashMap;
 
 public class home {
@@ -80,7 +83,10 @@ public class home {
 
     public void impendingapt() {
 
-        
+        ZonedDateTime curzdt = LocalDateTime.now().atZone(ZoneId.systemDefault());
+        ZonedDateTime utczdt = curzdt.withZoneSameInstant(ZoneId.of("UTC"));
+
+        //brute force check if apt in 15 min by checking every minute
 
     }
 
