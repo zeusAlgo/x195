@@ -13,7 +13,7 @@
       <ComboBox fx:id="contactcombobox" layoutX="426.0" layoutY="382.0" prefWidth="150.0" />
       <ComboBox fx:id="monthcombobox" layoutX="426.0" layoutY="445.0" prefWidth="150.0" />
       <ComboBox fx:id="daycombobox" layoutX="426.0" layoutY="512.0" prefWidth="150.0" />
-      <ComboBox fx:id="timescombobox" layoutX="425.0" layoutY="576.0" prefWidth="150.0" />
+      <ComboBox fx:id="timescombobox" onAction="#isbizopen" layoutX="425.0" layoutY="576.0" prefWidth="150.0" />
       <Button onAction="#updateapt" layoutX="470.0" layoutY="717.0" mnemonicParsing="false" text="Save" />
       <ComboBox fx:id="customercombobox" layoutX="425.0" layoutY="641.0" prefWidth="150.0" />
    </children>
