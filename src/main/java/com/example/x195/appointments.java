@@ -59,7 +59,7 @@ public class appointments {
     public void initialize() {
        contactshm.put("Anika Costa", 1);contactshm.put("Daniel Garcia", 2);contactshm.put("Li Lee", 3);
        usershm.put("test", 1);usershm.put("admin", 2);
-       timeshm.put("4 am", 1); timeshm.put("5 am", 2);timeshm.put("6 am", 3);timeshm.put("7 am", "8 am", "9 am", "10 am", "11 am", "12 am", "1 pm", "2 pm", "3 pm", "4 pm", "5 pm", "6 pm", "7 pm", "8 pm", "9 pm", "10 pm", "11 pm");
+       timeshm.put("4 am", 4); timeshm.put("5 am", 5);timeshm.put("6 am", 6);timeshm.put("7 am", 7);timeshm.put("8 am", 8);timeshm.put("9 am", 9);timeshm.put("10 am", 10);timeshm.put("11 am",11);timeshm.put("12 am", 12);timeshm.put("1 pm", 13);timeshm.put("2 pm", 14);timeshm.put("3 pm", 15);timeshm.put("4 pm", 16);timeshm.put("5 pm",17);timeshm.put("6 pm",18);timeshm.put("7 pm", 19);timeshm.put("8 pm", 20);timeshm.put("9 pm",21);timeshm.put("10 pm",22);timeshm.put("11 pm", 23);
 //       isbizopen("5 am");
        customershm = getallcustomers();
 //       convloctime2biztime();
