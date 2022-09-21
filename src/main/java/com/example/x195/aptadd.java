@@ -80,6 +80,7 @@ public class aptadd {
     // display all times in local time for user
     public void addapt(ActionEvent actionEvent) {
         try {
+            if (!isbizopen()) return;
             int colv = home.incrementcolval("appointments");
            //todo: fix apt time
             String apttime = (String) apttimecombobox.getSelectionModel().getSelectedItem();
