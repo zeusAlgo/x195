@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import java.util.HashMap;
 
 public class aptmodify {
-    public TextField titlecombobox, locationcombobox, typecombobox, descriptioncombobox;
+    public TextField titletxtfld, descriptiontxtfld, locationtxtfld, typetxtfld;
     public ComboBox userComboBox, contactcombobox, monthcombox, daycombobox, timescombobox, customercombobox;
 
     public HashMap<String, String> getaptinfo(int aptid) {
