@@ -42,14 +42,8 @@ public class aptadd {
 
         Alert alert = new Alert(Alert.AlertType.INFORMATION, "Business not open");
         Alert alert4 = new Alert(Alert.AlertType.INFORMATION, "Closed that day");
-        if (hour < 8 | hour > 22) {
-            alert.show();
-            return false;
-        }
-        if (dayofweek.equals("SATURDAY") | dayofweek.equals("SUNDAY")) {
-            alert4.show();
-            return false;
-        }
+        if (hour < 8 | hour > 22) {alert.show();return false;}
+        if (dayofweek.equals("SATURDAY") | dayofweek.equals("SUNDAY")) {alert4.show();return false;}
 
         int contactid = appointments.contactshm.get(contactcombobox.getSelectionModel().getSelectedItem());
 
@@ -71,15 +65,9 @@ public class aptadd {
         return bool;
     }
 
-
-    //todo: apt time
+    //todo:
     // from db utc to est and to usr time
-    // chk for outside biz hrs with est and usr
-    // chk apt not in db
 
-
-    //todo: convert to est to chk outside biz hours
-    // display all times in local time for user
     public void addapt(ActionEvent actionEvent) {
         try {
             if (!isbizopen()) return;
