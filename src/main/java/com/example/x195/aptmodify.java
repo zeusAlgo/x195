@@ -89,6 +89,9 @@ public class aptmodify {
                     " where Appointment_ID=" + appointments.toalterid + ";");
         } catch (SQLException e) {System.out.println("SQL Error: " + e.getMessage());}
     }
+
+    //todo: alert if 15 mins of login
+
     public void initialize() {
         HashMap<String, String> apthm = getaptinfo(appointments.toalterid);
         titletxtfld.setText(apthm.get("title"));descriptiontxtfld.setText(apthm.get("description"));
