@@ -20,7 +20,13 @@ public class aptmodify {
             while (rs.next()) {
                 apthm.put("id", String.valueOf(rs.getInt("Appointment_ID")));
                 apthm.put("title", rs.getString("Title"));
-                ap
+                apthm.put("description", rs.getString("Description"));
+                apthm.put("location", rs.getString("Location"));
+                apthm.put("type", rs.getString("Type"));
+                apthm.put("start", rs.getString("Start"));
+                apthm.put("end", rs.getString("End"));
+                
+
             }
         } catch(SQLException e) {System.out.println(e.getMessage());}
     }
