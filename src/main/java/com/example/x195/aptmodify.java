@@ -9,4 +9,8 @@ public class aptmodify {
     public TextField locationcombobox;
     public TextField typecombobox;
     public TextField descriptioncombobox;
+    public ComboBox contactcombobox;
+    public ComboBox monthcombox;
+    public ComboBox daycombobox;
+    public ComboBox timescombobox;
 }
