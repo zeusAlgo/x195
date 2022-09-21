@@ -37,9 +37,6 @@ public class customermodify {
         }
     }
 
-    //todo: add delete fn
-    // build appts
-
     public void updatecustomer() {
         try {
             int divid = 0;
