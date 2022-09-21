@@ -83,6 +83,19 @@ public class aptadd {
             if (!isbizopen()) return;
             int colv = home.incrementcolval("appointments");
            //todo: fix apt time
+            String hrS = (String) apttimecombobox.getSelectionModel().getSelectedItem();
+            
+            
+            int month = monthcombobox.getSelectionModel().getSelectedIndex()+1;
+            int day = (int) daycombobox.getSelectionModel().getSelectedItem();
+            int hr = Integer.parseInt(hrS.substring(0, 1));
+            ZonedDateTime aptcurzdt = LocalDateTime.of(2022, month, day, hr, 0).atZone(ZoneId.systemDefault());
+            ZonedDateTime aptutc = aptcurzdt.withZoneSameInstant(ZoneId.of("UTC"));
+            ZonedDateTime aptutcend = aptutc.plusHours(1);
+            String aptstart = aptutc.toString();
+            String aptend = aptutcend.toString();
+
+
             String apttime = (String) apttimecombobox.getSelectionModel().getSelectedItem();
             int custid = appointments.customershm.get(customercombobox.getSelectionModel().getSelectedItem());
             int userid = appointments.usershm.get(usercombobox.getSelectionModel().getSelectedItem());
@@ -91,7 +104,7 @@ public class aptadd {
             HelloController.connection.createStatement().execute(
                    "Insert into appointments values(" + colv + ", '" + titletxtfld.getText() +
                            "', '" + desctxtfld.getText() + "', '" + loctxtfld.getText() + "', '" + 
-                           typetxtfld.getText() + "', '" + apttime + "', '" + apttime + 
+                           typetxtfld.getText() + "', '" + aptstart + "', '" + aptend +
                            "', '" + "2022-08-30 17:02:46" + "', '" + "script" + "', '" +
                            "2022-08-30 17:02:46" + "', '" + "script" + "', " + custid + ", " +
                            userid + ", " + contactid + ");");
