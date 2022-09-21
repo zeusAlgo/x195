@@ -5,7 +5,8 @@ import javafx.scene.control.TextField;
 
 public class aptmodify {
     public ComboBox userComboBox;public TextField titlecombobox;
-    public TextField locationcombobox, typecombobox, descriptioncombobox;public ComboBox contactcombobox, monthcombox, daycombobox, timescombobox, customercombobox;
+    public TextField locationcombobox, typecombobox, descriptioncombobox;
+    public ComboBox contactcombobox, monthcombox, daycombobox, timescombobox, customercombobox;
 
     
 
