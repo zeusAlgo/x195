@@ -30,10 +30,7 @@ public class aptadd {
 
         ZonedDateTime aptcurzdt = LocalDateTime.of(2022, month, day, hr, 0).atZone(ZoneId.systemDefault());
         ZonedDateTime aptestzdt = aptcurzdt.withZoneSameInstant(ZoneId.of("America/New_York"));
-
-        ZonedDateTime aptcurzdt2 = LocalDateTime.of(2022, month, day, hr, 0).atZone(ZoneId.of("UTC"));
         ZonedDateTime aptutc = aptcurzdt.withZoneSameInstant(ZoneId.of("UTC"));
-        ZonedDateTime aptutc2 = aptcurzdt2.withZoneSameInstant(ZoneId.of("UTC"));
         int utchr = aptutc.getHour();
 
         int hour = aptestzdt.getHour();
