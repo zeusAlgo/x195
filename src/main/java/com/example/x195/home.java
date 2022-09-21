@@ -15,7 +15,7 @@ import java.util.HashMap;
 public class home {
     public Button customersBtn, aptBtn, reportsBtn;
     static HashMap<String, Integer> countryhm = new HashMap<>(), usdivhm = new HashMap<>(), ukdivhm = new HashMap<>(), canadadivhm = new HashMap<>();static HashMap<Integer, String> alldivshm = new HashMap<>();
-    static ObservableList<String> countryar = FXCollections.observableArrayList(), usdivar = FXCollections.observableArrayList(), ukdivar = FXCollections.observableArrayList(), canadadivar = FXCollections.observableArrayList();
+    static ObservableList<String> countryar = FXCollections.observableArrayList("U.S.", "UK", "Canada"), usdivar = FXCollections.observableArrayList(), ukdivar = FXCollections.observableArrayList(), canadadivar = FXCollections.observableArrayList();
 
     static public void launchActivity(String activityname){
         try {
@@ -27,7 +27,6 @@ public class home {
             stage.show();
         } catch(Exception e) {System.out.println(e.getMessage());}
     }
-
     public void launchA(ActionEvent actionEvent) { launchActivity("customers");}
     public void launchB(ActionEvent actionEvent) { launchActivity("appointments");}
     public void launchC(ActionEvent actionEvent) { launchActivity("reports");}
@@ -80,10 +79,7 @@ public class home {
     }
 
     public void initialize() {
-        countryhm.put("U.S", 1); countryhm.put("UK", 2); countryhm.put("Canada", 3);
-        countryar.add("U.S."); countryar.add("UK"); countryar.add("Canada");
-
-        usdivhm = getdivs(1);ukdivhm = getdivs(2);
-        canadadivhm = getdivs(3);alldivshm = getalldivs();
+        countryhm.put("U.S", 1); countryhm.put("UK", 2); countryhm.put("Canada", 3);usdivhm = getdivs(1);ukdivhm = getdivs(2);canadadivhm = getdivs(3);alldivshm = getalldivs();
+        
     }
 }
