@@ -1,6 +1,7 @@
 package com.example.x195;
 import com.mysql.cj.jdbc.exceptions.SQLError;
 import javafx.event.ActionEvent;
+import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 
@@ -38,8 +39,15 @@ public class aptadd {
         int hour = aptestzdt.getHour();
         String dayofweek = aptestzdt.getDayOfWeek().toString();
 
-        if (hour < 8 | hour > 22) return false;
-        if (dayofweek.equals("SATURDAY") | dayofweek.equals("SUNDAY")) return false;
+        Alert alert = new Alert(Alert.AlertType.INFORMATION, "Business not open");
+        if (hour < 8 | hour > 22) {
+            alert.show();
+            return false;
+        }
+        if (dayofweek.equals("SATURDAY") | dayofweek.equals("SUNDAY")) {
+            alert.show();
+            return false;
+        }
 
         int contactid = appointments.contactshm.get(contactcombobox.getSelectionModel().getSelectedItem());
 
