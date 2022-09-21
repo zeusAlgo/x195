@@ -78,7 +78,11 @@ public class home {
         return colv+1;
     }
 
-    
+    public void impendingapt() {
+
+        
+
+    }
 
     public void initialize() {
         countryhm.put("U.S", 1); countryhm.put("UK", 2); countryhm.put("Canada", 3);usdivhm = getdivs(1);ukdivhm = getdivs(2);canadadivhm = getdivs(3);alldivshm = getalldivs();
