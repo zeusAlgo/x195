@@ -81,8 +81,9 @@ public class aptmodify {
             int custid = appointments.customershm.get(customercombobox.getSelectionModel().getSelectedItem()),
                     userid = appointments.usershm.get(userComboBox.getSelectionModel().getSelectedItem()),
                     contactid = appointments.contactshm.get(contactcombobox.getSelectionModel().getSelectedItem());
-            HelloController.connection.createStatement().executeUpdate("Update appointments set " +
-                    "where Appointment")
+//            HelloController.connection.createStatement().executeUpdate("Update appointments set " +
+//                    "where Appointment_ID=")
+            //todo: add apt id
             HelloController.connection.createStatement().execute(
                    "Insert into appointments values(" + colv + ", '" + titletxtfld.getText() +
                            "', '" + descriptiontxtfld.getText() + "', '" + locationtxtfld.getText() + "', '" +
