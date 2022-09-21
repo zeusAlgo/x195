@@ -87,13 +87,6 @@ public class aptmodify {
                     "', Type='" + typetxtfld.getText() + "', Start='" + aptstart1 + "', End='" + aptend1 + "', Customer_ID="
                     + custid + ", User_ID=" + userid + ", Contact_ID=" + contactid +
                     " where Appointment_ID=" + appointments.toalterid + ";");
-//            HelloController.connection.createStatement().execute(
-//                   "Insert into appointments values(" + colv + ", '" + titletxtfld.getText() +
-//                           "', '" + descriptiontxtfld.getText() + "', '" + locationtxtfld.getText() + "', '" +
-//                           typetxtfld.getText() + "', '" + aptstart1 + "', '" + aptend1 +
-//                           "', '" + "2022-08-30 17:02:46" + "', '" + "script" + "', '" +
-//                           "2022-08-30 17:02:46" + "', '" + "script" + "', " + custid + ", " +
-//                           userid + ", " + contactid + ");");
         } catch (SQLException e) {System.out.println("SQL Error: " + e.getMessage());}
     }
     public void initialize() {
