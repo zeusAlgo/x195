@@ -39,8 +39,7 @@ public class aptmodify {
         locationtxtfld.setText(apthm.get("location"));typetxtfld.setText(apthm.get("type"));
         userComboBox.setItems(appointments.usersar); contactcombobox.setItems(appointments.contactsar);
         monthcombox.setItems(appointments.monthsar); daycombobox.setItems(appointments.daysar);
-        timescombobox.setItems();
-
+        timescombobox.setItems(appointments.timesar); customercombobox.setItems(appointments.customersar);
 
     }
 }
