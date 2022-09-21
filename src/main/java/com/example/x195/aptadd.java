@@ -71,7 +71,6 @@ public class aptadd {
         try {
             if (!isbizopen()) return;
             int colv = home.incrementcolval("appointments", "Appointment_ID");
-           //todo: fix apt time
             String hrS = (String) apttimecombobox.getSelectionModel().getSelectedItem();
             
             
@@ -79,16 +78,9 @@ public class aptadd {
             int day = (int) daycombobox.getSelectionModel().getSelectedItem();
             int hr = Integer.parseInt(hrS.substring(0, 1));
             ZonedDateTime aptcurzdt = LocalDateTime.of(2022, month, day, hr, 0).atZone(ZoneId.systemDefault());
-            ZonedDateTime aptutc = aptcurzdt.withZoneSameInstant(ZoneId.of("UTC"));
-            ZonedDateTime aptutcend = aptutc.plusHours(1);
-            LocalDateTime aptstart1 = aptutc.toLocalDateTime();
-            LocalDateTime aptend1 = aptutcend.toLocalDateTime();
+            ZonedDateTime aptutc = aptcurzdt.withZoneSameInstant(ZoneId.of("UTC")), aptutcend = aptutc.plusHours(1);
+            LocalDateTime aptstart1 = aptutc.toLocalDateTime(), aptend1 = aptutcend.toLocalDateTime();
 
-            String aptstart = aptutc.toString();
-            String aptend = aptutcend.toString();
-
-
-            String apttime = (String) apttimecombobox.getSelectionModel().getSelectedItem();
             int custid = appointments.customershm.get(customercombobox.getSelectionModel().getSelectedItem());
             int userid = appointments.usershm.get(usercombobox.getSelectionModel().getSelectedItem());
             int contactid = appointments.contactshm.get(contactcombobox.getSelectionModel().getSelectedItem());
