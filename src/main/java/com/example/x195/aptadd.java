@@ -92,6 +92,9 @@ public class aptadd {
             ZonedDateTime aptcurzdt = LocalDateTime.of(2022, month, day, hr, 0).atZone(ZoneId.systemDefault());
             ZonedDateTime aptutc = aptcurzdt.withZoneSameInstant(ZoneId.of("UTC"));
             ZonedDateTime aptutcend = aptutc.plusHours(1);
+            LocalDateTime aptstart1 = aptutc.toLocalDateTime();
+            LocalDateTime aptend1 = aptutcend.toLocalDateTime();
+
             String aptstart = aptutc.toString();
             String aptend = aptutcend.toString();
 
@@ -106,7 +109,7 @@ public class aptadd {
             HelloController.connection.createStatement().execute(
                    "Insert into appointments values(" + colv + ", '" + titletxtfld.getText() +
                            "', '" + desctxtfld.getText() + "', '" + loctxtfld.getText() + "', '" + 
-                           typetxtfld.getText() + "', '" + aptstart + "', '" + aptend +
+                           typetxtfld.getText() + "', '" + aptstart1 + "', '" + aptend1 +
                            "', '" + "2022-08-30 17:02:46" + "', '" + "script" + "', '" +
                            "2022-08-30 17:02:46" + "', '" + "script" + "', " + custid + ", " +
                            userid + ", " + contactid + ");");
