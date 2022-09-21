@@ -34,13 +34,11 @@ public class aptmodify {
         return apthm;
     }
 
-    public void updateapt(ActionEvent actionEvent) {
-    }
     public boolean isbizopen() {
         boolean bool = true;
         int month = monthcombobox.getSelectionModel().getSelectedIndex()+1;
         int day = (int) daycombobox.getSelectionModel().getSelectedItem();
-        String hrS = (String) apttimecombobox.getSelectionModel().getSelectedItem();
+        String hrS = (String) timescombobox.getSelectionModel().getSelectedItem();
         int hr = appointments.timeshm.get(hrS);
 
         ZonedDateTime aptcurzdt = LocalDateTime.of(2022, month, day, hr, 0).atZone(ZoneId.systemDefault());
@@ -67,13 +65,11 @@ public class aptmodify {
         return bool;
     }
 
-    // todo: from db utc to est and to usr time
-
-    public void addapt(ActionEvent actionEvent) {
+    public void updateapt(ActionEvent actionEvent) {
         try {
             if (!isbizopen()) return;
             int colv = home.incrementcolval("appointments", "Appointment_ID");
-            String hrS = (String) apttimecombobox.getSelectionModel().getSelectedItem();
+            String hrS = (String) timescombobox.getSelectionModel().getSelectedItem();
 
             int month = monthcombobox.getSelectionModel().getSelectedIndex()+1;
             int day = (int) daycombobox.getSelectionModel().getSelectedItem();
@@ -83,7 +79,7 @@ public class aptmodify {
             LocalDateTime aptstart1 = aptutc.toLocalDateTime(), aptend1 = aptutcend.toLocalDateTime();
 
             int custid = appointments.customershm.get(customercombobox.getSelectionModel().getSelectedItem());
-            int userid = appointments.usershm.get(usercombobox.getSelectionModel().getSelectedItem());
+            int userid = appointments.usershm.get(userComboBox.getSelectionModel().getSelectedItem());
             int contactid = appointments.contactshm.get(contactcombobox.getSelectionModel().getSelectedItem());
 
             HelloController.connection.createStatement().execute(
