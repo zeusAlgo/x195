@@ -25,8 +25,7 @@ public class aptmodify {
                 apthm.put("end", rs.getString("End"));
                 apthm.put("customerid", String.valueOf(rs.getString("Customer_ID")));
                 apthm.put("userid", String.valueOf(rs.getString("User_ID")));
-                apthm.put("contactid", String.valueOf(rs.getString("Contact_ID")));
-            }
+                apthm.put("contactid", String.valueOf(rs.getString("Contact_ID")));}
         } catch(SQLException e) {System.out.println(e.getMessage());}
         return apthm;
     }
