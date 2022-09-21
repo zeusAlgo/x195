@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.x195.aptmodify"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="1000.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.x195.aptmodify">
+   <children>
+      <ComboBox fx:id="userComboBox" layoutX="425.0" layoutY="60.0" prefWidth="150.0" />
+      <TextField fx:id="titlecombobox" layoutX="415.0" layoutY="122.0" promptText="Title" />
+      <TextField fx:id="descriptioncombobox" layoutX="415.0" layoutY="188.0" promptText="Description" />
+      <TextField fx:id="locationcombobox" layoutX="415.0" layoutY="253.0" promptText="Location" />
+      <TextField fx:id="typecombobox" layoutX="415.0" layoutY="315.0" />
+      <ComboBox fx:id="`" layoutX="426.0" layoutY="382.0" prefWidth="150.0" />
+      <ComboBox layoutX="426.0" layoutY="445.0" prefWidth="150.0" />
+      <ComboBox layoutX="426.0" layoutY="512.0" prefWidth="150.0" />
+      <ComboBox layoutX="425.0" layoutY="576.0" prefWidth="150.0" />
+      <Button layoutX="469.0" layoutY="651.0" mnemonicParsing="false" text="Button" />
+   </children>
 </AnchorPane>
