@@ -51,6 +51,7 @@ public class aptadd {
 
         int contactid = appointments.contactshm.get(contactcombobox.getSelectionModel().getSelectedItem());
 
+        Alert alert2 = new Alert(Alert.AlertType.INFORMATION, "Business not open");
         try {
             ResultSet rs = HelloController.connection.createStatement().executeQuery("Select * from appointments");
             while (rs.next()) {
@@ -58,7 +59,10 @@ public class aptadd {
                 String time1 = time.substring(11, 12);
                 String time2 = time.substring(11, 13);
                 String hr3 = String.valueOf(utchr);
-                if (time1.equals(hr3) | time2.equals(hr3)) return false;
+                if (time1.equals(hr3) | time2.equals(hr3)) {
+                    alert2.show();
+                    return false;
+                }
 //                perhaps check for contact ids
             }
         } catch (SQLException e) {System.out.println("SQL Error: " + e.getMessage());}
