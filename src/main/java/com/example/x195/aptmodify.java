@@ -8,9 +8,8 @@ import java.sql.SQLException;
 import java.util.HashMap;
 
 public class aptmodify {
-    public ComboBox userComboBox;public TextField titlecombobox;
-    public TextField locationcombobox, typecombobox, descriptioncombobox;
-    public ComboBox contactcombobox, monthcombox, daycombobox, timescombobox, customercombobox;
+    public TextField titlecombobox, locationcombobox, typecombobox, descriptioncombobox;
+    public ComboBox userComboBox, contactcombobox, monthcombox, daycombobox, timescombobox, customercombobox;
 
     public HashMap<String, String> getaptinfo(int aptid) {
         HashMap<String, String> apthm = new HashMap<>();
@@ -38,5 +37,6 @@ public class aptmodify {
 
     public void initialize() {
         HashMap<String, String> apthm = getaptinfo(appointments.toalterid);
+
     }
 }
