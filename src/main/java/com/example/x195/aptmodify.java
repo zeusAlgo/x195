@@ -84,7 +84,7 @@ public class aptmodify {
 
             HelloController.connection.createStatement().execute(
                    "Insert into appointments values(" + colv + ", '" + titletxtfld.getText() +
-                           "', '" + desctxtfld.getText() + "', '" + loctxtfld.getText() + "', '" +
+                           "', '" + descriptiontxtfld.getText() + "', '" + locationtxtfld.getText() + "', '" +
                            typetxtfld.getText() + "', '" + aptstart1 + "', '" + aptend1 +
                            "', '" + "2022-08-30 17:02:46" + "', '" + "script" + "', '" +
                            "2022-08-30 17:02:46" + "', '" + "script" + "', " + custid + ", " +
@@ -96,7 +96,7 @@ public class aptmodify {
         titletxtfld.setText(apthm.get("title"));descriptiontxtfld.setText(apthm.get("description"));
         locationtxtfld.setText(apthm.get("location"));typetxtfld.setText(apthm.get("type"));
         userComboBox.setItems(appointments.usersar); contactcombobox.setItems(appointments.contactsar);
-        monthcombox.setItems(appointments.monthsar); daycombobox.setItems(appointments.daysar);
+        monthcombobox.setItems(appointments.monthsar); daycombobox.setItems(appointments.daysar);
         timescombobox.setItems(appointments.timesar); customercombobox.setItems(appointments.customersar);
 
     }
