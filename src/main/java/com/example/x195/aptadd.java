@@ -30,9 +30,7 @@ public class aptadd {
         ZonedDateTime aptcurzdt = LocalDateTime.of(2022, month, day, hr, 0).atZone(ZoneId.systemDefault());
         ZonedDateTime aptestzdt = aptcurzdt.withZoneSameInstant(ZoneId.of("America/New_York")),
                 aptutc = aptcurzdt.withZoneSameInstant(ZoneId.of("UTC"));
-        int utchr = aptutc.getHour();
-
-        int hour = aptestzdt.getHour();
+        int utchr = aptutc.getHour(), hour = aptestzdt.getHour();
         String dayofweek = aptestzdt.getDayOfWeek().toString();
 
         Alert alert = new Alert(Alert.AlertType.INFORMATION, "Business not open"),
