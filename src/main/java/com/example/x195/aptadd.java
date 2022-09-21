@@ -68,14 +68,14 @@ public class aptadd {
     // display all times in local time for user
     public void addapt(ActionEvent actionEvent) {
         try {
-           int colv = home.incrementcolval("appointments");
+            int colv = home.incrementcolval("appointments");
            //todo: fix apt time
-           String apttime = (String) apttimecombobox.getSelectionModel().getSelectedItem();
-           int custid = appointments.customershm.get(customercombobox.getSelectionModel().getSelectedItem());
-           int userid = appointments.usershm.get(usercombobox.getSelectionModel().getSelectedItem());
-           int contactid = appointments.contactshm.get(contactcombobox.getSelectionModel().getSelectedItem());
+            String apttime = (String) apttimecombobox.getSelectionModel().getSelectedItem();
+            int custid = appointments.customershm.get(customercombobox.getSelectionModel().getSelectedItem());
+            int userid = appointments.usershm.get(usercombobox.getSelectionModel().getSelectedItem());
+            int contactid = appointments.contactshm.get(contactcombobox.getSelectionModel().getSelectedItem());
            
-           HelloController.connection.createStatement().execute(
+            HelloController.connection.createStatement().execute(
                    "Insert into appointments values(" + colv + ", '" + titletxtfld.getText() +
                            "', '" + desctxtfld.getText() + "', '" + loctxtfld.getText() + "', '" + 
                            typetxtfld.getText() + "', '" + apttime + "', '" + apttime + 
