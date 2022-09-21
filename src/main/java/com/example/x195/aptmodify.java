@@ -13,8 +13,7 @@ public class aptmodify {
 
     public HashMap<String, String> getaptinfo(int aptid) {
         HashMap<String, String> apthm = new HashMap<>();
-        try {
-            ResultSet rs = HelloController.connection.createStatement().executeQuery(
+        try {ResultSet rs = HelloController.connection.createStatement().executeQuery(
                 "Select * from appointments where Appointment_ID=" + aptid);
             while (rs.next()) {
                 apthm.put("id", String.valueOf(rs.getInt("Appointment_ID")));
@@ -39,6 +38,8 @@ public class aptmodify {
         HashMap<String, String> apthm = getaptinfo(appointments.toalterid);
         titletxtfld.setText(apthm.get("title"));descriptiontxtfld.setText(apthm.get("description"));
         locationtxtfld.setText(apthm.get("location"));typetxtfld.setText(apthm.get("type"));
+
+
 
     }
 }
