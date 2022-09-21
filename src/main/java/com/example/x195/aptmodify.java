@@ -16,8 +16,12 @@ public class aptmodify {
         HashMap<String, String> apthm = new HashMap<>();
         try {
             ResultSet rs = HelloController.connection.createStatement().executeQuery(
-
-            )
+                "Select * from appointments where Appointment_ID=" + aptid);
+            while (rs.next()) {
+                apthm.put("id", String.valueOf(rs.getInt("Appointment_ID")));
+                apthm.put("title", rs.getString("Title"));
+                ap
+            }
         } catch(SQLException e) {System.out.println(e.getMessage());}
     }
 
