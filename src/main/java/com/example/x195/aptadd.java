@@ -100,7 +100,9 @@ public class aptadd {
             int custid = appointments.customershm.get(customercombobox.getSelectionModel().getSelectedItem());
             int userid = appointments.usershm.get(usercombobox.getSelectionModel().getSelectedItem());
             int contactid = appointments.contactshm.get(contactcombobox.getSelectionModel().getSelectedItem());
-           
+
+
+            //todo: fix slicing on time thing. it's wrong. create hm k time => 1 - 24 hr clock thing
             HelloController.connection.createStatement().execute(
                    "Insert into appointments values(" + colv + ", '" + titletxtfld.getText() +
                            "', '" + desctxtfld.getText() + "', '" + loctxtfld.getText() + "', '" + 
