@@ -41,12 +41,13 @@ public class aptadd {
         String dayofweek = aptestzdt.getDayOfWeek().toString();
 
         Alert alert = new Alert(Alert.AlertType.INFORMATION, "Business not open");
+        Alert alert4 = new Alert(Alert.AlertType.INFORMATION, "Closed that day");
         if (hour < 8 | hour > 22) {
             alert.show();
             return false;
         }
         if (dayofweek.equals("SATURDAY") | dayofweek.equals("SUNDAY")) {
-            alert.show();
+            alert4.show();
             return false;
         }
 
