@@ -90,13 +90,15 @@ public class home {
         System.out.println(curzdt);
         System.out.println(utczdt);
 
-        HashSet<ZonedDateTime> hs = new HashSet<>();
+        HashSet<ZonedDateTime> zdths = new HashSet<>();
 
         for (int i=0; i <= 15; i ++) {
-            hs.add(utczdt.plusMinutes(i));
+            zdths.add(utczdt.plusMinutes(i));
         }
-        for (ZonedDateTime zdt : hs) {
-            
+
+        HashSet<String> stringhs = new HashSet<>();
+        for (ZonedDateTime zdt : zdths) {
+
         }
     }
 
