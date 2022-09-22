@@ -42,6 +42,8 @@ public class reports {
                     case 12 -> incrementhm(dechm, type);}
             }
         } catch (SQLException e) {System.out.println(e.getMessage());}
+
+        //todo: create string and set txt from hms
     }
 
 
