@@ -94,6 +94,8 @@ public class home {
 
         HashSet<String> stringhs = new HashSet<>();
         for (ZonedDateTime zdt : zdths) {
+            String string = zdt.toString();
+            System.out.println(string);
 
         }
     }
