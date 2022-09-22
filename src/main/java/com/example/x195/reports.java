@@ -3,15 +3,29 @@ package com.example.x195;
 import javafx.event.ActionEvent;
 import javafx.scene.control.TextArea;
 
+import java.util.HashMap;
+
 public class reports {
     public TextArea textarea;
 
-    public
     public void initialize() {
         textarea.setText("dlkfsjldjflsfl\nlksdjflajdlfkjsjdf\n");
     }
 
     public void report1(ActionEvent actionEvent) {
+        HashMap<String, Integer> janhm = new HashMap<>();
+        HashMap<String, Integer> febhm = new HashMap<>();
+        HashMap<String, Integer> marhm = new HashMap<>();
+        HashMap<String, Integer> aprhm = new HashMap<>();
+        HashMap<String, Integer> mayhm = new HashMap<>();
+        HashMap<String, Integer> junehm = new HashMap<>();
+        HashMap<String, Integer> julhm = new HashMap<>();
+        HashMap<String, Integer> aughm = new HashMap<>();
+        HashMap<String, Integer> septhm = new HashMap<>();
+        HashMap<String, Integer> octhm = new HashMap<>();
+        HashMap<String, Integer> novhm = new HashMap<>();
+        HashMap<String, Integer> dechm = new HashMap<>();
+
     }
 
     public void report2(ActionEvent actionEvent) {
