@@ -50,7 +50,7 @@ public class aptadd {
         return bool;
     }
 
-    // todo: from db utc to est and to usr time
+    //todo: make apt pull apt creds and insert work on reports
 
     public void addapt(ActionEvent actionEvent) {
         try {
@@ -60,7 +60,7 @@ public class aptadd {
             int month = monthcombobox.getSelectionModel().getSelectedIndex()+1,
                     day = (int) daycombobox.getSelectionModel().getSelectedItem(),
                     hr = appointments.timeshm.get(hrstring);
-            
+
             ZonedDateTime aptcurzdt = LocalDateTime.of(2022, month, day, hr, 0).atZone(ZoneId.systemDefault());
             ZonedDateTime aptutc = aptcurzdt.withZoneSameInstant(ZoneId.of("UTC")), aptutcend = aptutc.plusHours(1);
             LocalDateTime aptstart1 = aptutc.toLocalDateTime(), aptend1 = aptutcend.toLocalDateTime();
