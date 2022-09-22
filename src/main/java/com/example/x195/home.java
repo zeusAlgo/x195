@@ -95,8 +95,9 @@ public class home {
         HashSet<String> stringhs = new HashSet<>();
         for (ZonedDateTime zdt : zdths) {
             String string = zdt.toString();
-            string = string.substring(0, 19);
+            string = string.substring(0, 17);
             string.replace("T", " ");
+            string += "00";
             System.out.println(string);
 
         }
