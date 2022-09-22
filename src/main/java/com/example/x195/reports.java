@@ -14,6 +14,11 @@ public class reports {
         textarea.setText("dlkfsjldjflsfl\nlksdjflajdlfkjsjdf\n");
     }
 
+    public void incrementhm(HashMap<String, Integer> hm, String type) {
+       if (hm.containsKey(type)) hm.put(type, hm.get(type) + 1);
+       else {hm.put(type, 1);}
+    }
+
     public void report1(ActionEvent actionEvent) {
         HashMap<String, Integer> janhm = new HashMap<>(), febhm = new HashMap<>(), marhm = new HashMap<>(), aprhm = new HashMap<>(), mayhm = new HashMap<>(), junehm = new HashMap<>(), julhm = new HashMap<>(), aughm = new HashMap<>(), septhm = new HashMap<>(), octhm = new HashMap<>(), novhm = new HashMap<>(), dechm = new HashMap<>();
 
@@ -41,11 +46,8 @@ public class reports {
         } catch (SQLException e) {System.out.println(e.getMessage());}
 
     }
-    public void incrementhm(HashMap<String, Integer> hm, String type) {
-       if (hm.containsKey(type)) hm.put(type, hm.get(type) + 1);
-       else {hm.put(type, 1);}
-        
-    }
+
+
 
     public void report2(ActionEvent actionEvent) {
     }
