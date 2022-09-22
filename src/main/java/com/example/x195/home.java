@@ -89,15 +89,11 @@ public class home {
         //brute force check if apt in 15 min by checking every minute
         System.out.println(curzdt);
         System.out.println(utczdt);
-        utczdt.toLocalDateTime();
-        System.out.println(utczdt);
-
-        int curhr = utczdt.getHour(),
-                curmin = utczdt.getMinute();
-        HashSet<Integer> hs = new HashSet<Integer>();
+        
+        HashSet<ZonedDateTime> hs = new HashSet<>();
 
         for (int i=0; i <= 15; i ++) {
-
+            hs.add(utczdt.plusMinutes(i));
 
         }
     }
