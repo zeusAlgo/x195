@@ -45,9 +45,9 @@ public class home {
                 String divname = rs.getString("Division");
                 hashbrownmap.put(divname, rs.getInt("Division_ID"));
                 switch (countryid) {
-                    case 1: usdivar.add(divname); break;
-                    case 2: ukdivar.add(divname); break;
-                    case 3: canadadivar.add(divname); break;
+                    case 1 -> usdivar.add(divname);
+                    case 2 -> ukdivar.add(divname);
+                    case 3 -> canadadivar.add(divname);
                 }
             }
         } catch (SQLException e) {e.getMessage();}
