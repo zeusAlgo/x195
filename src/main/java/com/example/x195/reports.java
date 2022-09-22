@@ -20,10 +20,13 @@ public class reports {
         try {
             ResultSet rs = HelloController.connection.createStatement().executeQuery(
                     "Select * from appointments");
-            String monthstring = rs.getString("Start");
-            DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-mm-dd hh:mm:ss");
-            ZonedDateTime zdt = ZonedDateTime.parse(monthstring, dtf);
-            System.out.println(zdt.getMonth());
+            while (rs.next()) {
+                String monthstring = rs.getString("Start");
+                DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-mm-dd hh:mm:ss");
+                ZonedDateTime zdt = ZonedDateTime.parse(monthstring, dtf);
+                String month = zdt.getMonth().toString();
+                System.out.println(month);
+            }
 
         } catch (SQLException e) {System.out.println(e.getMessage());}
 
