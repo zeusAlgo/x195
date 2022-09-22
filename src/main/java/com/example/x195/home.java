@@ -86,8 +86,6 @@ public class home {
     public boolean impendingapt() {
         ZonedDateTime curzdt = LocalDateTime.now().atZone(ZoneId.systemDefault());
         ZonedDateTime utczdt = curzdt.withZoneSameInstant(ZoneId.of("UTC"));
-//        System.out.println(curzdt);
-//        System.out.println(utczdt);
         HashSet<ZonedDateTime> zdths = new HashSet<>();
         for (int i=0; i <= 15; i ++) zdths.add(utczdt.plusMinutes(i));
 
@@ -99,7 +97,6 @@ public class home {
             string += "00";
             stringhs.add(string);
         }
-        System.out.println(stringhs);
         try {
             ResultSet rs = HelloController.connection.createStatement().executeQuery("Select * from appointments");
             while (rs.next()) {

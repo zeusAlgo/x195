@@ -23,7 +23,7 @@ public class reports {
             while (rs.next()) {
                 String monthstring = rs.getString("Start");
                 int monthint = Integer.parseInt(monthstring.substring(5, 7));
-                
+                switch
 
             }
 
