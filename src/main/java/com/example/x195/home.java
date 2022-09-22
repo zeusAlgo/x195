@@ -86,6 +86,7 @@ public class home {
         ZonedDateTime curzdt = LocalDateTime.now().atZone(ZoneId.systemDefault());
         ZonedDateTime utczdt = curzdt.withZoneSameInstant(ZoneId.of("UTC"));
         //brute force check if apt in 15 min by checking every minute
+        System.out.println(curzdt);
         System.out.println(utczdt);
     }
 
