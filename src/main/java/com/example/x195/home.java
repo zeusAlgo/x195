@@ -100,13 +100,16 @@ public class home {
         }
         try {
             ResultSet rs = HelloController.connection.createStatement().executeQuery("Select * from appointments");
-            while (rs.next()) if (stringhs.contains(rs.getString("Start"))) return false;
+            while (rs.next()) if (stringhs.contains(rs.getString("Start"))) return true;
         } catch (SQLException e) { System.out.println(e.getMessage());}
-        return true;
+        return false;
     }
 
     public void initialize() {
         countryhm.put("U.S", 1); countryhm.put("UK", 2); countryhm.put("Canada", 3);usdivhm = getdivs(1);ukdivhm = getdivs(2);canadadivhm = getdivs(3);alldivshm = getalldivs();
-        impendingapt();
+        if(impendingapt()) System.out.println("Appointment in 15 mins!");
+        else {
+            System.out.println("No appointment in 15 mins.");
+        }
     }
 }
