@@ -23,8 +23,7 @@ public class reports {
         HashMap<String, Integer> janhm = new HashMap<>(), febhm = new HashMap<>(), marhm = new HashMap<>(), aprhm = new HashMap<>(), mayhm = new HashMap<>(), junehm = new HashMap<>(), julhm = new HashMap<>(), aughm = new HashMap<>(), septhm = new HashMap<>(), octhm = new HashMap<>(), novhm = new HashMap<>(), dechm = new HashMap<>();
 
         try {
-            ResultSet rs = HelloController.connection.createStatement().executeQuery(
-                    "Select * from appointments");
+            ResultSet rs = HelloController.connection.createStatement().executeQuery("Select * from appointments");
             while (rs.next()) {
                 String monthstring = rs.getString("Start"), type = rs.getString("Type");
                 int monthint = Integer.parseInt(monthstring.substring(5, 7));
@@ -32,14 +31,15 @@ public class reports {
                     case 1 -> incrementhm(janhm, type);
                     case 2 -> incrementhm(febhm, type);
                     case 3 -> incrementhm(marhm, type);
-                    case 4 -> incrementhm(mayhm, type);
-                    case 5 -> incrementhm(junehm, type);
-                    case 6 -> incrementhm(julhm, type);
-                    case 7 -> incrementhm(aughm, type);
-                    case 8 -> incrementhm(septhm, type);
-                    case 9 -> incrementhm(octhm, type);
-                    case 10 -> incrementhm();
-
+                    case 4 -> incrementhm(aprhm, type);
+                    case 5 -> incrementhm(mayhm, type);
+                    case 6 -> incrementhm(junehm, type);
+                    case 7 -> incrementhm(julhm, type);
+                    case 8 -> incrementhm(aughm, type);
+                    case 9 -> incrementhm(septhm, type);
+                    case 10 -> incrementhm(octhm, type);
+                    case 11 -> incrementhm(novhm, type);
+                    case 12 -> incrementhm(dechm, type);
                 }
             }
 
