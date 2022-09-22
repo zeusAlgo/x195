@@ -3,6 +3,8 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.TextArea;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 
 public class reports {
@@ -18,7 +20,11 @@ public class reports {
         try {
             ResultSet rs = HelloController.connection.createStatement().executeQuery(
                     "Select * from appointments");
-            int monthint = rs.get
+            String monthstring = rs.getString("Start");
+            DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-mm-dd hh:mm:ss");
+            ZonedDateTime zdt = ZonedDateTime.parse(monthstring, dtf);
+            System.out.println(zdt.getMonth());
+
         } catch (SQLException e) {System.out.println(e.getMessage());}
 
     }
