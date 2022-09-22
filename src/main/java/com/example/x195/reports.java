@@ -24,14 +24,27 @@ public class reports {
                 String monthstring = rs.getString("Start"), type = rs.getString("Type");
                 int monthint = Integer.parseInt(monthstring.substring(5, 7));
                 switch (monthint) {
-                    case 1: ;
-                    case 2:
+                    case 1: if (janhm.containsKey(type)) janhm.put(type, janhm.get(type) + 1);
+                            else {janhm.put(type, 1);}
+                    case 2: if (febhm.containsKey(type)) febhm.put(type, febhm.get(type) + 1);
+                            else {febhm.put(type, 1);}
+                    case 3: if (janhm.containsKey(type)) janhm.put(type, janhm.get(type) + 1);
+                            else {janhm.put(type, 1);}
+                    case 4: if (janhm.containsKey(type)) janhm.put(type, janhm.get(type) + 1);
+                            else {janhm.put(type, 1);}
+                            
+                            
                 }
 
             }
 
         } catch (SQLException e) {System.out.println(e.getMessage());}
 
+    }
+    public void incrementhm(HashMap<String, Integer> hm, String type) {
+       if (hm.containsKey(type)) hm.put(type, hm.get(type) + 1);
+       else {hm.put(type, 1);}
+        
     }
 
     public void report2(ActionEvent actionEvent) {
