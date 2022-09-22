@@ -85,10 +85,8 @@ public class home {
     public boolean impendingapt() {
         ZonedDateTime curzdt = LocalDateTime.now().atZone(ZoneId.systemDefault());
         ZonedDateTime utczdt = curzdt.withZoneSameInstant(ZoneId.of("UTC"));
-        //brute force check if apt in 15 min by checking every minute
-        System.out.println(curzdt);
-        System.out.println(utczdt);
-
+//        System.out.println(curzdt);
+//        System.out.println(utczdt);
         HashSet<ZonedDateTime> zdths = new HashSet<>();
         for (int i=0; i <= 15; i ++) zdths.add(utczdt.plusMinutes(i));
 
@@ -102,9 +100,7 @@ public class home {
         }
         try {
             ResultSet rs = HelloController.connection.createStatement().executeQuery("Select * from appointments");
-            while (rs.next()) {
-                if (stringhs.contains(rs.getString("Start"))) return false;
-            }
+            while (rs.next()) if (stringhs.contains(rs.getString("Start"))) return false;
         } catch (SQLException e) { System.out.println(e.getMessage());}
         return true;
     }
