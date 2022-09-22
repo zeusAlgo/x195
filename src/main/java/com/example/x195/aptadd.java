@@ -1,5 +1,4 @@
 package com.example.x195;
-import com.mysql.cj.jdbc.exceptions.SQLError;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
@@ -7,7 +6,9 @@ import javafx.scene.control.TextField;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.time.*;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 
 public class aptadd {
     public ComboBox usercombobox, apttimecombobox, customercombobox, contactcombobox, monthcombobox, daycombobox;
