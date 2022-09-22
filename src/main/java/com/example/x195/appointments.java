@@ -40,18 +40,6 @@ public class appointments {
     public void deleteapt(ActionEvent actionEvent) { home.del("appointments", "Appointment_ID", Integer.parseInt(deltxtfld.getText()));
     }
 
-    public void convloctime2biztime() {
-        ZonedDateTime curzdt = LocalDateTime.now().atZone(ZoneId.systemDefault());
-        ZonedDateTime utczdt = LocalDateTime.now().atZone(ZoneId.of("UTC"));
-        System.out.println(utczdt);
-
-        ZonedDateTime estzdt = curzdt.withZoneSameInstant(ZoneId.of("America/New_York"));
-        System.out.println(estzdt);
-
-        ZonedDateTime utczonedt = curzdt.withZoneSameInstant(ZoneId.of("UTC"));
-        System.out.println(utczonedt);
-    }
-
     public void initialize() {
        contactshm.put("Anika Costa", 1);contactshm.put("Daniel Garcia", 2);contactshm.put("Li Lee", 3);
        usershm.put("test", 1);usershm.put("admin", 2);
