@@ -14,6 +14,7 @@ import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.util.HashMap;
+import java.util.HashSet;
 
 public class home {
     public Button customersBtn, aptBtn, reportsBtn;
@@ -88,10 +89,15 @@ public class home {
         //brute force check if apt in 15 min by checking every minute
         System.out.println(curzdt);
         System.out.println(utczdt);
+        utczdt.toLocalDateTime();
+        System.out.println(utczdt);
+
         int curhr = utczdt.getHour(),
-                curmin = utczdt.getMinute();    
+                curmin = utczdt.getMinute();
+        HashSet<Integer> hs = new HashSet<Integer>();
 
         for (int i=0; i <= 15; i ++) {
+
 
         }
     }
