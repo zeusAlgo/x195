@@ -109,7 +109,7 @@ public class home {
         } catch (SQLException e) { System.out.println(e.getMessage());}
         return false;
     }
-    
+
 //todo: storing retrieval in db wrong; investigate
 
     public void initialize() {
