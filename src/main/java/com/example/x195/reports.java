@@ -22,10 +22,9 @@ public class reports {
                     "Select * from appointments");
             while (rs.next()) {
                 String monthstring = rs.getString("Start");
-                DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-mm-dd hh:mm:ss");
-                ZonedDateTime zdt = ZonedDateTime.parse(monthstring, dtf);
-                String month = zdt.getMonth().toString();
-                System.out.println(month);
+                int monthint = Integer.parseInt(monthstring.substring(5, 7));
+                
+
             }
 
         } catch (SQLException e) {System.out.println(e.getMessage());}
