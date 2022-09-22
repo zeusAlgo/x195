@@ -21,9 +21,12 @@ public class reports {
             ResultSet rs = HelloController.connection.createStatement().executeQuery(
                     "Select * from appointments");
             while (rs.next()) {
-                String monthstring = rs.getString("Start");
+                String monthstring = rs.getString("Start"), type = rs.getString("Type");
                 int monthint = Integer.parseInt(monthstring.substring(5, 7));
-                switch
+                switch (monthint) {
+                    case 1: ;
+                    case 2:
+                }
 
             }
 
