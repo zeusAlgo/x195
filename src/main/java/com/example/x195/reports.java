@@ -3,6 +3,8 @@ package com.example.x195;
 import javafx.event.ActionEvent;
 import javafx.scene.control.TextArea;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.HashMap;
 
 public class reports {
@@ -26,6 +28,11 @@ public class reports {
         HashMap<String, Integer> novhm = new HashMap<>();
         HashMap<String, Integer> dechm = new HashMap<>();
 
+        try {
+
+            ResultSet rs = HelloController.connection.createStatement().executeQuery(
+                    "Select * from appointments");
+        } catch (SQLException e) {System.out.println(e.getMessage());}
     }
 
     public void report2(ActionEvent actionEvent) {
