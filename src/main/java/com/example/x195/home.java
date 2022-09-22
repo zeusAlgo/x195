@@ -99,9 +99,13 @@ public class home {
             string += "00";
             stringhs.add(string);
         }
+        System.out.println(stringhs);
         try {
             ResultSet rs = HelloController.connection.createStatement().executeQuery("Select * from appointments");
-            while (rs.next()) if (stringhs.contains(rs.getString("Start"))) return true;
+            while (rs.next()) {
+                System.out.println(rs.getString("Start"));
+                if (stringhs.contains(rs.getString("Start"))) return true;
+            }
         } catch (SQLException e) { System.out.println(e.getMessage());}
         return false;
     }
