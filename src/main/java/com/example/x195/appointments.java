@@ -15,7 +15,7 @@ import java.util.HashMap;
 public class appointments {
     public TextField modifytxtfld, deltxtfld;
     static HashMap<String, Integer> contactshm = new HashMap<>(), usershm = new HashMap<>(), customershm = new HashMap<>(), timeshm = new HashMap<>();
-    static ObservableList<String> contactsar = FXCollections.observableArrayList("Anika Costa", "Daniel Garcia", "Li Lee"), usersar = FXCollections.observableArrayList("test", "admin"), customersar = FXCollections.observableArrayList(), timesar = FXCollections.observableArrayList("4 am", "5 am", "6 am", "7 am", "8 am", "9 am", "10 am", "11 am", "12 am", "1 pm", "2 pm", "3 pm", "4 pm", "5 pm", "6 pm", "7 pm", "8 pm", "9 pm", "10 pm", "11 pm"), monthsar = FXCollections.observableArrayList("JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER");static ObservableList<Integer> daysar = FXCollections.observableArrayList(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31);
+    static ObservableList<String> contactsar = FXCollections.observableArrayList("Anika Costa", "Daniel Garcia", "Li Lee"), usersar = FXCollections.observableArrayList("test", "admin"), customersar = FXCollections.observableArrayList(), timesar = FXCollections.observableArrayList("4 am", "5 am", "6 am", "7 am", "8 am", "9 am", "10 am", "11 am", "12 pm", "1 pm", "2 pm", "3 pm", "4 pm", "5 pm", "6 pm", "7 pm", "8 pm", "9 pm", "10 pm", "11 pm"), monthsar = FXCollections.observableArrayList("JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER");static ObservableList<Integer> daysar = FXCollections.observableArrayList(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31);
 
     public static int toalterid = 0;
 
@@ -55,7 +55,7 @@ public class appointments {
     public void initialize() {
        contactshm.put("Anika Costa", 1);contactshm.put("Daniel Garcia", 2);contactshm.put("Li Lee", 3);
        usershm.put("test", 1);usershm.put("admin", 2);
-       timeshm.put("4 am", 4); timeshm.put("5 am", 5);timeshm.put("6 am", 6);timeshm.put("7 am", 7);timeshm.put("8 am", 8);timeshm.put("9 am", 9);timeshm.put("10 am", 10);timeshm.put("11 am",11);timeshm.put("12 am", 12);timeshm.put("1 pm", 13);timeshm.put("2 pm", 14);timeshm.put("3 pm", 15);timeshm.put("4 pm", 16);timeshm.put("5 pm",17);timeshm.put("6 pm",18);timeshm.put("7 pm", 19);timeshm.put("8 pm", 20);timeshm.put("9 pm",21);timeshm.put("10 pm",22);timeshm.put("11 pm", 23);
+       timeshm.put("4 am", 4); timeshm.put("5 am", 5);timeshm.put("6 am", 6);timeshm.put("7 am", 7);timeshm.put("8 am", 8);timeshm.put("9 am", 9);timeshm.put("10 am", 10);timeshm.put("11 am",11);timeshm.put("12 pm", 12);timeshm.put("1 pm", 13);timeshm.put("2 pm", 14);timeshm.put("3 pm", 15);timeshm.put("4 pm", 16);timeshm.put("5 pm",17);timeshm.put("6 pm",18);timeshm.put("7 pm", 19);timeshm.put("8 pm", 20);timeshm.put("9 pm",21);timeshm.put("10 pm",22);timeshm.put("11 pm", 23);
        customershm = getallcustomers();
     }
 }
