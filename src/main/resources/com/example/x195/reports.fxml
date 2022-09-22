@@ -6,8 +6,8 @@
 <AnchorPane prefHeight="1000.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.x195.reports">
    <children>
       <TextArea fx:id="textarea" layoutX="44.0" layoutY="46.0" prefHeight="928.0" prefWidth="710.0" />
-      <Button layoutX="839.0" layoutY="337.0" mnemonicParsing="false" text="Report 1" />
-      <Button layoutX="839.0" layoutY="476.0" mnemonicParsing="false" text="Report 2" />
-      <Button layoutX="839.0" layoutY="632.0" mnemonicParsing="false" text="Report 3" />
+      <Button onAction="#report1" layoutX="839.0" layoutY="337.0" mnemonicParsing="false" text="Report 1" />
+      <Button onAction="#report2" layoutX="839.0" layoutY="476.0" mnemonicParsing="false" text="Report 2" />
+      <Button onAction="#report3" layoutX="839.0" layoutY="632.0" mnemonicParsing="false" text="Report 3" />
    </children>
 </AnchorPane>
