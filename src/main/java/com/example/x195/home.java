@@ -100,6 +100,7 @@ public class home {
             string += "00";
             stringhs.add(string);
         }
+        //todo: check if db start time in string hs. if hs.contains(string)
     }
 
     public void initialize() {
