@@ -40,7 +40,9 @@ public class reports {
                     case 10 -> incrementhm(octhm, type);
                     case 11 -> incrementhm(novhm, type);
                     case 12 -> incrementhm(dechm, type);}
+                System.out.println(monthstring);
             }
+            System.out.println(septhm);
         } catch (SQLException e) {System.out.println(e.getMessage());}
     }
 
