@@ -22,10 +22,10 @@ public class aptadd {
 
     public boolean isbizopen() {
         boolean bool = true;
-        int month = monthcombobox.getSelectionModel().getSelectedIndex()+1;
-        int day = (int) daycombobox.getSelectionModel().getSelectedItem();
         String hrS = (String) apttimecombobox.getSelectionModel().getSelectedItem();
-        int hr = appointments.timeshm.get(hrS);
+        int month = monthcombobox.getSelectionModel().getSelectedIndex()+1,
+                day = (int) daycombobox.getSelectionModel().getSelectedItem(),
+                hr = appointments.timeshm.get(hrS);
 
         ZonedDateTime aptcurzdt = LocalDateTime.of(2022, month, day, hr, 0).atZone(ZoneId.systemDefault());
         ZonedDateTime aptestzdt = aptcurzdt.withZoneSameInstant(ZoneId.of("America/New_York")),
@@ -38,7 +38,6 @@ public class aptadd {
                 alert2 = new Alert(Alert.AlertType.INFORMATION, "Appointment unavailable");
         if (hour < 8 | hour > 22) {alert.show();return false;}
         if (dayofweek.equals("SATURDAY") | dayofweek.equals("SUNDAY")) {alert4.show();return false;}
-//        int contactid = appointments.contactshm.get(contactcombobox.getSelectionModel().getSelectedItem());
         try {
             ResultSet rs = HelloController.connection.createStatement().executeQuery("Select * from appointments");
             while (rs.next()) {
