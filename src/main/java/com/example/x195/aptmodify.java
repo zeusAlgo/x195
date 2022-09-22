@@ -73,7 +73,7 @@ public class aptmodify {
 
             int month = monthcombobox.getSelectionModel().getSelectedIndex()+1,
                     day = (int) daycombobox.getSelectionModel().getSelectedItem(),
-                    hr = Integer.parseInt(hrS.substring(0, 1));
+                    hr = appointments.timeshm.get(hrS);
             ZonedDateTime aptcurzdt = LocalDateTime.of(2022, month, day, hr, 0).atZone(ZoneId.systemDefault());
             ZonedDateTime aptutc = aptcurzdt.withZoneSameInstant(ZoneId.of("UTC")), aptutcend = aptutc.plusHours(1);
             LocalDateTime aptstart1 = aptutc.toLocalDateTime(), aptend1 = aptutcend.toLocalDateTime();
