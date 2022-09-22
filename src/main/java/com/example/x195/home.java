@@ -82,7 +82,7 @@ public class home {
         return colv+1;
     }
 
-    public void impendingapt() {
+    public boolean impendingapt() {
         ZonedDateTime curzdt = LocalDateTime.now().atZone(ZoneId.systemDefault());
         ZonedDateTime utczdt = curzdt.withZoneSameInstant(ZoneId.of("UTC"));
         //brute force check if apt in 15 min by checking every minute
@@ -100,13 +100,13 @@ public class home {
             string += "00";
             stringhs.add(string);
         }
-        //todo: check if db start time in string hs. if hs.contains(string)
         try {
             ResultSet rs = HelloController.connection.createStatement().executeQuery("Select * from appointments");
             while (rs.next()) {
-                
+                if (stringhs.contains(rs.getString("Start"))) return false;
             }
         } catch (SQLException e) { System.out.println(e.getMessage());}
+        return true;
     }
 
     public void initialize() {
