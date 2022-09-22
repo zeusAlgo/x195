@@ -62,8 +62,13 @@ public class aptadd {
             int day = (int) daycombobox.getSelectionModel().getSelectedItem();
             int hr = Integer.parseInt(hrS.substring(0, 1));
             ZonedDateTime aptcurzdt = LocalDateTime.of(2022, month, day, hr, 0).atZone(ZoneId.systemDefault());
+            ZonedDateTime aptutczdt1 = LocalDateTime.of(2022, month, day, hr, 0).atZone(ZoneId.of("UTC"));
             ZonedDateTime aptutc = aptcurzdt.withZoneSameInstant(ZoneId.of("UTC")), aptutcend = aptutc.plusHours(1);
             LocalDateTime aptstart1 = aptutc.toLocalDateTime(), aptend1 = aptutcend.toLocalDateTime();
+
+            System.out.println(aptutczdt1);
+            System.out.println(aptutc);
+            System.out.println(aptstart1);
 
             int custid = appointments.customershm.get(customercombobox.getSelectionModel().getSelectedItem());
             int userid = appointments.usershm.get(usercombobox.getSelectionModel().getSelectedItem());
