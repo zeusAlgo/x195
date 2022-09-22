@@ -39,12 +39,9 @@ public class reports {
                     case 9 -> incrementhm(septhm, type);
                     case 10 -> incrementhm(octhm, type);
                     case 11 -> incrementhm(novhm, type);
-                    case 12 -> incrementhm(dechm, type);
-                }
+                    case 12 -> incrementhm(dechm, type);}
             }
-
         } catch (SQLException e) {System.out.println(e.getMessage());}
-
     }
 
 
