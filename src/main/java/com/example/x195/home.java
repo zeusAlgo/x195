@@ -90,15 +90,13 @@ public class home {
         System.out.println(utczdt);
 
         HashSet<ZonedDateTime> zdths = new HashSet<>();
-        for (int i=0; i <= 15; i ++) {
-            utczdt.getSecond();
-            zdths.add(utczdt.plusMinutes(i));
-        }
+        for (int i=0; i <= 15; i ++) zdths.add(utczdt.plusMinutes(i));
 
         HashSet<String> stringhs = new HashSet<>();
         for (ZonedDateTime zdt : zdths) {
             String string = zdt.toString();
             string = string.substring(0, 19);
+            string.replace("T", " ");
             System.out.println(string);
 
         }
