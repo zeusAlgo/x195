@@ -29,18 +29,18 @@ public class reports {
                 String monthstring = rs.getString("Start"), type = rs.getString("Type");
                 int monthint = Integer.parseInt(monthstring.substring(5, 7));
                 switch (monthint) {
-                    case 1: if (janhm.containsKey(type)) janhm.put(type, janhm.get(type) + 1);
-                            else {janhm.put(type, 1);}
-                    case 2: if (febhm.containsKey(type)) febhm.put(type, febhm.get(type) + 1);
-                            else {febhm.put(type, 1);}
-                    case 3: if (janhm.containsKey(type)) janhm.put(type, janhm.get(type) + 1);
-                            else {janhm.put(type, 1);}
-                    case 4: if (janhm.containsKey(type)) janhm.put(type, janhm.get(type) + 1);
-                            else {janhm.put(type, 1);}
-                            
-                            
-                }
+                    case 1 -> incrementhm(janhm, type);
+                    case 2 -> incrementhm(febhm, type);
+                    case 3 -> incrementhm(marhm, type);
+                    case 4 -> incrementhm(mayhm, type);
+                    case 5 -> incrementhm(junehm, type);
+                    case 6 -> incrementhm(julhm, type);
+                    case 7 -> incrementhm(aughm, type);
+                    case 8 -> incrementhm(septhm, type);
+                    case 9 -> incrementhm(octhm, type);
+                    case 10 -> incrementhm();
 
+                }
             }
 
         } catch (SQLException e) {System.out.println(e.getMessage());}
