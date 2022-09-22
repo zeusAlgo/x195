@@ -4,6 +4,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
@@ -107,9 +108,9 @@ public class home {
 
     public void initialize() {
         countryhm.put("U.S", 1); countryhm.put("UK", 2); countryhm.put("Canada", 3);usdivhm = getdivs(1);ukdivhm = getdivs(2);canadadivhm = getdivs(3);alldivshm = getalldivs();
-        if(impendingapt()) System.out.println("Appointment in 15 mins!");
-        else {
-            System.out.println("No appointment in 15 mins.");
-        }
+        Alert alerta = new Alert(Alert.AlertType.INFORMATION, "Appointment in 15 mins!");
+        Alert alertb = new Alert(Alert.AlertType.INFORMATION, "No appointment in 15 mins!");
+        if(impendingapt()) alerta.show();
+        else { alertb.show();}
     }
 }
