@@ -101,6 +101,12 @@ public class home {
             stringhs.add(string);
         }
         //todo: check if db start time in string hs. if hs.contains(string)
+        try {
+            ResultSet rs = HelloController.connection.createStatement().executeQuery("Select * from appointments");
+            while (rs.next()) {
+                
+            }
+        } catch (SQLException e) { System.out.println(e.getMessage());}
     }
 
     public void initialize() {
