@@ -90,7 +90,10 @@ public class home {
         System.out.println(utczdt);
 
         HashSet<ZonedDateTime> zdths = new HashSet<>();
-        for (int i=0; i <= 15; i ++) zdths.add(utczdt.plusMinutes(i));
+        for (int i=0; i <= 15; i ++) {
+            utczdt.getSecond();
+            zdths.add(utczdt.plusMinutes(i));
+        }
 
         HashSet<String> stringhs = new HashSet<>();
         for (ZonedDateTime zdt : zdths) {
