@@ -83,7 +83,6 @@ public class home {
     }
 
     public void impendingapt() {
-
         ZonedDateTime curzdt = LocalDateTime.now().atZone(ZoneId.systemDefault());
         ZonedDateTime utczdt = curzdt.withZoneSameInstant(ZoneId.of("UTC"));
         //brute force check if apt in 15 min by checking every minute
@@ -91,10 +90,7 @@ public class home {
         System.out.println(utczdt);
 
         HashSet<ZonedDateTime> zdths = new HashSet<>();
-
-        for (int i=0; i <= 15; i ++) {
-            zdths.add(utczdt.plusMinutes(i));
-        }
+        for (int i=0; i <= 15; i ++) zdths.add(utczdt.plusMinutes(i));
 
         HashSet<String> stringhs = new HashSet<>();
         for (ZonedDateTime zdt : zdths) {
