@@ -109,6 +109,8 @@ public class home {
         } catch (SQLException e) { System.out.println(e.getMessage());}
         return false;
     }
+    
+//todo: storing retrieval in db wrong; investigate
 
     public void initialize() {
         countryhm.put("U.S", 1); countryhm.put("UK", 2); countryhm.put("Canada", 3);usdivhm = getdivs(1);ukdivhm = getdivs(2);canadadivhm = getdivs(3);alldivshm = getalldivs();
