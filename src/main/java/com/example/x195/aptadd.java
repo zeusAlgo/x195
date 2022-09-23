@@ -10,16 +10,26 @@ import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 
+/**
+ * Adds an appointment
+ */
 public class aptadd {
     public ComboBox usercombobox, apttimecombobox, customercombobox, contactcombobox, monthcombobox, daycombobox;
     public TextField titletxtfld, desctxtfld, loctxtfld, typetxtfld;
 
+    /**
+     * Sets items for combo boxes
+     */
     public void initialize() {
         usercombobox.setItems(appointments.usersar);contactcombobox.setItems(appointments.contactsar);
         customercombobox.setItems(appointments.customersar);apttimecombobox.setItems(appointments.timesar);
         monthcombobox.setItems(appointments.monthsar);daycombobox.setItems(appointments.daysar);
     }
 
+    /**
+     * Checks if the business is open and requested timeslots are available
+     * @return Boolean if business is open and timeslots open
+     */
     public boolean isbizopen() {
         boolean bool = true;
         String hrS = (String) apttimecombobox.getSelectionModel().getSelectedItem();
@@ -50,8 +60,10 @@ public class aptadd {
         return bool;
     }
 
-    //todo: make apt pull apt creds and insert work on reports
-
+    /**
+     * Adds appointment
+     * @param actionEvent Mouse or keyboard press
+     */
     public void addapt(ActionEvent actionEvent) {
         try {
             if (!isbizopen()) return;
