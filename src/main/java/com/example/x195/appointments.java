@@ -63,17 +63,6 @@ public class appointments {
         tblViewW.setItems(appointmentModelW.getAppointmentInfoW(weekcombobox.getSelectionModel().getSelectedIndex()+1));
     }
 
-    public void setappointmentida(MouseEvent mouseEvent) {
-        toalterid = tblViewM.getSelectionModel().getSelectedItem().getAppointmentId();
-        modifytxtfld.setText(String.valueOf(toalterid));
-        deltxtfld.setText(String.valueOf(toalterid));
-    }
-
-    public void setappointmentidb(MouseEvent mouseEvent) {
-        toalterid = tblViewM.getSelectionModel().getSelectedItem().getAppointmentId();
-        modifytxtfld.setText(String.valueOf(toalterid));
-        deltxtfld.setText(String.valueOf(toalterid));
-    }
     public void initialize() {
        contactshm.put("Anika Costa", 1);contactshm.put("Daniel Garcia", 2);contactshm.put("Li Lee", 3);
        usershm.put("test", 1);usershm.put("admin", 2);
@@ -105,5 +94,18 @@ public class appointments {
        appointmentCustomerIdColW.setCellValueFactory(new PropertyValueFactory<Appointment, String>("customerId"));
        appointmentUserIdColW.setCellValueFactory(new PropertyValueFactory<Appointment, String>("userId"));
         tblViewW.setItems(appointmentModelW.getAppointments());
+    }
+
+
+    public void setappointmentidW(javafx.scene.input.MouseEvent mouseEvent) {
+        toalterid = tblViewW.getSelectionModel().getSelectedItem().getAppointmentId();
+        modifytxtfld.setText(String.valueOf(toalterid));
+        deltxtfld.setText(String.valueOf(toalterid));
+    }
+
+    public void setappointmentidM(javafx.scene.input.MouseEvent mouseEvent) {
+        toalterid = tblViewM.getSelectionModel().getSelectedItem().getAppointmentId();
+        modifytxtfld.setText(String.valueOf(toalterid));
+        deltxtfld.setText(String.valueOf(toalterid));
     }
 }

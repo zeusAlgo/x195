@@ -16,7 +16,7 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <TableView fx:id="tblViewM" layoutX="52.0" layoutY="76.0" prefHeight="763.0" prefWidth="619.0">
+                        <TableView fx:id="tblViewM" onMouseClicked="#setappointmentidM" layoutX="52.0" layoutY="76.0" prefHeight="763.0" prefWidth="619.0">
                           <columns>
                             <TableColumn fx:id="appointmentIdColM" prefWidth="75.0" text="Id" />
                             <TableColumn fx:id="appointmentTitleColM" prefWidth="75.0" text="Title" />
@@ -39,7 +39,7 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <TableView fx:id="tblViewW" layoutX="40.0" layoutY="55.0" prefHeight="785.0" prefWidth="632.0">
+                        <TableView fx:id="tblViewW" onMouseClicked="#setappointmentidW" layoutX="40.0" layoutY="55.0" prefHeight="785.0" prefWidth="632.0">
                           <columns>
                               <TableColumn fx:id="appointmentIdColW" prefWidth="75.0" text="Id" />
                               <TableColumn fx:id="appointmentTitleColW" prefWidth="75.0" text="Title" />
