@@ -40,7 +40,7 @@ public class reports {
         s += "Jan \n";
         var aa = new Object() {String s2;};
         janhm.forEach((k, v) -> {aa.s2 += k + ":" + String.valueOf(v) + "\n";});
-        s += aa.s2;
+        if (aa.s2 != null) s += aa.s2;
 
         s += "Feb \n";
         var ab = new Object() {String s2;};
@@ -80,7 +80,8 @@ public class reports {
         s += "Sept \n";
         var ai = new Object() {String s2;};
         septhm.forEach((k, v) -> {ai.s2 += k + ":" + String.valueOf(v) + "\n";});
-        s += ai.s2;
+        if (ai.s2.equals("null")) {}
+        else s += ai.s2;
 
         s += "Oct \n";
         var aj = new Object() {String s2;};
