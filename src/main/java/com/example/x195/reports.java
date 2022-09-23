@@ -4,6 +4,7 @@ import javafx.scene.control.TextArea;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.HashMap;
+import java.util.Map;
 
 public class reports {
     public TextArea textarea;
@@ -57,7 +58,13 @@ public class reports {
 //        s += dk.s1;
 //        System.out.println(s);
         //todo: lambdas
-        
+        StringBuilder s = null;
+        for (Map.Entry<String, Integer> entry : janhm.entrySet()) {
+            String k = entry.getKey();
+            Integer v = entry.getValue();
+            s.append(k).append(":").append(v);
+        }
+        textarea.setText(String.valueOf(s));
     }
 
 
