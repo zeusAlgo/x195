@@ -45,32 +45,32 @@ public class reports {
         s += "Feb \n";
         var ab = new Object() {String s2;};
         febhm.forEach((k, v) -> {ab.s2 += k + ":" + String.valueOf(v) + "\n";});
-        s += ab.s2;
+        if (ab.s2 != null) s += ab.s2;
 
         s += "Mar \n";
         var ac = new Object() {String s2;};
         marhm.forEach((k, v) -> {ac.s2 += k + ":" + String.valueOf(v) + "\n";});
-        s += ac.s2;
+        if (ac.s2 != null) s += ac.s2;
 
         s += "Apr \n";
         var ad = new Object() {String s2;};
         aprhm.forEach((k, v) -> {ad.s2 += k + ":" + String.valueOf(v) + "\n";});
-        s += ad.s2;
+        if (ad.s2 != null) s += ad.s2;
 
         s += "May \n";
         var ae = new Object() {String s2;};
         mayhm.forEach((k, v) -> {ae.s2 += k + ":" + String.valueOf(v) + "\n";});
-        s += ae.s2;
+        if (ae.s2 != null)s += ae.s2;
 
         s += "Jun \n";
         var af = new Object() {String s2;};
         junehm.forEach((k, v) -> {af.s2 += k + ":" + String.valueOf(v) + "\n";});
-        s += af.s2;
+        if (af.s2 != null) s += af.s2;
 
         s += "Jul \n";
         var ag = new Object() {String s2;};
         julhm.forEach((k, v) -> {ag.s2 += k + ":" + String.valueOf(v) + "\n";});
-        s += ag.s2;
+        if (ag.s2 != null) s += ag.s2;
 
         s += "Aug \n";
         var ah = new Object() {String s2;};
