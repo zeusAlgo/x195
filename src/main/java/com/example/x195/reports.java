@@ -135,7 +135,7 @@ public class reports {
                 }
             }
         } catch (SQLException e) { System.out.println(e.getMessage());}
-        String s = "\nAnika Costa : " + String.valueOf(ctr.get("Anika")) + "\nDaniel Garcia : " + String.valueOf(ctr.get("Daniel")) + "\nLi Lee : " + String.valueOf("Li");
+        String s = "Total Appointments by Contact\nAnika Costa : " + String.valueOf(ctr.get("Anika")) + "\nDaniel Garcia : " + String.valueOf(ctr.get("Daniel")) + "\nLi Lee : " + String.valueOf(ctr.get("Li"));
         textarea.setText(s);
     }
 }
