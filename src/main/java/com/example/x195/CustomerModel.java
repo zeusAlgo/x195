@@ -19,8 +19,7 @@ public class CustomerModel {
                         rs.getString("Address"),
                         rs.getString("Postal_Code"),
                         rs.getString("Phone"),
-                        rs.getInt("Division_ID")
-                );
+                        rs.getInt("Division_ID"));
                 customerInfo.add(curCustomer);
             }
         } catch (SQLException e) {System.out.println(e.getMessage());}
