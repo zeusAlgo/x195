@@ -54,9 +54,9 @@ public class reports {
         });
 
         var fb = new Object() {String s2;};
-        septhm.forEach((k, v) -> {fb.s2 = k + ":";});
+        septhm.forEach((k, v) -> {fb.s2 += k + ":" + String.valueOf(v);});
 
-        s += dk.s1;
+//        s += dk.s1;
         s += fb.s2;
         System.out.println(s);
         //todo: lambdas
