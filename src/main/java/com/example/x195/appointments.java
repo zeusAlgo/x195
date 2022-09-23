@@ -69,6 +69,11 @@ public class appointments {
         deltxtfld.setText(String.valueOf(toalterid));
     }
 
+    public void setappointmentidb(MouseEvent mouseEvent) {
+        toalterid = tblViewM.getSelectionModel().getSelectedItem().getAppointmentId();
+        modifytxtfld.setText(String.valueOf(toalterid));
+        deltxtfld.setText(String.valueOf(toalterid));
+    }
     public void initialize() {
        contactshm.put("Anika Costa", 1);contactshm.put("Daniel Garcia", 2);contactshm.put("Li Lee", 3);
        usershm.put("test", 1);usershm.put("admin", 2);
