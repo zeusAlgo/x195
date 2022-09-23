@@ -106,11 +106,14 @@ public class reports {
         String anikas = "Anika Costa\n========", daniels = "\nDaniel Garcia\n========", lis = "\nLi Lee\n=======";
         try {
             ResultSet rs = HelloController.connection.createStatement().executeQuery("Select * from appointments");
-            int contactid = rs.getInt("Contact_ID");
-            switch (contactid) {
-                case 1 -> anikas += "\n"+ String.valueOf(rs.getInt("Appointment_ID")) + rs.getString("Title") + rs.getString("Description") + rs.getString("Start") + rs.getString("End") + String.valueOf(rs.getInt("Customer_ID"));
-                case 2 -> daniels += "d";
-                case 3 -> lis += "l";
+            while (rs.next()) {
+                int contactid = rs.getInt("Contact_ID");
+                switch (contactid) {
+                    case 1 -> anikas += "\n"+ String.valueOf(rs.getInt("Appointment_ID")) + rs.getString("Title") + rs.getString("Description") + rs.getString("Start") + rs.getString("End") + String.valueOf(rs.getInt("Customer_ID"));
+                    case 2 -> daniels += "d";
+                    case 3 -> lis += "l";
+
+            }
             }
         } catch (SQLException e) { System.out.println(e.getMessage());}
         textarea.setText(anikas + daniels + lis);
