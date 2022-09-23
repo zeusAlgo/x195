@@ -58,12 +58,20 @@ public class reports {
         s += ad.s2;
 
         s += "May \n";
-        var fb = new Object() {String s2;};
-        janhm.forEach((k, v) -> {fb.s2 += k + ":" + String.valueOf(v) + "\n";});
+        var ae = new Object() {String s2;};
+        janhm.forEach((k, v) -> {ae.s2 += k + ":" + String.valueOf(v) + "\n";});
+        s += ae.s2;
+
         s += "Jun \n";
-        var fb = new Object() {String s2;};
-        janhm.forEach((k, v) -> {fb.s2 += k + ":" + String.valueOf(v) + "\n";});
-        s += fb.s2;
+        var af = new Object() {String s2;};
+        janhm.forEach((k, v) -> {af.s2 += k + ":" + String.valueOf(v) + "\n";});
+        s += af.s2;
+
+        s += "Jul \n";
+        var ag = new Object() {String s2;};
+        janhm.forEach((k, v) -> {ag.s2 += k + ":" + String.valueOf(v) + "\n";});
+        s += ag.s2;
+        
         textarea.setText(s);
     }
 
