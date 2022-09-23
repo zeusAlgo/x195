@@ -15,13 +15,12 @@ import javafx.stage.Stage;
 public class customers {
     public TextField modifyTxtFld, deleteTxtFld;
     public Button delBtn;
-    @FXML private TableColumn<customer, String> tblcola, tblcolb;
+    @FXML private TableColumn<Customer, String> tblcola, tblcolb;
     @FXML private TableView<customer> tblview;
-    public static ObservableList<customer> ar;
+    public static ObservableList<Customer> ar;
     public static int tomodifyid = 0;
 
     public void launchActivity(String activityname){
-
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(home.class.getResource(activityname+".fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 1100, 1100);
@@ -44,13 +43,5 @@ public class customers {
         tblcola.setCellValueFactory(new PropertyValueFactory<>("id"));
         tblcolb.setCellValueFactory(new PropertyValueFactory<>("name"));
         ar = FXCollections.observableArrayList();
-        customer custa = new customer(1, "dklaj", "slkfj", "lksdj", "lsdkjf",23);
-//        ar.add(String.valueOf(custa.getid()));
-        ar.add(custa);
-
-//        ar.add(
-//                String.valueOf(new customer(1, "dklaj", "slkfj", "lksdj", "lsdkjf",23)));
-//        ar.add("yes");
-//        tblview.setItems(ar);
     }
 }
