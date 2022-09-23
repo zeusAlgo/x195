@@ -103,12 +103,10 @@ public class reports {
     }
 
     public void report2(ActionEvent actionEvent) {
-        String s = "";
-        // check if obsv list can be concatenated to string
-        ObservableList<String> ar = FXCollections.observableArrayList();
-        s += ar;
+        String anikas = "Anika Costa \n =======", daniels = "Daniel Garcia \n ========", lis = "Li Lee \n =====";
 
-        // for each contact create hm and populate with aptid and data
+        // go through db and string concatenaate
+        ResultSet rs = HelloController.connection.createStatement().executeQuery("Select * from appointments");
 
         textarea.setText(s);
     }
