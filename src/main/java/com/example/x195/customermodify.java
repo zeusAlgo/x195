@@ -6,11 +6,19 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.HashMap;
 
+/**
+ * Modifies customer
+ */
 public class customermodify {
     public ComboBox countrycombobox, divisioncombobox;
     public TextField nametxtfld, addresstxtfld, postcodetxtfld, idtxtfld, phonetxtfld;
     String divname, nation;
 
+    /**
+     * Gets customer information
+     * @param customerid id of customer
+     * @return Hashmap of customer information
+     */
     public HashMap<String, String> getcustomerinfo(int customerid) {
         HashMap<String, String> customerhm = new HashMap<>();
         try {
@@ -28,6 +36,9 @@ public class customermodify {
         return customerhm;
     }
 
+    /**
+     * Sets divisions
+     */
     public void setdivs() {
         String countryname = (String) countrycombobox.getSelectionModel().getSelectedItem();
         switch (countryname) {
@@ -37,6 +48,9 @@ public class customermodify {
         }
     }
 
+    /**
+     * Updates customer
+     */
     public void updatecustomer() {
         try {
             int divid = 0;
@@ -52,6 +66,9 @@ public class customermodify {
 //        customers.tblView.refresh();
     }
 
+    /**
+     * Sets ui, hashmap, and array values
+     */
     public void initialize() {
         countrycombobox.setItems(home.countryar);
         int curcustomerid = customers.tomodifyid;
