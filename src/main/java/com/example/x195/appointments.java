@@ -53,7 +53,6 @@ public class appointments {
         String aptid = deltxtfld.getText();
         Alert alert = new Alert(Alert.AlertType.INFORMATION, "Appointment" + aptid + "deleted.");
         alert.show();
-
         home.del("appointments", "Appointment_ID", Integer.parseInt(deltxtfld.getText()));
     }
 
