@@ -32,7 +32,7 @@ public class reports {
                     case 5 -> incrementhm(mayhm, type); case 6 -> incrementhm(junehm, type);
                     case 7 -> incrementhm(julhm, type); case 8 -> incrementhm(aughm, type);
                     case 9 -> incrementhm(septhm, type); case 10 -> incrementhm(octhm, type);
-                    case 11 -> incrementhm(novhm, type);case 12 -> incrementhm(dechm, type);}
+                    case 11 -> incrementhm(novhm, type); case 12 -> incrementhm(dechm, type);}
             }
         } catch (SQLException e) {System.out.println(e.getMessage());}
 
