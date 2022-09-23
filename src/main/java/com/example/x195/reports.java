@@ -50,6 +50,12 @@ public class reports {
         janhm.forEach((k, v) -> {
             dk.s1 = k + ":" + v;
         });
+
+        var fb = new Object() {
+            String s2;
+        };
+        febhm.forEach((k, v) -> {fb.s2 = k + ":"+ v;});
+
         s += dk.s1;
     }
 
