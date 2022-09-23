@@ -114,8 +114,7 @@ public class reports {
                 case 3 -> lis += "l";
             }
         } catch (SQLException e) { System.out.println(e.getMessage());}
-
-        textarea.setText(s);
+        textarea.setText(anikas + daniels + lis);
     }
 
     public void report3(ActionEvent actionEvent) {
