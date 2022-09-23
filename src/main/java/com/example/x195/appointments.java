@@ -25,7 +25,8 @@ public class appointments {
     public static int toalterid = 0;
     private AppointmentModel appointmentModelM = new AppointmentModel();
     private AppointmentModel appointmentModelW = new AppointmentModel();
-    @FXML public final ObservableList<Appointment> appointmentInfo = FXCollections.observableArrayList();
+    @FXML public final ObservableList<Appointment> appointmentInfoM = FXCollections.observableArrayList();
+    @FXML public final ObservableList<Appointment> appointmentInfoW = FXCollections.observableArrayList();
     @FXML public TableView<Appointment> tblViewM, tblViewW;
     @FXML public ComboBox monthcombobox, weekcombobox;
     @FXML public TableColumn appointmentContactColM, appointmentIdColM, appointmentTitleColM, appointmentDescriptionColM, appointmentLocationColM, appointmentTypeColM, appointmentStartColM, appointmentEndColM, appointmentCustomerIdColM, appointmentUserIdColM, appointmentIdColW, appointmentTitleColW, appointmentDescriptionColW, appointmentLocationColW, appointmentContactColW, appointmentTypeColW, appointmentStartColW, appointmentEndColW, appointmentCustomerIdColW, appointmentUserIdColW;
