@@ -44,7 +44,10 @@ public class customers {
         launchActivity("customermodify");}
 
     //todo: can clean this up on btn.pressed -> fn
-    @FXML public void delete() {home.del("customers", "Customer_ID", Integer.parseInt(deleteTxtFld.getText()));}
+    @FXML public void delete() {
+        home.del("customers", "Customer_ID", Integer.parseInt(deleteTxtFld.getText()));
+        tblView.refresh();
+    }
 
     public void initialize() {
         customerIdCol.setCellValueFactory(new PropertyValueFactory<Customer, String>("id"));
