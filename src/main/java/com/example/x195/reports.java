@@ -113,7 +113,6 @@ public class reports {
                 case 2 -> daniels += "d";
                 case 3 -> lis += "l";
             }
-
         } catch (SQLException e) { System.out.println(e.getMessage());}
 
         textarea.setText(s);
