@@ -8,6 +8,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import org.w3c.dom.events.MouseEvent;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -61,6 +62,13 @@ public class appointments {
     public void setWeekTblView() {
         tblViewW.setItems(appointmentModelW.getAppointmentInfoW(weekcombobox.getSelectionModel().getSelectedIndex()+1));
     }
+
+    public void setappointmentida(MouseEvent mouseEvent) {
+        toalterid = tblViewM.getSelectionModel().getSelectedItem().getAppointmentId();
+        modifytxtfld.setText(String.valueOf(toalterid));
+        deltxtfld.setText(String.valueOf(toalterid));
+    }
+
     public void initialize() {
        contactshm.put("Anika Costa", 1);contactshm.put("Daniel Garcia", 2);contactshm.put("Li Lee", 3);
        usershm.put("test", 1);usershm.put("admin", 2);
@@ -79,7 +87,7 @@ public class appointments {
        appointmentEndColM.setCellValueFactory(new PropertyValueFactory<Appointment, String>("end"));
        appointmentCustomerIdColM.setCellValueFactory(new PropertyValueFactory<Appointment, String>("customerId"));
        appointmentUserIdColM.setCellValueFactory(new PropertyValueFactory<Appointment, String>("userId"));
-//       tblViewM.setItems(appointmentModelM.getAppointments());
+       tblViewM.setItems(appointmentModelM.getAppointments());
 
        appointmentIdColW.setCellValueFactory(new PropertyValueFactory<Appointment, String>("appointmentId"));
        appointmentTitleColW.setCellValueFactory(new PropertyValueFactory<Appointment, String>("title"));
@@ -91,6 +99,6 @@ public class appointments {
        appointmentEndColW.setCellValueFactory(new PropertyValueFactory<Appointment, String>("end"));
        appointmentCustomerIdColW.setCellValueFactory(new PropertyValueFactory<Appointment, String>("customerId"));
        appointmentUserIdColW.setCellValueFactory(new PropertyValueFactory<Appointment, String>("userId"));
-//        tblViewW.setItems(appointmentModelW.getAppointments());
+        tblViewW.setItems(appointmentModelW.getAppointments());
     }
 }
