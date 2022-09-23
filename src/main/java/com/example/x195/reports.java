@@ -42,20 +42,22 @@ public class reports {
         } catch (SQLException e) {System.out.println(e.getMessage());}
 
         //todo: create string and set txt from hms
-        String s = "";
-        var dk = new Object() {
-            String s1;
-        };
-        String string = "";
-        janhm.forEach((k, v) -> {
-            dk.s1 = k + ":" + v;
-        });
-
-        var fb = new Object() {String s2;};
-        febhm.forEach((k, v) -> {fb.s2 = k + ":"+ v;});
-
-        s += dk.s1;
-        System.out.println(s);
+//        String s = "";
+//        var dk = new Object() {
+//            String s1;
+//        };
+//        String string = "";
+//        janhm.forEach((k, v) -> {
+//            dk.s1 = k + ":" + v;
+//        });
+//
+//        var fb = new Object() {String s2;};
+//        febhm.forEach((k, v) -> {fb.s2 = k + ":"+ v;});
+//
+//        s += dk.s1;
+//        System.out.println(s);
+        //todo: lambdas
+        
     }
 
 
