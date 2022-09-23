@@ -110,11 +110,11 @@ public class reports {
                 int contactid = rs.getInt("Contact_ID");
                 switch (contactid) {
                     case 1 -> anikas +=
-                            "\n"+ String.valueOf(rs.getInt("Appointment_ID")) + rs.getString("Title") + rs.getString("Description") + rs.getString("Start") + rs.getString("End") + String.valueOf(rs.getInt("Customer_ID"));
+                            "\n"+ String.valueOf(rs.getInt("Appointment_ID")) + " "+ rs.getString("Title") +" "+ rs.getString("Description") +" "+ rs.getString("Start") +" "+ rs.getString("End") +" "+ String.valueOf(rs.getInt("Customer_ID"));
                     case 2 -> daniels +=
-                            "\n"+ String.valueOf(rs.getInt("Appointment_ID")) + rs.getString("Title") + rs.getString("Description") + rs.getString("Start") + rs.getString("End") + String.valueOf(rs.getInt("Customer_ID"));
+                            "\n"+ String.valueOf(rs.getInt("Appointment_ID")) +" "+ rs.getString("Title") +" "+ rs.getString("Description") +" "+ rs.getString("Start") +" "+ rs.getString("End") +" "+ String.valueOf(rs.getInt("Customer_ID"));
                     case 3 -> lis +=
-                            "\n"+ String.valueOf(rs.getInt("Appointment_ID")) + rs.getString("Title") + rs.getString("Description") + rs.getString("Start") + rs.getString("End") + String.valueOf(rs.getInt("Customer_ID"));
+                            "\n"+ String.valueOf(rs.getInt("Appointment_ID")) +" "+ rs.getString("Title") +" "+ rs.getString("Description") +" "+ rs.getString("Start") +" "+ rs.getString("End") +" "+ String.valueOf(rs.getInt("Customer_ID"));
                 }
             }
         } catch (SQLException e) { System.out.println(e.getMessage());}
