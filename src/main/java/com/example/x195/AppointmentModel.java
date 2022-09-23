@@ -36,11 +36,11 @@ public class AppointmentModel {
         } catch (SQLException e) { System.out.println(e.getMessage());}
     }
 
-       public ObservableList<Appointment> getAppointmentInfoM(String month) {
+       public ObservableList<Appointment> getAppointmentInfoM(int month) {
             ObservableList<Appointment> appointmentInfoM = FXCollections.observableArrayList();
-            int monthint = Integer.parseInt(month);
+//            int monthint = Integer.parseInt(month);
         try {
-            ResultSet rs = HelloController.connection.createStatement().executeQuery("Select * from appointments where month(Start)="+ monthint);
+            ResultSet rs = HelloController.connection.createStatement().executeQuery("Select * from appointments where month(Start)="+ month);
             while (rs.next()) {
                 Appointment curApt = new Appointment(
                         rs.getInt("Appointment_ID"),
@@ -59,6 +59,6 @@ public class AppointmentModel {
         return appointmentInfoM;
     }
     public ObservableList<Appointment> getAppointments() {return appointmentInfo;}
-    public ObservableList<Appointment> getAppointmentsM(String month) {return getAppointmentInfoM(month);}
-    public ObservableList<Appointment> getAppointmentsW(String week) {return appointmentInfoW;}
+    public ObservableList<Appointment> getAppointmentsM(int month) {return getAppointmentInfoM(month);}
+    public ObservableList<Appointment> getAppointmentsW(int week) {return appointmentInfoW;}
 }
