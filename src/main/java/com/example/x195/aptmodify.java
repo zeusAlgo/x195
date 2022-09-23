@@ -11,10 +11,18 @@ import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.util.HashMap;
 
+/**
+ * Modifies appointment
+ */
 public class aptmodify {
     public TextField titletxtfld, descriptiontxtfld, locationtxtfld, typetxtfld;
     public ComboBox userComboBox, contactcombobox, monthcombobox, daycombobox, timescombobox, customercombobox;
 
+    /**
+     * Gets appointment information
+     * @param aptid id of appointment
+     * @return Hashmap of appointment information
+     */
     public HashMap<String, String> getaptinfo(int aptid) {
         HashMap<String, String> apthm = new HashMap<>();
         try {ResultSet rs = HelloController.connection.createStatement().executeQuery(
@@ -34,6 +42,10 @@ public class aptmodify {
         return apthm;
     }
 
+    /**
+     * Checks if business is open and if requested timeslots are available
+     * @return Boolean if business is open and timeslots available
+     */
     public boolean isbizopen() {
         boolean bool = true;
         int month = monthcombobox.getSelectionModel().getSelectedIndex()+1;
@@ -65,6 +77,10 @@ public class aptmodify {
         return bool;
     }
 
+    /**
+     * Updated appointment
+     * @param actionEvent Mouse or keyboard press
+     */
     public void updateapt(ActionEvent actionEvent) {
         try {
             if (!isbizopen()) return;
@@ -89,8 +105,9 @@ public class aptmodify {
         } catch (SQLException e) {System.out.println("SQL Error: " + e.getMessage());}
     }
 
-    //todo: alert if 15 mins of login
-
+    /**
+     * Sets values for ui items and hashmaps
+     */
     public void initialize() {
         HashMap<String, String> apthm = getaptinfo(appointments.toalterid);
         titletxtfld.setText(apthm.get("title"));descriptiontxtfld.setText(apthm.get("description"));
