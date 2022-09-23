@@ -27,26 +27,37 @@ public class reports {
                 String monthstring = rs.getString("Start"), type = rs.getString("Type");
                 int monthint = Integer.parseInt(monthstring.substring(5, 7));
                 switch (monthint) {
-                    case 1 -> incrementhm(janhm, type);
-                    case 2 -> incrementhm(febhm, type);
-                    case 3 -> incrementhm(marhm, type);
-                    case 4 -> incrementhm(aprhm, type);
-                    case 5 -> incrementhm(mayhm, type);
-                    case 6 -> incrementhm(junehm, type);
-                    case 7 -> incrementhm(julhm, type);
-                    case 8 -> incrementhm(aughm, type);
-                    case 9 -> incrementhm(septhm, type);
-                    case 10 -> incrementhm(octhm, type);
-                    case 11 -> incrementhm(novhm, type);
-                    case 12 -> incrementhm(dechm, type);}
+                    case 1 -> incrementhm(janhm, type); case 2 -> incrementhm(febhm, type);
+                    case 3 -> incrementhm(marhm, type); case 4 -> incrementhm(aprhm, type);
+                    case 5 -> incrementhm(mayhm, type); case 6 -> incrementhm(junehm, type);
+                    case 7 -> incrementhm(julhm, type); case 8 -> incrementhm(aughm, type);
+                    case 9 -> incrementhm(septhm, type); case 10 -> incrementhm(octhm, type);
+                    case 11 -> incrementhm(novhm, type);case 12 -> incrementhm(dechm, type);}
             }
         } catch (SQLException e) {System.out.println(e.getMessage());}
 
         String s = "";
-        s += "January \n";
+        s += "Jan \n";
+        var aa = new Object() {String s2;};
+        janhm.forEach((k, v) -> {aa.s2 += k + ":" + String.valueOf(v) + "\n";});
+        s += aa.s2;
+
+        s += "Feb \n";
         var fb = new Object() {String s2;};
         janhm.forEach((k, v) -> {fb.s2 += k + ":" + String.valueOf(v) + "\n";});
 
+        s += "Mar \n";
+        var fb = new Object() {String s2;};
+        janhm.forEach((k, v) -> {fb.s2 += k + ":" + String.valueOf(v) + "\n";});
+        s += "Apr \n";
+        var fb = new Object() {String s2;};
+        janhm.forEach((k, v) -> {fb.s2 += k + ":" + String.valueOf(v) + "\n";});
+        s += "May \n";
+        var fb = new Object() {String s2;};
+        janhm.forEach((k, v) -> {fb.s2 += k + ":" + String.valueOf(v) + "\n";});
+        s += "Jun \n";
+        var fb = new Object() {String s2;};
+        janhm.forEach((k, v) -> {fb.s2 += k + ":" + String.valueOf(v) + "\n";});
         s += fb.s2;
         textarea.setText(s);
     }
