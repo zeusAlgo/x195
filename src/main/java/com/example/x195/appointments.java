@@ -3,6 +3,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -22,7 +23,8 @@ public class appointments {
 
     public static int toalterid = 0;
     @FXML public TableView<Appointment> tblViewM, tblViewW;
-    public TableColumn appointmentContactColM, appointmentIdColM, appointmentTitleColM, appointmentDescriptionColM, appointmentLocationColM, appointmentTypeColM, appointmentStartColM, appointmentEndColM, appointmentCustomerIdColM, appointmentUserIdColM, appointmentIdColW, appointmentTitleColW, appointmentDescriptionColW, appointmentLocationColW, appointmentContactColW, appointmentTypeColW, appointmentStartColW, appointmentEndColW, appointmentCustomerIdColW, appointmentUserIdColW;
+    @FXML public ComboBox monthcombobox, weekcombobox;
+    @FXML public TableColumn appointmentContactColM, appointmentIdColM, appointmentTitleColM, appointmentDescriptionColM, appointmentLocationColM, appointmentTypeColM, appointmentStartColM, appointmentEndColM, appointmentCustomerIdColM, appointmentUserIdColM, appointmentIdColW, appointmentTitleColW, appointmentDescriptionColW, appointmentLocationColW, appointmentContactColW, appointmentTypeColW, appointmentStartColW, appointmentEndColW, appointmentCustomerIdColW, appointmentUserIdColW;
 
 
     public void launchA(ActionEvent actionEvent) {home.launchActivity("aptadd");}
@@ -51,5 +53,8 @@ public class appointments {
        usershm.put("test", 1);usershm.put("admin", 2);
        timeshm.put("4 am", 4); timeshm.put("5 am", 5);timeshm.put("6 am", 6);timeshm.put("7 am", 7);timeshm.put("8 am", 8);timeshm.put("9 am", 9);timeshm.put("10 am", 10);timeshm.put("11 am",11);timeshm.put("12 pm", 12);timeshm.put("1 pm", 13);timeshm.put("2 pm", 14);timeshm.put("3 pm", 15);timeshm.put("4 pm", 16);timeshm.put("5 pm",17);timeshm.put("6 pm",18);timeshm.put("7 pm", 19);timeshm.put("8 pm", 20);timeshm.put("9 pm",21);timeshm.put("10 pm",22);timeshm.put("11 pm", 23);
        customershm = getallcustomers();
+
+       
+
     }
 }

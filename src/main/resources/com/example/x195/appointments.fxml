@@ -30,7 +30,7 @@
                               <TableColumn fx:id="appointmentUserIdColM" prefWidth="75.0" text="End" />
                           </columns>
                         </TableView>
-                        <ComboBox layoutX="270.0" layoutY="38.0" prefWidth="150.0" />
+                        <ComboBox fx:id="monthcombobox" layoutX="270.0" layoutY="38.0" prefWidth="150.0" />
                      </children>
                   </AnchorPane>
             </content>
@@ -56,7 +56,7 @@
 
                           </columns>
                         </TableView>
-                        <ComboBox layoutX="270.0" layoutY="23.0" prefWidth="150.0" />
+                        <ComboBox fx:id="weekcombobox" layoutX="270.0" layoutY="23.0" prefWidth="150.0" />
                      </children>
                   </AnchorPane>
             </content>
