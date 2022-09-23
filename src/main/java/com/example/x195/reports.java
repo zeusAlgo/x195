@@ -43,15 +43,20 @@ public class reports {
         s += aa.s2;
 
         s += "Feb \n";
-        var fb = new Object() {String s2;};
-        janhm.forEach((k, v) -> {fb.s2 += k + ":" + String.valueOf(v) + "\n";});
+        var ab = new Object() {String s2;};
+        janhm.forEach((k, v) -> {ab.s2 += k + ":" + String.valueOf(v) + "\n";});
+        s += ab.s2;
 
         s += "Mar \n";
-        var fb = new Object() {String s2;};
-        janhm.forEach((k, v) -> {fb.s2 += k + ":" + String.valueOf(v) + "\n";});
+        var ac = new Object() {String s2;};
+        janhm.forEach((k, v) -> {ac.s2 += k + ":" + String.valueOf(v) + "\n";});
+        s += ac.s2;
+
         s += "Apr \n";
-        var fb = new Object() {String s2;};
-        janhm.forEach((k, v) -> {fb.s2 += k + ":" + String.valueOf(v) + "\n";});
+        var ad = new Object() {String s2;};
+        janhm.forEach((k, v) -> {ad.s2 += k + ":" + String.valueOf(v) + "\n";});
+        s += ad.s2;
+
         s += "May \n";
         var fb = new Object() {String s2;};
         janhm.forEach((k, v) -> {fb.s2 += k + ":" + String.valueOf(v) + "\n";});
