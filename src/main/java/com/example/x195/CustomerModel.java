@@ -7,9 +7,9 @@ import java.sql.SQLException;
 
 public class CustomerModel {
     private ObservableList<Customer> customerInfo;
-    public CustomerModel() {customerInfo = FXCollections.observableArrayList(); getcustomerInfo();}
+    public CustomerModel() {customerInfo = FXCollections.observableArrayList(); getCustomerInfo();}
 
-    private void getcustomerInfo() {
+    private void getCustomerInfo() {
         try {
             ResultSet rs = HelloController.connection.createStatement().executeQuery("Select * from customers");
             while (rs.next()) {
