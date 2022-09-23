@@ -59,7 +59,7 @@ public class appointments {
     }
 
     public void setWeekTblView() {
-        tblViewW.setItems(appointmentModelW.getAppointmentInfoM( weekcombobox.getSelectionModel().getSelectedIndex()+1));
+        tblViewW.setItems(appointmentModelW.getAppointmentInfoM((Integer) weekcombobox.getSelectionModel().getSelectedItem()));
     }
     public void initialize() {
        contactshm.put("Anika Costa", 1);contactshm.put("Daniel Garcia", 2);contactshm.put("Li Lee", 3);
