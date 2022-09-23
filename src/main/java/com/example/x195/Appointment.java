@@ -26,6 +26,8 @@ public class Appointment {
     public String getType() {return type;}
     public String getStart() {return start;}
     public String getEnd() {return end;}
-    public String 
+    public int getCustomerId() {return customerId;}
+    public int getUserId() {return userId;}
+    public int getContactId() {return contactId;}
 
 }
