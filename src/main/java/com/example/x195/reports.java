@@ -1,4 +1,6 @@
 package com.example.x195;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.scene.control.TextArea;
 import java.sql.ResultSet;
@@ -103,7 +105,8 @@ public class reports {
     public void report2(ActionEvent actionEvent) {
         String s = "";
         // check if obsv list can be concatenated to string
-        
+        ObservableList<String> ar = FXCollections.observableArrayList();
+        s += ar;
 
         // for each contact create hm and populate with aptid and data
 
