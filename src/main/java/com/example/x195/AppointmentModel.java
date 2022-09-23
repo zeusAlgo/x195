@@ -6,7 +6,14 @@ import java.sql.SQLException;
 
 public class AppointmentModel {
     public ObservableList<Appointment> appointmentInfo;
-    public AppointmentModel() {appointmentInfo = FXCollections.observableArrayList(); getAppointmentInfo();}
+    public ObservableList<Appointment> appointmentInfoM;
+    public ObservableList<Appointment> appointmentInfoW;
+    public AppointmentModel() {
+        appointmentInfo = FXCollections.observableArrayList(); getAppointmentInfo();
+        appointmentInfoM = FXCollections.observableArrayList();
+        appointmentInfoW = FXCollections.observableArrayList();
+    }
+
 
     //todo: week month
     public void getAppointmentInfo() {
@@ -29,4 +36,6 @@ public class AppointmentModel {
         } catch (SQLException e) { System.out.println(e.getMessage());}
     }
     public ObservableList<Appointment> getAppointments() {return appointmentInfo;}
+    public ObservableList<Appointment> getAppointmentsM(String month) {return appointmentInfoM;}
+    public ObservableList<Appointment> getAppointmentsW() {return appointmentInfoW;}
 }
