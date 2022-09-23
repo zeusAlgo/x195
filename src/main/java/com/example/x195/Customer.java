@@ -1,14 +1,10 @@
 package com.example.x195;
 
-import com.mysql.cj.conf.IntegerProperty;
-import javafx.beans.value.ObservableValue;
-
-public class customer {
+public class Customer {
     private int id; int divid;
     private String name, address, postalcode, phone;
-    
 
-    public customer(int id, String name, String address, String postalcode, String phone, int divid){
+    public Customer(int id, String name, String address, String postalcode, String phone, int divid){
         this.id = id; this.name = name; this.address=address; this.postalcode=postalcode; this.divid=divid;
     }
 
