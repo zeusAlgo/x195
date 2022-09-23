@@ -4,6 +4,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.scene.control.*;
+
+import java.io.FileWriter;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.*;
@@ -37,6 +39,13 @@ public class HelloController {
         String db = "jdbc:mysql://localhost/client_schedule";
         try {
             Connection connection = DriverManager.getConnection(db, usrcreds, passcreds);
+            try {
+                FileWriter logger = new FileWriter("login_activity.txt");
+                logger.write("dklaj");
+                logger.close();
+            } catch (IOException e) {
+                System.out.println(e.getMessage());
+            }
             gohome();
         } catch (SQLException e) {
             System.out.println("Error" + e.getMessage());

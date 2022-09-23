@@ -107,8 +107,6 @@ public class home {
         return false;
     }
 
-//todo: storing retrieval in db wrong; investigate
-
     public void initialize() {
         countryhm.put("U.S", 1); countryhm.put("UK", 2); countryhm.put("Canada", 3);usdivhm = getdivs(1);ukdivhm = getdivs(2);canadadivhm = getdivs(3);alldivshm = getalldivs();
         Alert alerta = new Alert(Alert.AlertType.INFORMATION, "Appointment in 15 mins!"),
