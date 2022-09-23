@@ -81,6 +81,6 @@ public class appointments {
        appointmentEndColW.setCellValueFactory(new PropertyValueFactory<Appointment, String>("end"));
        appointmentCustomerIdColW.setCellValueFactory(new PropertyValueFactory<Appointment, String>("customerId"));
        appointmentUserIdColW.setCellValueFactory(new PropertyValueFactory<Appointment, String>("userId"));
-        tblViewM.setItems(appointmentModelW.getAppointments());
+        tblViewW.setItems(appointmentModelW.getAppointments());
     }
 }
