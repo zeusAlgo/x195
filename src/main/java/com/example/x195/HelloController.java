@@ -41,9 +41,9 @@ public class HelloController {
         try {
             Connection connection = DriverManager.getConnection(db, usrcreds, passcreds);
             try {
-                FileWriter logger = new FileWriter("login_activity.txt");
+                FileWriter logger = new FileWriter("login_activity.txt", true);
                 logger.write("\n\n");
-                logger.write(usrcreds);
+                logger.write(usrcreds +" ");
                 logger.write(String.valueOf(ZonedDateTime.now()));
                 logger.write("\nSuccessful Login");
                 logger.close();
@@ -51,9 +51,9 @@ public class HelloController {
             gohome();
         } catch (SQLException e) {
             try {
-                FileWriter logger = new FileWriter("login_activity.txt");
+                FileWriter logger = new FileWriter("login_activity.txt" ,true);
                 logger.write("\n\n");
-                logger.write(usrcreds);
+                logger.write(usrcreds + " ");
                 logger.write(String.valueOf(ZonedDateTime.now()));
                 logger.write("\nFailed Login");
                 logger.close();
