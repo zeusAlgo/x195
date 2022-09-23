@@ -80,7 +80,7 @@ public class reports {
         s += "Sept \n ====== \n";
         var ai = new Object() {String s2;};
         septhm.forEach((k, v) -> {ai.s2 += k + ":" + String.valueOf(v) + "\n";});
-        if (ai.s2 != "null") s += ai.s2;
+        if (ai.s2 != null) s += ai.s2;
 
         s += "Oct \n ======= \n";
         var aj = new Object() {String s2;};
