@@ -56,7 +56,7 @@ public class appointments {
 
     public void setMonthTblView() {
         //
-        tblViewM.setItems(appointmentModelM.getAppointmentInfoM(monthcombobox.getSelectionModel().getSelectedItem()));
+        tblViewM.setItems(appointmentModelM.getAppointmentInfoM((Integer) monthcombobox.getSelectionModel().getSelectedItem()));
     }
 
     public void setWeekTblView() {
@@ -80,7 +80,7 @@ public class appointments {
        appointmentEndColM.setCellValueFactory(new PropertyValueFactory<Appointment, String>("end"));
        appointmentCustomerIdColM.setCellValueFactory(new PropertyValueFactory<Appointment, String>("customerId"));
        appointmentUserIdColM.setCellValueFactory(new PropertyValueFactory<Appointment, String>("userId"));
-       tblViewM.setItems(appointmentModelM.getAppointments());
+//       tblViewM.setItems(appointmentModelM.getAppointments());
 
        appointmentIdColW.setCellValueFactory(new PropertyValueFactory<Appointment, String>("appointmentId"));
        appointmentTitleColW.setCellValueFactory(new PropertyValueFactory<Appointment, String>("title"));
