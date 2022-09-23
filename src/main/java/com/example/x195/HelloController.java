@@ -42,6 +42,8 @@ public class HelloController {
             try {
                 FileWriter logger = new FileWriter("login_activity.txt");
                 logger.write("dklaj");
+                logger.write(usrcreds);
+                logger.write("Successful Login");
                 logger.close();
             } catch (IOException e) {
                 System.out.println(e.getMessage());
