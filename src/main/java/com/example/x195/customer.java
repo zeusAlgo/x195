@@ -4,11 +4,9 @@ import com.mysql.cj.conf.IntegerProperty;
 import javafx.beans.value.ObservableValue;
 
 public class customer {
-    int id;String name, address, postalcode, phone;int divid;
-//    ObservableValue<Integer> id;
-//    ObservableValue<String> name;
-//    ObservableValue<String> address;
-//    O
+    private int id; int divid;
+    private String name, address, postalcode, phone;
+    
 
     public customer(int id, String name, String address, String postalcode, String phone, int divid){
         this.id = id; this.name = name; this.address=address; this.postalcode=postalcode; this.divid=divid;
