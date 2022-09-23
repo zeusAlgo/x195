@@ -44,57 +44,57 @@ public class reports {
 
         s += "Feb \n";
         var ab = new Object() {String s2;};
-        janhm.forEach((k, v) -> {ab.s2 += k + ":" + String.valueOf(v) + "\n";});
+        febhm.forEach((k, v) -> {ab.s2 += k + ":" + String.valueOf(v) + "\n";});
         s += ab.s2;
 
         s += "Mar \n";
         var ac = new Object() {String s2;};
-        janhm.forEach((k, v) -> {ac.s2 += k + ":" + String.valueOf(v) + "\n";});
+        marhm.forEach((k, v) -> {ac.s2 += k + ":" + String.valueOf(v) + "\n";});
         s += ac.s2;
 
         s += "Apr \n";
         var ad = new Object() {String s2;};
-        janhm.forEach((k, v) -> {ad.s2 += k + ":" + String.valueOf(v) + "\n";});
+        aprhm.forEach((k, v) -> {ad.s2 += k + ":" + String.valueOf(v) + "\n";});
         s += ad.s2;
 
         s += "May \n";
         var ae = new Object() {String s2;};
-        janhm.forEach((k, v) -> {ae.s2 += k + ":" + String.valueOf(v) + "\n";});
+        mayhm.forEach((k, v) -> {ae.s2 += k + ":" + String.valueOf(v) + "\n";});
         s += ae.s2;
 
         s += "Jun \n";
         var af = new Object() {String s2;};
-        janhm.forEach((k, v) -> {af.s2 += k + ":" + String.valueOf(v) + "\n";});
+        junehm.forEach((k, v) -> {af.s2 += k + ":" + String.valueOf(v) + "\n";});
         s += af.s2;
 
         s += "Jul \n";
         var ag = new Object() {String s2;};
-        janhm.forEach((k, v) -> {ag.s2 += k + ":" + String.valueOf(v) + "\n";});
+        julhm.forEach((k, v) -> {ag.s2 += k + ":" + String.valueOf(v) + "\n";});
         s += ag.s2;
 
         s += "Aug \n";
         var ah = new Object() {String s2;};
-        janhm.forEach((k, v) -> {ah.s2 += k + ":" + String.valueOf(v) + "\n";});
+        aughm.forEach((k, v) -> {ah.s2 += k + ":" + String.valueOf(v) + "\n";});
         s += ah.s2;
 
         s += "Sept \n";
         var ai = new Object() {String s2;};
-        janhm.forEach((k, v) -> {ai.s2 += k + ":" + String.valueOf(v) + "\n";});
+        septhm.forEach((k, v) -> {ai.s2 += k + ":" + String.valueOf(v) + "\n";});
         s += ai.s2;
 
         s += "Oct \n";
         var aj = new Object() {String s2;};
-        janhm.forEach((k, v) -> {aj.s2 += k + ":" + String.valueOf(v) + "\n";});
+        octhm.forEach((k, v) -> {aj.s2 += k + ":" + String.valueOf(v) + "\n";});
         s += aj.s2;
 
         s += "Nov \n";
         var ak = new Object() {String s2;};
-        janhm.forEach((k, v) -> {ak.s2 += k + ":" + String.valueOf(v) + "\n";});
+        novhm.forEach((k, v) -> {ak.s2 += k + ":" + String.valueOf(v) + "\n";});
         s += ak.s2;
 
         s += "Dec \n";
         var al = new Object() {String s2;};
-        janhm.forEach((k, v) -> {al.s2 += k + ":" + String.valueOf(v) + "\n";});
+        dechm.forEach((k, v) -> {al.s2 += k + ":" + String.valueOf(v) + "\n";});
         s += al.s2;
         textarea.setText(s);
     }
