@@ -22,6 +22,10 @@ public class Appointment {
     public int getAppointmentId() {return appointmentId;}
     public String getTitle() {return title;}
     public String getDescription() {return description;}
-    
+    public String getLocation() {return location;}
+    public String getType() {return type;}
+    public String getStart() {return start;}
+    public String getEnd() {return end;}
+    public String 
 
 }
