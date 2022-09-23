@@ -75,13 +75,12 @@ public class reports {
         s += "Aug \n";
         var ah = new Object() {String s2;};
         aughm.forEach((k, v) -> {ah.s2 += k + ":" + String.valueOf(v) + "\n";});
-        s += ah.s2;
+        if (ah.s2 != null) s += ah.s2;
 
         s += "Sept \n";
         var ai = new Object() {String s2;};
         septhm.forEach((k, v) -> {ai.s2 += k + ":" + String.valueOf(v) + "\n";});
-        if (ai.s2.equals("null")) {}
-        else s += ai.s2;
+        if (ai.s2 != "null") s += ai.s2;
 
         s += "Oct \n";
         var aj = new Object() {String s2;};
