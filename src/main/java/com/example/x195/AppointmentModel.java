@@ -54,8 +54,11 @@ public class AppointmentModel {
                         rs.getInt("User_ID"),
                         rs.getInt("Contact_ID"));
                 appointmentInfoM.add(curApt);
+                System.out.println(appointmentInfoM);
             }
-        } catch (SQLException e) { System.out.println(e.getMessage());}
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            throw new RuntimeException();}
         return appointmentInfoM;
     }
     public ObservableList<Appointment> getAppointments() {return appointmentInfo;}
