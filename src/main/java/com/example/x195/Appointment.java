@@ -19,6 +19,9 @@ public class Appointment {
     public void setUserId(int userId) {this.userId=userId;}
     public void setContactId(int contactId) {this.contactId=contactId;}
 
+    public int getAppointmentId() {return appointmentId;}
+    public String getTitle() {return title;}
+    public String getDescription() {return description;}
     
 
 }
