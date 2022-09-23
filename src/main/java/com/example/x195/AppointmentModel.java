@@ -36,9 +36,8 @@ public class AppointmentModel {
         } catch (SQLException e) { System.out.println(e.getMessage());}
     }
 
-       public ObservableList<Appointment> getAppointmentInfoM(int month) {
+       public ObservableList<Appointment> getAppointmentInfoM(Integer month) {
             ObservableList<Appointment> appointmentInfoM = FXCollections.observableArrayList();
-//            int monthint = Integer.parseInt(month);
         try {
             ResultSet rs = HelloController.connection.createStatement().executeQuery("Select * from appointments where month(Start)="+ month);
             while (rs.next()) {
@@ -54,14 +53,39 @@ public class AppointmentModel {
                         rs.getInt("User_ID"),
                         rs.getInt("Contact_ID"));
                 appointmentInfoM.add(curApt);
-                System.out.println(appointmentInfoM);
             }
         } catch (SQLException e) {
             System.out.println(e.getMessage());
             throw new RuntimeException();}
         return appointmentInfoM;
     }
+
+    public ObservableList<Appointment> getAppointmentInfoW(Integer week) {
+        ObservableList<Appointment> appointmentInfoM = FXCollections.observableArrayList();
+        try {
+            ResultSet rs = HelloController.connection.createStatement().executeQuery("Select * from appointments where month(Start)=" + month);
+            while (rs.next()) {
+                Appointment curApt = new Appointment(
+                        rs.getInt("Appointment_ID"),
+                        rs.getString("Title"),
+                        rs.getString("Description"),
+                        rs.getString("Location"),
+                        rs.getString("Type"),
+                        rs.getString("Start"),
+                        rs.getString("End"),
+                        rs.getInt("Customer_ID"),
+                        rs.getInt("User_ID"),
+                        rs.getInt("Contact_ID"));
+                appointmentInfoM.add(curApt);
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            throw new RuntimeException();
+        }
+        return appointmentInfoM;
+    }
+    
     public ObservableList<Appointment> getAppointments() {return appointmentInfo;}
-    public ObservableList<Appointment> getAppointmentsM(int month) {return getAppointmentInfoM(month);}
-    public ObservableList<Appointment> getAppointmentsW(int week) {return appointmentInfoW;}
+    public ObservableList<Appointment> getAppointmentsM(Integer month) {return getAppointmentInfoM(month);}
+    public ObservableList<Appointment> getAppointmentsW(Integer week) {return getAppointmentInfoW(week);}
 }
