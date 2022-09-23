@@ -86,14 +86,63 @@ public class Appointment {
      */
     public void setContactId(int contactId) {this.contactId=contactId;}
 
+    /**
+     * Gets appointment id
+     * @return id of appointment
+     */
     public int getAppointmentId() {return appointmentId;}
+
+    /**
+     * Gets appointment title
+     * @return title of appointment
+     */
     public String getTitle() {return title;}
+
+    /**
+     * Gets appointment description
+     * @return description of appointment
+     */
     public String getDescription() {return description;}
+
+    /**
+     * Gets location of appointment
+     * @return location of appointment
+     */
     public String getLocation() {return location;}
+
+    /**
+     * Gets type of appointment
+     * @return type of appointment
+     */
     public String getType() {return type;}
+
+    /**
+     * Gets start of appointment
+     * @return start of appointment
+     */
     public String getStart() {return start;}
+
+    /**
+     * Gets end of appointment
+     * @return end of appointment
+     */
     public String getEnd() {return end;}
+
+    /**
+     * Gets customer id
+     * @return id of customer
+     */
     public int getCustomerId() {return customerId;}
+
+    /**
+     * Gets user id
+     * @return id of user
+     */
     public int getUserId() {return userId;}
+
+    /**
+     * Gets contact id
+     * @return id of contact
+     */
     public int getContactId() {return contactId;}
 }
