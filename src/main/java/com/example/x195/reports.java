@@ -85,17 +85,17 @@ public class reports {
         s += "Oct \n";
         var aj = new Object() {String s2;};
         octhm.forEach((k, v) -> {aj.s2 += k + ":" + String.valueOf(v) + "\n";});
-        s += aj.s2;
+        if (aj.s2 != null) s += aj.s2;
 
         s += "Nov \n";
         var ak = new Object() {String s2;};
         novhm.forEach((k, v) -> {ak.s2 += k + ":" + String.valueOf(v) + "\n";});
-        s += ak.s2;
+        if (ak.s2 != null) s += ak.s2;
 
         s += "Dec \n";
         var al = new Object() {String s2;};
         dechm.forEach((k, v) -> {al.s2 += k + ":" + String.valueOf(v) + "\n";});
-        s += al.s2;
+        if (al.s2 != null) s += al.s2;
         textarea.setText(s);
     }
 
