@@ -130,15 +130,12 @@ public class reports {
                 int contactid = rs.getInt("Contact_ID");
                 switch (contactid) {
                     case 1 -> ctr.put("Anika", ctr.get("Anika") + 1);
-                    case 2 -> daniels +=
-                    case 3 -> lis +=
-
+                    case 2 -> ctr.put("Daniel", ctr.get("Daniel") + 1);
+                    case 3 -> ctr.put("Li", ctr.get("Li") + 1);
                 }
             }
         } catch (SQLException e) { System.out.println(e.getMessage());}
         String s = "";
-// most popular person
-        // heapq? sort by apts and pop max until empty
         textarea.setText(s);
     }
 }
