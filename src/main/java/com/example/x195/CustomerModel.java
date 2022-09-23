@@ -5,10 +5,16 @@ import javafx.collections.ObservableList;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * Model for customer
+ */
 public class CustomerModel {
     public ObservableList<Customer> customerInfo;
     public CustomerModel() {customerInfo = FXCollections.observableArrayList(); getCustomerInfo();}
 
+    /**
+     * Gets customer information
+     */
     public void getCustomerInfo() {
         try {
             ResultSet rs = HelloController.connection.createStatement().executeQuery("Select * from customers");
@@ -24,5 +30,10 @@ public class CustomerModel {
             }
         } catch (SQLException e) {System.out.println(e.getMessage());}
     }
+
+    /**
+     * Gets customer information
+     * @return Observable List of customers
+     */
     public ObservableList<Customer> getCustomers() {return customerInfo;}
 }
