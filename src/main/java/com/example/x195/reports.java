@@ -103,7 +103,7 @@ public class reports {
     }
 
     public void report2(ActionEvent actionEvent) {
-        String anikas = "Anika Costa \n =======", daniels = "Daniel Garcia \n ========", lis = "Li Lee \n =====";
+        String anikas = "Anika Costa\n========", daniels = "\nDaniel Garcia\n========", lis = "\nLi Lee\n======";
         // go through db and string concatenaate
         try {
             ResultSet rs = HelloController.connection.createStatement().executeQuery("Select * from appointments");
