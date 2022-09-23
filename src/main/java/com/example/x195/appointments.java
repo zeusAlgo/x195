@@ -2,6 +2,9 @@ package com.example.x195;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 
 import java.sql.ResultSet;
@@ -18,6 +21,29 @@ public class appointments {
     static ObservableList<String> contactsar = FXCollections.observableArrayList("Anika Costa", "Daniel Garcia", "Li Lee"), usersar = FXCollections.observableArrayList("test", "admin"), customersar = FXCollections.observableArrayList(), timesar = FXCollections.observableArrayList("4 am", "5 am", "6 am", "7 am", "8 am", "9 am", "10 am", "11 am", "12 pm", "1 pm", "2 pm", "3 pm", "4 pm", "5 pm", "6 pm", "7 pm", "8 pm", "9 pm", "10 pm", "11 pm"), monthsar = FXCollections.observableArrayList("JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER");static ObservableList<Integer> daysar = FXCollections.observableArrayList(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31);
 
     public static int toalterid = 0;
+    @FXML public TableView<Appointment> tblViewM;
+    @FXML public TableView<Appointment> tblViewW;
+    public TableColumn appointmentContactColM;
+    public TableColumn appointmentIdColM;
+    public TableColumn appointmentTitleColM;
+    public TableColumn appointmentDescriptionColM;
+    public TableColumn appointmentLocationColM;
+    public TableColumn appointmentTypeColM;
+    public TableColumn appointmentStartColM;
+    public TableColumn appointmentEndColM;
+    public TableColumn appointmentCustomerIdColM;
+    public TableColumn appointmentUserIdColM;
+    public TableColumn appointmentIdColW;
+    public TableColumn appointmentTitleColW;
+    public TableColumn appointmentDescriptionColW;
+    public TableColumn appointmentLocationColW;
+    public TableColumn appointmentContactColW;
+    public TableColumn appointmentTypeColW;
+    public TableColumn appointmentStartColW;
+    public TableColumn appointmentEndColW;
+    public TableColumn appointmentCustomerIdColW;
+    public TableColumn appointmentUserIdColW;
+
 
     public void launchA(ActionEvent actionEvent) {home.launchActivity("aptadd");}
     public void launchB(ActionEvent actionEvent) {

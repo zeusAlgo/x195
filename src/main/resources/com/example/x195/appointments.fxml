@@ -16,10 +16,18 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <TableView layoutX="52.0" layoutY="76.0" prefHeight="763.0" prefWidth="619.0">
+                        <TableView fx:id="tblViewM" layoutX="52.0" layoutY="76.0" prefHeight="763.0" prefWidth="619.0">
                           <columns>
-                            <TableColumn prefWidth="75.0" text="C1" />
-                            <TableColumn prefWidth="75.0" text="C2" />
+                            <TableColumn fx:id="appointmentIdColM" prefWidth="75.0" text="Id" />
+                            <TableColumn fx:id="appointmentTitleColM" prefWidth="75.0" text="Title" />
+                              <TableColumn fx:id="appointmentDescriptionColM" prefWidth="75.0" text="Description" />
+                              <TableColumn fx:id="appointmentLocationColM" prefWidth="75.0" text="Location" />
+                              <TableColumn fx:id="appointmentContactColM" prefWidth="75.0" text="Contact" />
+                              <TableColumn fx:id="appointmentTypeColM" prefWidth="75.0" text="Type" />
+                              <TableColumn fx:id="appointmentStartColM" prefWidth="75.0" text="Start" />
+                              <TableColumn fx:id="appointmentEndColM" prefWidth="75.0" text="End" />
+                              <TableColumn fx:id="appointmentCustomerIdColM" prefWidth="75.0" text="End" />
+                              <TableColumn fx:id="appointmentUserIdColM" prefWidth="75.0" text="End" />
                           </columns>
                         </TableView>
                         <ComboBox layoutX="270.0" layoutY="38.0" prefWidth="150.0" />
@@ -31,10 +39,21 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <TableView layoutX="40.0" layoutY="55.0" prefHeight="785.0" prefWidth="632.0">
+                        <TableView fx:id="tblViewW" layoutX="40.0" layoutY="55.0" prefHeight="785.0" prefWidth="632.0">
                           <columns>
+                              <TableColumn fx:id="appointmentIdColW" prefWidth="75.0" text="Id" />
+                              <TableColumn fx:id="appointmentTitleColW" prefWidth="75.0" text="Title" />
+                              <TableColumn fx:id="appointmentDescriptionColW" prefWidth="75.0" text="Description" />
+                              <TableColumn fx:id="appointmentLocationColW" prefWidth="75.0" text="Location" />
+                              <TableColumn fx:id="appointmentContactColW" prefWidth="75.0" text="Contact" />
+                              <TableColumn fx:id="appointmentTypeColW" prefWidth="75.0" text="Type" />
+                              <TableColumn fx:id="appointmentStartColW" prefWidth="75.0" text="Start" />
+                              <TableColumn fx:id="appointmentEndColW" prefWidth="75.0" text="End" />
+                              <TableColumn fx:id="appointmentCustomerIdColW" prefWidth="75.0" text="End" />
+                              <TableColumn fx:id="appointmentUserIdColW" prefWidth="75.0" text="End" />
                             <TableColumn prefWidth="75.0" text="C1" />
                             <TableColumn prefWidth="75.0" text="C2" />
+
                           </columns>
                         </TableView>
                         <ComboBox layoutX="270.0" layoutY="23.0" prefWidth="150.0" />

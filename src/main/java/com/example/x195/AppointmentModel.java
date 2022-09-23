@@ -1,7 +1,6 @@
 package com.example.x195;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
