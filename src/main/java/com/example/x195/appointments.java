@@ -56,7 +56,7 @@ public class appointments {
 
     public void setMonthTblView() {
         //
-        tblViewM.setItems(appointmentModelM.getAppointmentInfoM((Integer) monthcombobox.getSelectionModel().getSelectedItem()));
+        tblViewM.setItems(appointmentModelM.getAppointmentInfoM((Integer) monthcombobox.getSelectionModel().getSelectedIndex()+1));
     }
 
     public void setWeekTblView() {
