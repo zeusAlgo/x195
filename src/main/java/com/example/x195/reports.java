@@ -96,13 +96,12 @@ public class reports {
         var al = new Object() {String s2;};
         dechm.forEach((k, v) -> {al.s2 += k + ":" + String.valueOf(v) + "\n";});
         if (al.s2 != null) s += al.s2;
-        s = s.replaceAll("\bnull\b", "");
+        s = s.replaceAll("null", "");
         textarea.setText(s);
     }
 
-
-
     public void report2(ActionEvent actionEvent) {
+        
     }
 
     public void report3(ActionEvent actionEvent) {
