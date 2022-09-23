@@ -123,7 +123,7 @@ public class reports {
 
     public void report3(ActionEvent actionEvent) {
         HashMap<String, Integer> ctr = new HashMap<>();
-        ctr.put("Anika", 0); ctr.put("Daniel", 0) ctr.put("Li", 0);
+        ctr.put("Anika", 0); ctr.put("Daniel", 0); ctr.put("Li", 0);
                try {
             ResultSet rs = HelloController.connection.createStatement().executeQuery("Select * from appointments");
             while (rs.next()) {
