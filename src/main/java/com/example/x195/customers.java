@@ -54,12 +54,6 @@ public class customers {
         customerPhoneCol.setCellValueFactory(new PropertyValueFactory<Customer, String>("phone"));
         customerDivIdCol.setCellValueFactory(new PropertyValueFactory<Customer, String>("divid"));
         tblView.setItems(customerModel.getCustomers());
-        Customer selcust = tblView.getSelectionModel().getSelectedItem().;
-
-
-//        tblcola.setCellValueFactory(new PropertyValueFactory<>("id"));
-//        tblcolb.setCellValueFactory(new PropertyValueFactory<>("name"));
-//        ar = FXCollections.observableArrayList();
     }
 
     public void setcustomerid(MouseEvent mouseEvent) {
