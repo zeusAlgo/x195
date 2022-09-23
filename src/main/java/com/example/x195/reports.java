@@ -71,6 +71,26 @@ public class reports {
         var ag = new Object() {String s2;};
         janhm.forEach((k, v) -> {ag.s2 += k + ":" + String.valueOf(v) + "\n";});
         s += ag.s2;
+
+        s += "Aug \n";
+        var ah = new Object() {String s2;};
+        janhm.forEach((k, v) -> {ah.s2 += k + ":" + String.valueOf(v) + "\n";});
+        s += ah.s2;
+
+        s += "Jun \n";
+        var ai = new Object() {String s2;};
+        janhm.forEach((k, v) -> {ai.s2 += k + ":" + String.valueOf(v) + "\n";});
+        s += ai.s2;
+
+        s += "Jun \n";
+        var aj = new Object() {String s2;};
+        janhm.forEach((k, v) -> {aj.s2 += k + ":" + String.valueOf(v) + "\n";});
+        s += aj.s2;
+
+        s += "Jun \n";
+        var ak = new Object() {String s2;};
+        janhm.forEach((k, v) -> {ak.s2 += k + ":" + String.valueOf(v) + "\n";});
+        s += ak.s2;
         
         textarea.setText(s);
     }
