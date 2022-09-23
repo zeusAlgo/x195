@@ -108,5 +108,8 @@ public class reports {
     }
 
     public void report3(ActionEvent actionEvent) {
+        String s = "";
+
+        textarea.setText(s);
     }
 }
