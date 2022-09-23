@@ -20,11 +20,9 @@ public class customers {
     @FXML private TableColumn<Customer, String> customerIdCol, customerNameCol, customerAddressCol, customerPostalCodeCol, customerPhoneCol, customerDivIdCol;
     @FXML private final ObservableList<Customer> customerinfo = FXCollections.observableArrayList();
 
-    
-
-    @FXML private TableColumn<Customer, String> tblcola, tblcolb;
-    @FXML private TableView<customer> tblview;
-    public static ObservableList<Customer> ar;
+//    @FXML private TableColumn<Customer, String> tblcola, tblcolb;
+//    @FXML private TableView<customer> tblview;
+//    public static ObservableList<Customer> ar;
     public static int tomodifyid = 0;
 
     public void launchActivity(String activityname){
@@ -46,9 +44,14 @@ public class customers {
     @FXML public void delete() {home.del("customers", "Customer_ID", Integer.parseInt(deleteTxtFld.getText()));}
 
     public void initialize() {
+        customerIdCol.setCellValueFactory(new PropertyValueFactory<Customer, String>("id"));
+        customerNameCol.setCellValueFactory(new PropertyValueFactory<Customer, String>("name"));
+        customerAddressCol.setCellValueFactory(new PropertyValueFactory<Customer, String>("address"));
+        
 
-        tblcola.setCellValueFactory(new PropertyValueFactory<>("id"));
-        tblcolb.setCellValueFactory(new PropertyValueFactory<>("name"));
-        ar = FXCollections.observableArrayList();
+
+//        tblcola.setCellValueFactory(new PropertyValueFactory<>("id"));
+//        tblcolb.setCellValueFactory(new PropertyValueFactory<>("name"));
+//        ar = FXCollections.observableArrayList();
     }
 }
