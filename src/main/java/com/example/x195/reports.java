@@ -42,6 +42,7 @@ public class reports {
             }
         } catch (SQLException e) {System.out.println(e.getMessage());}
 
+        System.out.println(septhm);
         //todo: create string and set txt from hms
         String s = "";
         var dk = new Object() {
@@ -53,9 +54,10 @@ public class reports {
         });
 
         var fb = new Object() {String s2;};
-        septhm.forEach((k, v) -> {fb.s2 = k + ":"+ v;});
+        septhm.forEach((k, v) -> {fb.s2 = k + ":";});
 
         s += dk.s1;
+        s += fb.s2;
         System.out.println(s);
         //todo: lambdas
 //        StringBuilder s = null;
