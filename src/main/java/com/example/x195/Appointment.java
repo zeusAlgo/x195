@@ -11,5 +11,14 @@ public class Appointment {
     public void setAppointmentId(int appointmentId) {this.appointmentId=appointmentId;}
     public void setTitle(String title) {this.title=title;}
     public void setDescription(String description) {this.description=description;}
+    public void setLocation(String location) {this.location=location;}
+    public void setType(String type) {this.type=type;}
+    public void setStart(String start) {this.start=start;}
+    public void setEnd(String end) {this.end=end;}
+    public void setCustomerId(int customerId) {this.customerId=customerId;}
+    public void setUserId(int userId) {this.userId=userId;}
+    public void setContactId(int contactId) {this.contactId=contactId;}
+
     
+
 }
