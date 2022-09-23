@@ -58,5 +58,7 @@ public class customers {
 
     public void setcustomerid(MouseEvent mouseEvent) {
         tomodifyid = tblView.getSelectionModel().getSelectedItem().getId();
+        modifyTxtFld.setText(String.valueOf(tomodifyid));
+        deleteTxtFld.setText(String.valueOf(tomodifyid));
     }
 }
