@@ -47,7 +47,10 @@ public class customers {
         customerIdCol.setCellValueFactory(new PropertyValueFactory<Customer, String>("id"));
         customerNameCol.setCellValueFactory(new PropertyValueFactory<Customer, String>("name"));
         customerAddressCol.setCellValueFactory(new PropertyValueFactory<Customer, String>("address"));
-        
+        customerPostalCodeCol.setCellValueFactory(new  PropertyValueFactory<Customer, String>("postalcode"));
+        customerPhoneCol.setCellValueFactory(new PropertyValueFactory<Customer, String>("phone"));
+        customerDivIdCol.setCellValueFactory(new PropertyValueFactory<Customer, String>("divid"));
+        tblview.setItems(customerModel.getcustomers());
 
 
 //        tblcola.setCellValueFactory(new PropertyValueFactory<>("id"));
