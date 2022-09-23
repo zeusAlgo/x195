@@ -6,8 +6,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class CustomerModel {
-    private ObservableList<Customer> customerinfo;
-    public CustomerModel() {customerinfo = FXCollections.observableArrayList(); getcustomerinfo();}
+    private ObservableList<Customer> customerInfo;
+    public CustomerModel() {customerInfo = FXCollections.observableArrayList(); getcustomerinfo();}
 
     private void getcustomerinfo() {
         try {
@@ -21,9 +21,9 @@ public class CustomerModel {
                         rs.getString("Phone"),
                         rs.getInt("Division_ID")
                 );
-                customerinfo.add(curcustomer);
+                customerInfo.add(curcustomer);
             }
         } catch (SQLException e) {System.out.println(e.getMessage());}
     }
-    public ObservableList<Customer> getcustomers() {return customerinfo;}
+    public ObservableList<Customer> getCustomers() {return customerInfo;}
 }

@@ -16,8 +16,13 @@ public class customers {
     public TextField modifyTxtFld, deleteTxtFld;
     public Button delBtn;
     private CustomerModel customerModel = new CustomerModel();
-    @FXML private TableView<Customer> tblview;
-    @FXML private TableColumn<Customer, String> customerIdCol, customerNameCol, customerAddressCol, customerPostalCodeCol, customerPhoneCol, customerDivIdCol;
+    @FXML private TableView<Customer> tblView;
+    @FXML private TableColumn<Customer, String> customerIdCol;
+    @FXML private TableColumn<Customer, String> customerNameCol;
+    @FXML private TableColumn<Customer, String> customerAddressCol;
+    @FXML private TableColumn<Customer, String> customerPostalCodeCol;
+    @FXML private TableColumn<Customer, String> customerPhoneCol;
+    @FXML private TableColumn<Customer, String> customerDivIdCol;
     @FXML private final ObservableList<Customer> customerinfo = FXCollections.observableArrayList();
 
 //    @FXML private TableColumn<Customer, String> tblcola, tblcolb;
@@ -50,7 +55,7 @@ public class customers {
         customerPostalCodeCol.setCellValueFactory(new  PropertyValueFactory<Customer, String>("postalcode"));
         customerPhoneCol.setCellValueFactory(new PropertyValueFactory<Customer, String>("phone"));
         customerDivIdCol.setCellValueFactory(new PropertyValueFactory<Customer, String>("divid"));
-        tblview.setItems(customerModel.getcustomers());
+        tblView.setItems(customerModel.getCustomers());
 
 
 //        tblcola.setCellValueFactory(new PropertyValueFactory<>("id"));
