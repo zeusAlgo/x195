@@ -42,17 +42,12 @@ public class reports {
             }
         } catch (SQLException e) {System.out.println(e.getMessage());}
 
-        System.out.println(septhm);
-        //todo: create string and set txt from hms
         String s = "";
-
         s += "January \n";
         var fb = new Object() {String s2;};
-        septhm.forEach((k, v) -> {fb.s2 += k + ":" + String.valueOf(v) + "\n";});
+        janhm.forEach((k, v) -> {fb.s2 += k + ":" + String.valueOf(v) + "\n";});
 
         s += fb.s2;
-        System.out.println(s);
-
         textarea.setText(s);
     }
 
