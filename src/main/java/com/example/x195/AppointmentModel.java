@@ -82,7 +82,7 @@ public class AppointmentModel {
             System.out.println(e.getMessage());
             throw new RuntimeException();
         }
-        return appointmentInfoM;
+        return appointmentInfoW;
     }
 
     public ObservableList<Appointment> getAppointments() {return appointmentInfo;}
