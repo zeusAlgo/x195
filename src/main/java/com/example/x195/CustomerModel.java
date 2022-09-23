@@ -7,13 +7,13 @@ import java.sql.SQLException;
 
 public class CustomerModel {
     private ObservableList<Customer> customerInfo;
-    public CustomerModel() {customerInfo = FXCollections.observableArrayList(); getcustomerinfo();}
+    public CustomerModel() {customerInfo = FXCollections.observableArrayList(); getcustomerInfo();}
 
-    private void getcustomerinfo() {
+    private void getcustomerInfo() {
         try {
             ResultSet rs = HelloController.connection.createStatement().executeQuery("Select * from customers");
             while (rs.next()) {
-                Customer curcustomer = new Customer (
+                Customer curCustomer = new Customer (
                         rs.getInt("Customer_ID"),
                         rs.getString("Customer_Name"),
                         rs.getString("Address"),
@@ -21,7 +21,7 @@ public class CustomerModel {
                         rs.getString("Phone"),
                         rs.getInt("Division_ID")
                 );
-                customerInfo.add(curcustomer);
+                customerInfo.add(curCustomer);
             }
         } catch (SQLException e) {System.out.println(e.getMessage());}
     }
