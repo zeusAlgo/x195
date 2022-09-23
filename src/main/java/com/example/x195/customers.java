@@ -49,9 +49,9 @@ public class customers {
     @FXML public void delete() {
         Integer customerid = Integer.valueOf(deleteTxtFld.getText());
         try {
-            HelloController.connection.createStatement().execute("Delete from appointments where Customer_ID=" + )
+            HelloController.connection.createStatement().execute("Delete from appointments where Customer_ID=" + customerid);
         } catch (SQLException e) {
-
+            System.out.println(e.getMessage());
         }
         home.del("customers", "Customer_ID", Integer.parseInt(deleteTxtFld.getText()));
         home.launchActivity("customers");
