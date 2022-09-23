@@ -47,6 +47,13 @@ public class customers {
     @FXML public void delete() {
         home.del("customers", "Customer_ID", Integer.parseInt(deleteTxtFld.getText()));
         tblView.refresh();
+        customerIdCol.setCellValueFactory(new PropertyValueFactory<Customer, String>("id"));
+        customerNameCol.setCellValueFactory(new PropertyValueFactory<Customer, String>("name"));
+        customerAddressCol.setCellValueFactory(new PropertyValueFactory<Customer, String>("address"));
+        customerPostalCodeCol.setCellValueFactory(new  PropertyValueFactory<Customer, String>("postalcode"));
+        customerPhoneCol.setCellValueFactory(new PropertyValueFactory<Customer, String>("phone"));
+        customerDivIdCol.setCellValueFactory(new PropertyValueFactory<Customer, String>("divid"));
+        tblView.setItems(customerModel.getCustomers());
     }
 
     public void initialize() {
