@@ -102,6 +102,8 @@ public class reports {
 
     public void report2(ActionEvent actionEvent) {
         String s = "";
+        // check if obsv list can be concatenated to string
+        
 
         // for each contact create hm and populate with aptid and data
 
