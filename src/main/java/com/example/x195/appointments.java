@@ -23,6 +23,9 @@ public class appointments {
     static ObservableList<String> contactsar = FXCollections.observableArrayList("Anika Costa", "Daniel Garcia", "Li Lee"), usersar = FXCollections.observableArrayList("test", "admin"), customersar = FXCollections.observableArrayList(), timesar = FXCollections.observableArrayList("4 am", "5 am", "6 am", "7 am", "8 am", "9 am", "10 am", "11 am", "12 pm", "1 pm", "2 pm", "3 pm", "4 pm", "5 pm", "6 pm", "7 pm", "8 pm", "9 pm", "10 pm", "11 pm"), monthsar = FXCollections.observableArrayList("JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER");static ObservableList<Integer> daysar = FXCollections.observableArrayList(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31);
 
     public static int toalterid = 0;
+    private AppointmentModel appointmentModelM = new AppointmentModel();
+    private AppointmentModel appointmentModelW = new AppointmentModel();
+    @FXML public final ObservableList<Appointment> appointmentInfo = FXCollections.observableArrayList();
     @FXML public TableView<Appointment> tblViewM, tblViewW;
     @FXML public ComboBox monthcombobox, weekcombobox;
     @FXML public TableColumn appointmentContactColM, appointmentIdColM, appointmentTitleColM, appointmentDescriptionColM, appointmentLocationColM, appointmentTypeColM, appointmentStartColM, appointmentEndColM, appointmentCustomerIdColM, appointmentUserIdColM, appointmentIdColW, appointmentTitleColW, appointmentDescriptionColW, appointmentLocationColW, appointmentContactColW, appointmentTypeColW, appointmentStartColW, appointmentEndColW, appointmentCustomerIdColW, appointmentUserIdColW;
@@ -65,6 +68,7 @@ public class appointments {
        appointmentEndColM.setCellValueFactory(new PropertyValueFactory<Appointment, String>("end"));
        appointmentCustomerIdColM.setCellValueFactory(new PropertyValueFactory<Appointment, String>("customerId"));
        appointmentUserIdColM.setCellValueFactory(new PropertyValueFactory<Appointment, String>("userId"));
+       tblViewM.setItems(appointmentModelM.getAppointments());
 
        appointmentIdColW.setCellValueFactory(new PropertyValueFactory<Appointment, String>("id"));
        appointmentTitleColW.setCellValueFactory(new PropertyValueFactory<Appointment, String>("title"));
@@ -76,5 +80,6 @@ public class appointments {
        appointmentEndColW.setCellValueFactory(new PropertyValueFactory<Appointment, String>("end"));
        appointmentCustomerIdColW.setCellValueFactory(new PropertyValueFactory<Appointment, String>("customerId"));
        appointmentUserIdColW.setCellValueFactory(new PropertyValueFactory<Appointment, String>("userId"));
+        tblViewM.setItems(appointmentModelW.getAppointments());
     }
 }
