@@ -107,8 +107,12 @@ public class reports {
         // go through db and string concatenaate
         try {
             ResultSet rs = HelloController.connection.createStatement().executeQuery("Select * from appointments");
-            int contactid = 
-            switch ()
+            int contactid = rs.getInt("Contact_ID");
+            switch (contactid) {
+                case 1 -> anikas += "a";
+                case 2 -> daniels += "d";
+                case 3 -> lis += "l";
+            }
 
         } catch (SQLException e) { System.out.println(e.getMessage());}
 
