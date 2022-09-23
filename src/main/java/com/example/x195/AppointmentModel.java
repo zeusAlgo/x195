@@ -56,6 +56,7 @@ public class AppointmentModel {
                 appointmentInfoM.add(curApt);
             }
         } catch (SQLException e) { System.out.println(e.getMessage());}
+        return appointmentInfoM;
     }
     public ObservableList<Appointment> getAppointments() {return appointmentInfo;}
     public ObservableList<Appointment> getAppointmentsM(String month) {return getAppointmentInfoM(month);}

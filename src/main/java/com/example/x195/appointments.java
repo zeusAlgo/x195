@@ -53,17 +53,25 @@ public class appointments {
     public void deleteapt(ActionEvent actionEvent) { home.del("appointments", "Appointment_ID", Integer.parseInt(deltxtfld.getText()));
     }
 
+    public void setMonthTblView() {
+        //
+        tblViewM.setItems(appointmentModelM.getAppointmentInfoM("01"));
+    }
+
+    public void setWeekTblView() {
+
+    }
     public void initialize() {
        contactshm.put("Anika Costa", 1);contactshm.put("Daniel Garcia", 2);contactshm.put("Li Lee", 3);
        usershm.put("test", 1);usershm.put("admin", 2);
        timeshm.put("4 am", 4); timeshm.put("5 am", 5);timeshm.put("6 am", 6);timeshm.put("7 am", 7);timeshm.put("8 am", 8);timeshm.put("9 am", 9);timeshm.put("10 am", 10);timeshm.put("11 am",11);timeshm.put("12 pm", 12);timeshm.put("1 pm", 13);timeshm.put("2 pm", 14);timeshm.put("3 pm", 15);timeshm.put("4 pm", 16);timeshm.put("5 pm",17);timeshm.put("6 pm",18);timeshm.put("7 pm", 19);timeshm.put("8 pm", 20);timeshm.put("9 pm",21);timeshm.put("10 pm",22);timeshm.put("11 pm", 23);
        customershm = getallcustomers();
 
-       appointmentIdColM.setCellValueFactory(new PropertyValueFactory<Appointment, String>("id"));
+       appointmentIdColM.setCellValueFactory(new PropertyValueFactory<Appointment, String>("appointmentId"));
        appointmentTitleColM.setCellValueFactory(new PropertyValueFactory<Appointment, String>("title"));
        appointmentDescriptionColM.setCellValueFactory(new PropertyValueFactory<Appointment,String>("description"));
        appointmentLocationColM.setCellValueFactory(new PropertyValueFactory<Appointment, String>("location"));
-       appointmentContactColM.setCellValueFactory(new PropertyValueFactory<Appointment, String>("contact"));
+       appointmentContactColM.setCellValueFactory(new PropertyValueFactory<Appointment, String>("contactId"));
        appointmentTypeColM.setCellValueFactory(new PropertyValueFactory<Appointment, String>("type"));
        appointmentStartColM.setCellValueFactory(new PropertyValueFactory<Appointment, String>("start"));
        appointmentEndColM.setCellValueFactory(new PropertyValueFactory<Appointment, String>("end"));
@@ -71,11 +79,11 @@ public class appointments {
        appointmentUserIdColM.setCellValueFactory(new PropertyValueFactory<Appointment, String>("userId"));
        tblViewM.setItems(appointmentModelM.getAppointments());
 
-       appointmentIdColW.setCellValueFactory(new PropertyValueFactory<Appointment, String>("id"));
+       appointmentIdColW.setCellValueFactory(new PropertyValueFactory<Appointment, String>("appointmentId"));
        appointmentTitleColW.setCellValueFactory(new PropertyValueFactory<Appointment, String>("title"));
        appointmentDescriptionColW.setCellValueFactory(new PropertyValueFactory<Appointment,String>("description"));
        appointmentLocationColW.setCellValueFactory(new PropertyValueFactory<Appointment, String>("location"));
-       appointmentContactColW.setCellValueFactory(new PropertyValueFactory<Appointment, String>("contact"));
+       appointmentContactColW.setCellValueFactory(new PropertyValueFactory<Appointment, String>("contactId"));
        appointmentTypeColW.setCellValueFactory(new PropertyValueFactory<Appointment, String>("type"));
        appointmentStartColW.setCellValueFactory(new PropertyValueFactory<Appointment, String>("start"));
        appointmentEndColW.setCellValueFactory(new PropertyValueFactory<Appointment, String>("end"));
