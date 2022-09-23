@@ -17,11 +17,18 @@ import java.time.ZonedDateTime;
 import java.util.HashMap;
 import java.util.HashSet;
 
+/**
+ * Home activity
+ */
 public class home {
     public Button customersBtn, aptBtn, reportsBtn;
     static HashMap<String, Integer> countryhm = new HashMap<>(), usdivhm = new HashMap<>(), ukdivhm = new HashMap<>(), canadadivhm = new HashMap<>();static HashMap<Integer, String> alldivshm = new HashMap<>();
     static ObservableList<String> countryar = FXCollections.observableArrayList("U.S.", "UK", "Canada"), usdivar = FXCollections.observableArrayList(), ukdivar = FXCollections.observableArrayList(), canadadivar = FXCollections.observableArrayList();
 
+    /**
+     * Launches activity
+     * @param activityname activity to be launched
+     */
     static public void launchActivity(String activityname){
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(home.class.getResource(activityname+".fxml"));
@@ -32,10 +39,30 @@ public class home {
             stage.show();
         } catch(Exception e) {System.out.println(e.getMessage());}
     }
+
+    /**
+     * Launches customers activity
+     * @param actionEvent Mouse or keyboard press
+     */
     public void launchA(ActionEvent actionEvent) { launchActivity("customers");}
+
+    /**
+     * Launches appointments activity
+     * @param actionEvent Mouse or keyboard press
+     */
     public void launchB(ActionEvent actionEvent) { launchActivity("appointments");}
+
+    /**
+     * Launches appointments activity
+     * @param actionEvent Mouse or keyboard press
+     */
     public void launchC(ActionEvent actionEvent) { launchActivity("reports");}
 
+    /**
+     * Gets divisions
+     * @param countryid id of country
+     * @return Hashmap of divisions
+     */
     public HashMap<String, Integer> getdivs(int countryid) {
         HashMap<String, Integer> hashbrownmap = new HashMap<>();
         try {
@@ -54,6 +81,10 @@ public class home {
         return hashbrownmap;
     }
 
+    /**
+     * Gets all divisons
+     * @return Hashmap of all divisions
+     */
     public HashMap<Integer, String> getalldivs() {
         HashMap<Integer, String> hashmap = new HashMap<>();
         try {
@@ -67,12 +98,24 @@ public class home {
         return hashmap;
     }
 
+    /**
+     * Deletes from database
+     * @param tbl table to delete from
+     * @param col col to delete from
+     * @param id id of item to be deleted
+     */
     static public void del(String tbl, String col, int id) {
         try {HelloController.connection.createStatement().execute(
                     "Delete from " + tbl + " Where " +  col + "=" + id);
         } catch (SQLException error) {System.out.println("SQL Error: " + error.getMessage());}
    }
 
+    /**
+     * Increments the column
+     * @param tbl table to find column
+     * @param col column to increment
+     * @return Incremented column value
+     */
     static public int incrementcolval(String tbl, String col) {
         int colv = 0;
         try {
@@ -83,6 +126,10 @@ public class home {
         return colv+1;
     }
 
+    /**
+     * If there is an appointment within 15 mins of login
+     * @return Boolean if there is an appointment within 15 mins of login
+     */
     public boolean impendingapt() {
         ZonedDateTime curzdt = LocalDateTime.now().atZone(ZoneId.systemDefault());
         ZonedDateTime utczdt = curzdt.withZoneSameInstant(ZoneId.of("UTC"));
@@ -107,6 +154,9 @@ public class home {
         return false;
     }
 
+    /**
+     * Set ui, hashmaps, and alerts
+     */
     public void initialize() {
         countryhm.put("U.S", 1); countryhm.put("UK", 2); countryhm.put("Canada", 3);usdivhm = getdivs(1);ukdivhm = getdivs(2);canadadivhm = getdivs(3);alldivshm = getalldivs();
         Alert alerta = new Alert(Alert.AlertType.INFORMATION, "Appointment in 15 mins!"),

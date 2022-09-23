@@ -14,6 +14,9 @@ import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.util.Locale;
 
+/**
+ * Entry point into the application
+ */
 public class HelloController {
     public TextField usrTxtFld;
     public PasswordField passTxtFld;
@@ -24,6 +27,10 @@ public class HelloController {
     static String pass = "admin";
     static String dbsrc = "jdbc:mysql://localhost/client_schedule";
 
+    /**
+     * Gets connection to database
+     * @return Database connection
+     */
     public static Connection dbconnection() {
         try {
             return DriverManager.getConnection(dbsrc, usr, pass);
@@ -32,6 +39,9 @@ public class HelloController {
         }
     }
 
+    /**
+     * Signs user into app, logs sign in and potentially changes display language
+     */
     @FXML protected void signin() {
         String usrcreds = usrTxtFld.getText();
         usr = usrcreds;
@@ -68,6 +78,9 @@ public class HelloController {
         }
     }
 
+    /**
+     * Launches the home activity
+     */
     public void gohome(){
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(home.class.getResource("home.fxml"));
@@ -80,6 +93,10 @@ public class HelloController {
     }
 
     static Connection connection = dbconnection();
+
+    /**
+     * Sets ui and language
+     */
     public void initialize() {
         ZoneId zone = ZoneId.systemDefault();
         geoLbl.setText(String.valueOf(zone));

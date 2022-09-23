@@ -6,6 +6,9 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/**
+ * Entry point into the application
+ */
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
@@ -16,6 +19,10 @@ public class HelloApplication extends Application {
         stage.show();
     }
 
+    /**
+     * Launches the app
+     * @param args String array
+     */
     public static void main(String[] args) {
         launch();
     }
