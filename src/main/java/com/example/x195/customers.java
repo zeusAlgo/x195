@@ -13,6 +13,8 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
+import java.sql.SQLException;
+
 public class customers {
     public TextField modifyTxtFld, deleteTxtFld;
     public Button delBtn;
@@ -45,6 +47,12 @@ public class customers {
 
     //todo: can clean this up on btn.pressed -> fn
     @FXML public void delete() {
+        Integer customerid = Integer.valueOf(deleteTxtFld.getText());
+        try {
+            HelloController.connection.createStatement().execute("Delete from appointments where Customer_ID=" + )
+        } catch (SQLException e) {
+
+        }
         home.del("customers", "Customer_ID", Integer.parseInt(deleteTxtFld.getText()));
         home.launchActivity("customers");
         //workaround: relaunch the activity
