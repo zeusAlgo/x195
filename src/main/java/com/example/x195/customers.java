@@ -46,7 +46,9 @@ public class customers {
     //todo: can clean this up on btn.pressed -> fn
     @FXML public void delete() {
         home.del("customers", "Customer_ID", Integer.parseInt(deleteTxtFld.getText()));
-        tblView.refresh();
+//        tblView.refresh();
+        tblView.getColumns().get(0).setVisible(false);
+        tblView.getColumns().get(0).setVisible(true);
     }
 
     public void initialize() {
