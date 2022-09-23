@@ -11,6 +11,7 @@ import java.sql.Connection;
 import java.sql.*;
 import java.sql.DriverManager;
 import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.util.Locale;
 
 public class HelloController {
@@ -41,9 +42,10 @@ public class HelloController {
             Connection connection = DriverManager.getConnection(db, usrcreds, passcreds);
             try {
                 FileWriter logger = new FileWriter("login_activity.txt");
-                logger.write("dklaj");
+                logger.write("\ndklaj\n");
+                logger.write(String.valueOf(ZonedDateTime.now()));
                 logger.write(usrcreds);
-                logger.write("Successful Login");
+                logger.write("\nSuccessful Login");
                 logger.close();
             } catch (IOException e) {
                 System.out.println(e.getMessage());
