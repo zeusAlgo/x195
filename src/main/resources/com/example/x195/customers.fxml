@@ -8,7 +8,7 @@
       <Button layoutX="693.0" layoutY="428.0" mnemonicParsing="false" onAction="#launch1" text="Add" />
       <Button layoutX="684.0" layoutY="525.0" mnemonicParsing="false" onAction="#laundh2" text="Modify" />
       <Button fx:id="delBtn" layoutX="684.0" layoutY="620.0" mnemonicParsing="false" onAction="#delete" text="Delete" />
-      <TableView fx:id="tblView" layoutX="241.0" layoutY="122.0" prefHeight="809.0" prefWidth="427.0">
+      <TableView fx:id="tblView" layoutX="241.0" onMouseClicked="#setcustomerid" layoutY="122.0" prefHeight="809.0" prefWidth="427.0">
         <columns>
           <TableColumn fx:id="customerIdCol" prefWidth="75.0" text="Id" />
           <TableColumn fx:id="customerNameCol" prefWidth="75.0" text="Name" />

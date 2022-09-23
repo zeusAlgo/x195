@@ -10,6 +10,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 public class customers {
@@ -53,10 +54,15 @@ public class customers {
         customerPhoneCol.setCellValueFactory(new PropertyValueFactory<Customer, String>("phone"));
         customerDivIdCol.setCellValueFactory(new PropertyValueFactory<Customer, String>("divid"));
         tblView.setItems(customerModel.getCustomers());
+        Customer selcust = tblView.getSelectionModel().getSelectedItem().;
 
 
 //        tblcola.setCellValueFactory(new PropertyValueFactory<>("id"));
 //        tblcolb.setCellValueFactory(new PropertyValueFactory<>("name"));
 //        ar = FXCollections.observableArrayList();
+    }
+
+    public void setcustomerid(MouseEvent mouseEvent) {
+        tomodifyid = tblView.getSelectionModel().getSelectedItem().getId();
     }
 }
