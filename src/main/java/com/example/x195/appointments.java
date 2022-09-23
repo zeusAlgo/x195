@@ -3,10 +3,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import org.w3c.dom.events.MouseEvent;
 
@@ -52,7 +49,12 @@ public class appointments {
         return customershm;
     }
 
-    public void deleteapt(ActionEvent actionEvent) { home.del("appointments", "Appointment_ID", Integer.parseInt(deltxtfld.getText()));
+    public void deleteapt(ActionEvent actionEvent) {
+        String aptid = deltxtfld.getText();
+        Alert alert = new Alert(Alert.AlertType.INFORMATION, "Appointment" + aptid + "deleted.");
+        alert.show();
+
+        home.del("appointments", "Appointment_ID", Integer.parseInt(deltxtfld.getText()));
     }
 
     public void setMonthTblView() {
