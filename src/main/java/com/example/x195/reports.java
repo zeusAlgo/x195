@@ -103,13 +103,15 @@ public class reports {
     public void report2(ActionEvent actionEvent) {
         String s = "";
 
-        
+        // for each contact create hm and populate with aptid and data
+
         textarea.setText(s);
     }
 
     public void report3(ActionEvent actionEvent) {
         String s = "";
-
+// most popular person
+        // heapq? sort by apts and pop max until empty
         textarea.setText(s);
     }
 }
