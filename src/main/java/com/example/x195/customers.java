@@ -17,7 +17,7 @@ public class customers {
     public TextField modifyTxtFld, deleteTxtFld;
     public Button delBtn;
     private CustomerModel customerModel = new CustomerModel();
-    @FXML private TableView<Customer> tblView;
+    @FXML public static TableView<Customer> tblView;
     @FXML private TableColumn<Customer, String> customerIdCol;
     @FXML private TableColumn<Customer, String> customerNameCol;
     @FXML private TableColumn<Customer, String> customerAddressCol;

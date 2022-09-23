@@ -60,8 +60,7 @@ public class customeradd {
                     + phoneTxtFld.getText() + "', '" + "2022-09-14 20:00:00" + "', '" + "script" +
                     "', '" + "2022-09-14 20:00:00" + "', '" + "script" + "', "+ divisionidx + ")";
             statement.execute(insertion);
-        } catch (SQLException e) {
-            System.out.println("SQL Error " + e.getMessage());
-        }
+        } catch (SQLException e) {System.out.println("SQL Error " + e.getMessage());}
+        customers.tblView.refresh();
     }
 }
