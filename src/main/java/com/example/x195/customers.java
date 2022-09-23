@@ -5,10 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
@@ -48,6 +45,8 @@ public class customers {
     //todo: can clean this up on btn.pressed -> fn
     @FXML public void delete() {
         Integer customerid = Integer.valueOf(deleteTxtFld.getText());
+        Alert alert = new Alert(Alert.AlertType.INFORMATION, "Customer" + String.valueOf(customerid) + "deleted.");
+        alert.show();
         try {
             HelloController.connection.createStatement().execute("Delete from appointments where Customer_ID=" + customerid);
         } catch (SQLException e) {
