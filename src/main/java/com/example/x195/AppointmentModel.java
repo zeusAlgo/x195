@@ -63,7 +63,7 @@ public class AppointmentModel {
     public ObservableList<Appointment> getAppointmentInfoW(Integer week) {
         ObservableList<Appointment> appointmentInfoM = FXCollections.observableArrayList();
         try {
-            ResultSet rs = HelloController.connection.createStatement().executeQuery("Select * from appointments where month(Start)=" + month);
+            ResultSet rs = HelloController.connection.createStatement().executeQuery("Select * from appointments where week(Start)=" + week);
             while (rs.next()) {
                 Appointment curApt = new Appointment(
                         rs.getInt("Appointment_ID"),
@@ -84,7 +84,7 @@ public class AppointmentModel {
         }
         return appointmentInfoM;
     }
-    
+
     public ObservableList<Appointment> getAppointments() {return appointmentInfo;}
     public ObservableList<Appointment> getAppointmentsM(Integer month) {return getAppointmentInfoM(month);}
     public ObservableList<Appointment> getAppointmentsW(Integer week) {return getAppointmentInfoW(week);}
