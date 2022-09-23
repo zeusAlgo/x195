@@ -42,16 +42,24 @@ public class HelloController {
             Connection connection = DriverManager.getConnection(db, usrcreds, passcreds);
             try {
                 FileWriter logger = new FileWriter("login_activity.txt");
-                logger.write("\ndklaj\n");
-                logger.write(String.valueOf(ZonedDateTime.now()));
+                logger.write("\n\n");
                 logger.write(usrcreds);
+                logger.write(String.valueOf(ZonedDateTime.now()));
                 logger.write("\nSuccessful Login");
                 logger.close();
-            } catch (IOException e) {
-                System.out.println(e.getMessage());
-            }
+            } catch (IOException e) {System.out.println(e.getMessage());}
             gohome();
         } catch (SQLException e) {
+            try {
+
+                FileWriter logger = new FileWriter("login_activity.txt");
+                logger.write("\n\n");
+                logger.write(usrcreds);
+                logger.write(String.valueOf(ZonedDateTime.now()));
+                logger.write("\nSuccessful Login");
+                logger.close();
+            } catch (IOException e2) {System.out.println(e2.getMessage());}
+
             System.out.println("Error" + e.getMessage());
             String alerts = "";
             if (lang.equals("English")) alerts = "Please enter valid username and password";
