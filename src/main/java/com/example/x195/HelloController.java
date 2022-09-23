@@ -51,12 +51,11 @@ public class HelloController {
             gohome();
         } catch (SQLException e) {
             try {
-
                 FileWriter logger = new FileWriter("login_activity.txt");
                 logger.write("\n\n");
                 logger.write(usrcreds);
                 logger.write(String.valueOf(ZonedDateTime.now()));
-                logger.write("\nSuccessful Login");
+                logger.write("\nFailed Login");
                 logger.close();
             } catch (IOException e2) {System.out.println(e2.getMessage());}
 
