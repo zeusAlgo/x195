@@ -8,6 +8,7 @@ public class AppointmentModel {
     public ObservableList<Appointment> appointmentInfo;
     public AppointmentModel() {appointmentInfo = FXCollections.observableArrayList(); getAppointmentInfo();}
 
+    //todo: week month
     public void getAppointmentInfo() {
         try {
             ResultSet rs = HelloController.connection.createStatement().executeQuery("Select * from appointments");
