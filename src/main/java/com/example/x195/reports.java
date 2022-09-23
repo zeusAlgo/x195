@@ -107,6 +107,8 @@ public class reports {
         // go through db and string concatenaate
         try {
             ResultSet rs = HelloController.connection.createStatement().executeQuery("Select * from appointments");
+            int contactid = 
+            switch ()
 
         } catch (SQLException e) { System.out.println(e.getMessage());}
 
