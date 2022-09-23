@@ -104,7 +104,6 @@ public class reports {
 
     public void report2(ActionEvent actionEvent) {
         String anikas = "Anika Costa\n========", daniels = "\nDaniel Garcia\n========", lis = "\nLi Lee\n======";
-        // go through db and string concatenaate
         try {
             ResultSet rs = HelloController.connection.createStatement().executeQuery("Select * from appointments");
             int contactid = rs.getInt("Contact_ID");
