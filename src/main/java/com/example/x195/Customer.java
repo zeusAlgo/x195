@@ -5,7 +5,7 @@ public class Customer {
     private String name, address, postalcode, phone;
 
     public Customer(int id, String name, String address, String postalcode, String phone, int divid){
-        this.id = id; this.name = name; this.address=address; this.postalcode=postalcode; this.divid=divid;
+        this.id = id; this.name = name; this.address=address; this.postalcode=postalcode; this.phone=phone; this.divid=divid;
     }
 
     public void setId(int id) {this.id=id;}
