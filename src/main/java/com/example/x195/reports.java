@@ -3,8 +3,6 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.TextArea;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.time.ZonedDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 
 public class reports {
@@ -44,6 +42,15 @@ public class reports {
         } catch (SQLException e) {System.out.println(e.getMessage());}
 
         //todo: create string and set txt from hms
+        String s = "";
+        var dk = new Object() {
+            String s1;
+        };
+        String string = "";
+        janhm.forEach((k, v) -> {
+            dk.s1 = k + ":" + v;
+        });
+        s += dk.s1;
     }
 
 
