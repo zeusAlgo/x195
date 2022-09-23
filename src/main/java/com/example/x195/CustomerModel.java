@@ -6,10 +6,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class CustomerModel {
-    private ObservableList<Customer> customerInfo;
+    public ObservableList<Customer> customerInfo;
     public CustomerModel() {customerInfo = FXCollections.observableArrayList(); getCustomerInfo();}
 
-    private void getCustomerInfo() {
+    public void getCustomerInfo() {
         try {
             ResultSet rs = HelloController.connection.createStatement().executeQuery("Select * from customers");
             while (rs.next()) {

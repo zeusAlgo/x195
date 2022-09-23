@@ -17,14 +17,14 @@ public class customers {
     public TextField modifyTxtFld, deleteTxtFld;
     public Button delBtn;
     private CustomerModel customerModel = new CustomerModel();
-    @FXML public static TableView<Customer> tblView;
-    @FXML private TableColumn<Customer, String> customerIdCol;
-    @FXML private TableColumn<Customer, String> customerNameCol;
-    @FXML private TableColumn<Customer, String> customerAddressCol;
-    @FXML private TableColumn<Customer, String> customerPostalCodeCol;
-    @FXML private TableColumn<Customer, String> customerPhoneCol;
-    @FXML private TableColumn<Customer, String> customerDivIdCol;
-    @FXML private final ObservableList<Customer> customerInfo = FXCollections.observableArrayList();
+    @FXML public TableView<Customer> tblView;
+    @FXML public TableColumn<Customer, String> customerIdCol;
+    @FXML public TableColumn<Customer, String> customerNameCol;
+    @FXML public TableColumn<Customer, String> customerAddressCol;
+    @FXML public TableColumn<Customer, String> customerPostalCodeCol;
+    @FXML public TableColumn<Customer, String> customerPhoneCol;
+    @FXML public TableColumn<Customer, String> customerDivIdCol;
+    @FXML public final ObservableList<Customer> customerInfo = FXCollections.observableArrayList();
 
     public static int tomodifyid = 0;
 

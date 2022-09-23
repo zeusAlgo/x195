@@ -61,6 +61,6 @@ public class customeradd {
                     "', '" + "2022-09-14 20:00:00" + "', '" + "script" + "', "+ divisionidx + ")";
             statement.execute(insertion);
         } catch (SQLException e) {System.out.println("SQL Error " + e.getMessage());}
-        customers.tblView.refresh();
+//        customers.tblView.refresh();
     }
 }
