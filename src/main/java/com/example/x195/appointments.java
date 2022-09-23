@@ -59,7 +59,7 @@ public class appointments {
     }
 
     public void setWeekTblView() {
-        tblViewW.setItems(appointmentModelW.getAppointmentInfoM((Integer) weekcombobox.getSelectionModel().getSelectedItem()));
+        tblViewW.setItems(appointmentModelW.getAppointmentInfoW(weekcombobox.getSelectionModel().getSelectedIndex()+1));
     }
     public void initialize() {
        contactshm.put("Anika Costa", 1);contactshm.put("Daniel Garcia", 2);contactshm.put("Li Lee", 3);
@@ -91,6 +91,6 @@ public class appointments {
        appointmentEndColW.setCellValueFactory(new PropertyValueFactory<Appointment, String>("end"));
        appointmentCustomerIdColW.setCellValueFactory(new PropertyValueFactory<Appointment, String>("customerId"));
        appointmentUserIdColW.setCellValueFactory(new PropertyValueFactory<Appointment, String>("userId"));
-        tblViewW.setItems(appointmentModelW.getAppointments());
+//        tblViewW.setItems(appointmentModelW.getAppointments());
     }
 }

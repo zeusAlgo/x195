@@ -61,7 +61,7 @@ public class AppointmentModel {
     }
 
     public ObservableList<Appointment> getAppointmentInfoW(Integer week) {
-        ObservableList<Appointment> appointmentInfoM = FXCollections.observableArrayList();
+        ObservableList<Appointment> appointmentInfoW = FXCollections.observableArrayList();
         try {
             ResultSet rs = HelloController.connection.createStatement().executeQuery("Select * from appointments where week(Start)=" + week);
             while (rs.next()) {
@@ -76,7 +76,7 @@ public class AppointmentModel {
                         rs.getInt("Customer_ID"),
                         rs.getInt("User_ID"),
                         rs.getInt("Contact_ID"));
-                appointmentInfoM.add(curApt);
+                appointmentInfoW.add(curApt);
             }
         } catch (SQLException e) {
             System.out.println(e.getMessage());
