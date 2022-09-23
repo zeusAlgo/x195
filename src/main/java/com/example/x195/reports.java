@@ -51,12 +51,11 @@ public class reports {
             dk.s1 = k + ":" + v;
         });
 
-        var fb = new Object() {
-            String s2;
-        };
+        var fb = new Object() {String s2;};
         febhm.forEach((k, v) -> {fb.s2 = k + ":"+ v;});
 
         s += dk.s1;
+        System.out.println(s);
     }
 
 
