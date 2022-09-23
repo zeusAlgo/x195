@@ -15,6 +15,13 @@ import javafx.stage.Stage;
 public class customers {
     public TextField modifyTxtFld, deleteTxtFld;
     public Button delBtn;
+    private CustomerModel customerModel = new CustomerModel();
+    @FXML private TableView<Customer> tblview;
+    @FXML private TableColumn<Customer, String> customerIdCol, customerNameCol, customerAddressCol, customerPostalCodeCol, customerPhoneCol, customerDivIdCol;
+    @FXML private final ObservableList<Customer> customerinfo = FXCollections.observableArrayList();
+
+    
+
     @FXML private TableColumn<Customer, String> tblcola, tblcolb;
     @FXML private TableView<customer> tblview;
     public static ObservableList<Customer> ar;
