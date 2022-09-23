@@ -104,9 +104,11 @@ public class reports {
 
     public void report2(ActionEvent actionEvent) {
         String anikas = "Anika Costa \n =======", daniels = "Daniel Garcia \n ========", lis = "Li Lee \n =====";
-
         // go through db and string concatenaate
-        ResultSet rs = HelloController.connection.createStatement().executeQuery("Select * from appointments");
+        try {
+            ResultSet rs = HelloController.connection.createStatement().executeQuery("Select * from appointments");
+
+        } catch (SQLException e) { System.out.println(e.getMessage());}
 
         textarea.setText(s);
     }
