@@ -25,9 +25,6 @@ public class customers {
     @FXML private TableColumn<Customer, String> customerDivIdCol;
     @FXML private final ObservableList<Customer> customerinfo = FXCollections.observableArrayList();
 
-//    @FXML private TableColumn<Customer, String> tblcola, tblcolb;
-//    @FXML private TableView<customer> tblview;
-//    public static ObservableList<Customer> ar;
     public static int tomodifyid = 0;
 
     public void launchActivity(String activityname){
