@@ -62,10 +62,9 @@ public class appointments {
        appointmentContactColM.setCellValueFactory(new PropertyValueFactory<Appointment, String>("contact"));
        appointmentTypeColM.setCellValueFactory(new PropertyValueFactory<Appointment, String>("type"));
        appointmentStartColM.setCellValueFactory(new PropertyValueFactory<Appointment, String>("start"));
-       appointmentStartColM.setCellValueFactory(new PropertyValueFactory<Appointment, String>("start"));
-       appointmentStartColM.setCellValueFactory(new PropertyValueFactory<Appointment, String>("start"));
-       appointmentStartColM.setCellValueFactory(new PropertyValueFactory<Appointment, String>("start"));
-       appointmentStartColM.setCellValueFactory(new PropertyValueFactory<Appointment, String>("start"));
+       appointmentEndColM.setCellValueFactory(new PropertyValueFactory<Appointment, String>("end"));
+       appointmentCustomerIdColM.setCellValueFactory(new PropertyValueFactory<Appointment, String>("customerId"));
+       appointmentUserIdColM.setCellValueFactory(new PropertyValueFactory<Appointment, String>("userId"));
 
     }
 }

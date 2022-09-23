@@ -26,8 +26,8 @@
                               <TableColumn fx:id="appointmentTypeColM" prefWidth="75.0" text="Type" />
                               <TableColumn fx:id="appointmentStartColM" prefWidth="75.0" text="Start" />
                               <TableColumn fx:id="appointmentEndColM" prefWidth="75.0" text="End" />
-                              <TableColumn fx:id="appointmentCustomerIdColM" prefWidth="75.0" text="End" />
-                              <TableColumn fx:id="appointmentUserIdColM" prefWidth="75.0" text="End" />
+                              <TableColumn fx:id="appointmentCustomerIdColM" prefWidth="75.0" text="customerId" />
+                              <TableColumn fx:id="appointmentUserIdColM" prefWidth="75.0" text="userId" />
                           </columns>
                         </TableView>
                         <ComboBox fx:id="monthcombobox" layoutX="270.0" layoutY="38.0" prefWidth="150.0" />
