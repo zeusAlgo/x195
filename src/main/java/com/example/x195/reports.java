@@ -45,27 +45,14 @@ public class reports {
         System.out.println(septhm);
         //todo: create string and set txt from hms
         String s = "";
-        var dk = new Object() {
-            String s1;
-        };
-        String string = "";
-        janhm.forEach((k, v) -> {
-            dk.s1 = k + ":" + v;
-        });
 
+        s += "January \n";
         var fb = new Object() {String s2;};
-        septhm.forEach((k, v) -> {fb.s2 += k + ":" + String.valueOf(v);});
+        septhm.forEach((k, v) -> {fb.s2 += k + ":" + String.valueOf(v) + "\n";});
 
-//        s += dk.s1;
         s += fb.s2;
         System.out.println(s);
-        //todo: lambdas
-//        StringBuilder s = null;
-//        for (Map.Entry<String, Integer> entry : janhm.entrySet()) {
-//            String k = entry.getKey();
-//            Integer v = entry.getValue();
-//            s.append(k).append(":").append(v);
-//        }
+
         textarea.setText(s);
     }
 
