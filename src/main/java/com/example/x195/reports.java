@@ -122,6 +122,20 @@ public class reports {
     }
 
     public void report3(ActionEvent actionEvent) {
+        HashMap<String, Integer> ctr = new HashMap<>();
+        ctr.put("Anika", 0); ctr.put("Daniel", 0) ctr.put("Li", 0);
+               try {
+            ResultSet rs = HelloController.connection.createStatement().executeQuery("Select * from appointments");
+            while (rs.next()) {
+                int contactid = rs.getInt("Contact_ID");
+                switch (contactid) {
+                    case 1 -> ctr.put("Anika", ctr.get("Anika") + 1);
+                    case 2 -> daniels +=
+                    case 3 -> lis +=
+
+                }
+            }
+        } catch (SQLException e) { System.out.println(e.getMessage());}
         String s = "";
 // most popular person
         // heapq? sort by apts and pop max until empty
