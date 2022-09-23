@@ -37,65 +37,66 @@ public class reports {
         } catch (SQLException e) {System.out.println(e.getMessage());}
 
         String s = "";
-        s += "Jan \n";
+        s += "Jan \n ======= \n";
         var aa = new Object() {String s2;};
         janhm.forEach((k, v) -> {aa.s2 += k + ":" + String.valueOf(v) + "\n";});
         if (aa.s2 != null) s += aa.s2;
 
-        s += "Feb \n";
+        s += "Feb \n ======= \n";
         var ab = new Object() {String s2;};
         febhm.forEach((k, v) -> {ab.s2 += k + ":" + String.valueOf(v) + "\n";});
         if (ab.s2 != null) s += ab.s2;
 
-        s += "Mar \n";
+        s += "Mar \n ======= \n";
         var ac = new Object() {String s2;};
         marhm.forEach((k, v) -> {ac.s2 += k + ":" + String.valueOf(v) + "\n";});
         if (ac.s2 != null) s += ac.s2;
 
-        s += "Apr \n";
+        s += "Apr \n ======= \n";
         var ad = new Object() {String s2;};
         aprhm.forEach((k, v) -> {ad.s2 += k + ":" + String.valueOf(v) + "\n";});
         if (ad.s2 != null) s += ad.s2;
 
-        s += "May \n";
+        s += "May \n ======= \n";
         var ae = new Object() {String s2;};
         mayhm.forEach((k, v) -> {ae.s2 += k + ":" + String.valueOf(v) + "\n";});
         if (ae.s2 != null)s += ae.s2;
 
-        s += "Jun \n";
+        s += "Jun \n ======= \n";
         var af = new Object() {String s2;};
         junehm.forEach((k, v) -> {af.s2 += k + ":" + String.valueOf(v) + "\n";});
         if (af.s2 != null) s += af.s2;
 
-        s += "Jul \n";
+        s += "Jul \n ======= \n";
         var ag = new Object() {String s2;};
         julhm.forEach((k, v) -> {ag.s2 += k + ":" + String.valueOf(v) + "\n";});
         if (ag.s2 != null) s += ag.s2;
 
-        s += "Aug \n";
+        s += "Aug \n ======= \n";
         var ah = new Object() {String s2;};
         aughm.forEach((k, v) -> {ah.s2 += k + ":" + String.valueOf(v) + "\n";});
         if (ah.s2 != null) s += ah.s2;
 
-        s += "Sept \n";
+        s += "Sept \n ====== \n";
         var ai = new Object() {String s2;};
         septhm.forEach((k, v) -> {ai.s2 += k + ":" + String.valueOf(v) + "\n";});
         if (ai.s2 != "null") s += ai.s2;
 
-        s += "Oct \n";
+        s += "Oct \n ======= \n";
         var aj = new Object() {String s2;};
         octhm.forEach((k, v) -> {aj.s2 += k + ":" + String.valueOf(v) + "\n";});
         if (aj.s2 != null) s += aj.s2;
 
-        s += "Nov \n";
+        s += "Nov \n ======= \n";
         var ak = new Object() {String s2;};
         novhm.forEach((k, v) -> {ak.s2 += k + ":" + String.valueOf(v) + "\n";});
         if (ak.s2 != null) s += ak.s2;
 
-        s += "Dec \n";
+        s += "Dec \n ======= \n";
         var al = new Object() {String s2;};
         dechm.forEach((k, v) -> {al.s2 += k + ":" + String.valueOf(v) + "\n";});
         if (al.s2 != null) s += al.s2;
+        s = s.replaceAll("\bnull\b", "");
         textarea.setText(s);
     }
 
