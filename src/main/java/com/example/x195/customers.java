@@ -23,7 +23,7 @@ public class customers {
     @FXML private TableColumn<Customer, String> customerPostalCodeCol;
     @FXML private TableColumn<Customer, String> customerPhoneCol;
     @FXML private TableColumn<Customer, String> customerDivIdCol;
-    @FXML private final ObservableList<Customer> customerinfo = FXCollections.observableArrayList();
+    @FXML private final ObservableList<Customer> customerInfo = FXCollections.observableArrayList();
 
     public static int tomodifyid = 0;
 
