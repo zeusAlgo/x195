@@ -4,18 +4,26 @@ import javafx.collections.ObservableList;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * Model for Appointments class
+ */
 public class AppointmentModel {
     public ObservableList<Appointment> appointmentInfo;
     public ObservableList<Appointment> appointmentInfoM;
     public ObservableList<Appointment> appointmentInfoW;
+
+    /**
+     * Constructor for model
+     */
     public AppointmentModel() {
         appointmentInfo = FXCollections.observableArrayList(); getAppointmentInfo();
         appointmentInfoM = FXCollections.observableArrayList();
         appointmentInfoW = FXCollections.observableArrayList();
     }
 
-
-    //todo: week month
+    /**
+     * Gets appointment information
+     */
     public void getAppointmentInfo() {
         try {
             ResultSet rs = HelloController.connection.createStatement().executeQuery("Select * from appointments");
@@ -36,7 +44,12 @@ public class AppointmentModel {
         } catch (SQLException e) { System.out.println(e.getMessage());}
     }
 
-       public ObservableList<Appointment> getAppointmentInfoM(Integer month) {
+    /**
+     * Gets appointment information for a particular month
+     * @param month month to get appointments for
+     * @return Observable List of appointments
+     */
+    public ObservableList<Appointment> getAppointmentInfoM(Integer month) {
             ObservableList<Appointment> appointmentInfoM = FXCollections.observableArrayList();
         try {
             ResultSet rs = HelloController.connection.createStatement().executeQuery("Select * from appointments where month(Start)="+ month);
@@ -60,6 +73,11 @@ public class AppointmentModel {
         return appointmentInfoM;
     }
 
+    /**
+     * Gets appointment information for a particular week
+     * @param week week to get appointments for
+     * @return Observable List of appointments
+     */
     public ObservableList<Appointment> getAppointmentInfoW(Integer week) {
         ObservableList<Appointment> appointmentInfoW = FXCollections.observableArrayList();
         try {
@@ -85,7 +103,23 @@ public class AppointmentModel {
         return appointmentInfoW;
     }
 
+    /**
+     * Gets all appointments
+     * @return
+     */
     public ObservableList<Appointment> getAppointments() {return appointmentInfo;}
+
+    /**
+     * Gets appointments for a month
+     * @param month month to get appointments for
+     * @return Observable List of appointments
+     */
     public ObservableList<Appointment> getAppointmentsM(Integer month) {return getAppointmentInfoM(month);}
+
+    /**
+     * Gets appointments for a week
+     * @param week week to get appointments for
+     * @return Observable List of appointments
+     */
     public ObservableList<Appointment> getAppointmentsW(Integer week) {return getAppointmentInfoW(week);}
 }
