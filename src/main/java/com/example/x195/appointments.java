@@ -51,7 +51,7 @@ public class appointments {
 
     public void deleteapt(ActionEvent actionEvent) {
         String aptid = deltxtfld.getText();
-        Alert alert = new Alert(Alert.AlertType.INFORMATION, "Appointment" + aptid + "deleted.");
+        Alert alert = new Alert(Alert.AlertType.INFORMATION, "Appointment" + aptid + "canceled.");
         alert.show();
         home.del("appointments", "Appointment_ID", Integer.parseInt(deltxtfld.getText()));
     }
