@@ -29,5 +29,4 @@ public class Appointment {
     public int getCustomerId() {return customerId;}
     public int getUserId() {return userId;}
     public int getContactId() {return contactId;}
-
 }
