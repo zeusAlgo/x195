@@ -124,7 +124,7 @@ public class reports {
     public void report3(ActionEvent actionEvent) {
         HashMap<String, Integer> ctr = new HashMap<>();
         ctr.put("Anika", 0); ctr.put("Daniel", 0); ctr.put("Li", 0);
-               try {
+        try {
             ResultSet rs = HelloController.connection.createStatement().executeQuery("Select * from appointments");
             while (rs.next()) {
                 int contactid = rs.getInt("Contact_ID");
@@ -135,7 +135,7 @@ public class reports {
                 }
             }
         } catch (SQLException e) { System.out.println(e.getMessage());}
-        String s = "";
+        String s = "\nAnika Costa : " + String.valueOf(ctr.get("Anika")) + "\nDaniel Garcia : " + String.valueOf(ctr.get("Daniel")) + "\nLi Lee : " + String.valueOf("Li");
         textarea.setText(s);
     }
 }
