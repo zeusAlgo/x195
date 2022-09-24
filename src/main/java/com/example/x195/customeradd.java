@@ -36,7 +36,6 @@ public class customeradd {
         }
     }
 
-
     /**
      * Gets division for a particular country
      * @param countryIndex index of country

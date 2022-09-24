@@ -1,6 +1,8 @@
 package com.example.x195;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.scene.control.*;
@@ -26,6 +28,7 @@ public class HelloController {
     static String usr = "admin";
     static String pass = "admin";
     static String dbsrc = "jdbc:mysql://localhost/client_schedule";
+    Stage stage;Parent scene;
 
     /**
      * Gets connection to database
@@ -58,7 +61,8 @@ public class HelloController {
                 logger.write("\nSuccessful Login");
                 logger.close();
             } catch (IOException e) {System.out.println(e.getMessage());}
-            gohome();
+//            gohome();
+//            signin2();
         } catch (SQLException e) {
             try {
                 FileWriter logger = new FileWriter("login_activity.txt" ,true);
@@ -89,6 +93,7 @@ public class HelloController {
             stage.setTitle("Home");
             stage.setScene(scene);
             stage.show();
+
         } catch(Exception e) {System.out.println(e.getMessage());}
     }
 
@@ -105,6 +110,55 @@ public class HelloController {
         System.out.println(lang);
 
         if (lang.equals("French")) signinBtn.setText("S'identifier");
+
+    }
+
+    public void signin2(ActionEvent actionEvent) {
+               String usrcreds = usrTxtFld.getText();
+        usr = usrcreds;
+        String passcreds = passTxtFld.getText();
+        pass = passcreds;
+        String db = "jdbc:mysql://localhost/client_schedule";
+        try {
+            Connection connection = DriverManager.getConnection(db, usrcreds, passcreds);
+            try {
+                FileWriter logger = new FileWriter("login_activity.txt", true);
+                logger.write("\n\n");
+                logger.write(usrcreds +" ");
+                logger.write(String.valueOf(ZonedDateTime.now()));
+                logger.write("\nSuccessful Login");
+                logger.close();
+            } catch (IOException e) {System.out.println(e.getMessage());}
+//            gohome();
+//            signin2();
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("home.fxml"));
+            try {
+                loader.load();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            stage = (Stage) ((Button) actionEvent.getSource()).getScene().getWindow();
+            stage.show();
+
+        } catch (SQLException e) {
+            try {
+                FileWriter logger = new FileWriter("login_activity.txt" ,true);
+                logger.write("\n\n");
+                logger.write(usrcreds + " ");
+                logger.write(String.valueOf(ZonedDateTime.now()));
+                logger.write("\nFailed Login");
+                logger.close();
+            } catch (IOException e2) {System.out.println(e2.getMessage());}
+
+            System.out.println("Error" + e.getMessage());
+            String alerts = "";
+            if (lang.equals("English")) alerts = "Please enter valid username and password";
+            if (lang.equals("French")) alerts = "Veuillez entrer un nom d'utilisateur et un mot de passe valides";
+            Alert alert = new Alert(Alert.AlertType.INFORMATION, alerts);
+            alert.show();
+        }
+
 
     }
 }
