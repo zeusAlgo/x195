@@ -29,6 +29,9 @@ public class customeradd {
         int countryidx = countryComboBox.getSelectionModel().getSelectedIndex()+1;
         get_divisions(countryidx);
         divisionComboBox.setItems(divisionsar);
+        switch (countryidx) {
+            
+        }
     }
 
 
@@ -59,6 +62,7 @@ public class customeradd {
         countryhm2.put(1, "U.S");countryhm2.put(2, "UK");countryhm2.put(3, "Canada");
         countryar.add("U.S"); countryar.add("UK"); countryar.add("Canada");
         countryComboBox.setItems(countryar);
+
     }
 
     /**
