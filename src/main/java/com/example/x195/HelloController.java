@@ -34,11 +34,8 @@ public class HelloController {
      * @return Database connection
      */
     public static Connection dbconnection() {
-        try {
-            return DriverManager.getConnection(dbsrc, usr, pass);
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+        try {return DriverManager.getConnection(dbsrc, usr, pass);}
+        catch (SQLException e) {throw new RuntimeException(e);}
     }
 
     /**
