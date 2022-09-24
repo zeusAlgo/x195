@@ -130,7 +130,7 @@ public class home {
      * If there is an appointment within 15 mins of login
      * @return Boolean if there is an appointment within 15 mins of login
      */
-    public boolean impendingapt() {
+    static public boolean impendingapt() {
         ZonedDateTime curzdt = LocalDateTime.now().atZone(ZoneId.systemDefault());
         ZonedDateTime utczdt = curzdt.withZoneSameInstant(ZoneId.of("UTC"));
         HashSet<ZonedDateTime> zdths = new HashSet<>();

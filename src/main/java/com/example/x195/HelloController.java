@@ -16,6 +16,8 @@ import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.util.Locale;
 
+import static com.example.x195.home.impendingapt;
+
 /**
  * Entry point into the application
  */
@@ -57,7 +59,12 @@ public class HelloController {
                 logger.write("\nSuccessful Login");
                 logger.close();
             } catch (IOException e) {System.out.println(e.getMessage());}
-//            gohome();
+
+            Alert alerta = new Alert(Alert.AlertType.INFORMATION, "Appointment in 15 mins!"),
+                    alertb = new Alert(Alert.AlertType.INFORMATION, "No upcoming appointments.");
+            if (impendingapt()) alerta.show();
+            else {alertb.show();}
+            gohome();
 //            signin2();
         } catch (SQLException e) {
             try {
@@ -85,7 +92,8 @@ public class HelloController {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(home.class.getResource("home.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 1100, 1100);
-            Stage stage = new Stage();
+//            Stage stage = new Stage();
+            stage = new Stage();
             stage.setTitle("Home");
             stage.setScene(scene);
             stage.show();
@@ -125,8 +133,6 @@ public class HelloController {
                 logger.write("\nSuccessful Login");
                 logger.close();
             } catch (IOException e) {System.out.println(e.getMessage());}
-//            gohome();
-//            signin2();
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("home.fxml"));
             loader.load();
@@ -150,7 +156,5 @@ public class HelloController {
             Alert alert = new Alert(Alert.AlertType.INFORMATION, alerts);
             alert.show();
         }
-
-
     }
 }

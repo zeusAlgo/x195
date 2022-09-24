@@ -7,7 +7,7 @@
    <children>
       <PasswordField fx:id="passTxtFld" layoutX="521.0" layoutY="454.0" />
       <TextField fx:id="usrTxtFld" layoutX="344.0" layoutY="454.0" />
-      <Button fx:id="signinBtn" layoutX="699.0" layoutY="454.0" mnemonicParsing="false" onAction="#signin2" text="Sign In" />
+      <Button fx:id="signinBtn" layoutX="699.0" layoutY="454.0" mnemonicParsing="false" onAction="#signin" text="Sign In" />
       <Label fx:id="geoLbl" layoutX="521.0" layoutY="542.0" text="Label" />
    </children>
 </Pane>
