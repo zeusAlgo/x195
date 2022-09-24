@@ -159,9 +159,9 @@ public class home {
      */
     public void initialize() {
         countryhm.put("U.S", 1); countryhm.put("UK", 2); countryhm.put("Canada", 3);usdivhm = getdivs(1);ukdivhm = getdivs(2);canadadivhm = getdivs(3);alldivshm = getalldivs();
-        Alert alerta = new Alert(Alert.AlertType.INFORMATION, "Appointment in 15 mins!"),
-                alertb = new Alert(Alert.AlertType.INFORMATION, "No upcoming appointments.");
-        if (impendingapt()) alerta.show();
-        else {alertb.show();}
+//        Alert alerta = new Alert(Alert.AlertType.INFORMATION, "Appointment in 15 mins!"),
+//                alertb = new Alert(Alert.AlertType.INFORMATION, "No upcoming appointments.");
+//        if (impendingapt()) alerta.show();
+//        else {alertb.show();}
     }
 }

@@ -62,10 +62,9 @@ public class HelloController {
 
             Alert alerta = new Alert(Alert.AlertType.INFORMATION, "Appointment in 15 mins!"),
                     alertb = new Alert(Alert.AlertType.INFORMATION, "No upcoming appointments.");
-            if (impendingapt()) alerta.show();
-            else {alertb.show();}
+            if (impendingapt()) alerta.showAndWait();
+            else {alertb.showAndWait();}
             gohome();
-//            signin2();
         } catch (SQLException e) {
             try {
                 FileWriter logger = new FileWriter("login_activity.txt" ,true);
