@@ -34,7 +34,7 @@ public class customeradd {
 
     /**
      * Gets division for a particular country
-     * @param countryIndex
+     * @param countryIndex index of country
      */
     public void get_divisions(int countryIndex) {
         try {
