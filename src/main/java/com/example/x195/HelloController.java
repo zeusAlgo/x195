@@ -13,6 +13,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
+import java.util.HashMap;
 import java.util.Locale;
 
 import static com.example.x195.home.impendingapt;
@@ -26,6 +27,7 @@ public class HelloController {
     public String lang = "";
     static String usr = "admin", pass = "admin", dbsrc = "jdbc:mysql://localhost/client_schedule";
     Stage stage;Parent scene;
+    static HashMap<String, String> apthm = new HashMap<>();
 
     /**
      * Gets connection to database
