@@ -30,7 +30,9 @@ public class customeradd {
         get_divisions(countryidx);
         divisionComboBox.setItems(divisionsar);
         switch (countryidx) {
-            
+            case 1: addressTxtFld.setText("      ,  ");
+            case 2: addressTxtFld.setText("      ,  ");
+            case 3: addressTxtFld.setText("      ,        ,  ");
         }
     }
 
