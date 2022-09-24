@@ -41,7 +41,7 @@ public class HelloController {
     }
 
     /**
-     * Signs user into app, logs sign in and potentially changes display language
+     * Signs user into app, logs sign in, checks for impending appointments and potentially changes display language
      */
     @FXML protected void signin() {
         String usrcreds = usrTxtFld.getText();
@@ -116,44 +116,4 @@ public class HelloController {
 
     }
 
-    public void signin2(ActionEvent actionEvent) {
-               String usrcreds = usrTxtFld.getText();
-        usr = usrcreds;
-        String passcreds = passTxtFld.getText();
-        pass = passcreds;
-        String db = "jdbc:mysql://localhost/client_schedule";
-        try {
-            Connection connection = DriverManager.getConnection(db, usrcreds, passcreds);
-            try {
-                FileWriter logger = new FileWriter("login_activity.txt", true);
-                logger.write("\n\n");
-                logger.write(usrcreds +" ");
-                logger.write(String.valueOf(ZonedDateTime.now()));
-                logger.write("\nSuccessful Login");
-                logger.close();
-            } catch (IOException e) {System.out.println(e.getMessage());}
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("home.fxml"));
-            loader.load();
-            stage = (Stage) ((Button) actionEvent.getSource()).getScene().getWindow();
-            stage.show();
-
-        } catch (SQLException | IOException e) {
-            try {
-                FileWriter logger = new FileWriter("login_activity.txt" ,true);
-                logger.write("\n\n");
-                logger.write(usrcreds + " ");
-                logger.write(String.valueOf(ZonedDateTime.now()));
-                logger.write("\nFailed Login");
-                logger.close();
-            } catch (IOException e2) {System.out.println(e2.getMessage());}
-
-            System.out.println("Error" + e.getMessage());
-            String alerts = "";
-            if (lang.equals("English")) alerts = "Please enter valid username and password";
-            if (lang.equals("French")) alerts = "Veuillez entrer un nom d'utilisateur et un mot de passe valides";
-            Alert alert = new Alert(Alert.AlertType.INFORMATION, alerts);
-            alert.show();
-        }
-    }
 }
