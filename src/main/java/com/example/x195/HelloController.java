@@ -61,7 +61,8 @@ public class HelloController {
                 logger.close();
             } catch (IOException e) {System.out.println(e.getMessage());}
 
-            Alert alerta = new Alert(Alert.AlertType.INFORMATION, "Appointment in 15 mins!"),
+            Alert alerta = new Alert(Alert.AlertType.INFORMATION, "Appointment in 15 mins!\n"
+                    + apthm.get("aptid") + " " + apthm.get("datetime")),
                     alertb = new Alert(Alert.AlertType.INFORMATION, "No upcoming appointments.");
             if (impendingapt()) alerta.showAndWait();
             else {alertb.showAndWait();}
