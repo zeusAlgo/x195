@@ -150,9 +150,8 @@ public class home {
                 System.out.println(rs.getString("Start"));
                 if (stringhs.contains(rs.getString("Start"))) {
 
-                    HelloController.apthm.put("aptid", String.valueOf(rs.getInt("Appointment_ID")));
-
                     // apt modify needs to display all orignal info in correct timezone
+                    HelloController.apthm.put("aptid", String.valueOf(rs.getInt("Appointment_ID")));
                     HelloController.apthm.put("datetime", String.valueOf(rs.getString("Start")));
                     return true;
                 }
