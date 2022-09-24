@@ -20,14 +20,10 @@ import java.util.Locale;
  * Entry point into the application
  */
 public class HelloController {
-    public TextField usrTxtFld;
-    public PasswordField passTxtFld;
-    @FXML Label geoLbl;
-    @FXML Button signinBtn;
+    public TextField usrTxtFld;public PasswordField passTxtFld;
+    @FXML Label geoLbl;@FXML Button signinBtn;
     public String lang = "";
-    static String usr = "admin";
-    static String pass = "admin";
-    static String dbsrc = "jdbc:mysql://localhost/client_schedule";
+    static String usr = "admin", pass = "admin", dbsrc = "jdbc:mysql://localhost/client_schedule";
     Stage stage;Parent scene;
 
     /**
@@ -133,15 +129,11 @@ public class HelloController {
 //            signin2();
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("home.fxml"));
-            try {
-                loader.load();
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
+            loader.load();
             stage = (Stage) ((Button) actionEvent.getSource()).getScene().getWindow();
             stage.show();
 
-        } catch (SQLException e) {
+        } catch (SQLException | IOException e) {
             try {
                 FileWriter logger = new FileWriter("login_activity.txt" ,true);
                 logger.write("\n\n");
