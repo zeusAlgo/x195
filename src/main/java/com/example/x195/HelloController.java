@@ -88,6 +88,8 @@ public class HelloController {
      */
     public void gohome(){
         try {
+            Stage stage0 = (Stage) usrTxtFld.getScene().getWindow();
+            stage0.close();
             FXMLLoader fxmlLoader = new FXMLLoader(home.class.getResource("home.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 1100, 1100);
 //            Stage stage = new Stage();
