@@ -3,6 +3,7 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -88,6 +89,9 @@ public class aptadd {
                            "', '" + "2022-08-30 17:02:46" + "', '" + "script" + "', '" +
                            "2022-08-30 17:02:46" + "', '" + "script" + "', " + custid + ", " +
                            userid + ", " + contactid + ");");
+            Stage stage = (Stage) titletxtfld.getScene().getWindow();
+            stage.close();
+            home.launchActivity("appointments");
         } catch (SQLException e) {System.out.println("SQL Error: " + e.getMessage());}
     }
 }
