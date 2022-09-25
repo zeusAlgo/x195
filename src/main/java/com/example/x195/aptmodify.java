@@ -3,6 +3,7 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -102,6 +103,9 @@ public class aptmodify {
                     "', Type='" + typetxtfld.getText() + "', Start='" + aptstart1 + "', End='" + aptend1 + "', Customer_ID="
                     + custid + ", User_ID=" + userid + ", Contact_ID=" + contactid +
                     " where Appointment_ID=" + appointments.toalterid + ";");
+            Stage stage = (Stage) titletxtfld.getScene().getWindow();
+            stage.close();
+            home.launchActivity("appointments");
         } catch (SQLException e) {System.out.println("SQL Error: " + e.getMessage());}
     }
 
