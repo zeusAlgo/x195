@@ -25,7 +25,7 @@ public class home {
     public Button aptBtn, reportsBtn;
     static HashMap<String, Integer> countryhm = new HashMap<>(), usdivhm = new HashMap<>(), ukdivhm = new HashMap<>(), canadadivhm = new HashMap<>();static HashMap<Integer, String> alldivshm = new HashMap<>();
     static ObservableList<String> countryar = FXCollections.observableArrayList("U.S.", "UK", "Canada"), usdivar = FXCollections.observableArrayList(), ukdivar = FXCollections.observableArrayList(), canadadivar = FXCollections.observableArrayList();
-    public Button emptyBtn;
+    public static Button emptyBtn;
 
     /**
      * Launches activity
@@ -33,14 +33,14 @@ public class home {
      */
     static public void launchActivity(String activityname){
         try {
-            Stage stage0 = (Stage) customersBtn.getScene().getWindow();
-            stage0.close();
             FXMLLoader fxmlLoader = new FXMLLoader(home.class.getResource(activityname+".fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 1100, 1100);
             Stage stage = new Stage();
             stage.setTitle(activityname);
             stage.setScene(scene);
             stage.show();
+            Stage stage0 = (Stage) emptyBtn.getScene().getWindow();
+            stage0.close();
         } catch(Exception e) {System.out.println(e.getMessage());}
     }
 
