@@ -4,6 +4,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -81,6 +82,8 @@ public class customeradd {
                     + phoneTxtFld.getText() + "', '" + "2022-09-14 20:00:00" + "', '" + "script" +
                     "', '" + "2022-09-14 20:00:00" + "', '" + "script" + "', "+ divisionidx + ")";
             statement.execute(insertion);
+            Stage stage = (Stage) countryComboBox.getScene().getWindow();
+            stage.close();
             home.launchActivity("customers");
         } catch (SQLException e) {System.out.println("SQL Error " + e.getMessage());}
 //        customers.tblView.refresh();
