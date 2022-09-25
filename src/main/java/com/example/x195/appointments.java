@@ -28,11 +28,11 @@ public class appointments {
     @FXML public ComboBox monthcombobox, weekcombobox;
     @FXML public TableColumn appointmentContactColM, appointmentIdColM, appointmentTitleColM, appointmentDescriptionColM, appointmentLocationColM, appointmentTypeColM, appointmentStartColM, appointmentEndColM, appointmentCustomerIdColM, appointmentUserIdColM, appointmentIdColW, appointmentTitleColW, appointmentDescriptionColW, appointmentLocationColW, appointmentContactColW, appointmentTypeColW, appointmentStartColW, appointmentEndColW, appointmentCustomerIdColW, appointmentUserIdColW;
 
-
     public void launchA(ActionEvent actionEvent) {
         Stage stage = (Stage) modifytxtfld.getScene().getWindow();
         stage.close();
         home.launchActivity("aptadd");}
+
     public void launchB(ActionEvent actionEvent) {
         toalterid = Integer.parseInt(modifytxtfld.getText());
         Stage stage = (Stage) modifytxtfld.getScene().getWindow();
