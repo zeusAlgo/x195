@@ -31,8 +31,8 @@ public class customeradd {
         divisionComboBox.setItems(divisionsar);
         switch (countryidx) {
             case 1: addressTxtFld.setText("      ,  ");
-            case 2: addressTxtFld.setText("      ,  ");
-            case 3: addressTxtFld.setText("      ,        ,  ");
+            case 2: addressTxtFld.setText("      ,        , ");
+            case 3: addressTxtFld.setText("      ,  ");
         }
     }
 
