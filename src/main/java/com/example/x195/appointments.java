@@ -54,11 +54,12 @@ public class appointments {
 
     public void deleteapt(ActionEvent actionEvent) {
         String aptid = deltxtfld.getText();
+        home.del("appointments", "Appointment_ID", Integer.parseInt(deltxtfld.getText()));
         Alert alert = new Alert(Alert.AlertType.INFORMATION, "Appointment " + aptid + " canceled.");
         alert.showAndWait();
         Stage stage = (Stage) modifytxtfld.getScene().getWindow();
         stage.close();
-        home.del("appointments", "Appointment_ID", Integer.parseInt(deltxtfld.getText()));
+
     }
 
     public void setMonthTblView() {tblViewM.setItems(appointmentModelM.getAppointmentInfoM( monthcombobox.getSelectionModel().getSelectedIndex()+1));}
