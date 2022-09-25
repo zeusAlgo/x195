@@ -22,26 +22,16 @@ public class customers {
 
     public static int tomodifyid = 0;
 
-    public void launchActivity(String activityname){
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(home.class.getResource(activityname+".fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), 1100, 1100);
-            Stage stage = new Stage();
-            stage.setTitle(activityname);
-            stage.setScene(scene);
-            stage.show();
-        } catch(Exception e) {System.out.println(e.getMessage());}
-    }
     public void launch1(ActionEvent actionEvent) {
         Stage stage = (Stage) delBtn.getScene().getWindow();
         stage.close();
-        launchActivity("customeradd");}
+        home.launchActivity("customeradd");}
 
     public void launch2(ActionEvent actionEvent) {
         tomodifyid = Integer.parseInt(modifyTxtFld.getText());
         Stage stage = (Stage) delBtn.getScene().getWindow();
         stage.close();
-        launchActivity("customermodify");}
+        home.launchActivity("customermodify");}
 
     @FXML public void delete() {
         Integer customerid = Integer.valueOf(deleteTxtFld.getText());
