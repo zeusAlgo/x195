@@ -43,6 +43,8 @@ public class customers {
         launchActivity("customeradd");}
     public void laundh2(ActionEvent actionEvent) {
         tomodifyid = Integer.parseInt(modifyTxtFld.getText());
+        Stage stage = (Stage) delBtn.getScene().getWindow();
+        stage.close();
         launchActivity("customermodify");}
 
     //todo: can clean this up on btn.pressed -> fn
