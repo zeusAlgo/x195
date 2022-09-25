@@ -19,7 +19,6 @@ public class customers {
     @FXML public TableView<Customer> tblView;
     @FXML public TableColumn<Customer, String> customerIdCol, customerNameCol, customerAddressCol, customerPostalCodeCol, customerPhoneCol, customerDivIdCol;
     @FXML public final ObservableList<Customer> customerInfo = FXCollections.observableArrayList();
-
     public static int tomodifyid = 0;
 
     public void launch1(ActionEvent actionEvent) {
