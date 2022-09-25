@@ -17,12 +17,7 @@ public class customers {
     public Button delBtn;
     private CustomerModel customerModel = new CustomerModel();
     @FXML public TableView<Customer> tblView;
-    @FXML public TableColumn<Customer, String> customerIdCol;
-    @FXML public TableColumn<Customer, String> customerNameCol;
-    @FXML public TableColumn<Customer, String> customerAddressCol;
-    @FXML public TableColumn<Customer, String> customerPostalCodeCol;
-    @FXML public TableColumn<Customer, String> customerPhoneCol;
-    @FXML public TableColumn<Customer, String> customerDivIdCol;
+    @FXML public TableColumn<Customer, String> customerIdCol, customerNameCol, customerAddressCol, customerPostalCodeCol, customerPhoneCol, customerDivIdCol;
     @FXML public final ObservableList<Customer> customerInfo = FXCollections.observableArrayList();
 
     public static int tomodifyid = 0;
