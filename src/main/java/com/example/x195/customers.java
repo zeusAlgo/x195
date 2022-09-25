@@ -41,7 +41,7 @@ public class customers {
         Stage stage = (Stage) delBtn.getScene().getWindow();
         stage.close();
         launchActivity("customeradd");}
-    public void laundh2(ActionEvent actionEvent) {
+    public void launch2(ActionEvent actionEvent) {
         tomodifyid = Integer.parseInt(modifyTxtFld.getText());
         Stage stage = (Stage) delBtn.getScene().getWindow();
         stage.close();
