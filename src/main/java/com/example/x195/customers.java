@@ -45,14 +45,12 @@ public class customers {
     //todo: can clean this up on btn.pressed -> fn
     @FXML public void delete() {
         Integer customerid = Integer.valueOf(deleteTxtFld.getText());
-        Alert alert = new Alert(Alert.AlertType.INFORMATION, "Customer " + customerid + " deleted.");
         try {HelloController.connection.createStatement().execute("Delete from appointments where Customer_ID=" + customerid);
         } catch (SQLException e) {System.out.println(e.getMessage());}
+        Alert alert = new Alert(Alert.AlertType.INFORMATION, "Customer " + customerid + " deleted.");
         alert.showAndWait();
         home.del("customers", "Customer_ID", Integer.parseInt(deleteTxtFld.getText()));
         home.launchActivity("customers");
-        //workaround: relaunch the activity
-
     }
 
     public void initialize() {
