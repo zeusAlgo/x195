@@ -48,7 +48,7 @@ public class home {
      * @param actionEvent Mouse or keyboard press
      */
     public void launchA(ActionEvent actionEvent) {
-        Stage stage0 = (Stage) emptyTxtFld.getScene().getWindow();
+        Stage stage0 = (Stage) emptyBtn.getScene().getWindow();
         stage0.close();
         launchActivity("customers");}
 
