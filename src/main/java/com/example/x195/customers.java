@@ -49,6 +49,8 @@ public class customers {
         } catch (SQLException e) {System.out.println(e.getMessage());}
         Alert alert = new Alert(Alert.AlertType.INFORMATION, "Customer " + customerid + " deleted.");
         alert.showAndWait();
+        Stage stage = (Stage) delBtn.getScene().getWindow();
+        stage.close();
         home.del("customers", "Customer_ID", Integer.parseInt(deleteTxtFld.getText()));
         home.launchActivity("customers");
     }
