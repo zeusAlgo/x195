@@ -36,14 +36,13 @@ public class customers {
         Stage stage = (Stage) delBtn.getScene().getWindow();
         stage.close();
         launchActivity("customeradd");}
-    
+
     public void launch2(ActionEvent actionEvent) {
         tomodifyid = Integer.parseInt(modifyTxtFld.getText());
         Stage stage = (Stage) delBtn.getScene().getWindow();
         stage.close();
         launchActivity("customermodify");}
 
-    //todo: can clean this up on btn.pressed -> fn
     @FXML public void delete() {
         Integer customerid = Integer.valueOf(deleteTxtFld.getText());
         try {HelloController.connection.createStatement().execute("Delete from appointments where Customer_ID=" + customerid);
