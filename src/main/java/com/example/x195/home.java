@@ -54,13 +54,19 @@ public class home {
      * Launches appointments activity
      * @param actionEvent Mouse or keyboard press
      */
-    public void launchB(ActionEvent actionEvent) { launchActivity("appointments");}
+    public void launchB(ActionEvent actionEvent) {
+        Stage stage0 = (Stage) customersBtn.getScene().getWindow();
+        stage0.close();
+        launchActivity("appointments");}
 
     /**
      * Launches appointments activity
      * @param actionEvent Mouse or keyboard press
      */
-    public void launchC(ActionEvent actionEvent) { launchActivity("reports");}
+    public void launchC(ActionEvent actionEvent) {
+        Stage stage0 = (Stage) customersBtn.getScene().getWindow();
+        stage0.close();
+        launchActivity("reports");}
 
     /**
      * Gets divisions
