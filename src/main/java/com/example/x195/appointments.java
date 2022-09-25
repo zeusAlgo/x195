@@ -59,7 +59,7 @@ public class appointments {
         alert.showAndWait();
         Stage stage = (Stage) modifytxtfld.getScene().getWindow();
         stage.close();
-
+        home.launchActivity("appointments");
     }
 
     public void setMonthTblView() {tblViewM.setItems(appointmentModelM.getAppointmentInfoM( monthcombobox.getSelectionModel().getSelectedIndex()+1));}
