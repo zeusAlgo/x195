@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.sql.ResultSet;
@@ -25,7 +26,7 @@ public class home {
     public Button aptBtn, reportsBtn;
     static HashMap<String, Integer> countryhm = new HashMap<>(), usdivhm = new HashMap<>(), ukdivhm = new HashMap<>(), canadadivhm = new HashMap<>();static HashMap<Integer, String> alldivshm = new HashMap<>();
     static ObservableList<String> countryar = FXCollections.observableArrayList("U.S.", "UK", "Canada"), usdivar = FXCollections.observableArrayList(), ukdivar = FXCollections.observableArrayList(), canadadivar = FXCollections.observableArrayList();
-    public static Button emptyBtn;
+    public TextField emptyTxtFld;
 
     /**
      * Launches activity
@@ -39,8 +40,6 @@ public class home {
             stage.setTitle(activityname);
             stage.setScene(scene);
             stage.show();
-            Stage stage0 = (Stage) emptyBtn.getScene().getWindow();
-            stage0.close();
         } catch(Exception e) {System.out.println(e.getMessage());}
     }
 
@@ -48,7 +47,10 @@ public class home {
      * Launches customers activity
      * @param actionEvent Mouse or keyboard press
      */
-    public void launchA(ActionEvent actionEvent) { launchActivity("customers");}
+    public void launchA(ActionEvent actionEvent) {
+        Stage stage0 = (Stage) emptyTxtFld.getScene().getWindow();
+        stage0.close();
+        launchActivity("customers");}
 
     /**
      * Launches appointments activity
