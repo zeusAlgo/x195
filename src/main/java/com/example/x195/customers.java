@@ -37,7 +37,10 @@ public class customers {
             stage.show();
         } catch(Exception e) {System.out.println(e.getMessage());}
     }
-    public void launch1(ActionEvent actionEvent) { launchActivity("customeradd");}
+    public void launch1(ActionEvent actionEvent) {
+        Stage stage = (Stage) delBtn.getScene().getWindow();
+        stage.close();
+        launchActivity("customeradd");}
     public void laundh2(ActionEvent actionEvent) {
         tomodifyid = Integer.parseInt(modifyTxtFld.getText());
         launchActivity("customermodify");}
