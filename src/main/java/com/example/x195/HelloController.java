@@ -92,7 +92,6 @@ public class HelloController {
             stage0.close();
             FXMLLoader fxmlLoader = new FXMLLoader(home.class.getResource("home.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 1100, 1100);
-//            Stage stage = new Stage();
             stage = new Stage();
             stage.setTitle("Home");
             stage.setScene(scene);

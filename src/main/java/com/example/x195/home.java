@@ -31,6 +31,8 @@ public class home {
      */
     static public void launchActivity(String activityname){
         try {
+            Stage stage0 = (Stage) customersBtn.getScene().getWindow();
+            stage0.close();
             FXMLLoader fxmlLoader = new FXMLLoader(home.class.getResource(activityname+".fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 1100, 1100);
             Stage stage = new Stage();
