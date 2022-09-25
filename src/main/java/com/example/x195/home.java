@@ -22,11 +22,9 @@ import java.util.HashSet;
  * Home activity
  */
 public class home {
-    public Button customersBtn;
-    public Button aptBtn, reportsBtn;
+    public Button customersBtn, aptBtn, reportsBtn;
     static HashMap<String, Integer> countryhm = new HashMap<>(), usdivhm = new HashMap<>(), ukdivhm = new HashMap<>(), canadadivhm = new HashMap<>();static HashMap<Integer, String> alldivshm = new HashMap<>();
     static ObservableList<String> countryar = FXCollections.observableArrayList("U.S.", "UK", "Canada"), usdivar = FXCollections.observableArrayList(), ukdivar = FXCollections.observableArrayList(), canadadivar = FXCollections.observableArrayList();
-    public Button emptyBtn;
 
     /**
      * Launches activity
@@ -48,7 +46,7 @@ public class home {
      * @param actionEvent Mouse or keyboard press
      */
     public void launchA(ActionEvent actionEvent) {
-        Stage stage0 = (Stage) emptyBtn.getScene().getWindow();
+        Stage stage0 = (Stage) customersBtn.getScene().getWindow();
         stage0.close();
         launchActivity("customers");}
 

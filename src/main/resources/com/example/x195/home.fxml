@@ -8,6 +8,5 @@
       <Button fx:id="customersBtn" layoutX="326.0" layoutY="438.0" mnemonicParsing="false" onAction="#launchA" text="Customers" />
       <Button fx:id="aptBtn" layoutX="469.0" layoutY="438.0" mnemonicParsing="false" onAction="#launchB" text="Appointments" />
       <Button fx:id="reportsBtn" layoutX="597.0" layoutY="438.0" mnemonicParsing="false" onAction="#launchC" text="Reports" />
-      <Button fx:id="emptyBtn" layoutX="439.0" layoutY="968.0" />
    </children>
 </AnchorPane>
