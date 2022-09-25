@@ -1,6 +1,8 @@
 package com.example.x195;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -62,6 +64,9 @@ public class customermodify {
             }
             String update = "UPDATE customers set Customer_Name='" + nametxtfld.getText() + "', Address='" + addresstxtfld.getText() + "', Postal_Code='" + postcodetxtfld.getText()+ "', Phone='" + phonetxtfld.getText() + "', Division_ID=" + divid  + " WHERE Customer_ID=" + customers.tomodifyid;
             HelloController.connection.createStatement().executeUpdate(update);
+            Stage stage = (Stage) countrycombobox.getScene().getWindow();
+            stage.close();
+            home.launchActivity("customers");
         } catch (SQLException e) {System.out.println(e.getMessage());}
 //        customers.tblView.refresh();
     }
