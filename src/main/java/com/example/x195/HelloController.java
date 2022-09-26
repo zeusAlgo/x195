@@ -23,11 +23,10 @@ import static com.example.x195.home.impendingapt;
  * Entry point into the application
  */
 public class HelloController {
-    public TextField usrTxtFld;public PasswordField passTxtFld;
-    @FXML Label geoLbl;@FXML Button signinBtn;
-    public String lang = "";
+    public TextField usrTxtFld; public PasswordField passTxtFld;
+    @FXML Label geoLbl; @FXML Button signinBtn; public String lang = "";
     static String usr = "admin", pass = "admin", dbsrc = "jdbc:mysql://localhost/client_schedule";
-    Stage stage;Parent scene;
+    Stage stage; Parent scene;
     static HashMap<String, String> apthm = new HashMap<>();
 
     /**
