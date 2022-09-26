@@ -33,6 +33,7 @@ public class aptadd {
      */
     public boolean isbizopen() {
         boolean bool = true;
+        String s = "";
         String hrS = (String) apttimecombobox.getSelectionModel().getSelectedItem();
         int month = monthcombobox.getSelectionModel().getSelectedIndex()+1,
                 day = (int) daycombobox.getSelectionModel().getSelectedItem(),
