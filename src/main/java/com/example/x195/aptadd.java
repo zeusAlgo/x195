@@ -60,7 +60,7 @@ public class aptadd {
                 if (time1.equals(hr3) | time2.equals(hr3)) {
                     s += "\nAppointment unavailable\n";
                     bool = false;
-                }//perhaps check for contact ids
+                }
             }
         } catch (SQLException e) {System.out.println("SQL Error: " + e.getMessage());}
         if (!s.equals("")) {
