@@ -130,14 +130,15 @@ public class aptmodify {
         contactcombobox.getSelectionModel().select(appointments.contactshm2.get(contactid));
 
         String start = apthm.get("start");
-//        ZonedDateTime zdt = ZonedDateTime.parse(start);
-
         Timestamp ts = Timestamp.valueOf(start);
-        ts.getMonth();
 
-        System.out.println(ts.getMonth()+1);
-        System.out.println(ts.getDay());
-        System.out.println(ts.getHours());
+        int m = ts.getMonth()+1;
+        int d = ts.getDay()-1;
+        int h = ts.getHours();
+        ZonedDateTime utczdt = LocalDateTime.of(2022, m, d, h, 0).atZone(ZoneId.of("UTC"));
+        System.out.println(utczdt);
+
+
 
     }
 }
