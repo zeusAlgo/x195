@@ -122,12 +122,13 @@ public class aptmodify {
         userComboBox.setItems(appointments.usersar); contactcombobox.setItems(appointments.contactsar);
         monthcombobox.setItems(appointments.monthsar); daycombobox.setItems(appointments.daysar);
         timescombobox.setItems(appointments.timesar); customercombobox.setItems(appointments.customersar);
-        int custid = Integer.parseInt(apthm.get("customerid"));
-        int contactid = Integer.parseInt(apthm.get("contactid"));
-        int userid = Integer.parseInt(apthm.get("userid"));
+        int custid = Integer.parseInt(apthm.get("customerid")),
+                contactid = Integer.parseInt(apthm.get("contactid")),
+                userid = Integer.parseInt(apthm.get("userid"));
         userComboBox.getSelectionModel().select(appointments.usershm2.get(userid));
         customercombobox.getSelectionModel().select(appointments.customershm2.get(custid));
         contactcombobox.getSelectionModel().select(appointments.contactshm2.get(contactid));
+
 
     }
 }
