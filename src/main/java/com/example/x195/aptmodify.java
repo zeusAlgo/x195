@@ -135,6 +135,9 @@ public class aptmodify {
         Timestamp ts = Timestamp.valueOf(start);
         ts.getMonth();
 
-        System.out.println(ts);
+        System.out.println(ts.getMonth()+1);
+        System.out.println(ts.getDay());
+        System.out.println(ts.getHours());
+
     }
 }
