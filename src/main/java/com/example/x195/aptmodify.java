@@ -132,7 +132,8 @@ public class aptmodify {
         String start = apthm.get("start");
         LocalDateTime ldt = conv2usrtime(start);
         monthcombobox.getSelectionModel().select(ldt.getMonth().toString());
-        
+        daycombobox.getSelectionModel().select(ldt.getDayOfMonth());
+
         ldt.getHour();
     }
 
