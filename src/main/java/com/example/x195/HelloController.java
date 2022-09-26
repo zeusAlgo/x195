@@ -43,11 +43,9 @@ public class HelloController {
      * Signs user into app, logs sign in, checks for impending appointments and potentially changes display language
      */
     @FXML protected void signin() {
-        String usrcreds = usrTxtFld.getText(), passcreds = passTxtFld.getText();
+        String usrcreds = usrTxtFld.getText(), passcreds = passTxtFld.getText(), db = "jdbc:mysql://localhost/client_schedule";
         usr = usrcreds; pass = passcreds;
-        String db = "jdbc:mysql://localhost/client_schedule";
         try {
-            Connection connection = DriverManager.getConnection(db, usrcreds, passcreds);
             try {
                 FileWriter logger = new FileWriter("login_activity.txt", true);
                 logger.write("\n\n");
