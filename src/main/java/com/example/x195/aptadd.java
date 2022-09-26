@@ -45,7 +45,6 @@ public class aptadd {
         int utchr = aptutc.getHour(), hour = aptestzdt.getHour();
         String dayofweek = aptestzdt.getDayOfWeek().toString();
 
-        Alert alert = new Alert(Alert.AlertType.INFORMATION, s);
         if (hour < 8 | hour > 22) {
             s += "Business not open";
             bool = false;}
@@ -64,7 +63,10 @@ public class aptadd {
                 }//perhaps check for contact ids
             }
         } catch (SQLException e) {System.out.println("SQL Error: " + e.getMessage());}
-        if (!s.equals("")) alert.show();
+        if (!s.equals("")) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION, s);
+            alert.show();
+        }
         return bool;
     }
 
