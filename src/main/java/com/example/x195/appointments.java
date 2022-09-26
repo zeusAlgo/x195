@@ -53,9 +53,11 @@ public class appointments {
     }
 
     public void deleteapt(ActionEvent actionEvent) {
-        String aptid = deltxtfld.getText();
-        home.del("appointments", "Appointment_ID", Integer.parseInt(deltxtfld.getText()));
-        Alert alert = new Alert(Alert.AlertType.INFORMATION, "Appointment " + aptid + " canceled.");
+        int aptid= Integer.parseInt(deltxtfld.getText());
+        String type =  aptmodify.getaptinfo(aptid).get("type");
+        
+        home.del("appointments", "Appointment_ID", aptid);
+        Alert alert = new Alert(Alert.AlertType.INFORMATION, "Appointment " + aptid + " : "+ type + " canceled.");
         alert.showAndWait();
         Stage stage = (Stage) modifytxtfld.getScene().getWindow();
         stage.close();

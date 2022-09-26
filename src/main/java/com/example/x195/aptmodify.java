@@ -24,7 +24,7 @@ public class aptmodify {
      * @param aptid id of appointment
      * @return Hashmap of appointment information
      */
-    public HashMap<String, String> getaptinfo(int aptid) {
+    public static HashMap<String, String> getaptinfo(int aptid) {
         HashMap<String, String> apthm = new HashMap<>();
         try {ResultSet rs = HelloController.connection.createStatement().executeQuery(
                 "Select * from appointments where Appointment_ID=" + aptid);
