@@ -52,10 +52,21 @@ public class appointments {
         return customershm;
     }
 
+    public HashMap<Integer, String> getallcustomers2() {
+        HashMap<Integer, String> customershm = new HashMap<>();
+        try {
+            ResultSet res = HelloController.connection.createStatement().executeQuery("Select * from customers");
+            while (res.next()) {
+                String custname = res.getString("Customer_Name");
+                customershm.put(res.getInt("Customer_ID"), custname);
+            }
+        } catch (SQLException e) {System.out.println(e.getMessage());}
+        return customershm;
+    }
+
     public void deleteapt(ActionEvent actionEvent) {
         int aptid= Integer.parseInt(deltxtfld.getText());
         String type =  aptmodify.getaptinfo(aptid).get("type");
-
         home.del("appointments", "Appointment_ID", aptid);
         Alert alert = new Alert(Alert.AlertType.INFORMATION, "Appointment " + aptid + " : "+ type + " canceled.");
         alert.showAndWait();
