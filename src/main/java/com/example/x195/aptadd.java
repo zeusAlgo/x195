@@ -49,7 +49,7 @@ public class aptadd {
             s += "\nBusiness not open\n";
             bool = false;}
         if (dayofweek.equals("SATURDAY") | dayofweek.equals("SUNDAY")) {
-            s += "\nClosed that day.\n";
+            s += "\nClosed that day\n";
             bool = false;}
         try {
             ResultSet rs = HelloController.connection.createStatement().executeQuery("Select * from appointments");
