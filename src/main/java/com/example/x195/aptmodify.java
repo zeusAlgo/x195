@@ -134,8 +134,9 @@ public class aptmodify {
         monthcombobox.getSelectionModel().select(ldt.getMonth().toString());
         daycombobox.getSelectionModel().select(ldt.getDayOfMonth()-1);
 
+        int h = ldt.getHour();
+        daycombobox.getSelectionModel().select(appointments.timeshm2.get(h));
 
-        ldt.getHour();
     }
 
     /**
