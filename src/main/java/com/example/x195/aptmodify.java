@@ -133,7 +133,7 @@ public class aptmodify {
         Timestamp ts = Timestamp.valueOf(start);
 
         int m = ts.getMonth()+1;
-        int d = ts.getDay()-1;
+        int d = ts.getDate();
         int h = ts.getHours();
         ZonedDateTime utczdt = LocalDateTime.of(2022, m, d, h, 0).atZone(ZoneId.of("UTC"));
         System.out.println(utczdt);
