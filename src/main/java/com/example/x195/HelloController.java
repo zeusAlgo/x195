@@ -61,8 +61,7 @@ public class HelloController {
                 String ldts = ldt.toString();
                 String date = ldts.substring(0, 10);
                 int h = ldt.getHour();
-                String timesuffix = "";
-                Alert alerta = new Alert(Alert.AlertType.INFORMATION, "Appointment in 15 mins!\n"
+                Alert alerta = new Alert(Alert.AlertType.INFORMATION, "Appointment in 15 minutes!\n"
                         + "Appointment " + apthm.get("aptid") + " on " + date + " at " + h + ":00");
                 alerta.showAndWait();
             } else {
