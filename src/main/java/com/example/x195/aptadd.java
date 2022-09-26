@@ -46,10 +46,10 @@ public class aptadd {
         String dayofweek = aptestzdt.getDayOfWeek().toString();
 
         if (hour < 8 | hour > 22) {
-            s += "Business not open";
+            s += "\nBusiness not open\n";
             bool = false;}
         if (dayofweek.equals("SATURDAY") | dayofweek.equals("SUNDAY")) {
-            s += "Closed that day.";
+            s += "\nClosed that day.\n";
             bool = false;}
         try {
             ResultSet rs = HelloController.connection.createStatement().executeQuery("Select * from appointments");
@@ -58,7 +58,7 @@ public class aptadd {
                 String time1 = time.substring(11, 12), time2 = time.substring(11, 13);
                 String hr3 = String.valueOf(utchr);
                 if (time1.equals(hr3) | time2.equals(hr3)) {
-                    s += "Appointment unavailable";
+                    s += "\nAppointment unavailable\n";
                     bool = false;
                 }//perhaps check for contact ids
             }
