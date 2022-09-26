@@ -135,7 +135,7 @@ public class aptmodify {
         daycombobox.getSelectionModel().select(ldt.getDayOfMonth()-1);
 
         int h = ldt.getHour();
-        daycombobox.getSelectionModel().select(appointments.timeshm2.get(h));
+        timescombobox.getSelectionModel().select(appointments.timeshm2.get(h));
 
     }
 
@@ -144,7 +144,7 @@ public class aptmodify {
      * @param times Time string
      * @return Local date time in user's time zone
      */
-    public LocalDateTime conv2usrtime(String times) {
+    public static LocalDateTime conv2usrtime(String times) {
         Timestamp ts = Timestamp.valueOf(times);
         int m = ts.getMonth()+1, d = ts.getDate(), h = ts.getHours();
         ZonedDateTime utczdt = LocalDateTime.of(2022, m, d, h, 0).atZone(ZoneId.of("UTC"));

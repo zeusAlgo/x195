@@ -157,12 +157,9 @@ public class home {
         try {
             ResultSet rs = HelloController.connection.createStatement().executeQuery("Select * from appointments");
             while (rs.next()) {
-                System.out.println(rs.getString("Start"));
                 if (stringhs.contains(rs.getString("Start"))) {
-
-                    // apt modify needs to display all orignal info in correct timezone
                     HelloController.apthm.put("aptid", String.valueOf(rs.getInt("Appointment_ID")));
-                    HelloController.apthm.put("datetime", String.valueOf(rs.getString("Start")));
+                    HelloController.apthm.put("datetime", rs.getString("Start"));
                     return true;
                 }
             }

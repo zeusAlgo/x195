@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.util.HashMap;
@@ -58,11 +59,14 @@ public class HelloController {
                 logger.close();
             } catch (IOException e) {System.out.println(e.getMessage());}
 
-            Alert alerta = new Alert(Alert.AlertType.INFORMATION, "Appointment in 15 mins!\n"
-                    + apthm.get("aptid") + " " + apthm.get("datetime")),
-                    alertb = new Alert(Alert.AlertType.INFORMATION, "No upcoming appointments.");
-            if (impendingapt()) alerta.showAndWait();
-            else {alertb.showAndWait();}
+            LocalDateTime ldt = aptmodify.conv2usrtime(apthm.get("datetime"));
+            if (impendingapt()) {
+                Alert alerta = new Alert(Alert.AlertType.INFORMATION, "Appointment in 15 mins!\n"
+                        + apthm.get("aptid") + " " + aptmodify.conv2usrtime(apthm.get("datetime")));
+                alerta.showAndWait();
+            } else {
+                Alert alertb = new Alert(Alert.AlertType.INFORMATION, "No upcoming appointments.");
+                alertb.showAndWait();}
             gohome();
         } catch (SQLException e) {
             try {
@@ -106,6 +110,7 @@ public class HelloController {
      * Sets ui and language
      */
     public void initialize() {
+
         ZoneId zone = ZoneId.systemDefault();
         geoLbl.setText(String.valueOf(zone));
 
