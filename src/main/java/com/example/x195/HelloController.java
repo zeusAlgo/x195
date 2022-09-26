@@ -46,6 +46,7 @@ public class HelloController {
         String usrcreds = usrTxtFld.getText(), passcreds = passTxtFld.getText(), db = "jdbc:mysql://localhost/client_schedule";
         usr = usrcreds; pass = passcreds;
         try {
+            Connection connection = DriverManager.getConnection(db, usrcreds, passcreds);
             try {
                 FileWriter logger = new FileWriter("login_activity.txt", true);
                 logger.write("\n\n");
@@ -110,5 +111,4 @@ public class HelloController {
         System.out.println(lang);
         if (lang.equals("French")) signinBtn.setText("S'identifier");
     }
-
 }
