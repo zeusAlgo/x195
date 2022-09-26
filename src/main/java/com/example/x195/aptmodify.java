@@ -130,12 +130,17 @@ public class aptmodify {
         contactcombobox.getSelectionModel().select(appointments.contactshm2.get(contactid));
 
         String start = apthm.get("start");
-        LocalDateTime ldt = convtousrtime(start);
+        LocalDateTime ldt = conv2usrtime(start);
 
 
     }
 
-    public LocalDateTime convtousrtime(String times) {
+    /**
+     * Converts timestamp to users local time
+     * @param times Time string
+     * @return Local date time in user's time zone
+     */
+    public LocalDateTime conv2usrtime(String times) {
         Timestamp ts = Timestamp.valueOf(times);
         int m = ts.getMonth()+1, d = ts.getDate(), h = ts.getHours();
         ZonedDateTime utczdt = LocalDateTime.of(2022, m, d, h, 0).atZone(ZoneId.of("UTC"));
