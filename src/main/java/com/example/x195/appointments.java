@@ -55,7 +55,7 @@ public class appointments {
     public void deleteapt(ActionEvent actionEvent) {
         int aptid= Integer.parseInt(deltxtfld.getText());
         String type =  aptmodify.getaptinfo(aptid).get("type");
-        
+
         home.del("appointments", "Appointment_ID", aptid);
         Alert alert = new Alert(Alert.AlertType.INFORMATION, "Appointment " + aptid + " : "+ type + " canceled.");
         alert.showAndWait();
