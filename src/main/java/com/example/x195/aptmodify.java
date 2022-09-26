@@ -61,9 +61,6 @@ public class aptmodify {
         int utchr = aptutc.getHour(), hour = aptestzdt.getHour();
         String dayofweek = aptestzdt.getDayOfWeek().toString();
 
-        Alert alert = new Alert(Alert.AlertType.INFORMATION, "Business not open"),
-                alert4 = new Alert(Alert.AlertType.INFORMATION, "Closed that day"),
-                alert2 = new Alert(Alert.AlertType.INFORMATION, "Appointment unavailable");
         if (hour < 8 | hour > 22) {
             s += "\nBusiness not open\n";
             bool = false;}
@@ -81,7 +78,8 @@ public class aptmodify {
                     bool = false;}//perhaps check for contact ids
             }
         } catch (SQLException e) {System.out.println("SQL Error: " + e.getMessage());}
-
+        Alert alert = new Alert(Alert.AlertType.INFORMATION, s);
+        alert.show();
         return bool;
     }
 
