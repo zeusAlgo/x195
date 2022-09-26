@@ -48,17 +48,27 @@ public class aptadd {
         Alert alert = new Alert(Alert.AlertType.INFORMATION, "Business not open"),
                 alert4 = new Alert(Alert.AlertType.INFORMATION, "Closed that day"),
                 alert2 = new Alert(Alert.AlertType.INFORMATION, "Appointment unavailable");
-        if (hour < 8 | hour > 22) {alert.show();return false;}
-        if (dayofweek.equals("SATURDAY") | dayofweek.equals("SUNDAY")) {alert4.show();return false;}
+        if (hour < 8 | hour > 22) {
+            s += "Business not open";
+            bool = false;}
+        if (dayofweek.equals("SATURDAY") | dayofweek.equals("SUNDAY")) {
+            s += "Closed that day.";
+            bool = false;}
         try {
             ResultSet rs = HelloController.connection.createStatement().executeQuery("Select * from appointments");
             while (rs.next()) {
                 String time = rs.getString("Start");
                 String time1 = time.substring(11, 12), time2 = time.substring(11, 13);
                 String hr3 = String.valueOf(utchr);
-                if (time1.equals(hr3) | time2.equals(hr3)) {alert2.show();return false;}//perhaps check for contact ids
+                if (time1.equals(hr3) | time2.equals(hr3)) {
+                    s += "Appointment unavailable";
+                    bool = false;
+                }//perhaps check for contact ids
             }
         } catch (SQLException e) {System.out.println("SQL Error: " + e.getMessage());}
+        if (!s.equals("")) {
+            
+        }
         return bool;
     }
 
