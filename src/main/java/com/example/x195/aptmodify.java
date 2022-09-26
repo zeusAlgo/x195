@@ -7,6 +7,7 @@ import javafx.stage.Stage;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
@@ -128,6 +129,9 @@ public class aptmodify {
         customercombobox.getSelectionModel().select(appointments.customershm2.get(custid));
         contactcombobox.getSelectionModel().select(appointments.contactshm2.get(contactid));
 
+        String start = apthm.get("start");
+        Timestamp ts = Timestamp.valueOf(start);
+        ts.getMonth();
 
     }
 }
