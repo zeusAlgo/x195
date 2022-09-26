@@ -75,7 +75,7 @@ public class aptmodify {
                 String hr3 = String.valueOf(utchr);
                 if (time1.equals(hr3) | time2.equals(hr3)) {
                     s += "\nAppointment unavailable";
-                    bool = false;}//perhaps check for contact ids
+                    bool = false;}
             }
         } catch (SQLException e) {System.out.println("SQL Error: " + e.getMessage());}
         Alert alert = new Alert(Alert.AlertType.INFORMATION, s);
@@ -90,9 +90,7 @@ public class aptmodify {
     public void updateapt(ActionEvent actionEvent) {
         try {
             if (!isbizopen()) return;
-            int colv = home.incrementcolval("appointments", "Appointment_ID");
             String hrS = (String) timescombobox.getSelectionModel().getSelectedItem();
-
             int month = monthcombobox.getSelectionModel().getSelectedIndex()+1,
                     day = (int) daycombobox.getSelectionModel().getSelectedItem(),
                     hr = appointments.timeshm.get(hrS);
