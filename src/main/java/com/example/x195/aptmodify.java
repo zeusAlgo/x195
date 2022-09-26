@@ -130,8 +130,11 @@ public class aptmodify {
         contactcombobox.getSelectionModel().select(appointments.contactshm2.get(contactid));
 
         String start = apthm.get("start");
-        Timestamp ts = Timestamp.valueOf(start);
-        ts.getMonth();
+        ZonedDateTime zdt = ZonedDateTime.parse(start);
+        System.out.println(zdt);
+        
+//        Timestamp ts = Timestamp.valueOf(start);
+//        ts.getMonth();
 
     }
 }
