@@ -63,7 +63,7 @@ public class HelloController {
                 int h = ldt.getHour();
                 String timesuffix = "";
                 Alert alerta = new Alert(Alert.AlertType.INFORMATION, "Appointment in 15 mins!\n"
-                        + "Appointment " + apthm.get("aptid") + " on " + date + " at " + h + ":00"));
+                        + "Appointment " + apthm.get("aptid") + " on " + date + " at " + h + ":00");
                 alerta.showAndWait();
             } else {
                 Alert alertb = new Alert(Alert.AlertType.INFORMATION, "No upcoming appointments.");
