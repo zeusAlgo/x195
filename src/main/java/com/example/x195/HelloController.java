@@ -43,10 +43,8 @@ public class HelloController {
      * Signs user into app, logs sign in, checks for impending appointments and potentially changes display language
      */
     @FXML protected void signin() {
-        String usrcreds = usrTxtFld.getText();
-        usr = usrcreds;
-        String passcreds = passTxtFld.getText();
-        pass = passcreds;
+        String usrcreds = usrTxtFld.getText(), passcreds = passTxtFld.getText();
+        usr = usrcreds; pass = passcreds;
         String db = "jdbc:mysql://localhost/client_schedule";
         try {
             Connection connection = DriverManager.getConnection(db, usrcreds, passcreds);
@@ -59,7 +57,6 @@ public class HelloController {
                 logger.close();
             } catch (IOException e) {System.out.println(e.getMessage());}
 
-            LocalDateTime ldt = aptmodify.conv2usrtime(apthm.get("datetime"));
             if (impendingapt()) {
                 Alert alerta = new Alert(Alert.AlertType.INFORMATION, "Appointment in 15 mins!\n"
                         + apthm.get("aptid") + " " + aptmodify.conv2usrtime(apthm.get("datetime")));
@@ -100,7 +97,6 @@ public class HelloController {
             stage.setTitle("Home");
             stage.setScene(scene);
             stage.show();
-
         } catch(Exception e) {System.out.println(e.getMessage());}
     }
 
@@ -110,15 +106,11 @@ public class HelloController {
      * Sets ui and language
      */
     public void initialize() {
-
         ZoneId zone = ZoneId.systemDefault();
         geoLbl.setText(String.valueOf(zone));
-
         lang = Locale.getDefault().getDisplayLanguage();
         System.out.println(lang);
-
         if (lang.equals("French")) signinBtn.setText("S'identifier");
-
     }
 
 }
