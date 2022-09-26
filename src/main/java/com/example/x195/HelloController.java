@@ -57,8 +57,13 @@ public class HelloController {
             } catch (IOException e) {System.out.println(e.getMessage());}
 
             if (impendingapt()) {
+                LocalDateTime ldt = aptmodify.conv2usrtime(apthm.get("datetime"));
+                String ldts = ldt.toString();
+                String date = ldts.substring(0, 10);
+                int h = ldt.getHour();
+                String timesuffix = "";
                 Alert alerta = new Alert(Alert.AlertType.INFORMATION, "Appointment in 15 mins!\n"
-                        + apthm.get("aptid") + " " + aptmodify.conv2usrtime(apthm.get("datetime")));
+                        + "Appointment " + apthm.get("aptid") + " on " + date + " at " + h + ":00"));
                 alerta.showAndWait();
             } else {
                 Alert alertb = new Alert(Alert.AlertType.INFORMATION, "No upcoming appointments.");
