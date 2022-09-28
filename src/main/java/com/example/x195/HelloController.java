@@ -77,6 +77,7 @@ public class HelloController {
                 logger.close();
             } catch (IOException e2) {System.out.println(e2.getMessage());}
 
+            //todo: america -> amerique
             System.out.println("Error" + e.getMessage());
             String alerts = "";
             if (lang.equals("English")) alerts = "Please enter valid username and password";
@@ -109,6 +110,7 @@ public class HelloController {
      */
     public void initialize() {
         ZoneId zone = ZoneId.systemDefault();
+        
         geoLbl.setText(String.valueOf(zone));
         lang = Locale.getDefault().getDisplayLanguage();
         System.out.println(lang);
